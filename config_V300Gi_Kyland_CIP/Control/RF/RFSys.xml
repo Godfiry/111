@@ -1,0 +1,176 @@
+<SRF class="MKSDualCurrRatioHutRFSource" type="instance" alias="">
+	<setGenerator type="method">./SRCGenerator</setGenerator>
+	<setMatch type="method">./SRCMatch</setMatch>
+	<setNextRFSource type="method">../LF</setNextRFSource>
+	<setListHead type="method">/Control/Functional/PM/SRF</setListHead>
+	<addParamMap type="method">C1Preset,SRFC1Preset</addParamMap>
+	<addParamMap type="method">C2Preset,SRFC2Preset</addParamMap>
+	<addParamMap type="method">C5Preset,SRFC5Preset</addParamMap>
+	<addParamMap type="method">MatchTuneDelay,SRFMatchTuneDelay</addParamMap>
+	<addParamMap type="method">MatchTuneMode,SRFGenTuneMode</addParamMap>
+	<addParamMap type="method">MatchCurrRatio,SRFMatchCurrRatio</addParamMap>
+	<addParamMap type="method">MatchCurrMode,SRFMatchCurrMode</addParamMap>
+	<addParamMap type="method">RFRefl(W),SRFMaxReflectedPower(W)</addParamMap>
+	<addParamMap type="method">RFPower(W),SRFPower(W)</addParamMap>
+	<addParamMap type="method">Ramp,SRFRamp</addParamMap>
+	<addParamMap type="method">RampTime,SRFRampTime</addParamMap>
+	<addParamMap type="method">CloseRFBetweenStep,CloseSRFBetweenStep</addParamMap>
+	<addParamMap type="method">RcpStableCfg,RcpStableCfg</addParamMap>
+	<addParamMap type="method">cfgRunMode,/SETUP/RF/cfgSRFRunMode</addParamMap>
+	<addParamMap type="method">cfgRampEnable,/SETUP/Recipe/cfgSRFRampEnable</addParamMap>
+	<addParamMap type="method">cfgRampTime,/SETUP/Recipe/cfgSRFRampTime</addParamMap>
+	<addParamMap type="method">cfgLinerAdjust,/SETUP/RF/cfgSRFLinerAdjust</addParamMap>
+	<addParamMap type="method">cfgStableTimeout,/SETUP/Recipe/cfgSRFStableTimeout</addParamMap>
+	<addParamMap type="method">RFDelayTime,/SETUP/Recipe/cfgSRFDelayTime</addParamMap>
+	<addParamMap type="method">cfgStableThreadhold,/SETUP/Recipe/cfgSRFStableThreadhold</addParamMap>
+	
+	<!--addParamMap type="method">GenTuneMode,SRFGenTuneMode</addParamMap-->
+	<addParamMap type="method">StartFreq,SRFStartFreq(KHz)</addParamMap>
+	<addParamMap type="method">TuningMinFreq,SRFTuningMinFreq(KHz)</addParamMap>
+	<addParamMap type="method">TuningMaxFreq,SRFTuningMaxFreq(KHz)</addParamMap>
+	<!--addParamMap type="method">TuningTimeSpan,SRFTuningTimeSpan</addParamMap-->
+	<addParamMap type="method">cfgSRFTuningGain,/SETUP/RF/cfgSRFTuningGain</addParamMap>
+	<addParamMap type="method">RelativeGain,SRFTuningRelGain</addParamMap>
+	<addParamMap type="method">cfgSRFTuningModDeviation,/SETUP/RF/cfgSRFTuningModDeviation</addParamMap>
+	<addParamMap type="method">RelModDeviation,SRFTuningRelModDeviation</addParamMap>
+    <addParamMap type="method">SRFReflectedTuneFactor,SRFReflectedTuneFactor</addParamMap>
+    <addParamMap type="method">cfgSRFReflectedTuneLimit,/SETUP/RF/cfgSRFReflectedTuneLimit</addParamMap>
+	<addParamMap type="method">cfgLFPowerOnHoldDelay,/SETUP/RF/cfgLFPowerOnHoldDelay</addParamMap>
+	
+	<addSDOExcute type="method">SRF_Rcp,/Control/PMCExports/InnerDatas/SRFRecipeSDOWriteBusyDI,/Control/PMCExports/Datas/SRFSDOWriteExecuteDO</addSDOExcute>
+	<addSDOExcute type="method">SRF_Setup,/Control/PMCExports/InnerDatas/SRFSetupSDOWriteBusyDI,/Control/PMCExports/InnerDatas/SRFSetupSDOWriteExecuteDO</addSDOExcute>
+	<SRCGenerator class="HuttingerGenerator" type="instance" alias="">
+		<setOnOffSetpoint type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setOnOffSetpoint>
+		<setPowerSetpoint type="method">/Control/PMCExports/Datas/SRFSetpointAO</setPowerSetpoint>
+		<setModeSetpoint type="method">/Control/PMCExports/Datas/SRFFWRLoadPWRDO</setModeSetpoint>
+		<setForwardPowerSensor type="method">/Control/PMCExports/Datas/SRFFWDLPWRAI</setForwardPowerSensor>		
+		<setReflectPowerSensor type="method">/Control/PMCExports/Datas/SRFReflectPWRAI</setReflectPowerSensor>	
+		<setStatusCondition type="method">(/Control/PMCExports/InnerDatas/SRFOverheatDI==0)</setStatusCondition>
+		<setOnInterlocks type="method">./OpenInterlocks</setOnInterlocks>
+		<setOffInterlocks type="method">./CloseInterlocks</setOffInterlocks>	
+		<setForwardPowerCh type="method">/Control/PMCExports/Datas/SRF_ForwardPower</setForwardPowerCh>		
+		<setFilePath type="method">PreservedValue</setFilePath>		
+		
+		<setContrlMode type="method">/Control/PMCExports/InnerDatas/SRF_ControlModeSP</setContrlMode>
+		<setReset type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setReset>
+		<setFreqModeWCh type="method">/Control/PMCExports/Datas/SRFFrequencyMode</setFreqModeWCh>
+		<setStartFreqWCh type="method">/Control/PMCExports/Datas/SRFTuningStartOffsetAO</setStartFreqWCh>
+		<setTuningMinFreqWCh type="method">/Control/PMCExports/Datas/SRFMinTuningOffsetAO</setTuningMinFreqWCh>
+		<setTuningMaxFreqWCh type="method">/Control/PMCExports/Datas/SRFMaxTuningOffsetAO</setTuningMaxFreqWCh>
+		<setTuningTimeSpanWCh type="method">/Control/PMCExports/Datas/SRFTuningModulationPeriod</setTuningTimeSpanWCh>
+		<setGainWCh type="method">/Control/PMCExports/Datas/SRFTuningGain</setGainWCh>
+		<setRelativeGainWCh type="method">/Control/PMCExports/Datas/SRFTuningRelGain</setRelativeGainWCh>
+		<setModDeviationWCh type="method">/Control/PMCExports/Datas/SRFTuningModulationDeviation</setModDeviationWCh>
+		<setRelModDeviationWCh type="method">/Control/PMCExports/Datas/SRFTuningRelModDeviation</setRelModDeviationWCh>
+		<setClockOffsetMode type="method">/Control/PMCExports/InnerDatas/SRFClockOffsetModeDO</setClockOffsetMode>
+		&SRFInterlock;
+		&SetSimulated;
+	</SRCGenerator>	
+	
+	<SRCMatch class="PhyNMCMatch" type="instance" alias="">
+		<setManualAutoWCh type="method">/Control/PMCExports/Datas/SRF_OperateModeSP</setManualAutoWCh>
+		<setManualAutoRCh type="method">/Control/PMCExports/Datas/SRF_OperateMode</setManualAutoRCh>
+		<setLocalRemoteWCh type="method">/Control/PMCExports/Datas/SRF_RunModeSP</setLocalRemoteWCh>
+		<setLocalRemoteRCh type="method">/Control/PMCExports/Datas/SRF_RunMode</setLocalRemoteRCh>
+		<addCapPositionWCh type="method">1,/Control/PMCExports/Datas/SRFC1SP</addCapPositionWCh>
+		<addCapPositionWCh type="method">2,/Control/PMCExports/Datas/SRFC2SP</addCapPositionWCh>	
+		<addCapPositionWCh type="method">5,/Control/PMCExports/Datas/SRFC5SP</addCapPositionWCh>
+		<addCapPositionRCh type="method">1,/Control/PMCExports/Datas/SRFC1</addCapPositionRCh>
+		<addCapPositionRCh type="method">2,/Control/PMCExports/Datas/SRFC2</addCapPositionRCh>
+		<addCapPositionRCh type="method">5,/Control/PMCExports/Datas/SRFC5</addCapPositionRCh>	
+        <setPresetEnableWCh type="method">/Control/PMCExports/Datas/SRFPresetModeSP</setPresetEnableWCh>
+        <addPresetCapPosWCh type="method">1,/Control/PMCExports/Datas/SRFPresetC1SP</addPresetCapPosWCh>
+        <addPresetCapPosWCh type="method">2,/Control/PMCExports/Datas/SRFPresetC2SP</addPresetCapPosWCh>	
+        <addPresetCapPosWCh type="method">5,/Control/PMCExports/Datas/SRFC5SP</addPresetCapPosWCh>
+        <setCurrRatioWCh type="method">/Control/PMCExports/Datas/SetCurrRatio</setCurrRatioWCh>
+		<setCurrRatioRCh type="method">/Control/PMCExports/Datas/CurrentRatio</setCurrRatioRCh>
+		<setCurrModeWCh type="method">/Control/PMCExports/Datas/SMatch_SetC3C4Mode</setCurrModeWCh>
+		<setCurrModeRCh type="method">/Control/PMCExports/Datas/SMatch_ReadC3C4Mode</setCurrModeRCh>
+		<setStoreCh type="method">/Control/PMCExports/Datas/SRF_Store</setStoreCh>	
+		<setRecallCh type="method">/Control/PMCExports/Datas/SRF_Recall</setRecallCh>	
+		<setDelayTimeWCh type="method">/Control/PMCExports/InnerDatas/SMatch_SetRFOnDelayTime</setDelayTimeWCh>	
+		<setFaultResetWCh type="method">/Control/PMCExports/InnerDatas/SMatch_ErrorResetDO</setFaultResetWCh>
+		<setStopGammaWCh type="method">/Control/PMCExports/InnerDatas/SMatch_SetCWTargetGamma</setStopGammaWCh>
+		<setRestartGammaWCh type="method">/Control/PMCExports/InnerDatas/SMatch_SetCWRetuneGamma</setRestartGammaWCh>
+	    <setFlagBoschWCh type="method">/Control/PMCExports/InnerDatas/SMatch_FlagBoschSetpointDO</setFlagBoschWCh>
+		<setStatusCondition type="method">((/Control/PMCExports/Datas/CoilEnclosureSWDI==1)&amp;&amp;(/Control/PMCExports/Datas/HeRFCoverSWDI==1)&amp;&amp;(/Control/PMCExports/Datas/SMatchConSW1DI==1))</setStatusCondition>		
+		<setC1C2Value type="method">250-500-750,250-500-750</setC1C2Value>
+		<setCurrentRatioTol type="method">/SETUP/RF/cfgSRFMatchCurrRatioStableThreshold</setCurrentRatioTol>
+				
+		&SetSimulated;
+	</SRCMatch>
+	
+</SRF>
+
+<LF class="LFSource" type="instance" alias="">
+	<setGenerator type="method">./LFGenerator</setGenerator>
+	<setMatch type="method">./LFMatch</setMatch>
+	<setListHead type="method">/Control/Functional/PM/LF</setListHead>
+	<addParamMap type="method">C1Preset,LFC1Preset</addParamMap>
+	<addParamMap type="method">C2Preset,LFC2Preset</addParamMap>
+	<addParamMap type="method">MatchTuneMode,LFMatchTuneMode</addParamMap>
+	<addParamMap type="method">PulseSwitch,LFWaveMode</addParamMap>
+	<addParamMap type="method">RFRefl(W),LFMaxReflectedPower(W)</addParamMap>
+	<addParamMap type="method">RFPower(W),LFPower(W)</addParamMap>
+	<addParamMap type="method">Frequency,LFFrequency(Hz)</addParamMap>
+	<addParamMap type="method">Duty,LFDutyCycle</addParamMap>
+	<addParamMap type="method">Ramp,LFRamp</addParamMap>
+	<addParamMap type="method">RampTime,LFRampTime</addParamMap>
+	<addParamMap type="method">CloseRFBetweenStep,CloseLFBetweenStep</addParamMap>
+	<addParamMap type="method">FrequencyTuneMode,LFFrequencyTuneMode</addParamMap>
+	<addParamMap type="method">FreqTuneCap,LFFreqTuneCap</addParamMap>
+	<addParamMap type="method">cfgRunMode,/SETUP/RF/cfgLFRunMode</addParamMap>
+	<addParamMap type="method">cfgRampEnable,/SETUP/Recipe/cfgLFRampEnable</addParamMap>
+	<addParamMap type="method">cfgRampTime,/SETUP/Recipe/cfgLFRampTime</addParamMap>
+	<addParamMap type="method">cfgLinerAdjust,/SETUP/RF/cfgLFLinerAdjust</addParamMap>
+
+	<addSDOExcute type="method">LF_Rcp,/Control/PMCExports/InnerDatas/LF_RecipeSDOWriteBusyDI,/Control/PMCExports/InnerDatas/LF_RecipeSDOWriteExecuteDO</addSDOExcute>
+	<addSDOExcute type="method">LF_Setup,/Control/PMCExports/InnerDatas/LF_SetupSDOWriteBusyDI,/Control/PMCExports/InnerDatas/LF_SetupSDOWriteExecuteDO</addSDOExcute>
+			
+	<LFGenerator class="LFGenerator" type="instance" alias="">
+		<setOnOffSetpoint type="method">/Control/PMCExports/Datas/LFPowerOnDO</setOnOffSetpoint>
+		<setPowerSetpoint type="method">/Control/PMCExports/Datas/LFSetpointAO</setPowerSetpoint>
+		<setModeSetpoint type="method">/Control/PMCExports/Datas/LFFWRLoadPWRDO</setModeSetpoint>
+		<setForwardPowerSensor type="method">/Control/PMCExports/Datas/LFFWDLPWRAI</setForwardPowerSensor>		
+		<setReflectPowerSensor type="method">/Control/PMCExports/Datas/LFReflectPWRAI</setReflectPowerSensor>
+		<!--setStatusCondition type="method">(/Control/PMCExports/InnerDatas/LF_OverTempErrorDI==0)</setStatusCondition-->		
+		<setOnInterlocks type="method">./OpenInterlocks</setOnInterlocks>
+		<setOffInterlocks type="method">./CloseInterlocks</setOffInterlocks>
+		<setForwardPowerCh type="method">/Control/PMCExports/Datas/LF_ForwardPower</setForwardPowerCh>
+		<setDutySetpoint type="method">/Control/PMCExports/Datas/LFPulseDutyAO</setDutySetpoint>
+		<setDutySensor type="method">/Control/PMCExports/Datas/LFPulseDutyAI</setDutySensor>
+		<setFrequencySetpoint type="method">/Control/PMCExports/Datas/LFPulseFreqAO</setFrequencySetpoint>
+		<setFrequencySensor type="method">/Control/PMCExports/Datas/LFPulseFreqAI</setFrequencySensor>
+		<setPulseEnableSetpoint type="method">/Control/PMCExports/InnerDatas/LF_PulsingOnDO</setPulseEnableSetpoint>
+		<setFreqTuneModeSetpoint type="method">/Control/PMCExports/InnerDatas/LF_FrequencyModeDO</setFreqTuneModeSetpoint>
+		<setMaxSetPowerLimit type="method">/SETUP/PreservedValue/LFMaxSetPowerLimit</setMaxSetPowerLimit>
+		<setFilePath type="method">PreservedValue</setFilePath>		
+		&LFInterlock;
+		&SetSimulated;
+	</LFGenerator>
+	
+	<LFMatch class="LFAutoMatch" type="instance" alias="">		
+		<setManualAutoWCh type="method">/Control/PMCExports/Datas/LF_OperateModeSP</setManualAutoWCh>
+		<setManualAutoRCh type="method">/Control/PMCExports/Datas/LF_OperateMode</setManualAutoRCh>
+		<setLocalRemoteWCh type="method">/Control/PMCExports/InnerDatas/LF_LocalRemoteSP</setLocalRemoteWCh>
+		<setLocalRemoteRCh type="method">/Control/PMCExports/Datas/LF_RunMode</setLocalRemoteRCh>
+		<addCapPositionWCh type="method">1,/Control/PMCExports/Datas/LFC1SP</addCapPositionWCh>
+		<addCapPositionWCh type="method">2,/Control/PMCExports/Datas/LFC2SP</addCapPositionWCh>
+	    <addPresetCapPosWCh type="method">1,/Control/PMCExports/Datas/LFPresetC1SP</addPresetCapPosWCh>
+	    <addPresetCapPosWCh type="method">2,/Control/PMCExports/Datas/LFPresetC2SP</addPresetCapPosWCh>
+		<addCapPositionRCh type="method">1,/Control/PMCExports/Datas/LFC1</addCapPositionRCh>
+		<addCapPositionRCh type="method">2,/Control/PMCExports/Datas/LFC2</addCapPositionRCh>	
+		<setStoreCh type="method">/Control/PMCExports/Datas/LF_Store</setStoreCh>	
+		<setRecallCh type="method">/Control/PMCExports/Datas/LF_Recall</setRecallCh>	
+		<setDelayTimeWCh type="method">/Control/PMCExports/InnerDatas/LF_SetDelayTime</setDelayTimeWCh>	
+		<setFaultResetWCh type="method">/Control/PMCExports/InnerDatas/LF_FaultReset</setFaultResetWCh>
+		
+		<setPresetModeCh type="method">/Control/PMCExports/Datas/LF_PresetModeSP</setPresetModeCh>
+		<setPulseModeCh type="method">/Control/PMCExports/InnerDatas/LF_PulseModeSP</setPulseModeCh>
+		
+		<setC1C2Value type="method">250-500-750,250-500-750</setC1C2Value>
+		<setIfNeedCompareCapPosition type="method">false</setIfNeedCompareCapPosition>
+		&SetSimulated;
+	</LFMatch>
+	
+</LF>

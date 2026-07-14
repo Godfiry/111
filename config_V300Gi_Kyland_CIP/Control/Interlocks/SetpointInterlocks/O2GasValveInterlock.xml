@@ -1,0 +1,74 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open the secondary valve</setAlarmMessage>
+	<addToIOInterlocks type="method">./DryPumpAlarm</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxDoor1NotClosed</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxPressAbnormal</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxCDAAbnormal</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GaslinePressureAbove500T</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./CustomerIntlkInvoked</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./CustomerGasDetectFailed</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./ChamberPressureAbove500mT</addToIOInterlocks-->
+	<!--addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./H2PrimaryValveIntlkInvoked</addToIOInterlocks>
+	<addToIOInterlocks type="method">./H2SecondaryValveIntlkInvoked</addToIOInterlocks>
+
+	<DryPumpAlarm type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">232</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DryPumpAlarm>
+	
+	<GasBoxDoor1NotClosed type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">263</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/GasBoxDoorSW2DI==1))</setConditionStr>
+	</GasBoxDoor1NotClosed>	
+	
+	<GasBoxPressAbnormal type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">244</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI==1)</setConditionStr>
+	</GasBoxPressAbnormal>
+
+	<GasBoxCDAAbnormal type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">245</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</GasBoxCDAAbnormal>	
+	
+	<GaslinePressureAbove500T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">313</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure1SWDI==1)</setConditionStr>
+	</GaslinePressureAbove500T>
+	
+	<CustomerIntlkInvoked type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">240</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerIntlkDI==1)</setConditionStr>
+	</CustomerIntlkInvoked>	
+	
+	<CustomerGasDetectFailed type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">241</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==1)</setConditionStr>
+	</CustomerGasDetectFailed>		
+	<ChamberPressureAbove500mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">314</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/ChamberPressureSW1DI==1)</setConditionStr>
+	</ChamberPressureAbove500mT>
+	<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">315</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+	</ChamberPressureAbove75T>
+
+	<H2PrimaryValveIntlkInvoked type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">403</setMessageID>
+		<setConditionStr type="method">(((/SETUP/GasConfig/cfgH2O2Forbid==1))||(/Control/PMCExports/InnerDatas/GasPrimaryValve111DI==0))</setConditionStr>
+	</H2PrimaryValveIntlkInvoked>
+
+	<H2SecondaryValveIntlkInvoked type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">404</setMessageID>
+		<setConditionStr type="method">(((/SETUP/GasConfig/cfgH2O2Forbid==1))||(/Control/PMCExports/InnerDatas/GasSecondValve112DI==0))</setConditionStr>
+	</H2SecondaryValveIntlkInvoked>
+
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

@@ -1,0 +1,456 @@
+<addCheckItem type="method">./ProcessPressure</addCheckItem>	
+<addCheckItem type="method">./Gas1</addCheckItem>	
+<addCheckItem type="method">./Gas2</addCheckItem>	
+<addCheckItem type="method">./Gas3</addCheckItem>	
+<addCheckItem type="method">./Gas4</addCheckItem>	
+<addCheckItem type="method">./Gas5</addCheckItem>	
+<addCheckItem type="method">./Gas6</addCheckItem>	
+<addCheckItem type="method">./Gas7</addCheckItem>	
+<addCheckItem type="method">./Gas8</addCheckItem>
+<addCheckItem type="method">./Gas9</addCheckItem>
+<addCheckItem type="method">./Gas10</addCheckItem>
+<addCheckItem type="method">./Gas11</addCheckItem>
+<addCheckItem type="method">./Gas12</addCheckItem>
+<addCheckItem type="method">./Gas13</addCheckItem>
+<addCheckItem type="method">./Gas14</addCheckItem>
+<addCheckItem type="method">./Gas15</addCheckItem>
+<addCheckItem type="method">./Gas16</addCheckItem>	
+<addCheckItem type="method">./Gas17</addCheckItem>
+<addCheckItem type="method">./Gas18</addCheckItem>
+
+<ProcessPressure type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">Pressure(mT)</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/Vacuum/cfgPressureToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">ProcessPressure exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">53</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/ProcessPressure</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgPressureSoftTol</setTolerance>		
+	<setZeroTolerance type="method">1</setZeroTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/Vacuum/cfgPressureSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/Vacuum/cfgPressureToleranceCheckDelay</setCheckDelaySCh>			
+		<!--setAlarmMessage type="method">ProcessPressure exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">54</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/InnerDatas/ProcessGaugePressure</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgPressureHardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/Vacuum/cfgPressureHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</ProcessPressure>	
+
+<Gas1 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas1Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas1 flow exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">55</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas1AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas1SoftTol</setTolerance>		
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas1 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">56</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas1AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas1HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas1>	
+
+<Gas2 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas2Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas2 flow exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">57</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas2AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas2SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas2 flow exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">58</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas2AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas2HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas2>	
+
+<Gas3 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas3Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas3 flow exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">59</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas3AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas3SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas3 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">60</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas3AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas3HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas3>	
+
+<Gas4 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas4Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas4 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">61</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas4AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas4SoftTol</setTolerance>		
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas4 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">62</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas4AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas4HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas4>
+
+<Gas5 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas5Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas5 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">63</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas5AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas5SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas5 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">64</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas5AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas5HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas5>
+
+<Gas6 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas6Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas6 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">65</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas6AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas6SoftTol</setTolerance>
+	<setZeroTolerance type="method">1</setZeroTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas6 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">66</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas6AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas6HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas6>
+
+<Gas7 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas7Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas7 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">67</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas7AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas7SoftTol</setTolerance>		
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas7 flow exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">68</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas7AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas7HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas7>
+
+<Gas8 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas8Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas8 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">69</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas8AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas8SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas8 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">70</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas8AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas8HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas8>
+
+<Gas9 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas9Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas9 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">71</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas9AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas9SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas9 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">72</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas9AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas9HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas9>
+
+<Gas10 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas10Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas10 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">73</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas10AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas10SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas10 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">74</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas10AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas10HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas10>
+
+<Gas11 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas11Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas11 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">75</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas11AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas11SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas11 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">76</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas11AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas11HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas11>
+
+<Gas12 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas12Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas12 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">77</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas12AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas12SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas12 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">78</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas12AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas12HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas12>
+
+<Gas13 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas13Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas13 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">79</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas13AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas13SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas13 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">80</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas13AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas13HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas13>
+
+<Gas14 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas14Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas14 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">81</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas14AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas14SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas14 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">82</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas14AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas14HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas14>
+
+<Gas15 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas15Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas15 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">83</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas15AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas15SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas15 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">84</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas15AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas15HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas15>
+
+<Gas16 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas16Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas12 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">85</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas16AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas16SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas12 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">86</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas16AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas16HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas16>
+
+<Gas17 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas17Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas15 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">160</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas17AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas17SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas15 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">161</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas17AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas17HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas17>
+
+<Gas18 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">&Gas18Name;</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">Gas12 flow exceeded soft tolerance</setAlarmMessage-->	
+	<setAlarmMessageID type="method">162</setAlarmMessageID>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas18AT</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgGas18SoftTol</setTolerance>	
+	<setZeroTolerance type="method">1</setZeroTolerance>	
+	<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/GasConfig/cfgGasToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">Gas12 flow exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">163</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/Gas18AT</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgGas18HardTol</setTolerance>
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/GasConfig/cfgGasHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</Gas18>

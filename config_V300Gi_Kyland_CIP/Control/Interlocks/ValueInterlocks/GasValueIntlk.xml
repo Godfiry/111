@@ -1,0 +1,160 @@
+&NeedResetValueIntlk;
+
+<addCheckItem type="method">./GasBoxDoor1Open</addCheckItem>
+<addCheckItem type="method">./CustomerGasDetectFail</addCheckItem>
+<addCheckItem type="method">./CustomerIntlkInvoked</addCheckItem>
+<addCheckItem type="method">./GasBoxPressDiffl</addCheckItem>
+<!--addCheckItem type="method">./Gasline500TorrSWDI</addCheckItem-->
+
+<!--addCheckItem type="method">./PLCHeartBeatsLoss</addCheckItem-->   <!-- 心跳信号逻辑-->
+<addCheckItem type="method">./H2DetectorAlarm1</addCheckItem>
+<addCheckItem type="method">./H2DetectorAlarm2</addCheckItem>
+<addCheckItem type="method">./H2DetectorFaultDI</addCheckItem>
+
+<GasBoxDoor1Open type="instance" class="CheckItem">
+	<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI==0)||(/Control/PMCExports/InnerDatas/GasBoxDoorSW2DI==0))</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessageID type="method">8</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseV1389;
+		&CloseV24;
+		&CloseFinalV5;
+		&CloseAllFPVlv;
+		&CloseAllPriSec;
+		&CloseAllPur;		
+	</Action>		
+</GasBoxDoor1Open>
+
+<CustomerGasDetectFail type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessageID type="method">10</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseV1389;
+		&CloseV24;
+		&CloseFinalV5;
+	<!--&CloseAllFPVlv;-->
+		&CloseAllPriSec;
+		&CloseAllPur;		
+	</Action>		
+</CustomerGasDetectFail>	
+
+
+<CustomerIntlkInvoked type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/CustomerIntlkDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessageID type="method">11</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseV1389;
+		&CloseV24;
+		&CloseFinalV5;
+		&CloseAllPriSec;
+		&CloseAllPur;		
+	</Action>		
+</CustomerIntlkInvoked>	
+
+<GasBoxPressDiffl type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessageID type="method">12</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseV1389;
+		&CloseV24;
+		&CloseFinalV5;
+	<!--&CloseAllFPVlv;-->
+		&CloseAllPriSec;
+		&CloseAllPur;
+	</Action>		
+</GasBoxPressDiffl>	
+
+<PLCHeartBeatsLoss type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/PLCHeartBeatsDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">PLCHeartBeats is loss</setAlarmMessage-->
+	<setAlarmMessageID type="method">1291</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseAllPriSec;
+		&RFPowerOff;		
+	</Action>		
+</PLCHeartBeatsLoss>	
+
+<Gasline500TorrSWDI type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/GaslinePressure1SWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessageID type="method">146</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseAllPriSec;		
+	</Action>		
+</Gasline500TorrSWDI>	
+
+<H2DetectorAlarm1 type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/H2DetectorAlarm1DI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">H2 Detector has alarm1</setAlarmMessage-->
+	<setAlarmMessageID type="method">1308</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseAllPriSec;
+		<addActuator type="method">./Reset</addActuator>	
+		<Reset type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/DnetReset</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</Reset>		
+	</Action>		
+</H2DetectorAlarm1>	
+
+<H2DetectorAlarm2 type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/H2DetectorAlarm2DI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">H2 Detector has alarm2</setAlarmMessage-->
+	<setAlarmMessageID type="method">1309</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseAllPriSec;
+		<addActuator type="method">./Reset</addActuator>	
+		<Reset type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/DnetReset</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</Reset>		
+	</Action>		
+</H2DetectorAlarm2>	
+
+<H2DetectorFaultDI type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/H2DetectorFaultDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">H2 Detector has FAULT</setAlarmMessage-->
+	<setAlarmMessageID type="method">1310</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&CloseAllPriSec;	
+		<addActuator type="method">./Reset</addActuator>	
+		<Reset type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/DnetReset</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</Reset>	
+	</Action>		
+</H2DetectorFaultDI>	

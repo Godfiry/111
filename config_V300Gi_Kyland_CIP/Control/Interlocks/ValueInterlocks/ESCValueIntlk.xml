@@ -1,0 +1,75 @@
+<addCheckItem type="method">./ChillerFault</addCheckItem>	
+<addCheckItem type="method">./ChillerWarning</addCheckItem>	
+<addCheckItem type="method">./ChillerStop</addCheckItem>
+<addCheckItem type="method">./ChillerLocal</addCheckItem>	
+<addCheckItem type="method">./ChillerFlow</addCheckItem>	
+<addCheckItem type="method">./ChillerLeak</addCheckItem>
+
+<ChillerFault type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerAlarm==1)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller has Alarm</setAlarmMessage-->	
+	<setAlarmMessageID type="method">4</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>
+</ChillerFault>	
+
+<ChillerWarning type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerWarning==1)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller has Warning</setAlarmMessage-->	
+	<setAlarmMessageID type="method">5</setAlarmMessageID>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+</ChillerWarning>	
+
+<ChillerStop type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerRunStatusAT==0)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller is OffLine</setAlarmMessage-->
+	<setAlarmMessageID type="method">113</setAlarmMessageID>	
+	<setDurativeTimeS type="method">3</setDurativeTimeS>
+</ChillerStop>
+
+<ChillerLocal type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerRemote==0)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller is Local</setAlarmMessage-->
+	<setAlarmMessageID type="method">114</setAlarmMessageID>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+</ChillerLocal>
+
+<ChillerFlow type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerFlowSWDI==0)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">ChillerFlow is Abnormal</setAlarmMessage-->
+	<setAlarmMessageID type="method">1400</setAlarmMessageID>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+	<addAction type="method">./Action</addAction>
+    
+    <Action type="instance" class="DefaultGuadAction">
+        <!--addActuator type="method">./ResetWarning</addActuator-->
+        <addActuator type="method">./ChillerStop</addActuator>
+        <!--addActuator type="method">./ResetAlarm</addActuator-->
+
+        <ChillerStop type="instance" class="Actuator">
+            <setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChillerStatusSP</setActuatorCh>
+            <setActiveHigh type="method">false</setActiveHigh>
+        </ChillerStop>  
+    </Action>
+</ChillerFlow>
+
+<ChillerLeak type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerLeakDI==0)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller leak</setAlarmMessage-->
+	<setAlarmMessageID type="method">1401</setAlarmMessageID>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>
+   	<addAction type="method">./Action</addAction>
+    
+    	<Action type="instance" class="DefaultGuadAction">
+        <!--addActuator type="method">./ResetWarning</addActuator-->
+        <addActuator type="method">./ChillerStop</addActuator>
+        <!--addActuator type="method">./ResetAlarm</addActuator-->
+
+        <ChillerStop type="instance" class="Actuator">
+            <setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChillerStatusSP</setActuatorCh>
+            <setActiveHigh type="method">false</setActiveHigh>
+        </ChillerStop>  
+    </Action>	
+</ChillerLeak>
+
+

@@ -1,0 +1,385 @@
+<addCheckItem type="method">./ProcessOnTimeOut</addCheckItem>
+<addCheckItem type="method">./SRFOverHeat</addCheckItem>	
+
+<addCheckItem type="method">./LFOverHeat</addCheckItem>
+<addCheckItem type="method">./CoilEnclosureOpen</addCheckItem>	
+<addCheckItem type="method">./HeRFCoverOpen</addCheckItem>	
+<addCheckItem type="method">./SMatchNotCon</addCheckItem>
+<addCheckItem type="method">./SMatch2NotCon</addCheckItem>
+
+<addCheckItem type="method">./LMatchNotCon</addCheckItem>
+
+<addCheckItem type="method">./SRFNeedResetAlarm</addCheckItem>
+<addCheckItem type="method">./SRFNeedResetwarning</addCheckItem>
+<addCheckItem type="method">./SRFTemperatureOverHeat</addCheckItem>
+<addCheckItem type="method">./SRFInterLockOpen</addCheckItem>
+<addCheckItem type="method">./SRFECatState</addCheckItem>
+
+<addCheckItem type="method">./LFNeedResetAlarm</addCheckItem>
+<addCheckItem type="method">./LFNeedResetwarning</addCheckItem>
+<addCheckItem type="method">./LFTemperatureOverHeat</addCheckItem>
+<addCheckItem type="method">./LFInterLockOpen</addCheckItem>
+<addCheckItem type="method">./LFECatState</addCheckItem>
+
+<ProcessOnTimeOut type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ProcessTheRecipeFlag==1)</setTriggerCondition>			
+	<setDurativeTimeSCh type="method">/Control/PMCExports/InnerDatas/MaxProcessTime</setDurativeTimeSCh>
+	<!--setAlarmMessage type="method">Process on more than the maximum process time</setAlarmMessage-->
+	<setAlarmMessageID type="method">140</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&RFPowerOff;
+		<addActuator type="method">./ProcessTheRecipeOff</addActuator>
+		
+		<ProcessTheRecipeOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ProcessTheRecipeFlag</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</ProcessTheRecipeOff>	
+				
+	</Action>		
+</ProcessOnTimeOut>
+
+<SRFOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRFOverheatDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SRF is over heat</setAlarmMessage-->	
+	<setAlarmMessageID type="method">13</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		<addActuator type="method">./LFPowerOff</addActuator>
+		
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff>
+	</Action>		
+</SRFOverHeat>
+
+<LFOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LFOverheatDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">LF is over heat</setAlarmMessage-->	
+	<setAlarmMessageID type="method">16</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./LFPowerOff</addActuator>
+		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff>		
+	</Action>	
+</LFOverHeat>	
+
+<CoilEnclosureOpen type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/CoilEnclosureSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">CoilEnclosure is Open</setAlarmMessage-->	
+	<setAlarmMessageID type="method">20</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		&RFPowerOff;	
+		&CloseFinal;	
+	</Action>		
+</CoilEnclosureOpen>	
+
+<HeRFCoverOpen type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/HeRFCoverSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">HeRFCover is Open</setAlarmMessage-->	
+	<setAlarmMessageID type="method">21</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<!--addAction type="method">./Action</addAction-->
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./LFPowerOff</addActuator>
+		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff-->
+		&RFPowerOff;
+		&DisESCHVandNoPinUp;	
+	</Action>	
+</HeRFCoverOpen>
+
+<SMatchNotCon type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/SMatchConSW1DI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SMatch is Not Connect</setAlarmMessage-->	
+	<setAlarmMessageID type="method">22</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>				
+	</Action>	
+</SMatchNotCon>
+
+<SMatch2NotCon type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SMatchConSW2DI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SMatch is Not Connect</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1404</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>			
+	</Action>	
+</SMatch2NotCon>
+
+<LMatchNotCon type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LMatchConSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">LMatch is Not Connect</setAlarmMessage-->	
+	<setAlarmMessageID type="method">25</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./LFPowerOff</addActuator>
+		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff>	
+	</Action>
+
+</LMatchNotCon>
+
+<SRFNeedResetAlarm type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRFErrorStatusDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SRFCenter Generator has Alarm. Try to auto reset</setAlarmMessage-->	
+	<setAlarmMessageID type="method">160</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./ResetWarning</addActuator-->
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		<addActuator type="method">./ResetAlarm</addActuator>
+
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>	
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>
+	</Action>	
+</SRFNeedResetAlarm>
+
+<SRFNeedResetwarning type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRFWarningStatusDI==1)</setTriggerCondition>			
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+	<!--setAlarmMessage type="method">SRFCenter Generator has warning. Try to auto reset</setAlarmMessage-->	
+	<setAlarmMessageID type="method">161</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">	
+		<addActuator type="method">./ResetAlarm</addActuator>
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>			
+	</Action>	
+</SRFNeedResetwarning>
+
+<SRFTemperatureOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRFOverheatDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SRFCenter Generator Temperature is OverHeat. Try to auto reset. </setAlarmMessage-->	
+	<setAlarmMessageID type="method">162</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./ResetAlarm</addActuator>
+	
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>
+	</Action>	
+</SRFTemperatureOverHeat>
+
+<SRFInterLockOpen type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRFInterlockDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SRFCenter Generator Temperature is OverHeat. Try to auto reset. </setAlarmMessage-->	
+	<setAlarmMessageID type="method">1402</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./ResetWarning</addActuator-->
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		<addActuator type="method">./ResetAlarm</addActuator>
+
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>	
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>
+	</Action>	
+</SRFInterLockOpen>
+
+<SRFECatState type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/SRF_ECATWcState==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">SRFCenter Generator Temperature is OverHeat. Try to auto reset. </setAlarmMessage-->	
+	<setAlarmMessageID type="method">1403</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./ResetWarning</addActuator-->
+		<addActuator type="method">./SRFPowerOff</addActuator>
+		<!--addActuator type="method">./ResetAlarm</addActuator-->
+
+		<SRFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</SRFPowerOff>	
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SRF_RFErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>
+	</Action>	
+</SRFECatState>
+
+<LFNeedResetAlarm type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LFErrorStatusDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">BRF Generator has Alarm. Try to auto reset</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1295</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./ResetWarning</addActuator-->
+		<addActuator type="method">./LFPowerOff</addActuator>
+		<addActuator type="method">./ResetAlarm</addActuator>
+		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff>	
+		
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/LF_ErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>	
+	</Action>	
+</LFNeedResetAlarm>
+
+<LFNeedResetwarning type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LFWarningStatusDI==1)</setTriggerCondition>			
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+	<!--setAlarmMessage type="method">BRF Generator has warning. Try to auto reset</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1296</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./ResetAlarm</addActuator>
+					
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/LF_ErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>			
+	</Action>	
+</LFNeedResetwarning>
+
+<LFTemperatureOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LFOverheatDI==1)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">BRF Generator Temperature is OverHeat. Try to auto reset. </setAlarmMessage-->	
+	<setAlarmMessageID type="method">1297</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<!--addActuator type="method">./ResetWarning</addActuator-->
+		<addActuator type="method">./LFPowerOff</addActuator>
+		<addActuator type="method">./ResetAlarm</addActuator>
+		
+		<LFPowerOff type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</LFPowerOff>
+		
+		<ResetAlarm type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/LF_ErrorResetDO</setActuatorCh>
+			<setActiveHigh type="method">true</setActiveHigh>
+		</ResetAlarm>	
+			
+	</Action>	
+</LFTemperatureOverHeat>
+
+<LFInterLockOpen type="instance" class="CheckItem">
+    <setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LFInterlockDI==1)</setTriggerCondition>           
+    <setAlarmMessageID type="method">1405</setAlarmMessageID>   
+    <setAlarmSeverity type="method">1</setAlarmSeverity>
+    <addAction type="method">./Action</addAction>
+    
+    <Action type="instance" class="DefaultGuadAction">
+        <addActuator type="method">./LFPowerOff</addActuator>
+        <addActuator type="method">./ResetAlarm</addActuator>
+		
+        <LFPowerOff type="instance" class="Actuator">
+            <setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+            <setActiveHigh type="method">false</setActiveHigh>
+        </LFPowerOff>  
+        <ResetAlarm type="instance" class="Actuator">
+            <setActuatorCh type="method">/Control/PMCExports/InnerDatas/LF_ErrorResetDO</setActuatorCh>
+            <setActiveHigh type="method">true</setActiveHigh>
+        </ResetAlarm>
+    </Action>   
+</LFInterLockOpen>
+
+<LFECatState type="instance" class="CheckItem">
+    <setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/LF_ECATWcState==1)</setTriggerCondition>         
+    <setAlarmMessageID type="method">1406</setAlarmMessageID>   
+    <setAlarmSeverity type="method">1</setAlarmSeverity>
+    <addAction type="method">./Action</addAction>
+    
+    <Action type="instance" class="DefaultGuadAction">
+        <addActuator type="method">./LFPowerOff</addActuator>
+
+        <LFPowerOff type="instance" class="Actuator">
+            <setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+            <setActiveHigh type="method">false</setActiveHigh>
+        </LFPowerOff>
+    </Action>   
+</LFECatState>

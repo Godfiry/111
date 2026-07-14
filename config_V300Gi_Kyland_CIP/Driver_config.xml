@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE IAP [
+<!ENTITY SetSimulated SYSTEM "./VariableSettings/Simulated/SetSimulated.xml">
+<!ENTITY SetNotSimulated SYSTEM "./VariableSettings/Simulated/SetNotSimulated.xml">
+
+<!ENTITY Gas1Simulated SYSTEM "./VariableSettings/GasSimulated/Gas1Simulated.xml">
+<!ENTITY Gas2Simulated SYSTEM "./VariableSettings/GasSimulated/Gas2Simulated.xml">
+<!ENTITY Gas3Simulated SYSTEM "./VariableSettings/GasSimulated/Gas3Simulated.xml">
+<!ENTITY Gas4Simulated SYSTEM "./VariableSettings/GasSimulated/Gas4Simulated.xml">
+<!ENTITY Gas5Simulated SYSTEM "./VariableSettings/GasSimulated/Gas5Simulated.xml">
+<!ENTITY Gas6Simulated SYSTEM "./VariableSettings/GasSimulated/Gas6Simulated.xml">
+<!ENTITY Gas7Simulated SYSTEM "./VariableSettings/GasSimulated/Gas7Simulated.xml">
+<!ENTITY Gas8Simulated SYSTEM "./VariableSettings/GasSimulated/Gas8Simulated.xml">
+<!ENTITY Gas9Simulated SYSTEM "./VariableSettings/GasSimulated/Gas9Simulated.xml">
+<!ENTITY Gas10Simulated SYSTEM "./VariableSettings/GasSimulated/Gas10Simulated.xml">
+<!ENTITY Gas11Simulated SYSTEM "./VariableSettings/GasSimulated/Gas11Simulated.xml">
+<!ENTITY Gas12Simulated SYSTEM "./VariableSettings/GasSimulated/Gas12Simulated.xml">
+<!ENTITY Gas13Simulated SYSTEM "./VariableSettings/GasSimulated/Gas13Simulated.xml">
+<!ENTITY Gas14Simulated SYSTEM "./VariableSettings/GasSimulated/Gas14Simulated.xml">
+<!ENTITY Gas15Simulated SYSTEM "./VariableSettings/GasSimulated/Gas15Simulated.xml">
+<!ENTITY Gas16Simulated SYSTEM "./VariableSettings/GasSimulated/Gas16Simulated.xml">
+<!ENTITY Gas17Simulated SYSTEM "./VariableSettings/GasSimulated/Gas17Simulated.xml">
+<!ENTITY Gas18Simulated SYSTEM "./VariableSettings/GasSimulated/Gas18Simulated.xml">
+
+<!ENTITY EPDSimulated SYSTEM "./VariableSettings/Simulated/EPDSimulated.xml">
+<!ENTITY ChillerSimulated SYSTEM "./VariableSettings/Simulated/ChillerSimulated.xml">
+<!ENTITY SrcMatchSimulated SYSTEM "./VariableSettings/Simulated/SrcMatchSimulated.xml">
+<!ENTITY LFMatchSimulated SYSTEM "./VariableSettings/Simulated/LFMatchSimulated.xml">
+<!ENTITY PLCSimulated SYSTEM "./VariableSettings/Simulated/PLCSimulated.xml">
+<!ENTITY GaugeSimulated SYSTEM "./VariableSettings/Simulated/GaugeSimulated.xml">
+<!ENTITY TempCtlF4TSimulated SYSTEM "./VariableSettings/Simulated/TempCtlF4TSimulated.xml">
+<!ENTITY TempControlSimulated SYSTEM "./VariableSettings/Simulated/TempControlSimulated.xml">
+<!ENTITY ForlineTempCtlSimulated SYSTEM "./VariableSettings/Simulated/ForlineTempCtlSimulated.xml">
+<!ENTITY GaslineTempCtlSimulated SYSTEM "./VariableSettings/Simulated/GaslineTempCtlSimulated.xml">
+<!ENTITY KylandShmSimulated SYSTEM "./VariableSettings/Simulated/KylandShmSimulated.xml">
+]>
+<Driver>
+	<Kyland type="instance" class="KylandShmDevice">
+		&KylandShmSimulated;
+		<setNodeNum type="method">1</setNodeNum>
+		<setTimeOut type="method">500</setTimeOut>
+		<setPollIntervalMS type="method">1</setPollIntervalMS>
+		<init type="method"></init>
+		<setNoChangeChannel type="method">10301</setNoChangeChannel>
+		<setNoChangeChannel type="method">10701</setNoChangeChannel>
+		<setNoChangeChannel type="method">10702</setNoChangeChannel>
+		<setNoChangeChannel type="method">10703</setNoChangeChannel>
+		<setNoChangeChannel type="method">10704</setNoChangeChannel>
+		<setNoChangeChannel type="method">10705</setNoChangeChannel>
+		<setNoChangeChannel type="method">10751</setNoChangeChannel>
+		<setNoChangeChannel type="method">10752</setNoChangeChannel>
+		<setNoChangeChannel type="method">10753</setNoChangeChannel>
+		<setNoChangeChannel type="method">10754</setNoChangeChannel>
+		<setNoChangeChannel type="method">10755</setNoChangeChannel>
+		<setNoChangeChannel type="method">10801</setNoChangeChannel>
+		<setNoChangeChannel type="method">10802</setNoChangeChannel>
+		<setNoChangeChannel type="method">10803</setNoChangeChannel>
+		<setNoChangeChannel type="method">10804</setNoChangeChannel>
+		<setNoChangeChannel type="method">10805</setNoChangeChannel>
+		<setNoChangeChannel type="method">10806</setNoChangeChannel>
+		<setNoChangeChannel type="method">10807</setNoChangeChannel>
+		<setNoChangeChannel type="method">10808</setNoChangeChannel>
+		<setNoChangeChannel type="method">10809</setNoChangeChannel>
+		<setNoChangeChannel type="method">10810</setNoChangeChannel>
+		<setNoChangeChannel type="method">10811</setNoChangeChannel>
+		<setNoChangeChannel type="method">10851</setNoChangeChannel>
+		<setNoChangeChannel type="method">10852</setNoChangeChannel>
+		<setNoChangeChannel type="method">10853</setNoChangeChannel>
+		<setNoChangeChannel type="method">10854</setNoChangeChannel>
+		<setNoChangeChannel type="method">10855</setNoChangeChannel>
+		<setNoChangeChannel type="method">10856</setNoChangeChannel>
+		<setNoChangeChannel type="method">10857</setNoChangeChannel>
+		<setNoChangeChannel type="method">11601</setNoChangeChannel>
+		<setNoChangeChannel type="method">11602</setNoChangeChannel>
+		<setNoChangeChannel type="method">11603</setNoChangeChannel>
+		<setNoChangeChannel type="method">11604</setNoChangeChannel>
+		<setNoChangeChannel type="method">11605</setNoChangeChannel>
+		<setNoChangeChannel type="method">11606</setNoChangeChannel>
+		<setNoChangeChannel type="method">11607</setNoChangeChannel>
+		<setNoChangeChannel type="method">11608</setNoChangeChannel>
+		<setNoChangeChannel type="method">11609</setNoChangeChannel>
+		<setNoChangeChannel type="method">11610</setNoChangeChannel>
+		<setNoChangeChannel type="method">11611</setNoChangeChannel>
+		<setNoChangeChannel type="method">11612</setNoChangeChannel>
+		<setNoChangeChannel type="method">11613</setNoChangeChannel>
+		<setNoChangeChannel type="method">12201</setNoChangeChannel>
+		<setNoChangeChannel type="method">12202</setNoChangeChannel>
+		<setNoChangeChannel type="method">12203</setNoChangeChannel>
+		<setNoChangeChannel type="method">12204</setNoChangeChannel>
+		<setNoChangeChannel type="method">12701</setNoChangeChannel>
+		<setNoChangeChannel type="method">12702</setNoChangeChannel>
+		<setNoChangeChannel type="method">12703</setNoChangeChannel>
+		<setNoChangeChannel type="method">13401</setNoChangeChannel>
+		<setNoChangeChannel type="method">13402</setNoChangeChannel>
+		<setNoChangeChannel type="method">13403</setNoChangeChannel>
+		<setNoChangeChannel type="method">13404</setNoChangeChannel>
+		<setNoChangeChannel type="method">14001</setNoChangeChannel>
+		<setNoChangeChannel type="method">14002</setNoChangeChannel>
+		<setNoChangeChannel type="method">14003</setNoChangeChannel>
+		<setNoChangeChannel type="method">14004</setNoChangeChannel>
+		<setNoChangeChannel type="method">14005</setNoChangeChannel>
+		<setNoChangeChannel type="method">14006</setNoChangeChannel>
+		<setNoChangeChannel type="method">14007</setNoChangeChannel>
+		<setNoChangeChannel type="method">14008</setNoChangeChannel>
+		<setNoChangeChannel type="method">14009</setNoChangeChannel>
+		<setNoChangeChannel type="method">14010</setNoChangeChannel>
+		<setNoChangeChannel type="method">14011</setNoChangeChannel>
+		<setNoChangeChannel type="method">14012</setNoChangeChannel>
+		<setNoChangeChannel type="method">14013</setNoChangeChannel>
+		<setNoChangeChannel type="method">14014</setNoChangeChannel>
+		<setNoChangeChannel type="method">14015</setNoChangeChannel>
+		<setNoChangeChannel type="method">14016</setNoChangeChannel>
+		<setNoChangeChannel type="method">14017</setNoChangeChannel>
+		<setNoChangeChannel type="method">14018</setNoChangeChannel>
+		<setNoChangeChannel type="method">14019</setNoChangeChannel>
+		<setNoChangeChannel type="method">14020</setNoChangeChannel>
+		<setNoChangeChannel type="method">14021</setNoChangeChannel>
+		<setNoChangeChannel type="method">14022</setNoChangeChannel>
+		<setNoChangeChannel type="method">14023</setNoChangeChannel>
+		<setNoChangeChannel type="method">14024</setNoChangeChannel>
+		<setNoChangeChannel type="method">14025</setNoChangeChannel>
+		<setNoChangeChannel type="method">14026</setNoChangeChannel>
+		<setNoChangeChannel type="method">14027</setNoChangeChannel>
+		<setNoChangeChannel type="method">14028</setNoChangeChannel>
+		<setNoChangeChannel type="method">14029</setNoChangeChannel>
+		<setNoChangeChannel type="method">14030</setNoChangeChannel>
+		<setNoChangeChannel type="method">14031</setNoChangeChannel>
+		<setNoChangeChannel type="method">14032</setNoChangeChannel>
+		<setNoChangeChannel type="method">14033</setNoChangeChannel>
+		<setNoChangeChannel type="method">14034</setNoChangeChannel>
+		<setNoChangeChannel type="method">14035</setNoChangeChannel>
+		<setNoChangeChannel type="method">14036</setNoChangeChannel>
+		<setNoChangeChannel type="method">14037</setNoChangeChannel>
+		<setNoChangeChannel type="method">14038</setNoChangeChannel>
+		<setNoChangeChannel type="method">14039</setNoChangeChannel>
+		<setNoChangeChannel type="method">14040</setNoChangeChannel>
+		<setNoChangeChannel type="method">14041</setNoChangeChannel>
+		<setNoChangeChannel type="method">14042</setNoChangeChannel>
+		<setNoChangeChannel type="method">14043</setNoChangeChannel>
+		<setNoChangeChannel type="method">14044</setNoChangeChannel>
+		<setNoChangeChannel type="method">14045</setNoChangeChannel>
+		<setNoChangeChannel type="method">14046</setNoChangeChannel>
+		<setNoChangeChannel type="method">14047</setNoChangeChannel>
+		<setNoChangeChannel type="method">14048</setNoChangeChannel>
+		<setNoChangeChannel type="method">14049</setNoChangeChannel>
+		<setNoChangeChannel type="method">14050</setNoChangeChannel>
+		<setNoChangeChannel type="method">14051</setNoChangeChannel>
+		<setNoChangeChannel type="method">14052</setNoChangeChannel>
+		<setNoChangeChannel type="method">14053</setNoChangeChannel>
+		<setNoChangeChannel type="method">14054</setNoChangeChannel>
+		<setNoChangeChannel type="method">25301</setNoChangeChannel>
+		<setNoChangeChannel type="method">25302</setNoChangeChannel>
+		<setNoChangeChannel type="method">25303</setNoChangeChannel>
+		<setNoChangeChannel type="method">25304</setNoChangeChannel>
+		<setNoChangeChannel type="method">25305</setNoChangeChannel>
+		<setNoChangeChannel type="method">25306</setNoChangeChannel>
+		<setNoChangeChannel type="method">25307</setNoChangeChannel>
+		<setNoChangeChannel type="method">25308</setNoChangeChannel>
+		<setNoChangeChannel type="method">25309</setNoChangeChannel>
+		<setNoChangeChannel type="method">25310</setNoChangeChannel>
+		<setNoChangeChannel type="method">25311</setNoChangeChannel>
+		<setNoChangeChannel type="method">25312</setNoChangeChannel>
+		<setNoChangeChannel type="method">25313</setNoChangeChannel>
+		<setNoChangeChannel type="method">25314</setNoChangeChannel>
+		<setNoChangeChannel type="method">25315</setNoChangeChannel>
+		<setNoChangeChannel type="method">25316</setNoChangeChannel>
+		<setNoChangeChannel type="method">25317</setNoChangeChannel>
+		<setNoChangeChannel type="method">25318</setNoChangeChannel>
+		<setNoChangeChannel type="method">25319</setNoChangeChannel>
+		<setNoChangeChannel type="method">25320</setNoChangeChannel>
+		<setNoChangeChannel type="method">25321</setNoChangeChannel>
+		<setNoChangeChannel type="method">25322</setNoChangeChannel>
+		<setNoChangeChannel type="method">25323</setNoChangeChannel>
+		<setNoChangeChannel type="method">25324</setNoChangeChannel>
+		<setNoChangeChannel type="method">25325</setNoChangeChannel>
+		<setNoChangeChannel type="method">25326</setNoChangeChannel>
+		<setNoChangeChannel type="method">25327</setNoChangeChannel>
+		<setNoChangeChannel type="method">25401</setNoChangeChannel>
+		<setNoChangeChannel type="method">25402</setNoChangeChannel>
+		<setNoChangeChannel type="method">25403</setNoChangeChannel>
+		<setNoChangeChannel type="method">25404</setNoChangeChannel>
+		<setNoChangeChannel type="method">25405</setNoChangeChannel>
+		<setNoChangeChannel type="method">25406</setNoChangeChannel>
+		<setNoChangeChannel type="method">25407</setNoChangeChannel>
+		<setNoChangeChannel type="method">25408</setNoChangeChannel>
+		<setNoChangeChannel type="method">25409</setNoChangeChannel>
+		<setNoChangeChannel type="method">25410</setNoChangeChannel>
+		<setNoChangeChannel type="method">25411</setNoChangeChannel>
+		<setNoChangeChannel type="method">25412</setNoChangeChannel>
+		<setNoChangeChannel type="method">25413</setNoChangeChannel>
+		<setNoChangeChannel type="method">25414</setNoChangeChannel>
+		<setNoChangeChannel type="method">25415</setNoChangeChannel>
+		<setNoChangeChannel type="method">25416</setNoChangeChannel>
+		<setNoChangeChannel type="method">25417</setNoChangeChannel>
+		<setNoChangeChannel type="method">25418</setNoChangeChannel>
+		<setNoChangeChannel type="method">25419</setNoChangeChannel>
+		<setNoChangeChannel type="method">25420</setNoChangeChannel>
+		<setNoChangeChannel type="method">25421</setNoChangeChannel>
+		<setNoChangeChannel type="method">25422</setNoChangeChannel>
+		<setNoChangeChannel type="method">25423</setNoChangeChannel>
+		<setNoChangeChannel type="method">25424</setNoChangeChannel>
+		<setNoChangeChannel type="method">25425</setNoChangeChannel>
+		<setNoChangeChannel type="method">25426</setNoChangeChannel>
+		<setNoChangeChannel type="method">25427</setNoChangeChannel>
+		<setNoChangeChannel type="method">25428</setNoChangeChannel>
+		<setNoChangeChannel type="method">25429</setNoChangeChannel>
+		<setNoChangeChannel type="method">25430</setNoChangeChannel>
+		<setNoChangeChannel type="method">25431</setNoChangeChannel>
+		<setNoChangeChannel type="method">25432</setNoChangeChannel>
+		<setNoChangeChannel type="method">25433</setNoChangeChannel>
+		<setNoChangeChannel type="method">25434</setNoChangeChannel>
+		<setNoChangeChannel type="method">25435</setNoChangeChannel>
+		<setNoChangeChannel type="method">25436</setNoChangeChannel>
+		<setNoChangeChannel type="method">25437</setNoChangeChannel>
+		<setNoChangeChannel type="method">25438</setNoChangeChannel>
+		<setNoChangeChannel type="method">25439</setNoChangeChannel>
+		<setNoChangeChannel type="method">25440</setNoChangeChannel>
+		<setNoChangeChannel type="method">25441</setNoChangeChannel>
+		<setNoChangeChannel type="method">25442</setNoChangeChannel>
+		<setNoChangeChannel type="method">25443</setNoChangeChannel>
+		<setNoChangeChannel type="method">25444</setNoChangeChannel>
+		<setNoChangeChannel type="method">25445</setNoChangeChannel>
+		<setNoChangeChannel type="method">25446</setNoChangeChannel>
+		<setNoChangeChannel type="method">25447</setNoChangeChannel>
+		<setNoChangeChannel type="method">25448</setNoChangeChannel>
+		<setNoChangeChannel type="method">25449</setNoChangeChannel>
+		<setNoChangeChannel type="method">25450</setNoChangeChannel>
+		<setNoChangeChannel type="method">25451</setNoChangeChannel>
+		<setNoChangeChannel type="method">25452</setNoChangeChannel>
+		<setNoChangeChannel type="method">25453</setNoChangeChannel>
+		<setNoChangeChannel type="method">25454</setNoChangeChannel>
+		<setNoChangeChannel type="method">25455</setNoChangeChannel>
+		<setNoChangeChannel type="method">25456</setNoChangeChannel>
+		<setNoChangeChannel type="method">25457</setNoChangeChannel>
+		<setNoChangeChannel type="method">25458</setNoChangeChannel>
+		<setNoChangeChannel type="method">25459</setNoChangeChannel>
+		<setNoChangeChannel type="method">25460</setNoChangeChannel>
+		<setNoChangeChannel type="method">25701</setNoChangeChannel>
+		<setNoChangeChannel type="method">25702</setNoChangeChannel>
+		<setNoChangeChannel type="method">25703</setNoChangeChannel>
+		<setNoChangeChannel type="method">25751</setNoChangeChannel>
+		<setNoChangeChannel type="method">25752</setNoChangeChannel>
+		<setNoChangeChannel type="method">25753</setNoChangeChannel>
+		<setNoChangeChannel type="method">25801</setNoChangeChannel>
+		<setNoChangeChannel type="method">25802</setNoChangeChannel>
+		<setNoChangeChannel type="method">25803</setNoChangeChannel>
+		<setNoChangeChannel type="method">25804</setNoChangeChannel>
+		<setNoChangeChannel type="method">25851</setNoChangeChannel>
+		<setNoChangeChannel type="method">25852</setNoChangeChannel>
+		<setNoChangeChannel type="method">25853</setNoChangeChannel>
+		<setNoChangeChannel type="method">25854</setNoChangeChannel>
+		<setNoChangeChannel type="method">25855</setNoChangeChannel>
+		<setNoChangeChannel type="method">25856</setNoChangeChannel>
+		<setNoChangeChannel type="method">26601</setNoChangeChannel>
+		<setNoChangeChannel type="method">26602</setNoChangeChannel>
+		<setNoChangeChannel type="method">26603</setNoChangeChannel>
+		<setNoChangeChannel type="method">26604</setNoChangeChannel>
+		<setNoChangeChannel type="method">26605</setNoChangeChannel>
+		<setNoChangeChannel type="method">27701</setNoChangeChannel>
+		<setNoChangeChannel type="method">27702</setNoChangeChannel>
+		<setNoChangeChannel type="method">27703</setNoChangeChannel>
+		<setNoChangeChannel type="method">28401</setNoChangeChannel>
+		<setNoChangeChannel type="method">28402</setNoChangeChannel>
+		<setNoChangeChannel type="method">29001</setNoChangeChannel>
+		<setNoChangeChannel type="method">29002</setNoChangeChannel>
+		<setNoChangeChannel type="method">29003</setNoChangeChannel>
+		<setNoChangeChannel type="method">29004</setNoChangeChannel>
+		<setNoChangeChannel type="method">29005</setNoChangeChannel>
+		<setNoChangeChannel type="method">29006</setNoChangeChannel>
+		<setNoChangeChannel type="method">29007</setNoChangeChannel>
+		<setNoChangeChannel type="method">29008</setNoChangeChannel>
+		<setNoChangeChannel type="method">29009</setNoChangeChannel>
+		<setNoChangeChannel type="method">29010</setNoChangeChannel>
+		<setNoChangeChannel type="method">29011</setNoChangeChannel>
+		<setNoChangeChannel type="method">29012</setNoChangeChannel>
+		<setNoChangeChannel type="method">29013</setNoChangeChannel>
+		<setNoChangeChannel type="method">29014</setNoChangeChannel>
+		<setNoChangeChannel type="method">29015</setNoChangeChannel>
+		<setNoChangeChannel type="method">29016</setNoChangeChannel>
+		<setNoChangeChannel type="method">29017</setNoChangeChannel>
+		<setNoChangeChannel type="method">29018</setNoChangeChannel>
+	</Kyland>
+	
+	<!--srcMatch class="MKSPulseSingleMatch" type="instance">  
+		&SrcMatchSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		<setDevice type="method">serial0</setDevice>
+		<setNodeNum type="method">25</setNodeNum>
+		<setBaudRate type="method">19200</setBaudRate>
+		<setCharSize type="method">8</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">0</setParity>
+		<setXonoff type="method">false</setXonoff>
+		<setRtscts type="method">false</setRtscts>
+		<setTimeout type="method">1000</setTimeout>
+		<setPollInterval type="method">2</setPollInterval>
+		<init type="method"></init>
+	</srcMatch-->
+
+	<LFMatch type="instance" class="NMCMatchDriver">  <!--232-->
+		&LFMatchSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+		<setNodeNum type="method">42</setNodeNum>
+		<setBaudRate type="method">38400</setBaudRate>
+		
+		<setDataFrame type="method">8N1</setDataFrame>
+		<setSlaveAddress type="method">4</setSlaveAddress>
+        <setIndex type="method">32784</setIndex>
+		<setDevice type="method">serial2</setDevice>
+		
+		<setXonoff type="method">false</setXonoff>
+		<setRtscts type="method">false</setRtscts>
+		<setTimeout type="method">1000</setTimeout>
+		<setPollInterval type="method">2</setPollInterval>
+		<init type="method"></init>	
+	</LFMatch>
+
+	<TurboMolecularPump class="TurboMolecularPump" type="instance">  <!--232-->
+		&SetSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+	    <setNodeNum type="method">40</setNodeNum>
+	    <setBaudRate type="method">9600</setBaudRate>
+			
+		<setDataFrame type="method">8N1</setDataFrame>
+		<setSlaveAddress type="method">6</setSlaveAddress>
+        <setIndex type="method">32768</setIndex>
+		<setDevice type="method">serial5</setDevice>
+			
+   		<setPollInterval type="method">100</setPollInterval>
+        <init type="method"></init>
+  	</TurboMolecularPump>
+	
+	<ForlineTempCtl class="FabDoctorTempCtl" type="instance">
+		&ForlineTempCtlSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+		<setNodeNum type="method">60</setNodeNum>
+		<setBaudRate type="method">9600</setBaudRate>
+		<!--setCharSize type="method">8</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">0</setParity-->
+		
+		<setDataFrame type="method">8N1</setDataFrame>
+		<setSlaveAddress type="method">8</setSlaveAddress>
+        <setIndex type="method">32768</setIndex>
+		<setDevice type="method">serial11</setDevice>
+		
+		<setForlineTempInfo type="method">201,201</setForlineTempInfo>
+		<!--setGaugeTempInfo type="method">203,203</setGaugeTempInfo>
+		<setGaslineTempInfo type="method">204,205</setGaslineTempInfo-->
+		<setPollInterval type="method">200</setPollInterval>
+		<init type="method"></init>
+	</ForlineTempCtl>
+	
+	<TempCtl class="TDTempCtl" type="instance"><!--TaiDa-->
+        &TempControlSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+		<setNodeNum type="method">43</setNodeNum>
+		<setBaudRate type="method">38400</setBaudRate>
+		<!--setCharSize type="method">8</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">1</setParity-->
+		
+		<setDataFrame type="method">8E1</setDataFrame>
+		<setSlaveAddress type="method">8</setSlaveAddress>
+                <setIndex type="method">32784</setIndex>
+		<setDevice type="method">serial12</setDevice>
+		
+		<setXonoff type="method">false</setXonoff>
+		<setRtscts type="method">false</setRtscts>
+		<setTimeout type="method">1000</setTimeout>
+		<setPollInterval type="method">200</setPollInterval>
+		<init type="method"></init>
+	</TempCtl>
+	
+	<ATSChiller type="instance" class="ATSChiller">
+		&ChillerSimulated;
+		<setNodeNum type="method">23</setNodeNum>
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+		<setBaudRate type="method">9600</setBaudRate>
+		<!--setCharSize type="method">7</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">1</setParity-->
+		
+		<setDataFrame type="method">7E1</setDataFrame>
+		<setSlaveAddress type="method">9</setSlaveAddress>
+        <setIndex type="method">32768</setIndex>
+		<setDevice type="method">serial13</setDevice>
+		
+		<setXonoff type="method">false</setXonoff>
+		<setRtscts type="method">false</setRtscts>
+		<setTimeout type="method">1000</setTimeout>
+		<setPollInterval type="method">200</setPollInterval>
+		<init type="method"></init>
+	</ATSChiller>
+	
+	<ESCBaseTemp class="TempSensorGndCorelight" type="instance">  <!--485-->
+		&SetSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		
+		<setNodeNum type="method">55</setNodeNum>
+		<setBaudRate type="method">19200</setBaudRate>
+		<!--setCharSize type="method">8</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">0</setParity-->
+		
+		<setDataFrame type="method">8N1</setDataFrame>
+		<setSlaveAddress type="method">7</setSlaveAddress>
+                <setIndex type="method">32768</setIndex>
+		<setDevice type="method">serial9</setDevice>
+		
+		<setXonoff type="method">false</setXonoff>
+		<setRtscts type="method">false</setRtscts>
+		<setTimeout type="method">1000</setTimeout>
+		<setPollInterval type="method">200</setPollInterval>
+		<init type="method"></init>
+	</ESCBaseTemp>
+	
+	<GaslineTempCtl class="FabDoctorTempCtl" type="instance">
+		&SetNotSimulated;
+		<setDeviceType type="method">ETHERCAT_TO_SERIAL</setDeviceType>
+		<setDevice type="method">serial10</setDevice>
+		<setNodeNum type="method">61</setNodeNum>
+		<setBaudRate type="method">9600</setBaudRate>
+		<!--setCharSize type="method">8</setCharSize>
+		<setStopBit type="method">1</setStopBit>
+		<setParity type="method">0</setParity-->
+		
+		<setDataFrame type="method">8N1</setDataFrame>
+		<setSlaveAddress type="method">7</setSlaveAddress>
+        <setIndex type="method">32784</setIndex>
+		
+		<setForlineTempInfo type="method">201,201</setForlineTempInfo>
+		<!--setGaugeTempInfo type="method">203,203</setGaugeTempInfo>
+		<setGaslineTempInfo type="method">204,205</setGaslineTempInfo-->
+		<setPollInterval type="method">200</setPollInterval>
+		<init type="method"></init>
+	</GaslineTempCtl>
+	
+	<EPD type="instance" class="TCPCheTianCIPEPD">
+		&EPDSimulated;
+		<setNodeNum type="method">27</setNodeNum>
+		<setServer type="method">192.168.14.221</setServer>
+		<setPollIntervalMS type="method">200</setPollIntervalMS>
+		<!--setNameOfSPCV type="method">SpectraView1</setNameOfSPCV-->
+		<init type="method"></init>
+	</EPD>
+	
+	<CPUDriver type="instance" class="CPUTestDriver">
+		&SetNotSimulated;
+		<setNodeNum type="method">50</setNodeNum>
+	   	<setPollInterval type="method">500</setPollInterval>
+	   	<init type="method"></init>
+	</CPUDriver>
+</Driver> 			 

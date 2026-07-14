@@ -1,0 +1,426 @@
+<addCheckItem type="method">./RampMode</addCheckItem>
+<addCheckItem type="method">./CycleNum</addCheckItem>
+<addCheckItem type="method">./GroupName</addCheckItem>
+<addCheckItem type="method">./RampIntervalTime</addCheckItem>
+<addCheckItem type="method">./ProcessTime</addCheckItem>
+<addCheckItem type="method">./EndMode</addCheckItem>
+<addCheckItem type="method">./Oetch</addCheckItem>
+<!--addCheckItem type="method">./ProcessPressure</addCheckItem-->
+<!--addCheckItem type="method">./SRFPower</addCheckItem>
+<addCheckItem type="method">./LFPower</addCheckItem-->
+<addCheckItem type="method">./LFWaveMode</addCheckItem>
+<addCheckItem type="method">./LFPulseFrequency</addCheckItem>
+<!--addCheckItem type="method">./LFPulseDutyCycle</addCheckItem-->
+<!--addCheckItem type="method">./Gas1</addCheckItem>
+<addCheckItem type="method">./Gas2</addCheckItem>
+<addCheckItem type="method">./Gas3</addCheckItem>
+<addCheckItem type="method">./Gas4</addCheckItem>
+<addCheckItem type="method">./Gas5</addCheckItem>
+<addCheckItem type="method">./Gas6</addCheckItem>
+<addCheckItem type="method">./Gas7</addCheckItem>
+<addCheckItem type="method">./Gas8</addCheckItem>
+<addCheckItem type="method">./Gas9</addCheckItem>
+<addCheckItem type="method">./Gas10</addCheckItem>
+<addCheckItem type="method">./Gas11</addCheckItem>
+<addCheckItem type="method">./Gas12</addCheckItem-->
+<addCheckItem type="method">./VATCtlMode</addCheckItem>
+<addCheckItem type="method">./VATBankSelect</addCheckItem>
+<addCheckItem type="method">./PressLearnCycles</addCheckItem>
+<addCheckItem type="method">./BoschFPHoldDelay</addCheckItem>
+<addCheckItem type="method">./PressLearnDelay</addCheckItem>
+<addCheckItem type="method">./BoschRFDelayTime</addCheckItem>
+<addCheckItem type="method">./VATPosition</addCheckItem>
+<addCheckItem type="method">./VATPosDelayTime</addCheckItem>
+<!--addCheckItem type="method">./ESCHePressureInner</addCheckItem>
+<addCheckItem type="method">./ESCHePressureOuter</addCheckItem-->
+<!--addCheckItem type="method">./BoshESCVoltage</addCheckItem-->
+<!--addCheckItem type="method">./ESCTemp</addCheckItem-->
+<addCheckItem type="method">./RingPosition</addCheckItem>
+<addCheckItem type="method">./PinPosition</addCheckItem>
+<addCheckItem type="method">./CloseSRFBetweenStep</addCheckItem>
+<addCheckItem type="method">./CloseLFBetweenStep</addCheckItem>
+<!--addCheckItem type="method">./SRFReflPower</addCheckItem>
+<addCheckItem type="method">./LFReflPower</addCheckItem-->
+<addCheckItem type="method">./SRFRamp</addCheckItem>
+<addCheckItem type="method">./SRFRampTime</addCheckItem>
+<addCheckItem type="method">./LFRamp</addCheckItem>
+<addCheckItem type="method">./LFRampTime</addCheckItem>
+<addCheckItem type="method">./SRFC1</addCheckItem>
+<addCheckItem type="method">./SRFC2</addCheckItem>
+<!--addCheckItem type="method">./SRFC5</addCheckItem-->
+<addCheckItem type="method">./LFC1</addCheckItem>
+<addCheckItem type="method">./LFC2</addCheckItem>
+<addCheckItem type="method">./SRFGenTuneMode</addCheckItem>
+<addCheckItem type="method">./SRFMatchCurrMode</addCheckItem>
+<addCheckItem type="method">./SRFMatchTuneDelay</addCheckItem>
+<addCheckItem type="method">./SRFLearnCycles</addCheckItem>
+<addCheckItem type="method">./SRFIgnoreLearnedCycle</addCheckItem>
+<addCheckItem type="method">./SRFStartFreq</addCheckItem>
+<addCheckItem type="method">./SRFTuningMinFreq</addCheckItem>
+<addCheckItem type="method">./SRFTuningMaxFreq</addCheckItem>
+<addCheckItem type="method">./SRFTuningRelGain</addCheckItem>
+<addCheckItem type="method">./SRFTuningRelModDeviation</addCheckItem>
+<addCheckItem type="method">./SRFReflectedTuneFactor</addCheckItem>
+<addCheckItem type="method">./LFMatchTuneMode</addCheckItem>
+<addCheckItem type="method">./LFFrequencyTuneMode</addCheckItem>
+<addCheckItem type="method">./EPDType</addCheckItem>
+<addCheckItem type="method">./EPDConfig</addCheckItem>
+<addCheckItem type="method">./SingleStepStop</addCheckItem>
+<addCheckItem type="method">./MinEPDTime</addCheckItem>
+<addCheckItem type="method">./MaxEPDTime</addCheckItem>
+
+<RampMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">RampMode</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</RampMode>
+
+<CycleNum type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">CycleNum</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</CycleNum>
+
+<GroupName type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">GroupName</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</GroupName>
+
+<RampIntervalTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">RampIntervalTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</RampIntervalTime>
+
+<ProcessTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">ProcessTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</ProcessTime>
+
+<EndMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">EndMode</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</EndMode>
+
+<Oetch type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Oetch(percent)</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Oetch>
+
+<!--ProcessPressure type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">ProcessPressure</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</ProcessPressure-->
+
+<!--SRFPower type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFPower</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</SRFPower>
+
+<LFPower type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFPower</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFPower-->
+
+<LFWaveMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFWaveMode</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</LFWaveMode>
+
+<LFPulseFrequency type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFFrequency(Hz)</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFPulseFrequency>
+
+<!--LFPulseDutyCycle type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFDutyCycle</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFPulseDutyCycle-->
+
+<LFPulseDutyCycle type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFDutyCycle</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFPulseDutyCycle>
+
+<!--Gas1 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas1</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas1>
+
+<Gas2 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas2</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas2>
+
+<Gas3 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas3</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas3>
+
+<Gas4 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas4</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas4>
+
+<Gas5 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas5</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas5>
+
+<Gas6 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas6</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas6>
+
+<Gas7 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas7</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas7>
+
+<Gas8 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas8</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas8>
+
+<Gas9 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas9</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas9>
+
+<Gas10 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas10</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas10>
+
+<Gas11 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas11</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas11>
+
+<Gas12 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">Gas12</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</Gas12-->
+
+<VATCtlMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">VATCtlMode</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</VATCtlMode>
+
+<VATBankSelect type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">VATBankSelect</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</VATBankSelect>
+
+<PressLearnCycles type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">PressLearnCycles</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</PressLearnCycles>
+
+<BoschFPHoldDelay type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">BoschFPHoldDelay(ms)</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</BoschFPHoldDelay>
+
+<PressLearnDelay type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">PressLearnDelay(ms)</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</PressLearnDelay>
+
+<BoschRFDelayTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">BoschRFDelayTime(ms)</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</BoschRFDelayTime>
+
+<VATPosition type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">VATPosPreset</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</VATPosition>
+
+<VATPosDelayTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">VATPosDelayTime</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</VATPosDelayTime>
+
+<!--ESCHePressureInner type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">ESCHePressureInner</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</ESCHePressureInner>
+
+<ESCHePressureOuter type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">ESCHePressureOuter</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</ESCHePressureOuter-->
+
+<!--BoshESCVoltage type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">BoshESCVoltage</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</BoshESCVoltage-->
+
+<!--ESCTemp type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">ESCTemp</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</ESCTemp-->
+
+<RingPosition type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">RingPosition</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</RingPosition>
+
+<PinPosition type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">PinPosition</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</PinPosition>
+
+<CloseSRFBetweenStep type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">CloseSRFBetweenStep</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</CloseSRFBetweenStep>
+
+<CloseLFBetweenStep type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">CloseLFBetweenStep</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</CloseLFBetweenStep>
+
+<!--SRFReflPower type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFReflPower</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</SRFReflPower>
+
+<LFReflPower type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFReflPower</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFReflPower-->
+
+<SRFRamp type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFRamp</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFRamp>
+
+<SRFRampTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFRampTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</SRFRampTime>
+
+<LFRamp type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFRamp</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</LFRamp>
+
+<LFRampTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFRampTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</LFRampTime>
+
+<SRFC1 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFC1Preset</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFC1>
+
+<SRFC2 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFC2Preset</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFC2>
+
+<!--SRFC5 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFC5Preset</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFC5-->
+
+<LFC1 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFC1Preset</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</LFC1>
+
+<LFC2 type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFC2Preset</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</LFC2>
+
+<SRFGenTuneMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFGenTuneMode</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFGenTuneMode>
+
+<SRFMatchCurrMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFMatchCurrMode</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFMatchCurrMode>
+
+<SRFMatchTuneDelay type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFMatchTuneDelay</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</SRFMatchTuneDelay>
+
+<SRFLearnCycles type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFLearnCycles</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFLearnCycles>
+
+<SRFIgnoreLearnedCycle type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFIgnoreLearnedCycle</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFIgnoreLearnedCycle>
+
+<SRFStartFreq type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFStartFreq(KHz)</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFStartFreq>
+
+<SRFTuningMinFreq type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFTuningMinFreq(KHz)</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFTuningMinFreq>
+
+<SRFTuningMaxFreq type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFTuningMaxFreq(KHz)</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFTuningMaxFreq>
+
+<SRFTuningRelGain type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFTuningRelGain</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFTuningRelGain>
+
+<SRFTuningRelModDeviation type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFTuningRelModDeviation</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFTuningRelModDeviation>
+
+<SRFReflectedTuneFactor type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SRFReflectedTuneFactor</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</SRFReflectedTuneFactor>
+
+<LFMatchTuneMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFMatchTuneMode</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</LFMatchTuneMode>
+
+<LFFrequencyTuneMode type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">LFFrequencyTuneMode</setSetPointID>
+	<setDataType type="method">1</setDataType>
+</LFFrequencyTuneMode>
+
+<EPDType type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">EPDType</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</EPDType>
+
+<EPDConfig type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">EPDConfig</setSetPointID>	
+	<setDataType type="method">2</setDataType>
+</EPDConfig>
+
+<SingleStepStop type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">SingleStepStop</setSetPointID>	
+	<setDataType type="method">1</setDataType>
+</SingleStepStop>
+
+<MinEPDTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">MinEPDTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</MinEPDTime>
+
+<MaxEPDTime type="instance" class="RecipeSetPoint">
+	<setSetPointID type="method">MaxEPDTime</setSetPointID>
+	<setDataType type="method">3</setDataType>
+</MaxEPDTime>
+

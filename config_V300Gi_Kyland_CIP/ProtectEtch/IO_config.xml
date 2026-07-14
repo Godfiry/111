@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE IO [
+<!ENTITY SetSimulated SYSTEM "./SetSimulated.xml">
+<!ENTITY SetNotSimulated SYSTEM "./SetNotSimulated.xml">
+]>
+<IO>
+
+
+<PLC>
+
+<DO>
+
+	    <SRFPowerOnDO dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SRFPowerOnDO">
+		      <Bd>200</Bd>
+		      <Ch>628</Ch>
+		      <DescriptorList>Off,On</DescriptorList>
+		      &SetSimulated;
+	    </SRFPowerOnDO>
+		<LFPowerOnDO dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFPowerOnDO">
+			<Bd>200</Bd>
+			<Ch>653</Ch>
+			<DescriptorList>OFF,ON</DescriptorList>
+			&SetSimulated;
+		</LFPowerOnDO>
+
+</DO>
+
+<AI>
+
+		<SRFFWDLPWRAI dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/SRFFWDLPWRAI">
+		      <Bd>200</Bd>
+		      <Ch>1043</Ch>
+		      <Min>0</Min>
+		      <Max>&SRFPowerValue;</Max>
+		      <Accuracy>1</Accuracy>
+		      <Unit>watt</Unit>
+		      &SetSimulated;
+	    </SRFFWDLPWRAI>
+
+		<LFFWDLPWRAI dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/LFFWDLPWRAI">
+			<Bd>200</Bd>
+			<Ch>1068</Ch>
+			<Min>0</Min>
+			<Max></Max>
+			<Accuracy>1</Accuracy>
+			<Unit></Unit>
+			&SetSimulated;
+		</LFFWDLPWRAI>
+
+</AI>
+
+</PLC>
+
+
+<!--HuttingerLF-->
+  <!--LF> 
+	<LFPowerOnDO dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFPowerOnDO">
+	   <Bd>43</Bd>
+	   <Ch>1</Ch>
+	   <DescriptorList>Off,On</DescriptorList>
+	   &SetSimulated;
+	</LFPowerOnDO>
+
+	  <LFFWDLPWRAI dataType="D" accessMode="R"  alias="/Control/PMCExports/Datas/LFFWDLPWRAI">
+		<Bd>43</Bd>
+		<Ch>10</Ch>
+		<Min>0</Min>
+		<Max>1500</Max>
+		<Accuracy>0.1</Accuracy>
+		<Unit>watt</Unit>
+		&SetSimulated;
+	    </LFFWDLPWRAI>
+	</LF> 
+
+ <PCI7434>
+    <SRFPowerOnDO dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SRFPowerOnDO">
+      <Bd>51</Bd>
+      <Ch>6</Ch>
+      <DescriptorList>Off,On</DescriptorList>
+      &SetSimulated;
+    </SRFPowerOnDO>
+    
+    <BRFPowerOnDO dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/BRFPowerOnDO">
+      <Bd>51</Bd>
+      <Ch>12</Ch>
+      <DescriptorList>Off,On</DescriptorList>
+      &SetNotSimulated;
+    </BRFPowerOnDO>
+ </PCI7434>
+ 
+  <PCI9116>   
+    <SRFFWDLPWRAI dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/SRFFWDLPWRAI">
+      <Bd>54</Bd>
+      <Ch>6</Ch>
+      <Min>0</Min>
+      <Max>5500</Max>
+      <Accuracy>0.1</Accuracy>
+      <Unit>watt</Unit>
+      &SetSimulated;
+    </SRFFWDLPWRAI>
+
+    <BRFFWDLPWRAI dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/BRFFWDLPWRAI">
+      <Bd>54</Bd>
+      <Ch>10</Ch>
+      <Min>0</Min>
+      <Max>1500</Max>
+      <Accuracy>0.1</Accuracy>
+      <Unit>watt</Unit>
+     &SetNotSimulated;
+    </BRFFWDLPWRAI>   
+  </PCI9116-->
+</IO>

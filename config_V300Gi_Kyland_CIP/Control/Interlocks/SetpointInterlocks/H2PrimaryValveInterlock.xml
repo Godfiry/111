@@ -1,0 +1,153 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open the primary valve</setAlarmMessage>
+	<addToIOInterlocks type="method">./DryPumpAlarm</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DryPumpNotRunning</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DPGasFlowWarning</addToIOInterlocks>
+	<addToIOInterlocks type="method">./N2DilutionFlowNotOK</addToIOInterlocks>
+	<addToIOInterlocks type="method">./SlotValveOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ChamberPressAbove20T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxDoor1NotClosed</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxPressAbnormal</addToIOInterlocks>
+    <addToIOInterlocks type="method">./GasBoxCDAAbnormal</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GaslinePressureAbove500T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./CustomerIntlkInvoked</addToIOInterlocks>
+	<addToIOInterlocks type="method">./CustomerGasDetectFailed</addToIOInterlocks>
+	<addToIOInterlocks type="method">./Gasline1PressureAbove400T</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./Gasline2PressureAbove400T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./Gasline3PressureAbove400T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./Gasline4PressureAbove400T</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./GaspanelBOXIntlk</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./H2DetectorAlarm1</addToIOInterlocks>
+	<addToIOInterlocks type="method">./PurgeValveIsOpen</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./ChamberPressureAbove500mT</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks>
+    <addToIOInterlocks type="method">./O2PrimaryValveIntlkInvoked</addToIOInterlocks>
+	<addToIOInterlocks type="method">./O2SecondaryValveIntlkInvoked</addToIOInterlocks>	
+
+	<DryPumpAlarm type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">232</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DryPumpAlarm>
+	
+	<DryPumpNotRunning type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open Valve With Dry pump not running</setMessage-->
+		<setMessageID type="method">272</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+	</DryPumpNotRunning>
+	
+	<DPGasFlowWarning type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open valve With Dry pump not running</setMessage-->
+		<setMessageID type="method">325</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/DPGasFlowWarningDI==1)</setConditionStr>
+	</DPGasFlowWarning>	
+	
+	<N2DilutionFlowNotOK type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open valve With Dry pump not running</setMessage-->
+		<setMessageID type="method">326</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/N2DilutionFlowSWDI==1)</setConditionStr>
+	</N2DilutionFlowNotOK>
+	
+	<SlotValveOpen type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">242</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/SlotValveCloseDI==1)</setConditionStr>
+	</SlotValveOpen>
+	
+	<ChamberPressAbove20T type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">327</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ChamberPressureSW2DI==1)</setConditionStr>
+	</ChamberPressAbove20T>
+	
+	<ChamberSWOpen type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open BRF With ChamberSW Open</setMessage-->
+		<setMessageID type="method">238</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberSWOpen>
+	
+	<GasBoxDoor1NotClosed type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">263</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/GasBoxDoorSW2DI==1))</setConditionStr>
+	</GasBoxDoor1NotClosed>
+
+	<GasBoxPressAbnormal type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">244</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI==1)</setConditionStr>
+	</GasBoxPressAbnormal>
+
+	<GasBoxCDAAbnormal type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">245</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</GasBoxCDAAbnormal>
+	
+	<GaslinePressureAbove500T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">313</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure1SWDI==1)</setConditionStr>
+	</GaslinePressureAbove500T>
+	
+	<CustomerIntlkInvoked type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">240</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerIntlkDI==1)</setConditionStr>
+	</CustomerIntlkInvoked>
+	
+	<CustomerGasDetectFailed type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">241</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==1)</setConditionStr>
+	</CustomerGasDetectFailed>	
+	
+	<Gasline1PressureAbove400T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">328</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure1SWDI==1)</setConditionStr>
+	</Gasline1PressureAbove400T>		
+	<Gasline2PressureAbove400T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">329</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure2SWDI==1)</setConditionStr>
+	</Gasline2PressureAbove400T>
+	<Gasline3PressureAbove400T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">330</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure3SWDI==1)</setConditionStr>
+	</Gasline3PressureAbove400T>
+	<Gasline4PressureAbove400T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">331</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/GaslinePressure4SWDI==1)</setConditionStr>
+	</Gasline4PressureAbove400T>
+	
+	<GaspanelBOXIntlk type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">332</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GaspanelBoxIntlkDI==1)</setConditionStr>
+	</GaspanelBOXIntlk>
+	
+	<H2DetectorAlarm1 type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">339</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/H2DetectorAlarm1DI==1)</setConditionStr>
+	</H2DetectorAlarm1>
+	
+	<PurgeValveIsOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">311</setMessageID>
+		<setCondition type="method">../../../PurgeValve/InterlockData,==,0</setCondition>
+	</PurgeValveIsOpen>
+	<ChamberPressureAbove500mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">314</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/ChamberPressureSW1DI==1)</setConditionStr>
+	</ChamberPressureAbove500mT>
+	<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">315</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+	</ChamberPressureAbove75T>
+
+	<O2PrimaryValveIntlkInvoked type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">401</setMessageID>
+		<setConditionStr type="method">((/SETUP/GasConfig/cfgH2O2Forbid==1)||((/Control/PMCExports/InnerDatas/GasPrimaryValve81DI==0)&amp;&amp;(/Control/PMCExports/InnerDatas/GasPrimaryValve101DI==0)))</setConditionStr>
+	</O2PrimaryValveIntlkInvoked>
+
+	<O2SecondaryValveIntlkInvoked type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">402</setMessageID>
+		<setConditionStr type="method">((/SETUP/GasConfig/cfgH2O2Forbid==1)||((/Control/PMCExports/InnerDatas/GasSecondValve82DI==0)&amp;&amp;(/Control/PMCExports/InnerDatas/GasSecondValve102DI==0)))</setConditionStr>
+	</O2SecondaryValveIntlkInvoked>
+	
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataLog>
+	<Database type="mysql">
+		<ServerHost>localhost</ServerHost>
+		<ServerPort></ServerPort>
+		<ClientHost>localhost</ClientHost>
+		<RootPassword>Naura@8888</RootPassword>
+		<UserName>TMCI</UserName>
+		<UserPassword>Naura@8888</UserPassword>
+		<DbInstance>TMCI</DbInstance>
+	</Database>
+    <!--Database type="sqlserver">
+            <ServerHost>192.168.14.200</ServerHost>
+            <ServerPort></ServerPort>
+            <ClientHost></ClientHost>
+            <RootPassword></RootPassword>
+            <UserName>sa</UserName>
+            <UserPassword>8888</UserPassword>
+            <DbInstance>TMCI</DbInstance>
+    </Database-->
+</DataLog>

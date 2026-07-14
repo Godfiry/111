@@ -1,0 +1,25 @@
+Name   MacID OutputOffSet OutputSize(Byte) InputOffSet InputSize(Byte)
+ PM     1        0             2                0            2
+GasBox1 2        2             4                2            0
+GasBox2 3        6             4                2            0
+GasBox3 4        10            4                2            0
+Ppcma   5        14            4                2            5
+Ppcma2  6        18            4                7            5
+MFC1    21       22            2                12           3
+MFC2    22       24            2                15           3
+MFC3    23       26            2                18           3
+MFC4    24       28            2                21           3
+MFC5    25       30            2                24           3
+MFC6    26       32            2                27           3
+MFC7    27       34            2                30           3
+MFC8    28       36            2                33           3
+MFC9    29       38            2                36           3 
+MFC10   30       40            2                39           3 
+MFC11   31       42            2                42           3 
+MFC12   32       44            2                45           3
+MFC13   33       46            2                48           3 
+MFC14   34       48            2                51           3 
+MFC15   35       50            2                54           3 
+MFC16   36       52            2                57           3
+VAT     37       54            4                60           5
+LF      38       58            5                65           11

@@ -1,0 +1,1096 @@
+<addToSequence type="method">./PrePurgeGas</addToSequence>
+<addToSequence type="method">./PurgeGasStage1</addToSequence>
+<addToSequence type="method">./PurgeGasStage2</addToSequence>
+<addToSequence type="method">./PurgeGasStage3</addToSequence>
+<addToSequence type="method">./PostPurgeGas</addToSequence>
+
+<PrePurgeGas type="instance" class="PressureControllerSequence">
+	<setSequenceName type="method">PrePurgeGas</setSequenceName>
+	<addToNextState type="method">./CloseValves</addToNextState>
+	
+	<CloseValves type="instance" class="PressureState">
+		<setStateName type="method">CloseValves</setStateName>
+		<!--setRoughSourceState type="method">./FastRough</setRoughSourceState-->
+		<!--setGaugeSourceState type="method">./Vac</setGaugeSourceState-->
+		<setGassesToFlow type="method">./GassesToFlow</setGassesToFlow>
+		<!--setHighVacuumSourceState type="method">./HighVacStateOff</setHighVacuumSourceState-->
+		<setExecuteAlways type="method">true</setExecuteAlways>
+		<!--setCheckTolleranceAfterExecution type="method">true</setCheckTolleranceAfterExecution-->
+		<!--setBuildStateEnableItem type="method"></setBuildStateEnableItem-->
+
+		<GassesToFlow type="instance" class="GassesToFlow">
+			<addToGases type="method">ClosePendulumValve</addToGases>
+			
+			<!--addToGases type="method">OpenFP11</addToGases>
+			<addToGases type="method">OpenFP12</addToGases>
+			<addToGases type="method">OpenFP21</addToGases>
+			<addToGases type="method">OpenFP22</addToGases-->
+
+			<addToGases type="method">./CloseV5</addToGases>
+			<addToGases type="method">./CloseV501</addToGases>
+			<addToGases type="method">./CloseV502</addToGases>
+			<addToGases type="method">./CloseV503</addToGases>
+			
+			<addToGases type="method">CloseFP11</addToGases>
+			<addToGases type="method">CloseFP12</addToGases>
+			<addToGases type="method">CloseFP21</addToGases>
+			<addToGases type="method">CloseFP22</addToGases>
+
+			<addToGases type="method">./OpenV4</addToGases>
+			<addToGases type="method">./OpenV401</addToGases>
+			<addToGases type="method">./OpenV402</addToGases>
+			<addToGases type="method">./OpenV403</addToGases>
+
+			<addToGases type="method">./CloseV4</addToGases>
+			<addToGases type="method">./CloseV401</addToGases>
+			<addToGases type="method">./CloseV402</addToGases>
+			<addToGases type="method">./CloseV403</addToGases>			
+
+			<addToGases type="method">GasesAction</addToGases>
+			
+			<ClosePendulumValve type="instance" class="GasRecipe">
+				<setGasID type="method">PendulumValve</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</ClosePendulumValve>	
+			
+			<OpenFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP11>
+			
+			<OpenFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP12>
+			
+			<OpenFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP21>
+			
+			<OpenFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<setTimeToFlow type="method">60</setTimeToFlow>
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP22>
+
+			<CloseV5 type="instance" class="GasRecipe">
+				<setGasID type="method">V5</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV5>
+
+			<CloseV501 type="instance" class="GasRecipe">
+				<setGasID type="method">V501</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV501>
+
+			<CloseV502 type="instance" class="GasRecipe">
+				<setGasID type="method">V502</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV502>
+
+			<CloseV503 type="instance" class="GasRecipe">
+				<setGasID type="method">V503</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV503>
+			
+			<CloseFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP11>	
+
+			<CloseFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP12>
+
+			<CloseFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP21>	
+
+			<CloseFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP22>
+
+			<OpenV4 type="instance" class="GasRecipe">
+				<setGasID type="method">V4</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV4>
+				
+			<OpenV401 type="instance" class="GasRecipe">
+				<setGasID type="method">V401</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV401>	
+			
+			<OpenV402 type="instance" class="GasRecipe">
+				<setGasID type="method">V402</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV402>
+				
+			<OpenV403 type="instance" class="GasRecipe">
+				<setGasID type="method">V403</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">true</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<setTimeToFlow type="method">60</setTimeToFlow>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV403>
+
+			<CloseV4 type="instance" class="GasRecipe">
+				<setGasID type="method">V4</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV4>
+			
+			<CloseV401 type="instance" class="GasRecipe">
+				<setGasID type="method">V401</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV401>
+			
+			<CloseV402 type="instance" class="GasRecipe">
+				<setGasID type="method">V402</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV402>
+			
+			<CloseV403 type="instance" class="GasRecipe">
+				<setGasID type="method">V403</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV403>
+
+			<GasesAction type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addCloseValveId type="method">Primary</addCloseValveId>
+				<addOpenValveId type="method">Secondary</addOpenValveId>
+				<addOpenValveId type="method">MFC</addOpenValveId>				
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</GasesAction>				
+		</GassesToFlow>
+	</CloseValves>
+</PrePurgeGas>	
+
+
+<PurgeGasStage1 type="instance" class="PressureControllerSequence">
+	<setSequenceName type="method">PurgeGasStage1</setSequenceName>
+	<addToNextState type="method">./Purge1</addToNextState>
+
+	<Purge1 type="instance" class="PressureState">
+		<setStateName type="method">Purge1</setStateName>
+		<!--setRoughSourceState type="method">./RoughPumpStateOff</setRoughSourceState-->
+		<!--setGaugeSourceState type="method">./Vac</setGaugeSourceState-->
+		<setGassesToFlow type="method">./GassesToFlow</setGassesToFlow>
+		<!--setHighVacuumSourceState type="method">./HighVacStateOff</setHighVacuumSourceState-->
+		<setExecuteAlways type="method">true</setExecuteAlways>
+		<!--setCheckTolleranceAfterExecution type="method">true</setCheckTolleranceAfterExecution-->
+		<!--setBuildStateEnableItem type="method"></setBuildStateEnableItem-->
+
+		<GassesToFlow type="instance" class="GassesToFlow">
+			<addToGases type="method">./OpenV1</addToGases>
+			<addToGases type="method">./OpenPurgeVlvs</addToGases>
+			<!--addToGases type="method">./CloseV1</addToGases>
+			<addToGases type="method">./ClosePurgeVlvs</addToGases>
+			<addToGases type="method">./OpenFP11</addToGases>	
+			<addToGases type="method">./OpenFP12</addToGases>	
+			<addToGases type="method">./OpenFP21</addToGases>	
+			<addToGases type="method">./OpenFP22</addToGases>	
+			<addToGases type="method">./OpenV4</addToGases>
+			<addToGases type="method">CloseFP11</addToGases>
+			<addToGases type="method">CloseFP12</addToGases>
+			<addToGases type="method">CloseFP21</addToGases>
+			<addToGases type="method">CloseFP22</addToGases-->				
+
+			
+			<OpenV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV1>		
+			
+			<OpenPurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addOpenValveId type="method">Purge</addOpenValveId>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh-->
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenPurgeVlvs>
+
+			<CloseV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">true</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV1>		
+			
+			<ClosePurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addCloseValveId type="method">Purge</addCloseValveId>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh-->
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</ClosePurgeVlvs>
+			
+			<OpenFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP11>
+			
+			<OpenFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP12>
+			
+			<OpenFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP21>
+			
+			<OpenFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP22>
+			
+			<OpenV4 type="instance" class="GasRecipe">
+				<setGasID type="method">V4</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPumpTime</setTimeToFlowCh>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">true</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV4>	
+
+			<CloseFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP11>	
+
+			<CloseFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP12>
+
+			<CloseFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP21>	
+
+			<CloseFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP22>			
+		</GassesToFlow>
+	</Purge1>
+</PurgeGasStage1>	
+
+<PurgeGasStage2 type="instance" class="PressureControllerSequence">
+	<setSequenceName type="method">PurgeGasStage2</setSequenceName>
+	<addToNextState type="method">./Purge2</addToNextState>
+
+	<Purge2 type="instance" class="PressureState">
+		<setStateName type="method">Purge2</setStateName>
+		<!--setRoughSourceState type="method">./RoughPumpStateOff</setRoughSourceState-->
+		<!--setGaugeSourceState type="method">./Vac</setGaugeSourceState-->
+		<setGassesToFlow type="method">./GassesToFlow</setGassesToFlow>
+		<!--setHighVacuumSourceState type="method">./HighVacStateOff</setHighVacuumSourceState-->
+		<setExecuteAlways type="method">true</setExecuteAlways>
+		<!--setCheckTolleranceAfterExecution type="method">true</setCheckTolleranceAfterExecution-->
+		<!--setBuildStateEnableItem type="method"></setBuildStateEnableItem-->
+
+		<GassesToFlow type="instance" class="GassesToFlow">
+			<!--addToGases type="method">./OpenV1</addToGases>
+			<addToGases type="method">./OpenPurgeVlvs</addToGases-->
+			<addToGases type="method">./CloseV1</addToGases>
+			<addToGases type="method">./ClosePurgeVlvs</addToGases>
+			<!--addToGases type="method">./OpenFP11</addToGases>	
+			<addToGases type="method">./OpenFP12</addToGases>	
+			<addToGases type="method">./OpenFP21</addToGases>	
+			<addToGases type="method">./OpenFP22</addToGases-->	
+			<!--addToGases type="method">./OpenV4</addToGases-->
+			<!--addToGases type="method">CloseFP11</addToGases>
+			<addToGases type="method">CloseFP12</addToGases>
+			<addToGases type="method">CloseFP21</addToGases>
+			<addToGases type="method">CloseFP22</addToGases-->
+
+			<addToGases type="method">./OpenV4</addToGases>
+			<addToGases type="method">./OpenV401</addToGases>
+			<addToGases type="method">./OpenV402</addToGases>
+			<addToGases type="method">./OpenV403</addToGases>				
+
+			
+			<OpenV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV1>		
+			
+			<OpenPurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addOpenValveId type="method">Purge</addOpenValveId>
+				<setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh>
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenPurgeVlvs>
+
+			<CloseV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">true</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV1>		
+			
+			<ClosePurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addCloseValveId type="method">Purge</addCloseValveId>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh-->
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</ClosePurgeVlvs>
+			
+			<OpenFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP11>
+			
+			<OpenFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP12>
+			
+			<OpenFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP21>
+			
+			<OpenFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP22>
+			
+			<CloseFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP11>	
+
+			<CloseFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP12>
+
+			<CloseFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP21>	
+
+			<CloseFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP22>	
+
+			<OpenV4 type="instance" class="GasRecipe">
+				<setGasID type="method">V4</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV4>
+				
+			<OpenV401 type="instance" class="GasRecipe">
+				<setGasID type="method">V401</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV401>	
+			
+			<OpenV402 type="instance" class="GasRecipe">
+				<setGasID type="method">V402</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV402>
+				
+			<OpenV403 type="instance" class="GasRecipe">
+				<setGasID type="method">V403</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgPressureStablizationTime</setTimeToFlowCh-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV403>
+
+
+		
+		</GassesToFlow>
+	</Purge2>
+</PurgeGasStage2>
+
+<PurgeGasStage3 type="instance" class="PressureControllerSequence">
+	<setSequenceName type="method">PurgeGasStage3</setSequenceName>
+	<addToNextState type="method">./Purge3</addToNextState>
+
+	<Purge3 type="instance" class="PressureState">
+		<setStateName type="method">Purge3</setStateName>
+		<!--setRoughSourceState type="method">./RoughPumpStateOff</setRoughSourceState-->
+		<!--setGaugeSourceState type="method">./Vac</setGaugeSourceState-->
+		<setGassesToFlow type="method">./GassesToFlow</setGassesToFlow>
+		<!--setHighVacuumSourceState type="method">./HighVacStateOff</setHighVacuumSourceState-->
+		<setExecuteAlways type="method">true</setExecuteAlways>
+		<!--setCheckTolleranceAfterExecution type="method">true</setCheckTolleranceAfterExecution-->
+		<!--setBuildStateEnableItem type="method"></setBuildStateEnableItem-->
+
+		<GassesToFlow type="instance" class="GassesToFlow">
+			<!--addToGases type="method">./OpenV1</addToGases>
+			<addToGases type="method">./OpenPurgeVlvs</addToGases>
+			<addToGases type="method">./CloseV1</addToGases>
+			<addToGases type="method">./ClosePurgeVlvs</addToGases>
+			<addToGases type="method">./OpenFP11</addToGases>	
+			<addToGases type="method">./OpenFP12</addToGases>	
+			<addToGases type="method">./OpenFP21</addToGases>	
+			<addToGases type="method">./OpenFP22</addToGases-->	
+			<!--addToGases type="method">./CloseV4</addToGases-->
+			<!--addToGases type="method">CloseFP11</addToGases>
+			<addToGases type="method">CloseFP12</addToGases>
+			<addToGases type="method">CloseFP21</addToGases>
+			<addToGases type="method">CloseFP22</addToGases-->	
+			
+			<addToGases type="method">./CloseV4</addToGases>
+			<addToGases type="method">./CloseV401</addToGases>
+			<addToGases type="method">./CloseV402</addToGases>
+			<addToGases type="method">./CloseV403</addToGases>
+			
+			<OpenV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenV1>		
+			
+			<OpenPurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addOpenValveId type="method">Purge</addOpenValveId>
+				<setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh>
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenPurgeVlvs>
+
+			<CloseV1 type="instance" class="GasRecipe">
+				<setGasID type="method">V1</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">true</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV1>		
+			
+			<ClosePurgeVlvs type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addCloseValveId type="method">Purge</addCloseValveId>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh-->
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</ClosePurgeVlvs>
+			
+			<OpenFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP11>
+			
+			<OpenFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP12>
+			
+			<OpenFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP21>
+			
+			<OpenFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">100</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</OpenFP22>
+
+			<CloseFP11 type="instance" class="GasRecipe">
+				<setGasID type="method">FP11</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP11>	
+
+			<CloseFP12 type="instance" class="GasRecipe">
+				<setGasID type="method">FP12</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP12>
+
+			<CloseFP21 type="instance" class="GasRecipe">
+				<setGasID type="method">FP21</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method">3</setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP21>	
+
+			<CloseFP22 type="instance" class="GasRecipe">
+				<setGasID type="method">FP22</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseFP22>
+
+			<CloseV4 type="instance" class="GasRecipe">
+				<setGasID type="method">V4</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV4>
+			
+			<CloseV401 type="instance" class="GasRecipe">
+				<setGasID type="method">V401</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV401>
+			
+			<CloseV402 type="instance" class="GasRecipe">
+				<setGasID type="method">V402</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV402>
+			
+			<CloseV403 type="instance" class="GasRecipe">
+				<setGasID type="method">V403</setGasID>
+				<setGasFlowRate type="method">0</setGasFlowRate>
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<!--setStopAtSetpoint type="method">false</setStopAtSetpoint-->
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</CloseV403>
+			
+		</GassesToFlow>
+	</Purge3>
+</PurgeGasStage3>
+
+<PostPurgeGas type="instance" class="PressureControllerSequence">
+	<setSequenceName type="method">PostPurgeGas</setSequenceName>
+	<addToNextState type="method">./CloseGases</addToNextState>
+
+	<CloseGases type="instance" class="PressureState">
+		<setStateName type="method">CloseGases</setStateName>
+		<!--setRoughSourceState type="method">./RoughPumpStateOff</setRoughSourceState-->
+		<!--setGaugeSourceState type="method">./Vac</setGaugeSourceState-->
+		<setGassesToFlow type="method">./GassesToFlow</setGassesToFlow>
+		<!--setHighVacuumSourceState type="method">./HighVacStateOff</setHighVacuumSourceState-->
+		<setExecuteAlways type="method">true</setExecuteAlways>
+		<!--setCheckTolleranceAfterExecution type="method">true</setCheckTolleranceAfterExecution-->
+		<!--setBuildStateEnableItem type="method"></setBuildStateEnableItem-->
+
+		<GassesToFlow type="instance" class="GassesToFlow">
+			<addToGases type="method">./GasesAction</addToGases>
+			
+			<GasesAction type="instance" class="ProcessGasRecipe">
+				<setGasIDCh type="method">../../../../../../GasPurgeId</setGasIDCh>
+				<addCloseValveId type="method">MFC</addCloseValveId>
+				<addCloseValveId type="method">Secondary</addCloseValveId>
+				<!--setTimeToFlowCh type="method">/SETUP/GasConfig/cfgGasBoxPurgeTime</setTimeToFlowCh-->
+				<!--setGasFlowRate type="method">0</setGasFlowRate-->
+				<!--setPressureToFlowTo1 type="method">730,400,1000</setPressureToFlowTo1-->
+				<!--setTimeout type="method">1000</setTimeout-->
+				<setStopAtSetpoint type="method">false</setStopAtSetpoint>
+				<!--setPressureToFlowTo type="method">450,400,1000</setPressureToFlowTo-->
+				<!--setTimeToFlow type="method"></setTimeToFlow-->
+				<!--setControlledPressurePoint type="method"></setControlledPressurePoint-->
+				<!--setSimulatedTimeTargetPres type="method">720</setSimulatedTimeTargetPres-->
+				<!--setSimulatedTimeTargetTimeout type="method">60</setSimulatedTimeTargetTimeout-->
+			</GasesAction>
+		</GassesToFlow>
+	</CloseGases>
+</PostPurgeGas>	

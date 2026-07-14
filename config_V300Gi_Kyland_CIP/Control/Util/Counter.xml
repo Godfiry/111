@@ -1,0 +1,166 @@
+<CounterManager type="instance" class="CounterManager">
+	<setSaveInterval type="method">30</setSaveInterval>
+	<setFilePath type="method">Counters</setFilePath>
+	
+	<CounterType>
+		<WaferCounter type="instance" class="CounterType">
+			<setName type="method">WaferCounter</setName>		
+			<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ProcessHasWaferFlag==1)</setTriggerCondition>	
+			<setTypeIsTime type="method">false</setTypeIsTime>	
+		</WaferCounter>
+		
+		<PinCounter type="instance" class="CounterType">
+			<setName type="method">PinCounter</setName>		
+			<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/PinUpDO==1)&amp;&amp;(/Control/PMCExports/InnerDatas/PinDownDO==0))</setTriggerCondition>	
+			<setTypeIsTime type="method">false</setTypeIsTime>	
+		</PinCounter>
+		
+		<SRFTimer type="instance" class="CounterType">
+			<setName type="method">SRFTimer</setName>		
+			<setTriggerCondition type="method">((/Control/PMCExports/Datas/SRFPowerOnDO==1)&amp;&amp;(/Control/PMCExports/Datas/SRFSetpointAO&gt;=5.0))</setTriggerCondition>	
+			<setTypeIsTime type="method">true</setTypeIsTime>	
+		</SRFTimer>
+
+		<LFTimer type="instance" class="CounterType">
+			<setName type="method">LFTimer</setName>		
+			<setTriggerCondition type="method">((/Control/PMCExports/Datas/LFPowerOnDO==1)&amp;&amp;
+			(/Control/PMCExports/Datas/LFSetpointAO&gt;=5.0))</setTriggerCondition>	
+			<setTypeIsTime type="method">true</setTypeIsTime>	
+		</LFTimer>
+		
+		<TMPTimer type="instance" class="CounterType">
+			<setName type="method">TMPTimer</setName>		
+			<setTriggerCondition type="method">(/Control/PMCExports/Datas/TMPAtSpeedDI==1)</setTriggerCondition>	
+			<setTypeIsTime type="method">true</setTypeIsTime>	
+		</TMPTimer>
+		
+		<ESCTimer type="instance" class="CounterType">
+			<setName type="method">ESCTimer</setName>		
+			<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ESCHVEnableDO==1)</setTriggerCondition>	
+			<setTypeIsTime type="method">true</setTypeIsTime>	
+		</ESCTimer>
+		
+		<Time type="instance" class="CounterType">
+			<setName type="method">Time</setName>		
+				
+			<setTypeIsTime type="method">true</setTypeIsTime>	
+		</Time>
+	</CounterType>
+	
+	<CounterItems>
+		<WaferCounter type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/WaferCounter/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</WaferCounter>
+		
+		<SRFTimer type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/SRFTimer/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</SRFTimer>	
+
+		<LFTimer type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/LFTimer/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</LFTimer>
+		
+		<UnDefined1 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined1/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined1>	
+		
+		<UnDefined2 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined2/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined2>		
+		
+		<UnDefined3 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined3/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined3>		
+		
+		<UnDefined4 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined4/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined4>		
+		
+		<UnDefined5 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined5/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined5>	
+		
+		<UnDefined6 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined6/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined6>	
+		
+		<UnDefined7 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined7/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined7>
+		
+		<UnDefined8 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined8/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined8>	
+		
+		<UnDefined9 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined9/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined9>	
+		
+		<UnDefined10 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined10/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined10>	
+		
+		<UnDefined11 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined11/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined11>
+		
+		<UnDefined12 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined12/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined12>	
+		
+		<UnDefined13 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined13/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined13>	
+		
+		<UnDefined14 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined14/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined14>
+		
+		<UnDefined15 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined15/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined15>	
+		
+		<UnDefined16 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined16/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined16>	
+		
+		<UnDefined17 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined17/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined17>	
+		
+		<UnDefined18 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined18/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined18>
+		
+		<UnDefined19 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined19/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined19>
+		
+		<UnDefined20 type="instance" class="LifeCounter">
+			<setPrefix type="method">/SETUP/Counters/UnDefined20/</setPrefix>
+			<setHardTolAlmLevel type="method">ERROR</setHardTolAlmLevel>
+		</UnDefined20>																						
+	</CounterItems>
+</CounterManager>

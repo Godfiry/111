@@ -1,0 +1,53 @@
+#
+# Callback strategy: IceStorm or Bidirection
+#
+Debugger.CallbackManager.Type=Bidirection
+#Debugger.CallbackManager.Type=IceStorm
+#
+# This property is used to configure the endpoints of the client
+# subscriber adapter.
+#
+CallbackAdapter.Endpoints=default
+
+# Config client adapter's thread pool (for subscribers in adapter)
+CallbackAdapter.ThreadPool.SizeMax=20
+CallbackAdapter.ThreadPool.Size=1
+
+#
+# This property is used by the clients to connect to IceStorm.
+#
+Debugger.IceStorm.TopicManager.Proxy=MyIceStorm/TopicManager:default -p 9999 -t 6000
+
+# Config client's thread pool (for AMI cb)
+Ice.ThreadPool.Client.SizeMax=10
+Ice.ThreadPool.Client.Size=1
+
+# Disable client's ACM
+Ice.ACM.Client=0
+
+# Timeout (ms)
+#Ice.Override.Timeout=1000
+#Ice.Override.ConnectTimeout=500
+
+Debugger.RemoteApp.Timeout=5000
+
+#
+# Debugger connection monitor setting
+#
+# Notify connection problem after 'x' continuous failure
+Debugger.ConnMonitor.Limit=100
+# Interval between each checking (ms, min=100)
+Debugger.ConnMonitor.Interval=1000
+
+# Config client's
+#
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+#Ice.Trace.Network=2
+
+Debugger.Callback.Timeout=2000

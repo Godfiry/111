@@ -1,0 +1,33 @@
+<addActuator type="method">./CloseV2</addActuator>	
+<addActuator type="method">./CloseV4</addActuator>
+<addActuator type="method">./CloseV401</addActuator>
+<addActuator type="method">./CloseV402</addActuator>
+<addActuator type="method">./CloseV403</addActuator>
+	
+<CloseV2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/VacuumPrimaryValveV2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV2>	
+
+<CloseV4 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV4DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV4>	
+
+<CloseV401 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV401DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV401>
+
+<CloseV402 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV402DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV402>
+
+<CloseV403 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV403DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV403>
+					
+
+	

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataLog>
+	<Database type="mysql">
+		<ServerHost>localhost</ServerHost>
+		<ServerPort></ServerPort>
+		<ClientHost>localhost</ClientHost>
+		<RootPassword>8888</RootPassword>
+		<UserName>PMCI</UserName>
+		<UserPassword>8888</UserPassword>
+		<DbInstance>PMCI</DbInstance>
+	</Database>
+</DataLog>

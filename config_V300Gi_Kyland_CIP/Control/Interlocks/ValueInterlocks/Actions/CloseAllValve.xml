@@ -1,0 +1,511 @@
+<addActuator type="method">./CloseV10</addActuator>	
+<addActuator type="method">./CloseV12</addActuator>
+<addActuator type="method">./CloseV20</addActuator>	
+<addActuator type="method">./CloseV22</addActuator>
+<addActuator type="method">./CloseV30</addActuator>	
+<addActuator type="method">./CloseV32</addActuator>
+<addActuator type="method">./CloseV40</addActuator>
+<addActuator type="method">./CloseV42</addActuator>
+<addActuator type="method">./CloseV50</addActuator>	
+<addActuator type="method">./CloseV52</addActuator>
+<addActuator type="method">./CloseV60</addActuator>
+<addActuator type="method">./CloseV62</addActuator>
+<addActuator type="method">./CloseV70</addActuator>	
+<addActuator type="method">./CloseV72</addActuator>
+<addActuator type="method">./CloseV80</addActuator>	
+<addActuator type="method">./CloseV82</addActuator>
+<addActuator type="method">./CloseV90</addActuator>	
+<addActuator type="method">./CloseV92</addActuator>
+<addActuator type="method">./CloseV100</addActuator>	
+<addActuator type="method">./CloseV102</addActuator>
+<addActuator type="method">./CloseV110</addActuator>	
+<addActuator type="method">./CloseV112</addActuator>
+<addActuator type="method">./CloseV120</addActuator>	
+<addActuator type="method">./CloseV122</addActuator>
+<addActuator type="method">./CloseV130</addActuator>	
+<addActuator type="method">./CloseV132</addActuator>
+<addActuator type="method">./CloseV140</addActuator>	
+<addActuator type="method">./CloseV142</addActuator>
+<addActuator type="method">./CloseV150</addActuator>	
+<addActuator type="method">./CloseV152</addActuator>
+<addActuator type="method">./CloseV160</addActuator>	
+<addActuator type="method">./CloseV162</addActuator>
+<addActuator type="method">./CloseV170</addActuator>	
+<addActuator type="method">./CloseV172</addActuator>
+<addActuator type="method">./CloseV180</addActuator>	
+<addActuator type="method">./CloseV182</addActuator>
+
+<addActuator type="method">./CloseV11</addActuator>
+<addActuator type="method">./CloseV21</addActuator>
+
+<addActuator type="method">./CloseV31</addActuator>
+<addActuator type="method">./CloseV41</addActuator>
+
+<addActuator type="method">./CloseV51</addActuator>
+<addActuator type="method">./CloseV61</addActuator>
+
+<addActuator type="method">./CloseV71</addActuator>
+<addActuator type="method">./CloseV81</addActuator>
+
+<addActuator type="method">./CloseV91</addActuator>
+<addActuator type="method">./CloseV101</addActuator>
+
+<addActuator type="method">./CloseV111</addActuator>
+<addActuator type="method">./CloseV121</addActuator>
+
+<addActuator type="method">./CloseV131</addActuator>
+<addActuator type="method">./CloseV141</addActuator>
+
+<addActuator type="method">./CloseV151</addActuator>
+<addActuator type="method">./CloseV161</addActuator>
+
+<addActuator type="method">./CloseV171</addActuator>
+<addActuator type="method">./CloseV181</addActuator>
+
+<addActuator type="method">./CloseBypassValve1</addActuator>
+<addActuator type="method">./CloseBypassValve2</addActuator>
+
+<addActuator type="method">./ClosePenValve</addActuator>
+<addActuator type="method">./CloseTMPPurge</addActuator>
+<addActuator type="method">./CloseIsolationValve</addActuator>
+
+<addActuator type="method">./CloseV1</addActuator>	
+<!--addActuator type="method">./CloseV3</addActuator-->
+<addActuator type="method">./CloseV8</addActuator>	
+<addActuator type="method">./CloseV802</addActuator>	
+<addActuator type="method">./CloseV9</addActuator>
+<addActuator type="method">./CloseV902</addActuator>
+
+<addActuator type="method">./CloseV2</addActuator>	
+<addActuator type="method">./CloseV4</addActuator>
+<addActuator type="method">./CloseV401</addActuator>
+<addActuator type="method">./CloseV402</addActuator>
+<addActuator type="method">./CloseV403</addActuator>
+
+<addActuator type="method">./CloseV5</addActuator>
+<addActuator type="method">./CloseV501</addActuator>
+<addActuator type="method">./CloseV502</addActuator>
+<addActuator type="method">./CloseV503</addActuator>
+
+<addActuator type="method">./CloseHeliumVlv1</addActuator>	
+<addActuator type="method">./CloseHeliumVlv2</addActuator>
+<addActuator type="method">./CloseHeliumVlv3</addActuator>
+<addActuator type="method">./CloseHeliumVlv4</addActuator>
+<addActuator type="method">./CloseHeliumVlv22</addActuator>
+<addActuator type="method">./CloseHeliumVlv32</addActuator>
+<addActuator type="method">./CloseHeliumVlv42</addActuator>
+
+<addActuator type="method">./NoPinUp</addActuator>
+<addActuator type="method">./NoPinDown</addActuator>
+
+<CloseV10 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve11DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV10>	
+
+<CloseV12 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve12DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV12>
+
+<CloseV20 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve21DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV20>
+
+<CloseV22 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve22DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV22>
+
+<CloseV30 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve31DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV30>
+
+<CloseV32 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve32DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV32>
+
+<CloseV40 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve41DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV40>
+
+<CloseV42 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve42DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV42>
+
+<CloseV50 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve51DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV50>
+
+<CloseV52 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve52DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV52>
+
+<CloseV60 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve61DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV60>
+
+<CloseV62 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve62DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV62>
+
+<CloseV70 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve71DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV70>
+
+<CloseV72 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve72DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV72>
+
+<CloseV80 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve81DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV80>
+
+<CloseV82 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve82DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV82>
+
+<CloseV90 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve91DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV90>
+
+<CloseV92 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve92DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV92>
+
+<CloseV100 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve101DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV100>
+
+<CloseV102 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve102DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV102>
+
+<CloseV110 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve111DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV110>
+
+<CloseV112 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve112DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV112>
+
+<CloseV120 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve121DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV120>
+
+<CloseV122 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve122DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV122>
+
+<CloseV130 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve131DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV130>
+
+<CloseV132 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve132DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV132>
+
+<CloseV140 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve141DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV140>
+
+<CloseV142 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve142DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV142>
+
+<CloseV150 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve151DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV150>
+
+<CloseV152 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve152DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV152>
+
+<CloseV160 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve161DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV160>
+
+<CloseV162 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve162DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV162>
+
+<CloseV170 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve171DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV170>
+
+<CloseV172 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve172DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV172>
+
+<CloseV180 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve181DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV180>
+
+<CloseV182 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve182DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV182>
+
+<CloseV11 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve13DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV11>
+
+<CloseV21 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve23DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV21>
+		
+<CloseV31 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve33DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV31>
+
+<CloseV41 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve43DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV41>
+
+<CloseV51 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve53DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV51>
+
+<CloseV61 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve63DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV61>
+
+<CloseV71 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve73DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV71>
+
+<CloseV81 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve83DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV81>
+
+<CloseV91 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve93DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV91>
+
+<CloseV101 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve103DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV101>
+
+<CloseV111 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve113DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV111>
+
+<CloseV121 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve123DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV121>
+
+<CloseV131 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve133DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV131>
+
+<CloseV141 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve143DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV141>
+
+<CloseV151 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve153DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV151>
+
+<CloseV161 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve163DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV161>
+
+<CloseV171 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve173DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV171>
+
+<CloseV181 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve183DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV181>
+
+<CloseBypassValve1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseBypassValve1>	
+
+<CloseBypassValve2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseBypassValve2>	
+
+<ClosePenValve type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_OpenCloseDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</ClosePenValve>	
+
+<CloseTMPPurge type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/TMPPurgeValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseTMPPurge>
+
+<CloseIsolationValve type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/ISOValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseIsolationValve>
+
+<CloseV1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/N2PurgeValveV1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV1>		
+
+<CloseV8 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV801DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV8>	
+
+<CloseV802 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV802DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV802>	
+
+<CloseV9 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV901DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV9>
+
+<CloseV902 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV902DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV902>
+
+<CloseV2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/VacuumPrimaryValveV2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV2>	
+
+<CloseV4 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV4DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV4>
+
+<CloseV401 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV401DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV401>
+
+<CloseV402 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV402DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV402>
+
+<CloseV403 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV403DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV403>
+
+
+<CloseV5 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV5DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV5>
+
+<CloseV501 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV501DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV501>
+
+<CloseV502 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV502DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV502>
+
+<CloseV503 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV503DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV503>
+
+
+<CloseHeliumVlv1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv1>
+
+<CloseHeliumVlv2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv2>
+
+<CloseHeliumVlv3 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve3DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv3>
+
+<CloseHeliumVlv4 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve4DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv4>
+
+<CloseHeliumVlv22 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve22DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv22>
+
+<CloseHeliumVlv32 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve23DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv32>
+
+<CloseHeliumVlv42 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve24DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv42>
+
+<NoPinUp type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PinUpDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</NoPinUp>
+
+<NoPinDown type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PinDownDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</NoPinDown>

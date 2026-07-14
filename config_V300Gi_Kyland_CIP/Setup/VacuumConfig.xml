@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <VacuumConfig comments="VacuumConfig">
+    <Param name="BasePressure" dataObject="/SETUP/Vacuum/cfgBasePressure" type="D" min="0" max="50" units="mTorr" accuracy="0.1" default="5" />
+    <Param name="BasePressureWaitTime" dataObject="/SETUP/Vacuum/cfgBasePressureWaitTime" type="I" min="0" max="10000" descriptorList="" units="s" default="1200" />
+    <Param name="ChamberBallastEnabled" dataObject="/SETUP/Vacuum/cfgChamberBallastEnabled" type="I" min="0" max="1" descriptorList="false:0,true:1" units="" default="false" />
+    <Param name="ChamberBallastPressure" dataObject="/SETUP/Vacuum/cfgChamberBallastPressure" type="D" min="0" max="100" units="mTorr" accuracy="0.1" default="80" />
+    <Param name="ChamberBallastTolerance" dataObject="/SETUP/Vacuum/cfgChamberBallastTolerance" type="D" min="0" max="100" units="mTorr" accuracy="0.1" default="3" />
+    <Param name="ChamberBallastTimeoutSeconds" dataObject="/SETUP/Vacuum/cfgChamberBallastTimeoutSeconds" type="I" min="0" max="2000" descriptorList="" units="sec" default="50" />
+    <Param name="TurboPumpAtSpeedTimeoutSeconds" dataObject="/SETUP/Vacuum/cfgTurboPumpAtSpeedTimeoutSeconds" type="I" min="0" max="1800" descriptorList="" units="s" default="1200" />
+    <Param name="TurboPumpedPressure" dataObject="/SETUP/Vacuum/cfgTurboPumpedPressure" type="D" min="0" max="500" units="mTorr" accuracy="0.1" default="97.5" />
+    <Param name="PumpToBasTimeoutSeconds" dataObject="/SETUP/Vacuum/cfgPumpToBasTimeoutSeconds" type="I" min="0" max="2000" descriptorList="" units="s" default="300" />
+    <Param name="NumPPCycles" dataObject="/SETUP/Vacuum/cfgNumPPCycles" type="I" min="0" max="200" descriptorList="" units="" default="200" />
+    <Param name="PumpTimeSecondsForPP" dataObject="/SETUP/Vacuum/cfgPumpTimeSecondsForPP" type="I" min="15" max="2000" descriptorList="" units="s" default="30" />
+    <Param name="PurgeTimeSecondsForPP" dataObject="/SETUP/Vacuum/cfgPurgeTimeSecondsForPP" type="I" min="15" max="2000" descriptorList="" units="s" default="15" />
+    <Param name="LeakbackTestTimeSeconds" dataObject="/SETUP/Vacuum/cfgLeakbackTestTimeSeconds" type="I" min="0" max="6000" descriptorList="" units="s" default="300" />
+    <Param name="LeakbackStabilizeTimeSeconds" dataObject="/SETUP/Vacuum/cfgLeakbackStabilizeTimeSeconds" type="I" min="0" max="6000" descriptorList="" units="s" default="30" />
+    <Param name="LeakbackMaxChamberPressure" dataObject="/SETUP/Vacuum/cfgLeakbackMaxChamberPressure" type="D" min="0" max="90" units="mTorr" accuracy="0.1" default="30" />
+    <Param name="LeakbackAlarmRate" dataObject="/SETUP/Vacuum/cfgLeakbackAlarmRate" type="D" min="0" max="90" units="mTorrPerMin" accuracy="0.001" default="1.5" />
+    <Param name="VentTimeForV8Open" dataObject="/SETUP/Vacuum/cfgVentTimeForV8Open" type="I" min="10" max="600" descriptorList="" units="sec" default="10" />
+    <Param name="VentToAtmosphereTimeoutSeconds" dataObject="/SETUP/Vacuum/cfgVentToAtmosphereTimeoutSeconds" type="I" min="0" max="2000" descriptorList="" units="sec" default="500" />
+    <Param name="ForelinePressureWaitTimeoutSeconds" dataObject="/SETUP/Vacuum/cfgForelinePressureWaitTimeoutSeconds" type="I" min="0" max="100" descriptorList="" units="sec" default="80" />
+    <Param name="N2BallastPumpTimeAfterWAC" dataObject="/SETUP/Vacuum/N2BallastPumpTimeAfterWAC" type="D" min="0" max="100" units="s" accuracy="0.01" default="0.5" />
+    <Param name="N2BallastPumpTimeAfterProcess" dataObject="/SETUP/Vacuum/N2BallastPumpTimeAfterProcess" type="D" min="0" max="100" units="s" accuracy="0.01" default="0.5" />
+    <Param name="N2BallastPumpTimeBeforeWAC" dataObject="/SETUP/Vacuum/N2BallastPumpTimeBeforeWAC" type="D" min="0" max="100" units="s" accuracy="0.01" default="0.5" />
+    <Param name="N2BallastPumpTimeBeforeProcess" dataObject="/SETUP/Vacuum/N2BallastPumpTimeBeforeProcess" type="D" min="0" max="100" units="s" accuracy="0.01" default="3" />
+    <Param name="N2BallastPumpOutBeforePinDown" dataObject="/SETUP/Vacuum/N2BallastPumpOutBeforePinDown" type="D" min="0" max="100" units="s" accuracy="0.01" default="3" />
+    <Param name="PendulumValvePressureAlignment" dataObject="/SETUP/Vacuum/cfgPendulumValvePressureAlignment" type="D" min="0" max="1" units="mTorr" accuracy="0.01" default="0" />    
+    <Param name="GasPurgeVentPressureThreshold" dataObject="/SETUP/Vacuum/cfgGasPurgeVentPressureThreshold" type="D" min="0" max="100" units="psi" accuracy="0.01" default="0" />
+    <Param name="GasPurgePumpPressureThreshold" dataObject="/SETUP/Vacuum/cfgGasPurgePumpPressureThreshold" type="D" min="0" max="100" units="psi" accuracy="0.01" default="0" />
+    <Param name="GaslinePumpPurgeFullVentSeconds" dataObject="/SETUP/Vacuum/cfgGaslinePumpPurgeFullVentSeconds" type="D" min="0" max="100" units="s" accuracy="0.01" default="55" />
+    <Param name="GaslinePumpPurgeFullPumpSeconds" dataObject="/SETUP/Vacuum/cfgGaslinePumpPurgeFullPumpSeconds" type="D" min="0" max="100" units="s" accuracy="0.01" default="55" />
+    <Option index="1">
+      <Value paramName="BasePressure">5</Value>
+      <Value paramName="BasePressureWaitTime">1200</Value>
+      <Value paramName="ChamberBallastEnabled">false</Value>
+      <Value paramName="ChamberBallastPressure">80</Value>
+      <Value paramName="ChamberBallastTolerance">3</Value>
+      <Value paramName="ChamberBallastTimeoutSeconds">50</Value>
+      <Value paramName="TurboPumpAtSpeedTimeoutSeconds">1200</Value>
+      <Value paramName="TurboPumpedPressure">97.5</Value>
+      <Value paramName="PumpToBasTimeoutSeconds">300</Value>
+      <Value paramName="NumPPCycles">100</Value>
+      <Value paramName="PumpTimeSecondsForPP">30</Value>
+      <Value paramName="PurgeTimeSecondsForPP">15</Value>
+      <Value paramName="LeakbackTestTimeSeconds">300</Value>
+      <Value paramName="LeakbackStabilizeTimeSeconds">30</Value>
+      <Value paramName="LeakbackMaxChamberPressure">30</Value>
+      <Value paramName="LeakbackAlarmRate">1.5</Value>
+      <Value paramName="VentTimeForV8Open">10</Value>
+      <Value paramName="VentToAtmosphereTimeoutSeconds">500</Value>
+      <Value paramName="ForelinePressureWaitTimeoutSeconds">80</Value>
+      <Value paramName="N2BallastPumpTimeAfterWAC">0.5</Value>
+      <Value paramName="N2BallastPumpTimeAfterProcess">0.5</Value>
+      <Value paramName="N2BallastPumpTimeBeforeWAC">0.5</Value>
+      <Value paramName="N2BallastPumpTimeBeforeProcess">3</Value>
+      <Value paramName="N2BallastPumpOutBeforePinDown">3</Value>
+      <Value paramName="PendulumValvePressureAlignment">0.1</Value>
+      <Value paramName="GasPurgeVentPressureThreshold">30</Value>
+      <Value paramName="GasPurgePumpPressureThreshold">10</Value>
+      <Value paramName="GaslinePumpPurgeFullVentSeconds">55</Value>
+      <Value paramName="GaslinePumpPurgeFullPumpSeconds">55</Value>
+    </Option>
+  </VacuumConfig>
+

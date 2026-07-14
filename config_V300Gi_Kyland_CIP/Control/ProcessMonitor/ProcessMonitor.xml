@@ -1,0 +1,47 @@
+<ProcessMonitor type="instance" class="ProcessMonitor">
+	<setIntervalS type="method">0.2</setIntervalS>		
+	<setAutoStart type="method">false</setAutoStart>
+	<setRecipeClassName type="method">Process</setRecipeClassName>	
+	<!--setSetpointNum type="method">51</setSetpointNum-->	
+	<setStartDelaySCh type="method">/SETUP/Recipe/cfgRecipeStabilityTimeAtStep</setStartDelaySCh>	
+	
+	&SetSimulated;
+	&ESCItems;
+	&GasItems;
+	&RFItems;
+	&TempItems;
+    &InnerDoorItems;
+	&OtherRecipeItems;
+</ProcessMonitor>
+
+<BoshProcessMonitorStable type="instance" class="ProcessMonitor">
+	<setIntervalS type="method">0.2</setIntervalS>		
+	<setAutoStart type="method">false</setAutoStart>	
+	<setRecipeClassName type="method">Process</setRecipeClassName>
+		
+	&SetSimulated;
+    &BoshESCItems;
+	&BoshTempItems;
+	&BoschRFReflJitterItems;
+</BoshProcessMonitorStable>
+
+<BoshProcessMonitorVariable type="instance" class="BoshProcessMonitor">
+	<setIntervalS type="method">0.2</setIntervalS>		
+	<setAutoStart type="method">false</setAutoStart>	
+	
+	
+	&SetSimulated;
+	&BoshGasItems;
+	&BoshRFItems;
+</BoshProcessMonitorVariable>
+
+<!--Lvjw:For Reflact Power-->
+<BoshProcessReflMonitor type="instance" class="ProcessMonitor">
+	<setIntervalS type="method">0.2</setIntervalS>		
+	<setAutoStart type="method">false</setAutoStart>
+	<setRecipeClassName type="method">Process</setRecipeClassName>	
+	
+	&SetSimulated;
+	&BoshRFReflItems;
+</BoshProcessReflMonitor>
+

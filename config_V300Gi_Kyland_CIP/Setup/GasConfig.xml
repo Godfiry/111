@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <GasConfig comments="GasConfig">
+    <Param name="GasPumpPurgeCycle" dataObject="/SETUP/GasConfig/cfgGasPumpPurgeCycle" type="I" min="0" max="10000" descriptorList="" units="" default="20" />
+    <Param name="GasCalibrationSoftTol" dataObject="/SETUP/GasConfig/cfgGasCalibrationSoftTol" type="D" min="0" max="100" units="%" accuracy="0.01" default="3" />
+    <Param name="GasCalibrationHardTol" dataObject="/SETUP/GasConfig/cfgGasCalibrationHardTol" type="D" min="0" max="100" units="%" accuracy="0.01" default="5" />
+    <Param name="GasPanelLeakRateTimeout" dataObject="/SETUP/GasConfig/cfgGasPanelLeakRateTimeout" type="I" min="0" max="10000" descriptorList="" units="s" default="300" />
+    <Param name="GasPanelPumpTime" dataObject="/SETUP/GasConfig/cfgGasPanelPumpTime" type="I" min="0" max="1000" descriptorList="" units="s" default="20" />
+    <Param name="GasFlowTime" dataObject="/SETUP/GasConfig/cfgGasFlowTime" type="I" min="10" max="120" descriptorList="" units="s" default="100" />
+    <Param name="HighFlowPressureMax" dataObject="/SETUP/GasConfig/cfgHighFlowPressureMax" type="D" min="1" max="10" units="Torr" accuracy="0.001" default="8" />
+    <Param name="LowFlowPressureMax" dataObject="/SETUP/GasConfig/cfgLowFlowPressureMax" type="D" min="0.005" max="0.1" units="Torr" accuracy="0.001" default="0.09" />
+    <Param name="GasFlowCutpoint" dataObject="/SETUP/GasConfig/cfgGasFlowCutpoint" type="D" min="5" max="200" units="sccm" accuracy="0.1" default="5" />
+    <Param name="CalStabilizationTime" dataObject="/SETUP/GasConfig/cfgCalStabilizationTime" type="I" min="10" max="120" descriptorList="" units="s" default="100" />
+    <Param name="PressureStablizationTime" dataObject="/SETUP/GasConfig/cfgPressureStablizationTime" type="I" min="10" max="120" descriptorList="" units="s" default="30" />
+    <Param name="GasBoxPumpTime" dataObject="/SETUP/GasConfig/cfgGasBoxPumpTime" type="I" min="10" max="3000" descriptorList="" units="s" default="60" />
+    <Param name="GasBoxPurgeTime" dataObject="/SETUP/GasConfig/cfgGasBoxPurgeTime" type="I" min="10" max="3000" descriptorList="" units="s" default="60" />
+    <Param name="ChamberVolume" dataObject="/SETUP/GasConfig/cfgChamberVolume" type="D" min="1" max="200" units="L" accuracy="0.01" default="82" />
+    <Param name="GaslineVolume" dataObject="/SETUP/GasConfig/cfgGaslineVolume" type="D" min="0" max="200" units="L" accuracy="0.01" default="1" />
+    <Param name="GasTemperature" dataObject="/SETUP/GasConfig/cfgGasTemperature" type="D" min="20" max="70" units="degC" accuracy="0.01" default="60" />
+    <Param name="GasPanelLeakRateTemperatureTol" dataObject="/SETUP/GasConfig/CfgGasPanelLeakRateTemperatureTol" type="D" min="0" max="100" units="degC" accuracy="0.01" default="60" />
+    <Param name="BasePressureMonitorMin" dataObject="/SETUP/GasConfig/cfgBasePressureMin" type="D" min="-1" max="1" units="mT" accuracy="0.01" default="0.1" />
+    <Param name="BasePressureMonitorMax" dataObject="/SETUP/GasConfig/cfgBasePressureMax" type="D" min="-1" max="1" units="mT" accuracy="0.01" default="0.3" />
+	<Param name="H2O2Forbid" dataObject="/SETUP/GasConfig/cfgH2O2Forbid" type="I" min="0" max="1" descriptorList="forbid:0,permit:1" units="" default="forbid" />
+    <Option index="1">
+      <Value paramName="GasPumpPurgeCycle">20</Value>
+      <Value paramName="GasCalibrationSoftTol">3</Value>
+      <Value paramName="GasCalibrationHardTol">5</Value>
+      <Value paramName="GasPanelLeakRateTimeout">300</Value>
+      <Value paramName="GasPanelPumpTime">20</Value>
+      <Value paramName="GasFlowTime">100</Value>
+      <Value paramName="HighFlowPressureMax">8</Value>
+      <Value paramName="LowFlowPressureMax">0.09</Value>
+      <Value paramName="GasFlowCutpoint">5</Value>
+      <Value paramName="CalStabilizationTime">30</Value>
+      <Value paramName="PressureStablizationTime">30</Value>
+      <Value paramName="GasBoxPumpTime">60</Value>
+      <Value paramName="GasBoxPurgeTime">60</Value>
+      <Value paramName="ChamberVolume">82</Value>
+      <Value paramName="GaslineVolume">1</Value>
+      <Value paramName="GasTemperature">60</Value>
+      <Value paramName="GasPanelLeakRateTemperatureTol">100</Value>
+      <Value paramName="BasePressureMonitorMin">0.01</Value>
+      <Value paramName="BasePressureMonitorMax">0.3</Value>
+	  <Value paramName="H2O2Forbid">forbid</Value>
+    </Option>
+  </GasConfig>
+

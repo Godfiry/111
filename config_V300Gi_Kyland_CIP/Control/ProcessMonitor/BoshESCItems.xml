@@ -1,0 +1,164 @@
+<addCheckItem type="method">./BoshESCChuckInner</addCheckItem>
+<addCheckItem type="method">./BoshESCChuckOuter</addCheckItem>
+<addCheckItem type="method">./BoshESCVoltage</addCheckItem>
+<addCheckItem type="method">./BoshESCTemp</addCheckItem>
+
+<BoshESCChuckInner type="instance" class="GroupedCheckItem">
+	<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>
+	<addCheckItem type="method">./BoshESCHeFlowInner</addCheckItem>
+	
+	<addCheckItem type="method">./BoshESCHePressureInner</addCheckItem>
+	
+	<addCheckItem type="method">./BoshDCBias</addCheckItem>
+	
+	
+	<BoshESCHeFlowInner type="instance" class="RatioProcessCheckItem">
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureInner</setSetPoint-->	
+		<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>	
+		<!--setAlarmMessage type="method">ESC HeFlow exceeded max flow per torr threshold</setAlarmMessage-->
+		<setAlarmMessageID type="method">44</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/PCFlowOutAI</setSensor>
+		<setRatioThreshold type="method">/SETUP/EChuck/cfgHeMaxFlowPerTorrThreshold</setRatioThreshold>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>	
+		<setMyLightColor type="method">2</setMyLightColor>	
+		<setNextCheckItem type="method">./CheckMinTolerance</setNextCheckItem>	
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		
+		<CheckMinTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+			<setTriggerCondition type="method">(/Control/PMCExports/Datas/PCFlowOutAI&lt;/SETUP/EChuck/cfgHeMinFlowAlarmThreshold)</setTriggerCondition>	
+			<!--setAlarmMessage type="method">ESC HeFlow under min flow alarm threshold</setAlarmMessage-->
+			<setAlarmMessageID type="method">45</setAlarmMessageID>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>			
+		</CheckMinTolerance>		
+	</BoshESCHeFlowInner>
+	
+	<BoshESCHePressureInner type="instance" class="ProcessCheckItem">
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureInner</setSetPoint-->	
+		<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>	
+		<!--setAlarmMessage type="method">ESC HePressure exceeded soft tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">46</setAlarmMessageID>
+		<setSensor type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgHePressureSoftTol</setTolerance>		
+		<setZeroTolerance type="method">1</setZeroTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureSoftToleranceTimeout</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="ProcessCheckItem">
+			<!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureInner</setSetPoint-->	
+			<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>			
+			<!--setAlarmMessage type="method">ESC HePressure exceeded hard tolerance</setAlarmMessage-->	
+			<setAlarmMessageID type="method">47</setAlarmMessageID>		
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setSensor>
+			<setTolerance type="method">/SETUP/Recipe/cfgHePressureHardTol</setTolerance>
+			<setZeroTolerance type="method">1</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureHardToleranceTimeout</setDurativeTimeSCh>	
+		</CheckHardTolerance>		
+	</BoshESCHePressureInner>	
+	
+	<BoshDCBias type="instance" class="ProcessCheckItem">
+		<setTriggerCondition type="method">(/Control/PMCExports/Datas/LFDCBias&gt;/SETUP/EChuck/cfgESCBiasMaxVoltage)</setTriggerCondition>	
+		<!--setAlarmMessage type="method">DCBias exceeded max value</setAlarmMessage-->	
+		<setAlarmMessageID type="method">49</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<!--setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh-->	
+	</BoshDCBias>
+	
+</BoshESCChuckInner>
+
+<BoshESCChuckOuter type="instance" class="GroupedCheckItem">
+	<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>
+	<addCheckItem type="method">./BoshESCHeFlowOuter</addCheckItem>
+	<addCheckItem type="method">./BoshESCHePressureOuter</addCheckItem>
+	
+	<BoshESCHeFlowOuter type="instance" class="RatioProcessCheckItem">
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureOuter</setSetPoint-->
+		<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+		<setAlarmMessageID type="method">127</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/PMFlowOut2AI</setSensor>
+		<setRatioThreshold type="method">/SETUP/EChuck/cfgHeMaxFlowPerTorrThreshold</setRatioThreshold>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>	
+		<setMyLightColor type="method">2</setMyLightColor>	
+		<setNextCheckItem type="method">./CheckMinTolerance</setNextCheckItem>	
+		<setZeroTolerance type="method">1</setZeroTolerance>
+		
+		<CheckMinTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+			<setTriggerCondition type="method">(/Control/PMCExports/Datas/PMFlowOut2AI&lt;/SETUP/EChuck/cfgHeMinFlowAlarmThreshold)</setTriggerCondition>	
+			<!--setAlarmMessage type="method">ESC HeFlow under min flow alarm threshold</setAlarmMessage-->
+			<setAlarmMessageID type="method">128</setAlarmMessageID>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>			
+		</CheckMinTolerance>	
+	</BoshESCHeFlowOuter>
+	
+	<BoshESCHePressureOuter type="instance" class="ProcessCheckItem">
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureOuter</setSetPoint-->	
+		<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>	
+		<!--setAlarmMessage type="method">ESC HePressure exceeded soft tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">129</setAlarmMessageID>
+		<setSensor type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgHePressureSoftTol</setTolerance>		
+		<setZeroTolerance type="method">1</setZeroTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureSoftToleranceTimeout</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="ProcessCheckItem">
+           <!--setSetPoint type="method">/SETUP/EChuck/cfgBoshMonitorHeliumPressureOuter</setSetPoint-->	
+			<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>			
+			<!--setAlarmMessage type="method">ESC HePressure exceeded hard tolerance</setAlarmMessage-->	
+			<setAlarmMessageID type="method">130</setAlarmMessageID>		
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setSensor>
+			<setTolerance type="method">/SETUP/Recipe/cfgHePressureHardTol</setTolerance>
+			<setZeroTolerance type="method">1</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureHardToleranceTimeout</setDurativeTimeSCh>	
+		</CheckHardTolerance>		
+	</BoshESCHePressureOuter>
+	
+</BoshESCChuckOuter>
+
+<BoshESCVoltage type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">ESCVoltage(V)</setSetPointID>
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgESCClampVoltageSetpoint</setSetPoint-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh-->	
+		<!--setAlarmMessage type="method">ESC Voltage exceeded tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">48</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/DCOutputAI</setSensor>
+		<setTolerance type="method">/SETUP/EChuck/cfgESCClampVoltageDefaultTolerance</setTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCClampVoltageToleranceTimeout</setDurativeTimeSCh>	
+		<!--setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem-->	
+</BoshESCVoltage>
+
+	<BoshESCTemp type="instance" class="TempProcessCheckItem">
+		<setSetPointID type="method">ESCTempCheck(degC)</setSetPointID>
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgESCTempSetpoint</setSetPoint-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+		<!--setAlarmMessage type="method">ESC temp exceeded soft tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">50</setAlarmMessageID>		
+		<setSensor type="method">/Control/PMCExports/Datas/BiasTemp</setSensor>
+		<setTolerance type="method">/SETUP/EChuck/cfgESCTempSoftTolerance</setTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCTempSoftToleranceTime</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+			<!--setSetPoint type="method">/SETUP/EChuck/cfgESCTempSetpoint</setSetPoint-->	
+			<!--setAlarmMessage type="method">ESC temp exceeded hard tolerance</setAlarmMessage-->	
+			<setAlarmMessageID type="method">51</setAlarmMessageID>	
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/BiasTemp</setSensor>
+			<setTolerance type="method">/SETUP/EChuck/cfgESCTempHardTolerance</setTolerance>
+			<setZeroTolerance type="method">1</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCTempHardToleranceTime</setDurativeTimeSCh>	
+		</CheckHardTolerance>		
+	</BoshESCTemp>

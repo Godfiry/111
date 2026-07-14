@@ -1,0 +1,183 @@
+<ChamberGaugeSource  type="instance" class="GaugeSource">
+	<setGaugeMechanism type="method">./GaugeMechanism</setGaugeMechanism>
+	<setLowerLimit type="method">-1</setLowerLimit>
+	<setUpperLimit type="method">10</setUpperLimit>	
+	<addGaugeMechanism type="method">../ForlineGaugeSource/GaugeMechanism</addGaugeMechanism>
+	<addGaugeMechanism type="method">../ATMPressureSwitch</addGaugeMechanism>
+	<addGaugeMechanism type="method">../VACPressureSwitch</addGaugeMechanism>
+	<addGaugeMechanism type="method">../Pressure100mTSwitch</addGaugeMechanism>
+	<addGaugeMechanism type="method">../Pressure500mTSwitch</addGaugeMechanism>
+	<addGaugeMechanism type="method">../ForlinePressureSwitch</addGaugeMechanism>
+	<addGaugeMechanism type="method">../ProcessGaugeSource/GaugeMechanism</addGaugeMechanism>
+	<setNextGauge type="method">../ProcessGaugeSource</setNextGauge>
+	<!--setPreviousGauge type="method">./GaugeSource</setPreviousGauge-->
+	<!--setHighAccuracyGauge type="method">true</setHighAccuracyGauge-->
+	
+	<GaugeMechanism type="instance" class="GaugeMechanism">
+		<setID type="method">Chamber</setID>
+		<!--setGaugeDriver type="method"></setGaugeDriver-->		
+		<setPressureChannel type="method">/Control/PMCExports/Datas/ChamberPressure</setPressureChannel>		
+		&SetSimulated;
+	</GaugeMechanism>
+</ChamberGaugeSource>
+
+<ProcessGaugeSource  type="instance" class="GaugeSource">
+	<setGaugeMechanism type="method">./GaugeMechanism</setGaugeMechanism>
+	<setLowerLimit type="method">-1</setLowerLimit>
+	<setUpperLimit type="method">0.249</setUpperLimit>	
+	<setHighAccuracyGauge type="method">true</setHighAccuracyGauge>
+	<setUnit type="method" comment="1:Torr 2:mTorr">2</setUnit>
+	<setPreviousGauge type="method">../ChamberGaugeSource</setPreviousGauge>
+	<!--setNextGauge type="method">./</setNextGauge-->
+
+	<GaugeMechanism type="instance" class="GaugeMechanism">
+		<setID type="method">Process</setID>
+		<!--setGaugeDriver type="method"></setGaugeDriver-->		
+		<setPressureChannel type="method">/Control/PMCExports/Datas/ProcessPressure</setPressureChannel>	
+		&SetSimulated;
+	</GaugeMechanism>
+</ProcessGaugeSource>
+
+<ForlineGaugeSource  type="instance" class="GaugeSource">
+	<setGaugeMechanism type="method">./GaugeMechanism</setGaugeMechanism>
+	<setLowerLimit type="method">-1</setLowerLimit>
+	<setUpperLimit type="method">10</setUpperLimit>
+	<!--setPreviousGauge type="method"></setPreviousGauge-->
+	<!--setHighAccuracyGauge type="method">true</setHighAccuracyGauge-->
+	<!--setNextGauge type="method">./</setNextGauge-->
+
+	<GaugeMechanism type="instance" class="GaugeMechanism">
+		<setID type="method">Forline</setID>
+		<!--setGaugeDriver type="method"></setGaugeDriver-->		
+		<setPressureChannel type="method">/Control/PMCExports/Datas/ForlinePressure</setPressureChannel>		
+		&SetSimulated;
+	</GaugeMechanism>
+</ForlineGaugeSource>
+
+<ATMPressureSwitch type="instance" class="PressureSwitchGaugeMechanism">
+	<setID type="method">ATMSwitch</setID>
+	<!--setReferenceGauge type="method">../ChamberGaugeSource/GaugeMechanism</setReferenceGauge-->	
+	<setAtmosphereSensor type="method">./AtmSensor</setAtmosphereSensor>
+	<!--setBelowAtmSensor type="method">./BelowAtmSensor</setBelowAtmSensor-->
+	<setVacuumSensor type="method">./VacSensor</setVacuumSensor>
+	<!--setAtmosphereValue type="method">735</setAtmosphereValue-->
+	<!--setVacuumValue type="method">80</setVacuumValue-->
+	
+	<AtmSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ATMSwitchDI</setSensorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+		<!--setExportName type="method">dTRC/ATMSns</setExportName-->
+	</AtmSensor>
+
+	<VacSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ATMSwitchDI</setSensorCh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</VacSensor>
+	
+	&SetSimulated;
+</ATMPressureSwitch>
+
+<VACPressureSwitch type="instance" class="PressureSwitchGaugeMechanism">
+	<setID type="method">VACSwitch</setID>
+	<setReferenceGauge type="method">../ChamberGaugeSource/GaugeMechanism</setReferenceGauge>	
+	<setAtmosphereSensor type="method">./AtmSensor</setAtmosphereSensor>
+	<!--setBelowAtmSensor type="method">./BelowAtmSensor</setBelowAtmSensor-->
+	<setVacuumSensor type="method">./VacSensor</setVacuumSensor>
+	<!--setAtmosphereValue type="method">75</setAtmosphereValue-->
+	<!--setVacuumValue type="method">50</setVacuumValue-->
+	
+	<AtmSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/VACSwitchDI</setSensorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</AtmSensor>
+
+	<VacSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/VACSwitchDI</setSensorCh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</VacSensor>
+	
+	&SetSimulated;
+</VACPressureSwitch>	
+
+<Pressure100mTSwitch type="instance" class="PressureSwitchGaugeMechanism">
+	<setID type="method">100mTSwitch</setID>
+	<setReferenceGauge type="method">../ProcessGaugeSource/GaugeMechanism</setReferenceGauge>	
+	<setAtmosphereSensor type="method">./AtmSensor</setAtmosphereSensor>
+	<!--setBelowAtmSensor type="method">./BelowAtmSensor</setBelowAtmSensor-->
+	<setVacuumSensor type="method">./VacSensor</setVacuumSensor>
+
+	<AtmSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ChamberPressureSW2DI</setSensorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</AtmSensor>
+
+	<VacSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ChamberPressureSW2DI</setSensorCh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</VacSensor>
+	
+	&SetSimulated;
+</Pressure100mTSwitch>	
+	
+<Pressure500mTSwitch type="instance" class="PressureSwitchGaugeMechanism">
+	<setID type="method">500mTSwitch</setID>
+	<setReferenceGauge type="method">../ProcessGaugeSource/GaugeMechanism</setReferenceGauge>
+	<setAtmosphereSensor type="method">./AtmSensor</setAtmosphereSensor>
+	<!--setBelowAtmSensor type="method">./BelowAtmSensor</setBelowAtmSensor-->
+	<setVacuumSensor type="method">./VacSensor</setVacuumSensor>
+
+	<AtmSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/InnerDatas/ChamberPressureSW1DI</setSensorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</AtmSensor>
+
+	<VacSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/InnerDatas/ChamberPressureSW1DI</setSensorCh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</VacSensor>
+	
+	&SetSimulated;
+</Pressure500mTSwitch>		
+
+<ForlinePressureSwitch type="instance" class="PressureSwitchGaugeMechanism">
+	<setID type="method">ForlineSwitch</setID>
+	<setReferenceGauge type="method">../ForlineGaugeSource/GaugeMechanism</setReferenceGauge>
+	<setAtmosphereSensor type="method">./AtmSensor</setAtmosphereSensor>
+	<!--setBelowAtmSensor type="method">./BelowAtmSensor</setBelowAtmSensor-->
+	<setVacuumSensor type="method">./VacSensor</setVacuumSensor>
+
+	<AtmSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ForlinePressure1SWDI</setSensorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</AtmSensor>
+
+	<VacSensor type="instance" class="Sensor">
+		<setSensorCh type="method">/Control/PMCExports/Datas/ForlinePressure1SWDI</setSensorCh>
+		<!--setExportName type="method">dTRC/VACSns</setExportName-->
+	</VacSensor>
+	
+	&SetSimulated;
+</ForlinePressureSwitch>	
+
+<!--GaugeSource  type="instance" class="GaugeSource"-->
+	<!--setGaugeMechanism type="method">./GaugeMechanism</setGaugeMechanism-->
+	<!--setLowerLimit type="method">10</setLowerLimit-->
+	<!--setUpperLimit type="method">100</setUpperLimit-->
+	<!--setNextGauge type="method">../ChamberGaugeSource</setNextGauge-->
+	<!--setPreviousGauge type="method">./ChamberGaugeSource</setPreviousGauge-->
+	<!--setHighAccuracyGauge type="method">true</setHighAccuracyGauge-->
+	
+	<!--GaugeMechanism type="instance" class="GaugeMechanism"-->
+		<!--setID type="method">Gauge</setID-->
+		<!--setGaugeDriver type="method"></setGaugeDriver-->		
+		<!--setPressureChannel type="method">/IO/PLC/AI/GaugePressureOutAI</setPressureChannel>		
+		&SetSimulated;
+	</GaugeMechanism-->
+<!--/GaugeSource-->
+
+
+	

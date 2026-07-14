@@ -1,0 +1,12 @@
+<addActuator type="method">./CloseBypassValve1</addActuator>
+<addActuator type="method">./CloseBypassValve2</addActuator>
+
+<CloseBypassValve1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseBypassValve1>	
+
+<CloseBypassValve2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseBypassValve2>	

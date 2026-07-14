@@ -1,0 +1,63 @@
+<addActuator type="method">./ChamberMiddle1Heater</addActuator>
+<addActuator type="method">./ChamberMiddle2Heater</addActuator>
+<addActuator type="method">./ChamberMiddle3Heater</addActuator>
+<addActuator type="method">./ChamberMiddle4Heater</addActuator>
+<addActuator type="method">./WindowInner</addActuator>
+<addActuator type="method">./AirHeater</addActuator>
+<!--addActuator type="method">./Gasinput</addActuator>
+<addActuator type="method">./Top1</addActuator>
+<addActuator type="method">./Top2</addActuator>
+<addActuator type="method">./InnerDoor</addActuator>
+<addActuator type="method">./Gasinput</addActuator>
+<addActuator type="method">./Inliner</addActuator-->
+<addActuator type="method">./Grid</addActuator>
+
+<ChamberMiddle1Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC1TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle1Heater>
+<ChamberMiddle2Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC2TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle2Heater>
+<ChamberMiddle3Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC3TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle3Heater>
+<ChamberMiddle4Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC4TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle4Heater>
+<WindowInner type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/WindowInnerTempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</WindowInner>
+<AirHeater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/AirTempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</AirHeater>
+<!--Gasinput type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/GasInputHeaterSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</Gasinput>
+<Top1 type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/TopHeater1SP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</Top1>
+<Top2 type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/TopHeater2SP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</Top2>
+<InnerDoor type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/InnerDoorHeaterSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</InnerDoor>
+<Inliner type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/InlinerHeaterSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</Inliner-->
+<Grid type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/GDPTempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</Grid>
+

@@ -1,0 +1,339 @@
+<!--addCheckItem type="method">./BoshProcessPressure</addCheckItem-->	
+<addCheckItem type="method">./BoshGas1</addCheckItem>	
+<addCheckItem type="method">./BoshGas2</addCheckItem>	
+<addCheckItem type="method">./BoshGas3</addCheckItem>	
+<addCheckItem type="method">./BoshGas4</addCheckItem>	
+<addCheckItem type="method">./BoshGas5</addCheckItem>	
+<addCheckItem type="method">./BoshGas6</addCheckItem>	
+<addCheckItem type="method">./BoshGas7</addCheckItem>	
+<addCheckItem type="method">./BoshGas8</addCheckItem>	
+<addCheckItem type="method">./BoshGas9</addCheckItem>	
+<addCheckItem type="method">./BoshGas10</addCheckItem>
+<addCheckItem type="method">./BoshGas11</addCheckItem>	
+<addCheckItem type="method">./BoshGas12</addCheckItem>
+<addCheckItem type="method">./BoshGas13</addCheckItem>	
+<addCheckItem type="method">./BoshGas14</addCheckItem>
+<addCheckItem type="method">./BoshGas15</addCheckItem>	
+<addCheckItem type="method">./BoshGas16</addCheckItem>			
+<addCheckItem type="method">./BoshGas17</addCheckItem>	
+<addCheckItem type="method">./BoshGas18</addCheckItem>
+
+<BoshProcessPressure type="instance" class="BoshProcessCheckItem">
+	<setSetPointID type="method">Pressure(mT)</setSetPointID>		
+	<setSoftTriggerAlarm type="method">53,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">54,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/ProcessPressure</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgPressureSoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgPressureHardTol</setSensorHardTolerance>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+			
+</BoshProcessPressure>
+
+<BoshGas1 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas1</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas1SP</setSetPoint>		
+	<setSoftTriggerAlarm type="method">55,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">56,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/Gas1AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas1SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas1HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>		
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->	
+</BoshGas1>
+
+<BoshGas2 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas2</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas2SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">57,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">58,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas2AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas2SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas2HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->	
+</BoshGas2>	
+
+<BoshGas3 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas3</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas3SP</setSetPoint>		
+	<setSoftTriggerAlarm type="method">59,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">60,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas3AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas3SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas3HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas3>	
+
+<BoshGas4 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas4</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas4SP</setSetPoint>		
+	<setSoftTriggerAlarm type="method">61,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">62,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas4AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas4SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas4HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->	
+</BoshGas4>
+
+<BoshGas5 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas5</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas5SP</setSetPoint>		
+	<setSoftTriggerAlarm type="method">63,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">64,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas5AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas5SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas5HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas5>
+
+<BoshGas6 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas6</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas6SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">65,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">66,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas6AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas6SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas6HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->	
+</BoshGas6>
+
+<BoshGas7 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas7</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas7SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">67,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">68,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas7AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas7SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas7HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas7>
+
+<BoshGas8 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas8</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas8SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">69,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">70,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas8AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas8SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas8HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas8>
+
+<BoshGas9 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas9</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas9SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">71,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">72,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas9AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas9SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas9HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas9>
+
+<BoshGas10 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas10</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas10SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">73,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">74,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas10AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas10SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas10HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas10>
+
+<BoshGas11 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas11</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas11SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">75,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">76,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas11AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas11SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas11HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas11>
+
+<BoshGas12 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas12</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas12SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">77,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">78,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas12AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas12SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas12HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas12>
+
+<BoshGas13 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas13</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas13SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">79,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">80,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas13AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas13SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas13HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas13>
+
+<BoshGas14 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas14</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas14SP</setSetPoint>	
+    <setSoftTriggerAlarm type="method">81,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">82,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas14AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas14SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas14HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas14>
+
+<BoshGas15 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas15</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas15SP</setSetPoint>		
+    <setSoftTriggerAlarm type="method">83,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">84,1</setHardTriggerAlarm>	
+	<setSensor type="method">/Control/PMCExports/Datas/Gas15AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas15SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas15HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas15>
+
+<BoshGas16 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas16</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas16SP</setSetPoint>	
+    <setSoftTriggerAlarm type="method">85,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">86,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas16AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas16SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas16HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas16>
+
+<BoshGas17 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas17</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas17SP</setSetPoint>	
+    <setSoftTriggerAlarm type="method">160,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">161,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas17AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas17SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas17HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas17>
+
+<BoshGas18 type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">BoshGas18</setSetPointID>	
+	<setSetPoint type="method">/Control/PMCExports/Datas/Gas18SP</setSetPoint>	
+    <setSoftTriggerAlarm type="method">162,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">163,1</setHardTriggerAlarm>		
+	<setSensor type="method">/Control/PMCExports/Datas/Gas18AT</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgGas18SoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgGas18HardTol</setSensorHardTolerance>
+	<setLowFlowSoftToleranceValue type="method">10.0</setLowFlowSoftToleranceValue>
+	<setLowFlowHardToleranceValue type="method">10.0</setLowFlowHardToleranceValue>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>	
+	<!--setZeroFlowCheckFlag type="method">false</setZeroFlowCheckFlag-->
+</BoshGas18>

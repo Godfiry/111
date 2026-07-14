@@ -1,0 +1,19 @@
+<IOMonitor class="IOMonitor" type="instance" alias="">
+	<!--setLogPath type="method">/home/nmc/PMCI/CPUlog</setLogPath-->
+
+      <!--addMonitorIO type="method">/Control/PMCExports/InnerDatas/CurrentUsedCpu</addMonitorIO>
+      <addMonitorIO type="method">/Control/PMCExports/InnerDatas/CurrentUsedMem</addMonitorIO-->
+      
+</IOMonitor>
+
+<!--CommunicationStatus>
+	<ChillerStatus class="ChannelStatus" type="instance" alias="">
+		<setMonitorChannel type="method">/Control/PMCExports/Datas/ChillerTemp,./CommunicationStatus</setMonitorChannel>
+		
+		<CommunicationStatus type="data" dataType="I" accessMode="RW" alias="/IO/Datas/ChillerCommunicationStatus">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>Normal,Abnormal</DescriptorList>
+		</CommunicationStatus>
+	</ChillerStatus>
+</CommunicationStatus-->

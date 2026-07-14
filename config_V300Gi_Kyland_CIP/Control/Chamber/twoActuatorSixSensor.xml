@@ -1,0 +1,111 @@
+<Open type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./OpenedOnState</addToActuatorStates>
+	<addToActuatorStates type="method">./ClosedOffState</addToActuatorStates>
+	<addToSensorStates type="method">./OpenOnSense1</addToSensorStates>
+	<addToSensorStates type="method">./CloseOffSense1</addToSensorStates>
+	<addToSensorStates type="method">./OpenOnSense2</addToSensorStates>
+	<addToSensorStates type="method">./CloseOffSense2</addToSensorStates>
+	<addToSensorStates type="method">./OpenOnSense3</addToSensorStates>
+	<addToSensorStates type="method">./CloseOffSense3</addToSensorStates>
+	<setInterlocks type="method">../OpenInterlocks</setInterlocks>
+	<setPositionID type="method">1</setPositionID>
+	<setTimeoutSeconds type="method">12</setTimeoutSeconds>	
+
+	<OpenedOnState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../OpenActuator</setActuator>
+		<setActuatorState type="method">true</setActuatorState>
+	</OpenedOnState>	
+
+	<ClosedOffState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../CloseActuator</setActuator>
+		<setActuatorState type="method">false</setActuatorState>
+	</ClosedOffState>	
+
+	<OpenOnSense1 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor1</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</OpenOnSense1>	
+
+	<CloseOffSense1 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor1</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</CloseOffSense1>
+	
+	<OpenOnSense2 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor2</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</OpenOnSense2>	
+
+	<CloseOffSense2 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor2</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</CloseOffSense2>
+	
+	<OpenOnSense3 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor3</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</OpenOnSense3>	
+
+	<CloseOffSense3 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor3</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</CloseOffSense3>
+	
+	&SetSimulated;
+</Open>
+
+<Close type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./ClosedOnState</addToActuatorStates>
+	<addToActuatorStates type="method">./OpenedOffState</addToActuatorStates>
+	<addToSensorStates type="method">./OpenOffSense1</addToSensorStates>
+	<addToSensorStates type="method">./CloseOnSense1</addToSensorStates>
+	<addToSensorStates type="method">./OpenOffSense2</addToSensorStates>
+	<addToSensorStates type="method">./CloseOnSense2</addToSensorStates>
+	<addToSensorStates type="method">./OpenOffSense3</addToSensorStates>
+	<addToSensorStates type="method">./CloseOnSense3</addToSensorStates>
+	<setInterlocks type="method">../CloseInterlocks</setInterlocks>
+	<setPositionID type="method">0</setPositionID>
+	<setTimeoutSeconds type="method">12</setTimeoutSeconds>	
+
+	<OpenedOffState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../OpenActuator</setActuator>
+		<setActuatorState type="method">false</setActuatorState>
+	</OpenedOffState>	
+
+	<ClosedOnState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../CloseActuator</setActuator>
+		<setActuatorState type="method">true</setActuatorState>
+	</ClosedOnState>
+
+	<OpenOffSense1 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor1</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</OpenOffSense1>	
+
+	<CloseOnSense1 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor1</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</CloseOnSense1>
+	
+	<OpenOffSense2 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor2</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</OpenOffSense2>	
+
+	<CloseOnSense2 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor2</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</CloseOnSense2>
+	
+	<OpenOffSense3 type="instance" class="IOSensorState">
+		<setSensor type="method">../../OpenedSensor3</setSensor>
+		<setSensorState type="method">false</setSensorState>
+	</OpenOffSense3>	
+
+	<CloseOnSense3 type="instance" class="IOSensorState">
+		<setSensor type="method">../../ClosedSensor3</setSensor>
+		<setSensorState type="method">true</setSensorState>
+	</CloseOnSense3>
+	
+	&SetSimulated;
+</Close>

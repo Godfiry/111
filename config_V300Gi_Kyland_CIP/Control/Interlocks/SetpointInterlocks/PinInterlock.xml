@@ -1,0 +1,80 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't pin down</setAlarmMessage>
+	<addToIOInterlocks type="method">./CDANotOK</addToIOInterlocks>	
+	
+	<CDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">259</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANotOK>
+		
+	&SetSimulated;
+</OpenInterlocks>
+
+<SoftUpInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't pin SoftUp</setAlarmMessage>
+	<addToIOInterlocks type="method">./CDANotOK</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./ClampRingNotUP</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ClampRingIsDown</addToIOInterlocks>
+	<CDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">259</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANotOK>
+	<ClampRingNotUP type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">296</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/EPRUpDI==1)</setConditionStr>
+	</ClampRingNotUP>
+	
+	<ClampRingIsDown type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">297</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/EPRDownDO==0)</setConditionStr>
+	</ClampRingIsDown>	
+	&SetSimulated;
+</SoftUpInterlocks>
+
+<SoftUpResetInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't SoftUpReset</setAlarmMessage>
+	<addToIOInterlocks type="method">./CDANotOK</addToIOInterlocks>	
+	
+	<CDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">259</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANotOK>
+		
+	&SetSimulated;
+</SoftUpResetInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't pin up</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChamberCDANotOK</addToIOInterlocks>	
+	<!--addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./HeRFCoverSWUnConnect</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./ClampRingNotUP</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ClampRingIsDown</addToIOInterlocks>
+	
+	<ChamberCDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">260</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</ChamberCDANotOK>
+	
+	<ChamberSWOpen type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">261</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberSWOpen>	
+	
+	<HeRFCoverSWUnConnect type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">262</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/HeRFCoverSWDI==1)</setConditionStr>
+	</HeRFCoverSWUnConnect>
+	
+	<ClampRingNotUP type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">296</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/EPRUpDI==1)</setConditionStr>
+	</ClampRingNotUP>
+	
+	<ClampRingIsDown type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">297</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/EPRDownDO==0)</setConditionStr>
+	</ClampRingIsDown>
+		
+	&SetSimulated;
+</CloseInterlocks>

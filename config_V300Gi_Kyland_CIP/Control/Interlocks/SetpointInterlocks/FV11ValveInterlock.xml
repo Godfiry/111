@@ -1,0 +1,76 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open FV11 valve</setAlarmMessage>
+	<addToIOInterlocks type="method">./DPAlarmPresent</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DryPumpNotRunning</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./ChamberPressureAbove735T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>	
+	<!--addToIOInterlocks type="method">./CoilEnclosureSWOpen</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./CustomerIntlkInvoked</addToIOInterlocks-->
+	<!--addToIOInterlocks type="method">./CustomerGasDetectFailed</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./CDANotOK</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./SlotValveOpen</addToIOInterlocks-->
+	<!--addToIOInterlocks type="method">./FP11Open</addToIOInterlocks-->	
+	
+	<DPAlarmPresent type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">232</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DPAlarmPresent>
+	
+	<DryPumpNotRunning type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open Valve With Dry pump not running</setMessage-->
+		<setMessageID type="method">272</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+	</DryPumpNotRunning>
+	
+	<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">246</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+	</ChamberPressureAbove75T>
+	
+	<ChamberPressureAbove735T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">237</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ATMSwitchDI==1)</setConditionStr>
+	</ChamberPressureAbove735T>
+	
+	<ChamberSWOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">238</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberSWOpen>			
+	
+	<CoilEnclosureSWOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">239</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/CoilEnclosureSWDI==1)</setConditionStr>
+	</CoilEnclosureSWOpen>		
+	
+	<CustomerIntlkInvoked type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">240</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerIntlkDI==1)</setConditionStr>
+	</CustomerIntlkInvoked>	
+	
+	<CustomerGasDetectFailed type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">241</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==1)</setConditionStr>
+	</CustomerGasDetectFailed>		
+
+	<CDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">233</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANotOK>
+	
+	<SlotValveOpen type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">242</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/SlotValveCloseDI==1)</setConditionStr>
+	</SlotValveOpen>
+
+	<FP11Open type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">300</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/FP11ValveDO==0)</setConditionStr>
+	</FP11Open>
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

@@ -1,0 +1,91 @@
+<ALLTest type="instance" class="ALLTest" alias="">
+    <addTestModule type="method">1,PM,./PMTest</addTestModule>
+    <addTestModule type="method">2,S1,./S1Test</addTestModule>
+    <addTestModule type="method">3,FncPM,./FncPMTest</addTestModule>
+	<addTestModule type="method">4,ESC,./ESCTest</addTestModule>
+	<addTestModule type="method">5,EPD,./EPDTest</addTestModule>
+	<addTestModule type="method">6,TempCtl,./TempCtlTest</addTestModule>
+	<addTestModule type="method">7,RF,./SRFTest</addTestModule>
+	<addTestModule type="method">8,RF,./BRFTest</addTestModule>
+	
+	<addTestModule type="method">9,Chamber,./ChamberTest</addTestModule>
+	
+	<PMTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">PM,/Control/PM200L/Operational/PM</setTestModule>	
+		<addServices type="method">Init,-</addServices>
+		<addServices type="method">SetOpMode,3-true</addServices>	
+		&SetSimulated;
+	</PMTest>
+	
+	<S1Test type="instance" class="PMTest" alias="">
+		<setTestModule type="method">S1,/Control/PM200L/Operational/PM/S1</setTestModule>	
+		<addServices type="method">Prepare,/DryClean/test_dry;1</addServices>	
+		<addServices type="method">Process,-</addServices>
+		&SetSimulated;
+	</S1Test>
+	
+	<FncPMTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">FncPM,/Control/PM200L/Operational/PM/FncPM</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>	
+		<addServices type="method">ShutDown,-</addServices>
+		
+		&SetSimulated;
+	</FncPMTest>
+	
+	<ESCTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">ESC,/Control/PM200L/Operational/PM/FncPM/ESC</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+		<addServices type="method">Chuck,23.2</addServices>
+		<addServices type="method">Dechuck,-</addServices>	
+		<addServices type="method">SetHePress,34.6-true</addServices>
+		<addServices type="method">CloseHePress,-</addServices>
+		
+		&SetSimulated;
+	</ESCTest>	
+	
+	<EPDTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">EPD,/Control/PM200L/Operational/PM/FncPM/EPD</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+			
+		&SetSimulated;
+	</EPDTest>
+	
+	<TempCtlTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">TempCtl,/Control/PM200L/Operational/PM/FncPM/TempCtl</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+		
+		&SetSimulated;
+	</TempCtlTest>
+	
+	<SRFTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">RF,/Control/PM200L/Operational/PM/FncPM/SRF</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+		<addServices type="method">SetPower,23.2-true-2.0</addServices>	
+		
+		&SetSimulated;
+	</SRFTest>
+	
+	<BRFTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">RF,/Control/PM200L/Operational/PM/FncPM/BRF</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+		<addServices type="method">SetPower,23.2-true-2.0</addServices>
+			
+		
+		&SetSimulated;
+	</BRFTest>
+
+	<ChamberTest type="instance" class="PMTest" alias="">
+		<setTestModule type="method">Chamber,/Control/PM200L/Operational/PM/FncPM/Chamber</setTestModule>	
+		<addServices type="method">Initialize,-</addServices>
+		<addServices type="method">ShutDown,-</addServices>
+		
+		&SetSimulated;
+	</ChamberTest>
+	
+</ALLTest>
+

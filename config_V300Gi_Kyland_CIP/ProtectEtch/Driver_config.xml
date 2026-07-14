@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE IAP [
+<!ENTITY SetSimulated SYSTEM "./SetSimulated.xml">
+<!ENTITY SetNotSimulated SYSTEM "./SetNotSimulated.xml">
+]>
+<Driver>
+
+	<EtherCatPLC type="instance" class="EtherCatPLC_V300Gi">
+		&SetSimulated;
+		<setNodeNum type="method">200</setNodeNum>
+		<setEtherCatDeviceTotalNum type="method">1</setEtherCatDeviceTotalNum>
+		<!-- Mac pdo sort -->
+		<setMacMapComment comment="deciveMac,deviceMapindex,IOChSize,Inputbyte,outputbyte,simulate"></setMacMapComment>
+		<!--MacID,DeviceMapIndex,ChannelSize,Input.ByteSize,Output.ByteSize,Simulation-->
+		<setMacMap type="method" >256,1,10000,1402,1400,&PLCSimulated;</setMacMap>
+		<setChannelSize type="method">500</setChannelSize>
+		<setPollIntervalMS type="method">2</setPollIntervalMS>
+	
+		<addDeviceDO type="method" comment="channel = start+2">400,1,1,1,1</addDeviceDO>  <!--  SRF off  -->
+	    <addDeviceDO type="method" comment="channel = start+2">698,1,1,1,1</addDeviceDO>  <!--  LF off  -->
+	
+		<addDeviceAI type="method" comment="channel = start+0">402,4,9,0,1,1</addDeviceAI> <!--SRF power-->	
+	    <addDeviceAI type="method" comment="channel = start+0">714,4,9,0,1,1</addDeviceAI> <!--LF power-->	
+	
+	</EtherCatPLC>
+	
+	<!--LF class="GeneratorHuttinger3000DNet" type="instance">
+		&SetSimulated;
+        <setFWdir type="method">/home/nmc/PMCI</setFWdir>
+		<setDeviceName type="method">CifX</setDeviceName>
+		<setNodeNum type="method">43</setNodeNum>
+		<setMacID type="method">38</setMacID>
+		<setPollInterval type="method">25</setPollInterval>
+		<init type="method"></init>
+	</LF-->
+
+	<!--LF  class="TCPMKSGenerator" type="instance">
+		&SetSimulated;
+		<setNodeNum type="method">43</setNodeNum>
+		<setServer type="method">192.168.14.180</setServer>
+		<setPort type="method">11235</setPort>
+		<setPollIntervalMS type="method">50</setPollIntervalMS>
+		<setTimeOutS type="method">60</setTimeOutS>
+		<setReadTimeOutMS type="method">200</setReadTimeOutMS>
+		<init type="method"></init>
+	</LF-->
+	
+ 	<!--PCI_7434 type="instance" class="PCICard" simulated="">
+		&SetSimulated;
+		<setCardType type="method">18</setCardType>
+		<setCardNum type="method">0</setCardNum>
+		<setNodeNum type="method">51</setNodeNum>
+		<setPollInterval type="method">200</setPollInterval>			
+		<init type="method"></init>
+	</PCI_7434>
+
+	<PCI_9116 type="instance" class="PCICard" simulated="">
+		&SetSimulated;
+		<setCardType type="method">32</setCardType>
+		<setCardNum type="method">0</setCardNum>
+		<setNodeNum type="method">54</setNodeNum>	
+		<setPollInterval type="method">25</setPollInterval>		
+		<init type="method"></init>
+	</PCI_9116-->	
+</Driver> 

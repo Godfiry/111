@@ -1,0 +1,245 @@
+<addCheckItem type="method">./AirTempOverHeat</addCheckItem>	
+<!--addCheckItem type="method">./MiddleTempOverHeat</addCheckItem-->
+<addCheckItem type="method">./BaseHeaterOverHeat</addCheckItem>
+<addCheckItem type="method">./AirFlowAlarm</addCheckItem>
+<addCheckItem type="method">./GDPTempOverHeat</addCheckItem>
+<addCheckItem type="method">./AirHeater1TempAbnormal</addCheckItem>
+<!-- GE  -->
+<addCheckItem type="method">./ChamberTempOverHeat</addCheckItem>
+<addCheckItem type="method">./AirHeaterOrInnerDoorOverHeat</addCheckItem>
+<addCheckItem type="method">./AirFlowOrTOPOverHeat</addCheckItem>
+<addCheckItem type="method">./GasInputOverHeat</addCheckItem>
+<addCheckItem type="method">./InlinerOverHeat</addCheckItem>
+<!--addCheckItem type="method">./SideCylinderOverHeat</addCheckItem-->
+
+<AirTempOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/AirHeateOrInnerDoorOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessage type="method">Air Heater is OverHeat </setAlarmMessage>
+	<!--setAlarmMessageID type="method">27</setAlarmMessageID-->	
+	<!--addAction type="method"></addAction-->
+	<addAction type="method">./Action</addAction>	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./WinInnerClear</addActuator>
+			
+		<WinInnerClear type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/WindowInnerTempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</WinInnerClear>	
+	
+	</Action>	
+</AirTempOverHeat>
+
+<!--MiddleTempOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/Spare1OTSWDI==0)</setTriggerCondition>			
+		
+	<setAlarmMessageID type="method">28</setAlarmMessageID>	
+	
+	<addAction type="method">./Action</addAction>	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./MT1</addActuator>
+		<addActuator type="method">./MT2</addActuator>
+		<addActuator type="method">./MT3</addActuator>
+		<addActuator type="method">./MT4</addActuator>
+			
+		<MT1 type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC1TempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</MT1>
+
+		<MT2 type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC2TempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</MT2>
+
+		<MT3 type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC3TempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</MT3>	
+
+		<MT4 type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC4TempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</MT4>
+	
+	</Action>	
+</MiddleTempOverHeat-->
+
+<BaseHeaterOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/GasinputOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">BaseHeate Temperatrue is OverHeat </setAlarmMessage-->	
+	<setAlarmMessageID type="method">212</setAlarmMessageID>	
+	<!--addAction type="method"></addAction-->
+	<addAction type="method">./Action</addAction>	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./BaseHeater1Zero</addActuator>
+		<addActuator type="method">./BaseHeater2Zero</addActuator>
+			
+		<BaseHeater1Zero type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/BaseHeater1SP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</BaseHeater1Zero>
+
+		<BaseHeater2Zero type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/BaseHeater2SP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</BaseHeater2Zero>
+	</Action>
+</BaseHeaterOverHeat>
+<AirFlowAlarm type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/AirFlowOrTopOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<setAlarmMessage type="method">AirFlowSWDI is Alarm</setAlarmMessage>	
+	<!--setAlarmMessageID type="method">141</setAlarmMessageID-->	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<!--addAction type="method">./Action</addAction-->	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./WinInnerClear</addActuator>
+			
+		<WinInnerClear type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/GDPTempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</WinInnerClear>	
+	
+	</Action>
+
+</AirFlowAlarm>	
+
+<GDPTempOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/GDPOrGridOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">AirFlowSWDI is Alarm</setAlarmMessage-->	
+	<setAlarmMessageID type="method">141</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./GDPClear</addActuator>
+			
+		<GDPClear type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/GDPTempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</GDPClear>	
+	
+	</Action>
+
+</GDPTempOverHeat>
+
+<AirHeater1TempAbnormal type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/AirSensor>=425.0)</setTriggerCondition>
+	<!--setAlarmMessage type="method">AirHeater1 Temperatrue Over 425 degc </setAlarmMessage-->	
+	<setAlarmMessageID type="method">142</setAlarmMessageID>
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>	
+
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./WinInnerClear</addActuator>
+			
+		<WinInnerClear type="instance" class="DoubleActuator">
+			<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/WindowInnerTempSP</setDoubleActuatorCh>
+			<setDoubleValue type="method">0</setDoubleValue>
+		</WinInnerClear>	
+	
+	</Action>
+</AirHeater1TempAbnormal>
+
+<ChamberTempOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChamberOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">ChamberTemp is OverHeat</setAlarmMessage-->	
+	<setAlarmMessageID type="method">169</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		<addActuator type="method">./ChamberMiddle1Heater</addActuator>
+		<addActuator type="method">./ChamberMiddle2Heater</addActuator>
+		<addActuator type="method">./ChamberMiddle3Heater</addActuator>
+		<addActuator type="method">./ChamberMiddle4Heater</addActuator>
+<ChamberMiddle1Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC1TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle1Heater>
+<ChamberMiddle2Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC2TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle2Heater>
+<ChamberMiddle3Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC3TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle3Heater>
+<ChamberMiddle4Heater type="instance" class="DoubleActuator">
+	<setDoubleActuatorCh type="method">/Control/PMCExports/Datas/MC4TempSP</setDoubleActuatorCh>
+	<setDoubleValue type="method">0</setDoubleValue>
+</ChamberMiddle4Heater>
+	</Action>	
+</ChamberTempOverHeat>	
+
+<AirHeaterOrInnerDoorOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/AirHeateOrInnerDoorOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">AirHeater or InnerDoor is OverHeat.</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1285</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		&AllTempDown;
+	</Action>	
+</AirHeaterOrInnerDoorOverHeat>
+
+<AirFlowOrTOPOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/AirFlowOrTopOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">AirFlow or TOP is OverHeat.</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1286</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		&AllTempDown;
+	</Action>	
+</AirFlowOrTOPOverHeat>
+
+<GasInputOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/GasinputOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">GasInput is OverHeat.</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1287</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		&AllTempDown;
+	</Action>	
+</GasInputOverHeat>	
+
+<InlinerOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/InlinerOTSWDI==0)</setTriggerCondition>			
+	<!--setDurativeTimeS type="method">3</setDurativeTimeS-->	
+	<!--setAlarmMessage type="method">Inliner is OverHeat.</setAlarmMessage-->	
+	<setAlarmMessageID type="method">1288</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		&AllTempDown;
+	</Action>	
+</InlinerOverHeat>	
+
+<!--SideCylinderOverHeat type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/Spare1OTSWDI==0)</setTriggerCondition>			
+	
+	<setAlarmMessageID type="method">1289</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+
+	<Action type="instance" class="DefaultGuadAction">		
+		&AllTempDown;
+	</Action>	
+</SideCylinderOverHeat-->

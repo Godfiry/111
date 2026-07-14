@@ -1,0 +1,9 @@
+<addCheckItem type="method">./NeedResetButtonAlarm</addCheckItem>
+
+<NeedResetButtonAlarm type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/Datas/NeedResetButton==0)</setTriggerCondition>				
+	<setAlarmMessageID type="method">172</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setEnableAtStart type="method">true</setEnableAtStart>
+	<!--addAction type="method">./Action</addAction-->		
+</NeedResetButtonAlarm>

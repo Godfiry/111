@@ -1,0 +1,10 @@
+<addActuator type="method">./ESCHVDisable</addActuator>
+<addActuator type="method">./NoPinUp</addActuator>
+	<ESCHVDisable type="instance" class="Actuator">
+		<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ESCHVEnableDO</setActuatorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+	</ESCHVDisable>
+	<NoPinUp type="instance" class="Actuator">
+		<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PinUpDO</setActuatorCh>
+		<setActiveHigh type="method">false</setActiveHigh>
+	</NoPinUp>

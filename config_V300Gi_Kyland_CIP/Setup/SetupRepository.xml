@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SetupRepository>
+  <Counters/>
+  <EChuckConfig/>
+  <GasConfig/>
+  <RFConfig/>
+  <RecipeConfig/>
+  <TempCtlConfig/>
+  <VacuumConfig/>
+  <PreservedValue/>
+  <PVControlConfig/>
+</SetupRepository>

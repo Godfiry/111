@@ -1,0 +1,285 @@
+
+
+<nLifeCounterSoftTolAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nLifeCounterSoftTolAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">700</setMessage>
+	<setDescription type="method">701</setDescription>
+	<setSeverity type="method">3</setSeverity>
+		
+</nLifeCounterSoftTolAlm>
+
+<nLifeCounterHardTolAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nLifeCounterHardTolAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">702</setMessage>
+	<setDescription type="method">703</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nLifeCounterHardTolAlm>
+
+<!--Chamber-->
+
+
+<nChamberLeakRateMaxPressAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nChamberLeakRateMaxPressAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">656</setMessage>
+	<setDescription type="method">657</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nChamberLeakRateMaxPressAlm>
+
+<nChamberLeakRateBelowZeroAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nChamberLeakRateBelowZeroAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">658</setMessage>
+	<setDescription type="method">659</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nChamberLeakRateBelowZeroAlm>
+
+<nChamberLeakRateAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nChamberLeakRateAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">660</setMessage>
+	<setDescription type="method">661</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nChamberLeakRateAlm>
+
+<nGasLeakRateAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nGasLeakRateAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">662</setMessage>
+	<setDescription type="method">663</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nGasLeakRateAlm>
+
+<nChamberLeakRateAbnormalAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nChamberLeakRateAbnormalAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">664</setMessage>
+	<setDescription type="method">665</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nChamberLeakRateAbnormalAlm>
+
+<nChamberTempAbnormalAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nChamberTempAbnormalAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">666</setMessage>
+	<setDescription type="method">667</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nChamberTempAbnormalAlm>
+
+<nGasZeroDriftSoftAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nGasZeroDriftSoftAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">668</setMessage>
+	<setDescription type="method">669</setDescription>
+	<setSeverity type="method">3</setSeverity>
+		
+</nGasZeroDriftSoftAlm>
+
+<nGasZeroDriftHardAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nGasZeroDriftHardAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">670</setMessage>
+	<setDescription type="method">671</setDescription>
+	<setSeverity type="method">3</setSeverity>
+		
+</nGasZeroDriftHardAlm>
+
+<bSlotValveIsOpenAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotValveIsOpenAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">672</setMessage>
+	<setDescription type="method">673</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>	
+</bSlotValveIsOpenAlm>
+
+<!--EPD-->
+<nProcessNotStableAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nProcessNotStableAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">674</setMessage>
+	<setDescription type="method">675</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nProcessNotStableAlarm>
+
+<nMaxEDPTimeTooShort type="instance" class="AlarmResource" alias="">
+	<setName type="method">nMaxEDPTimeTooShort</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">676</setMessage>
+	<setDescription type="method">677</setDescription>
+	<setSeverity type="method">4</setSeverity>
+		
+</nMaxEDPTimeTooShort>
+
+<nEndpointReceivedBeforeMin type="instance" class="AlarmResource" alias="">
+	<setName type="method">nEndpointReceivedBeforeMin</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">678</setMessage>
+	<setDescription type="method">679</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nEndpointReceivedBeforeMin>
+
+<nEndpointNotReceived type="instance" class="AlarmResource" alias="">
+	<setName type="method">nEndpointNotReceived</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">680</setMessage>
+	<setDescription type="method">681</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nEndpointNotReceived>
+
+<nEndWithEndStep type="instance" class="AlarmResource" alias="">
+	<setName type="method">nEndWithEndStep</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">682</setMessage>
+	<setDescription type="method">683</setDescription>
+	<setSeverity type="method">4</setSeverity>
+		
+</nEndWithEndStep>
+
+<nTopTempNotStable type="instance" class="AlarmResource" alias="">
+	<setName type="method">nTopTempNotStable</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">684</setMessage>
+	<setDescription type="method">685</setDescription>
+	<setSeverity type="method">4</setSeverity>
+		
+</nTopTempNotStable>
+
+<!--ESC-->
+<bESCClampTimeout type="instance" class="AlarmResource" alias="">
+	<setName type="method">bESCClampTimeout</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">690</setMessage>
+	<setDescription type="method">691</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">abort</addRecovery>
+
+</bESCClampTimeout>
+
+<bHeEvacTimeout type="instance" class="AlarmResource" alias="">
+	<setName type="method">bHeEvacTimeout</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">692</setMessage>
+	<setDescription type="method">693</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">abort</addRecovery>
+
+</bHeEvacTimeout>
+
+<bESC_RecipeAndSetupChiller type="instance" class="AlarmResource" alias="">
+	<setName type="method">bESC_RecipeAndSetupChiller</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">710</setMessage>
+	<setDescription type="method">711</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">abort</addRecovery>
+
+</bESC_RecipeAndSetupChiller>
+
+<bESCChillerTimeoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bESCChillerTimeoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">712</setMessage>
+	<setDescription type="method">713</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">abort</addRecovery>
+
+</bESCChillerTimeoutAlarm>
+
+
+<!--RF-->
+<nCcontrolorTcontrolWrongAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nCcontrolorTcontrolWrongAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">694</setMessage>
+	<setDescription type="method">695</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nCcontrolorTcontrolWrongAlm>
+
+<nRFNotStable type="instance" class="AlarmResource" alias="">
+	<setName type="method">nRFNotStable</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">696</setMessage>
+	<setDescription type="method">697</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nRFNotStable>
+
+<nPressureNotStable type="instance" class="AlarmResource" alias="">
+	<setName type="method">nPressureNotStable</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">698</setMessage>
+	<setDescription type="method">699</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nPressureNotStable>
+
+<!--PM-->
+
+<bErrorOrFaltalAlarmExist type="instance" class="AlarmResource" alias="">
+	<setName type="method">bErrorOrFaltalAlarmExist</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">704</setMessage>
+	<setDescription type="method">705</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<!--addRecovery type="method">retry</addRecovery-->
+	<addRecovery type="method">continue</addRecovery>
+	
+</bErrorOrFaltalAlarmExist>
+
+<nErrorOrFaltalAlarmExist type="instance" class="AlarmResource" alias="">
+	<setName type="method">nErrorOrFaltalAlarmExist</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">704</setMessage>
+	<setDescription type="method">705</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	
+</nErrorOrFaltalAlarmExist>
+
+<nProcessInterruptedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nProcessInterruptedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">706</setMessage>
+	<setDescription type="method">707</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	
+</nProcessInterruptedAlarm>
+
+<nDryCleanInterruptedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nDryCleanInterruptedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">708</setMessage>
+	<setDescription type="method">709</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	
+</nDryCleanInterruptedAlarm>
+
+<nSlotValveNotClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nSlotValveNotClosedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">538</setMessage>
+	<setDescription type="method">539</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	
+</nSlotValveNotClosedAlarm>
+

@@ -1,0 +1,36 @@
+<addActuator type="method">./CloseV1</addActuator>	
+<!--addActuator type="method">./CloseV3</addActuator-->
+<addActuator type="method">./CloseV8</addActuator>	
+<addActuator type="method">./CloseV802</addActuator>
+<addActuator type="method">./CloseV9</addActuator>	
+<addActuator type="method">./CloseV902</addActuator>
+
+<CloseV1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/N2PurgeValveV1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV1>		
+
+<!--CloseV3 type="instance" class="Actuator">
+	<setActuatorCh type="method">/IO/PLC/DO/ManifoldPrechargeValveV3DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV3-->		
+
+<CloseV8 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV801DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV8>	
+
+<CloseV802 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV802DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV802>	
+
+<CloseV9 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV901DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV9>
+
+<CloseV902 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV902DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV902>

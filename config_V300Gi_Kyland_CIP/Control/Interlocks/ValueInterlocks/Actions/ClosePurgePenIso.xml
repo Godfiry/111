@@ -1,0 +1,18 @@
+<addActuator type="method">./ClosePenValve</addActuator>
+<addActuator type="method">./CloseTMPPurge</addActuator>
+<addActuator type="method">./CloseIsolationValve</addActuator>
+
+<ClosePenValve type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_OpenCloseDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</ClosePenValve>	
+
+<CloseTMPPurge type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/TMPPurgeValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseTMPPurge>
+
+<CloseIsolationValve type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/ISOValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseIsolationValve>

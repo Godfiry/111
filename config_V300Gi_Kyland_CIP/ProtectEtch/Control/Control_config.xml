@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Control [
+]>
+<Control>
+	<CloseRF class="ProtectEtch" type="instance" alias="">
+		<addRFOnOffWCh type="method">SRF,/Control/PMCExports/Datas/SRFPowerOnDO</addRFOnOffWCh>
+		<addRFOnOffWCh type="method">BRF,/Control/PMCExports/Datas/BRFPowerOnDO</addRFOnOffWCh>
+		<addRFOnOffWCh type="method">LF,/Control/PMCExports/Datas/LFPowerOnDO</addRFOnOffWCh>
+		<addRFForwardPowerSensorCh type="method">SRF,/Control/PMCExports/Datas/SRFFWDLPWRAI</addRFForwardPowerSensorCh>
+		<addRFForwardPowerSensorCh type="method">BRF,/Control/PMCExports/Datas/BRFFWDLPWRAI</addRFForwardPowerSensorCh>
+		<addRFForwardPowerSensorCh type="method">LF,/Control/PMCExports/Datas/LFFWDLPWRAI</addRFForwardPowerSensorCh>
+	</CloseRF>
+</Control>

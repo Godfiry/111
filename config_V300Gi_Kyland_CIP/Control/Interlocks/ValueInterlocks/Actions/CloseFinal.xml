@@ -1,0 +1,29 @@
+<addActuator type="method">./CloseFV11</addActuator>
+<addActuator type="method">./CloseFV12</addActuator>
+<addActuator type="method">./CloseFV21</addActuator>
+<addActuator type="method">./CloseFV22</addActuator>
+
+<CloseFV11 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/FV11ValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseFV11>
+
+<CloseFV12 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/FV12ValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseFV12>
+
+<CloseFV21 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/FV21ValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseFV21>
+
+<CloseFV22 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/FV22ValveDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseFV22>
+
+
+	
+
+

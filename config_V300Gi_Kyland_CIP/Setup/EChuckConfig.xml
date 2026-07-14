@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <EChuckConfig comments="EChuckConfigExec">
+    <Param name="WaferSizePM" dataObject="/SETUP/EChuck/cfgWaferSizePM" type="I" min="0" max="1" descriptorList="300mm:0,200mm:1" units="" default="300mm" />
+    <Param name="DechuckHVReverse" dataObject="/SETUP/EChuck/cfgDechuckHVReverse" type="I" min="0" max="1" descriptorList="No:0,Yes:1" units="" default="No" />
+    <Param name="ESCClampVoltageSetpoint" dataObject="/SETUP/EChuck/cfgESCClampVoltageSetpoint" type="D" min="0" max="10000" units="volt" accuracy="1" default="4000" />
+    <Param name="ESCReversePolarityDeclampVoltSetpt" dataObject="/SETUP/EChuck/cfgESCReversePolarityDeclampVoltSetpt" type="D" min="0" max="10000" units="volt" accuracy="0.1" default="2000" />
+    <Param name="ESCHoldingVoltage" dataObject="/SETUP/EChuck/cfgESCHoldingVoltage" type="D" min="0" max="10000" units="volt" accuracy="1" default="4000" />
+    <Param name="ESCHeOnDelayTime" dataObject="/SETUP/EChuck/cfgESCHeOnDelayTime" type="D" min="0.5" max="5" units="s" accuracy="0.1" default="2" />
+    <Param name="ESCChargingTime" dataObject="/SETUP/EChuck/cfgESCChargingTime" type="D" min="1" max="30" units="s" accuracy="0.1" default="3" />
+    <Param name="ESCReversedPolarityDechuckTime" dataObject="/SETUP/EChuck/cfgESCReversedPolarityDechuckTime" type="D" min="1" max="30" units="s" accuracy="0.1" default="2" />
+    <Param name="DechuckDelayTime1" dataObject="/SETUP/EChuck/cfgDechuckDelayTime1" type="D" min="0" max="60" units="s" accuracy="0.1" default="20" />
+    <Param name="DechuckDelayTime2" dataObject="/SETUP/EChuck/cfgDechuckDelayTime2" type="D" min="0" max="10" units="s" accuracy="0.1" default="2" />
+    <Param name="ESCTempSetpoint" dataObject="/SETUP/EChuck/cfgESCTempSetpoint" type="D" min="-40" max="80" units="degC" accuracy="0.1" default="20" />
+    <Param name="ESCTempOffSet" dataObject="/SETUP/EChuck/cfgESCTempOffSet" type="D" min="-10" max="10" units="degC" accuracy="0.1" default="0" />
+    <Param name="ESCTempThreshold" dataObject="/SETUP/EChuck/cfgESCTempThreshold" type="D" min="-10" max="10" units="degC" accuracy="0.1" default="1" />
+    <Param name="ESCTempMeetTimeOut" dataObject="/SETUP/EChuck/cfgESCTempMeetTimeOut" type="D" min="0" max="3600" units="s" accuracy="0.1" default="1800" />
+    <Param name="ESCTempStableTimeOut" dataObject="/SETUP/EChuck/cfgESCTempStableTimeOut" type="D" min="0" max="3600" units="s" accuracy="0.1" default="60" />
+    <Param name="HePresThresholdToBeginDechuck" dataObject="/SETUP/EChuck/cfgHePresThresholdToBeginDechuck" type="D" min="2" max="50" units="Torr" accuracy="0.1" default="2" />
+    <Param name="ESCDCCurrentMax" dataObject="/SETUP/EChuck/cfgESCDCCurrentMax" type="D" min="0" max="2" units="mA" accuracy="0.1" default="2" />
+    <Param name="HeStableTime" dataObject="/SETUP/EChuck/cfgHeStableTime" type="D" min="1" max="30" units="s" accuracy="0.1" default="7" />
+    <Param name="ESCDCDischargTime" dataObject="/SETUP/EChuck/cfgESCDCDischargTime" type="D" min="0" max="10" units="s" accuracy="0.1" default="1" />
+    <Param name="VoltageRampTime" dataObject="/SETUP/EChuck/cfgVoltageRampTime" type="D" min="0" max="1000" units="s" accuracy="0.1" default="1" />
+    <Param name="VoltageDownRampTime" dataObject="/SETUP/EChuck/cfgVoltageDownRampTime" type="D" min="0" max="10" units="s" accuracy="0.1" default="1" />
+    <Param name="ESCDCOnDelayTime" dataObject="/SETUP/EChuck/cfgESCDCOnDelayTime" type="D" min="0" max="1000" units="s" accuracy="0.1" default="1" />
+    <Param name="ESCDCPolarityChangeBetweenWafer" dataObject="/SETUP/EChuck/cfgESCDCPolarityChangeBetweenWafer" type="I" min="0" max="1" descriptorList="False:0,True:1" units="" default="False" />
+    <Param name="EPRPrePosition" dataObject="/SETUP/EChuck/cfgEPRPrePosition" type="I" min="0" max="1" descriptorList="Down:0,Up:1" units="" default="Down" />
+    <Param name="ESCSleepTimeAfterRingUp" dataObject="/SETUP/EChuck/cfgESCSleepTimeAfterRingUp" type="I" min="0" max="10" descriptorList="" units="s" default="2" />
+    <Param name="HePresThresholdToBeginDownDechuck" dataObject="/SETUP/EChuck/cfgHePresThresholdToBeginDownDechuck" type="D" min="0.1" max="50" units="Torr" accuracy="0.1" default="1" />
+    <Param name="DownDechuckHVReverse" dataObject="/SETUP/EChuck/cfgDownDechuckHVReverse" type="I" min="0" max="1" descriptorList="No:0,Yes:1" units="" default="No" />
+    <Param name="ESCDownDechuckReversePolarityDeclampVoltSetpt" dataObject="/SETUP/EChuck/cfgESCDownDechuckReversePolarityDeclampVoltSetpt" type="D" min="0" max="3000" units="volt" accuracy="0.1" default="2000" />
+    <Param name="ESCReversedPolarityDownDechuckTime" dataObject="/SETUP/EChuck/cfgESCReversedPolarityDownDechuckTime" type="D" min="1" max="30" units="s" accuracy="0.1" default="5" />
+    <Param name="DownDechuckDelayTime1" dataObject="/SETUP/EChuck/cfgDownDechuckDelayTime1" type="D" min="0" max="10" units="s" accuracy="0.1" default="6" />
+    <Param name="DownDechuckDelayTime2" dataObject="/SETUP/EChuck/cfgDownDechuckDelayTime2" type="D" min="0" max="10" units="s" accuracy="0.1" default="2" />
+    <Param name="HighPressureDelayTime" dataObject="/SETUP/EChuck/cfgHighPressureDelayTime" type="I" min="0" max="1000" descriptorList="" units="s" default="2" />
+    <Option index="1">
+      <Value paramName="WaferSizePM">300mm</Value>
+      <Value paramName="DechuckHVReverse">No</Value>
+      <Value paramName="ESCClampVoltageSetpoint">4500</Value>
+      <Value paramName="ESCReversePolarityDeclampVoltSetpt">3000</Value>
+      <Value paramName="ESCHoldingVoltage">4500</Value>
+      <Value paramName="ESCHeOnDelayTime">2</Value>
+      <Value paramName="ESCChargingTime">3</Value>
+      <Value paramName="ESCReversedPolarityDechuckTime">3</Value>
+      <Value paramName="DechuckDelayTime1">15</Value>
+      <Value paramName="DechuckDelayTime2">2</Value>
+      <Value paramName="ESCTempSetpoint">34</Value>
+      <Value paramName="ESCTempOffSet">0</Value>
+      <Value paramName="ESCTempThreshold">1</Value>
+      <Value paramName="ESCTempMeetTimeOut">1800</Value>
+      <Value paramName="ESCTempStableTimeOut">60</Value>
+      <Value paramName="HePresThresholdToBeginDechuck">2.25</Value>
+      <Value paramName="ESCDCCurrentMax">2</Value>
+      <Value paramName="HeStableTime">7</Value>
+      <Value paramName="ESCDCDischargTime">1</Value>
+      <Value paramName="VoltageRampTime">1</Value>
+      <Value paramName="VoltageDownRampTime">1</Value>
+      <Value paramName="ESCDCOnDelayTime">1</Value>
+      <Value paramName="ESCDCPolarityChangeBetweenWafer">False</Value>
+      <Value paramName="EPRPrePosition">Up</Value>
+      <Value paramName="ESCSleepTimeAfterRingUp">2</Value>
+      <Value paramName="HePresThresholdToBeginDownDechuck">1</Value>
+      <Value paramName="DownDechuckHVReverse">No</Value>
+      <Value paramName="ESCDownDechuckReversePolarityDeclampVoltSetpt">2000</Value>
+      <Value paramName="ESCReversedPolarityDownDechuckTime">5</Value>
+      <Value paramName="DownDechuckDelayTime1">6</Value>
+      <Value paramName="DownDechuckDelayTime2">2</Value>
+      <Value paramName="HighPressureDelayTime">2</Value>
+    </Option>
+  </EChuckConfig>
+

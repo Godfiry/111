@@ -1,0 +1,314 @@
+<ESC class="DualHePlusESCSource" type="instance" alias="">
+	<setChiller type="method">./Chiller</setChiller>
+	<setPin type="method">./Pin</setPin>
+	<setRing type="method">./Ring</setRing>	
+	<setESCDC type="method">./ESCDC</setESCDC>
+	<setHePressCtl type="method">./HePressCtlInner</setHePressCtl>
+	<setHePressCtl2 type="method">./HePressCtlOuter</setHePressCtl2>
+	<setESCDoDownDechuck type="method">true</setESCDoDownDechuck>
+	<setHeValve1 type="method">../Chamber/PC/GasSource/GasValves/HeValve1/HeController1</setHeValve1>
+	<setHeValve2 type="method">../Chamber/PC/GasSource/GasValves/HeValve2/HeController2</setHeValve2>
+	<setHeValve3 type="method">../Chamber/PC/GasSource/GasValves/HeValve3/HeController3</setHeValve3>
+	<setHeValve4 type="method">../Chamber/PC/GasSource/GasValves/HeValve4/HeController4</setHeValve4>
+	<setHeValve22 type="method">../Chamber/PC/GasSource/GasValves/HeValve22/HeController22</setHeValve22>
+	<setHeValve23 type="method">../Chamber/PC/GasSource/GasValves/HeValve32/HeController32</setHeValve23>
+	<setHeValve24 type="method">../Chamber/PC/GasSource/GasValves/HeValve42/HeController42</setHeValve24>
+
+	<addParamMap type="method">PinUpWCh,/Control/PMCExports/InnerDatas/PinUpDO</addParamMap>
+	<addParamMap type="method">PinDownWCh,/Control/PMCExports/InnerDatas/PinDownDO</addParamMap>
+	<addParamMap type="method">PinUpSensor,/Control/PMCExports/InnerDatas/Pin1UpDI</addParamMap>
+	<addParamMap type="method">PinDownSensor,/Control/PMCExports/InnerDatas/Pin1DownDI</addParamMap>
+	
+	<setOpenInterlockForHeGasLine type="method">./HeGasLineInterlock</setOpenInterlockForHeGasLine>
+	<setOpenInterlockForHVReverse type="method">./HVReverseInterlock</setOpenInterlockForHVReverse>
+	
+	<HeGasLineInterlock type="instance" class="IOInterlocks">
+		<setAlarmMessage type="method">Can't open He gasLine valve</setAlarmMessage>
+		<addToIOInterlocks type="method">./DPAlarmPresent</addToIOInterlocks>
+		<addToIOInterlocks type="method">./DPNoRuning</addToIOInterlocks>
+		<addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks>
+		<addToIOInterlocks type="method">./ChamberCDANotOK</addToIOInterlocks>
+		<addToIOInterlocks type="method">./SlotValveOpen</addToIOInterlocks>
+		<addToIOInterlocks type="method">./ForlinePressAbove750mT</addToIOInterlocks>
+	
+		<DPAlarmPresent type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Dry pump has alarm. The channel [/Control/PMCExports/Datas/DPAlarmPresenceDI] should be [NoAlarm]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+		</DPAlarmPresent>
+		
+		<DPNoRuning type="instance" class="IOInterlockCondition">
+			<setMessage type="method">DP is abnormal. The channel [/Control/PMCExports/Datas/DPOnDI] should be [Running]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+		</DPNoRuning>
+		
+		<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Chamber pressure above 75T. The channel [/Control/PMCExports/Datas/VACSwitchDI] should be [Less75T]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+		</ChamberPressureAbove75T>
+		
+		<ChamberCDANotOK type="instance" class="IOInterlockCondition">	
+			<setMessage type="method">Chamber CDA is abnormal. The channel [/IO/PLC/DI/CDAOKDI] should be [Normal]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+		</ChamberCDANotOK>
+
+		<SlotValveOpen type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Slot valve is not closed. The channel [/Control/PMCExports/InnerDatas/SlotValveCloseDI] should be [Close]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/InnerDatas/SlotValveCloseDI==1)</setConditionStr>
+		</SlotValveOpen>
+
+		<ForlinePressAbove750mT type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Forline pressure is abnormal. The channel [/Control/PMCExports/Datas/ForlinePressure1SWDI] should be [less750mT]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/ForlinePressure1SWDI==1)</setConditionStr>
+		</ForlinePressAbove750mT>
+		
+		&SetSimulated;
+	</HeGasLineInterlock>
+	
+	<HVReverseInterlock type="instance" class="IOInterlocks">
+		<setAlarmMessage type="method">Can't reverse HV for EChuck</setAlarmMessage>
+		<addToIOInterlocks type="method">./HeRFCoverSWOpen</addToIOInterlocks>
+		<addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks>
+		<addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>	
+	
+		<HeRFCoverSWOpen type="instance" class="IOInterlockCondition">
+			<setMessage type="method">He RFCover is not closed. The channel [/Control/PMCExports/Datas/HeRFCoverSWDI] should be [Close]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/HeRFCoverSWDI==1)</setConditionStr>
+		</HeRFCoverSWOpen>
+	
+		<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Chamber pressure above 75T. The channel [/Control/PMCExports/Datas/VACSwitchDI] should be [Less75T]</setMessage>
+			<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+		</ChamberPressureAbove75T>	
+
+		<ChamberSWOpen type="instance" class="IOInterlockCondition">
+			<setMessage type="method">Chamber lid is not closed. The channel [/Control/PMCExports/InnerDatas/ChamberSW1DI] should be [Close]</setMessage>
+			<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+		</ChamberSWOpen>	
+		
+		&SetSimulated;
+	</HVReverseInterlock>
+	
+	
+	<Pin type="instance" class="Pin" alias="">
+		<setClosePosition type="method">./Close</setClosePosition>
+		<setOpenPosition type="method">./Open</setOpenPosition>
+		<setSoftUpPosition type="method">./SoftUp</setSoftUpPosition>
+		<setSoftUpResetPosition type="method">./SoftUpReset</setSoftUpResetPosition>
+		<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+		<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+
+		<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Pin_Sns">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>UNKNOW:-1, FALSE, TRUE</DescriptorList>
+		</InterlockData>					
+		
+		<PositionIndication type="data" dataType="S" accessMode="RW">
+			<Bd></Bd>
+			<Ch></Ch>
+			<MaxLength>100</MaxLength>
+		</PositionIndication>
+						
+		<OpenActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PinDownDO</setActuatorCh>
+		</OpenActuator>
+		
+		<CloseActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PinUpDO</setActuatorCh>
+		</CloseActuator>
+		
+		<SoftUpActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/SoftPinUpDO</setActuatorCh>
+		</SoftUpActuator>
+		
+		<OpenedSensor1 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin1DownDI</setSensorCh>
+		</OpenedSensor1>		
+		
+		<ClosedSensor1 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin1UpDI</setSensorCh>
+		</ClosedSensor1>
+
+		<OpenedSensor2 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin2DownDI</setSensorCh>
+		</OpenedSensor2>		
+		
+		<ClosedSensor2 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin2UpDI</setSensorCh>
+		</ClosedSensor2>
+
+      	<OpenedSensor3 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin3DownDI</setSensorCh>
+		</OpenedSensor3>		
+		
+		<ClosedSensor3 type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/Pin3UpDI</setSensorCh>
+		</ClosedSensor3>				
+		
+		<SoftUp type="instance" class="IOPosition">
+			<addToActuatorStates type="method">./DownDOToZero</addToActuatorStates>
+			<addToActuatorStates type="method">./SoftUpDOToOne</addToActuatorStates>
+			<addToSensorStates type="method">./UpDIToZero1</addToSensorStates>
+			<addToSensorStates type="method">./DownDIToZero1</addToSensorStates>
+			<addToSensorStates type="method">./UpDIToZero2</addToSensorStates>
+			<addToSensorStates type="method">./DownDIToZero2</addToSensorStates>
+			<addToSensorStates type="method">./UpDIToZero3</addToSensorStates>
+			<addToSensorStates type="method">./DownDIToZero3</addToSensorStates>
+			<setInterlocks type="method">../SoftUpInterlocks</setInterlocks>
+			<setPositionID type="method">2</setPositionID>
+			<setTimeoutSeconds type="method">30</setTimeoutSeconds>
+			
+			<DownDOToZero type="instance" class="IOActuatorState">
+				<setActuator type="method">../../OpenActuator</setActuator>
+				<setActuatorState type="method">false</setActuatorState>
+			</DownDOToZero>	
+
+			<SoftUpDOToOne type="instance" class="IOActuatorState">
+				<setActuator type="method">../../SoftUpActuator</setActuator>
+				<setActuatorState type="method">true</setActuatorState>
+			</SoftUpDOToOne>
+
+			<DownDIToZero1 type="instance" class="IOSensorState">
+				<setSensor type="method">../../OpenedSensor1</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</DownDIToZero1>
+			
+			<UpDIToZero1 type="instance" class="IOSensorState">
+				<setSensor type="method">../../ClosedSensor1</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</UpDIToZero1>
+			
+			<DownDIToZero2 type="instance" class="IOSensorState">
+				<setSensor type="method">../../OpenedSensor2</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</DownDIToZero2>
+			
+			<UpDIToZero2 type="instance" class="IOSensorState">
+				<setSensor type="method">../../ClosedSensor2</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</UpDIToZero2>
+			
+			<DownDIToZero3 type="instance" class="IOSensorState">
+				<setSensor type="method">../../OpenedSensor3</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</DownDIToZero3>
+			
+			<UpDIToZero3 type="instance" class="IOSensorState">
+				<setSensor type="method">../../ClosedSensor3</setSensor>
+				<setSensorState type="method">false</setSensorState>
+			</UpDIToZero3>
+			
+			&SetSimulated;
+		</SoftUp>
+		
+		<SoftUpReset type="instance" class="IOPosition">
+			<addToActuatorStates type="method">./DownDOToOne</addToActuatorStates>
+			<addToActuatorStates type="method">./UpDOToZero</addToActuatorStates>
+			<addToActuatorStates type="method">./SoftUpDOToZero</addToActuatorStates>
+			<setInterlocks type="method">../SoftUpResetInterlocks</setInterlocks>
+			<setPositionID type="method">3</setPositionID>
+			<setTimeoutSeconds type="method">8</setTimeoutSeconds>
+			
+			<DownDOToOne type="instance" class="IOActuatorState">
+				<setActuator type="method">../../OpenActuator</setActuator>
+				<setActuatorState type="method">true</setActuatorState>
+			</DownDOToOne>
+			
+			<UpDOToZero type="instance" class="IOActuatorState">
+				<setActuator type="method">../../CloseActuator</setActuator>
+				<setActuatorState type="method">false</setActuatorState>
+			</UpDOToZero>
+
+			<SoftUpDOToZero type="instance" class="IOActuatorState">
+				<setActuator type="method">../../SoftUpActuator</setActuator>
+				<setActuatorState type="method">false</setActuatorState>
+			</SoftUpDOToZero>
+			
+			&SetSimulated;
+		</SoftUpReset>
+		&PinInterlock;
+		&twoActuatorSixSensor;
+	</Pin>	
+	
+	<Ring type="instance" class="Ring" alias="">
+		<setClosePosition type="method">./Close</setClosePosition>
+		<setOpenPosition type="method">./Open</setOpenPosition>
+		<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+		<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+
+		<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Ring_Sns">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>Unknow:-1, Up, Down</DescriptorList>
+		</InterlockData>					
+		
+		<PositionIndication type="data" dataType="S" accessMode="RW">
+			<Bd></Bd>
+			<Ch></Ch>
+			<MaxLength>100</MaxLength>
+		</PositionIndication>
+						
+		<OpenActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/EPRDownDO</setActuatorCh>
+		</OpenActuator>
+		
+		<CloseActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/EPRUpDO</setActuatorCh>
+		</CloseActuator>	
+		
+		<OpenedSensor type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/EPRDownDI</setSensorCh>
+		</OpenedSensor>		
+		
+		<ClosedSensor type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/EPRUpDI</setSensorCh>
+		</ClosedSensor>				
+		
+		&RingInterlock;
+		&twoActuatorTwoSensor;
+	</Ring>	
+	
+	<Chiller type="instance" class="Chiller" alias="">
+		<setStartCh type="method">/Control/PMCExports/InnerDatas/ChillerStatusSP</setStartCh>
+		<setTempWCh type="method">/Control/PMCExports/Datas/ChillerTemp_SetPoint</setTempWCh>
+		<setTempRCh type="method">/Control/PMCExports/Datas/ChillerTemp</setTempRCh>		
+		<setESCTempRCh type="method">/Control/PMCExports/Datas/BiasTemp</setESCTempRCh>		
+		<setChillerOnInterlocks type="method">./OpenInterlocks</setChillerOnInterlocks>		
+		&ChillerInterlock;	
+		&SetSimulated;
+	</Chiller>
+	
+	<ESCDC type="instance" class="ESCDC" alias="">
+		<setOnOffCh type="method">/Control/PMCExports/InnerDatas/ESCHVEnableDO</setOnOffCh>
+		<setChargeCh type="method">/Control/PMCExports/InnerDatas/ESCDischargeDO</setChargeCh>
+		<setVoltageWCh type="method">/Control/PMCExports/Datas/ESCDCSPAO</setVoltageWCh>
+		<setCurrentWCh type="method">/Control/PMCExports/Datas/ESCDCCurrentSPAO</setCurrentWCh>
+		<setPolarityCh type="method">/Control/PMCExports/Datas/ESCPolarityChangeDO</setPolarityCh>
+		<setVoltageRCh type="method">/Control/PMCExports/Datas/DCOutputAI</setVoltageRCh>
+		<setNegativeCurrentRCh type="method">/Control/PMCExports/Datas/NegCurrentMonAI</setNegativeCurrentRCh>
+		<setPositiveCurrentRCh type="method">/Control/PMCExports/Datas/PosCurrentMonAI</setPositiveCurrentRCh>
+		<setCenterVoltageRCh type="method">/Control/PMCExports/Datas/CenterTapMonAI</setCenterVoltageRCh>
+		<setDCOnInterlocks type="method">./OpenInterlocks</setDCOnInterlocks>
+		&SetSimulated;
+		&ESCInterlock;		
+	</ESCDC>
+	
+	<HePressCtlInner type="instance" class="HePressureCtl" alias="">
+		<setPressureWCh type="method">/Control/PMCExports/Datas/ESCHePressureSPAO</setPressureWCh>
+		<setPressureRCh type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setPressureRCh>
+		<setHeFlowRCh type="method">/Control/PMCExports/Datas/PCFlowOutAI</setHeFlowRCh>	
+		&SetSimulated;
+					
+	</HePressCtlInner>
+	
+	<HePressCtlOuter type="instance" class="HePressureCtl" alias="">
+		<setPressureWCh type="method">/Control/PMCExports/Datas/ESCHePressureSP2AO</setPressureWCh>
+		<setPressureRCh type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setPressureRCh>
+		<setHeFlowRCh type="method">/Control/PMCExports/Datas/PMFlowOut2AI</setHeFlowRCh>	
+		&SetSimulated;
+	
+	</HePressCtlOuter>	
+	&SetSimulated;
+</ESC>
+
+

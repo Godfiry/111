@@ -1,0 +1,41 @@
+<Open type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./ClosedOffState</addToActuatorStates>
+	<addToActuatorStates type="method">./OpenedOnState</addToActuatorStates>
+	<!--addToSensorStates type="method"></addToSensorStates-->
+	<setInterlocks type="method">../OpenInterlocks</setInterlocks>
+	<setPositionID type="method">1</setPositionID>	
+	<setTimeoutSeconds type="method">8</setTimeoutSeconds>
+	
+	<OpenedOnState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../OpenActuator</setActuator>
+		<setActuatorState type="method">true</setActuatorState>
+	</OpenedOnState>	
+
+	<ClosedOffState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../CloseActuator</setActuator>
+		<setActuatorState type="method">false</setActuatorState>
+	</ClosedOffState>		
+	
+	&SetSimulated;
+</Open>
+
+<Close type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./OpenedOffState</addToActuatorStates>
+	<!--addToActuatorStates type="method">./ClosedOnState</addToActuatorStates-->
+	<!--addToSensorStates type="method"></addToSensorStates-->
+	<setInterlocks type="method">../CloseInterlocks</setInterlocks>
+	<setPositionID type="method">0</setPositionID>
+	<setTimeoutSeconds type="method">8</setTimeoutSeconds>
+	
+	<OpenedOffState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../OpenActuator</setActuator>
+		<setActuatorState type="method">false</setActuatorState>
+	</OpenedOffState>	
+
+	<ClosedOnState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../CloseActuator</setActuator>
+		<setActuatorState type="method">true</setActuatorState>
+	</ClosedOnState>
+	
+	&SetSimulated;
+</Close>

@@ -1,0 +1,34 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open pendulum valve</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChamberPressureAbove500mT</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ForlinePressureAbove750mT</addToIOInterlocks>	
+	<!--addToIOInterlocks type="method">./TMPForlinePressAbove1T</addToIOInterlocks-->			
+	<addToIOInterlocks type="method">./CDANotOK</addToIOInterlocks>	
+	
+	<ChamberPressureAbove500mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">258</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ChamberPressureSW2DI==1)</setConditionStr>
+	</ChamberPressureAbove500mT>	
+
+	<ForlinePressureAbove750mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">247</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ForlinePressure1SWDI==1)</setConditionStr>
+	</ForlinePressureAbove750mT>	
+
+	<TMPForlinePressAbove1T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">334</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ForlinePressure2SWDI==1)</setConditionStr>
+	</TMPForlinePressAbove1T>	
+		
+	<CDANotOK type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">233</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANotOK>
+		
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

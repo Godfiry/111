@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <PVControlConfig comments="PVControlConfig">
+    <Param name="SamplingTime" dataObject="/SETUP/Recipe/cfgSamplingTime" type="I" min="10" max="1000" descriptorList="" units="ms" default="50" />
+    <Param name="BoschPVMaxPos" dataObject="/SETUP/Recipe/cfgBoschPVMaxPos" type="I" min="0" max="1000" descriptorList="" units="" default="250" />
+    <Param name="BoschPVMinPos" dataObject="/SETUP/Recipe/cfgBoschPVMinPos" type="I" min="0" max="1000" descriptorList="" units="" default="30" />
+    <Param name="PVchangeLimit" dataObject="/SETUP/Recipe/cfgPVchangeLimit" type="I" min="0" max="50" descriptorList="" units="ms" default="3" />
+    <Param name="GainP" dataObject="/SETUP/Recipe/cfgGainP" type="D" min="0" max="5" units="" accuracy="0.1" default="0.2" />
+    <Param name="GainI" dataObject="/SETUP/Recipe/cfgGainI" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="GainD" dataObject="/SETUP/Recipe/cfgGainD" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="BoschPVMaxPos1" dataObject="/SETUP/Recipe/cfgBoschPVMaxPos1" type="I" min="0" max="1000" descriptorList="" units="" default="250" />
+    <Param name="BoschPVMinPos1" dataObject="/SETUP/Recipe/cfgBoschPVMinPos1" type="I" min="0" max="1000" descriptorList="" units="" default="30" />
+    <Param name="PVchangeLimit1" dataObject="/SETUP/Recipe/cfgPVchangeLimit1" type="I" min="0" max="50" descriptorList="" units="ms" default="3" />
+    <Param name="GainP1" dataObject="/SETUP/Recipe/cfgGainP1" type="D" min="0" max="5" units="" accuracy="0.1" default="0.2" />
+    <Param name="GainI1" dataObject="/SETUP/Recipe/cfgGainI1" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="GainD1" dataObject="/SETUP/Recipe/cfgGainD1" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="BoschPVMaxPos2" dataObject="/SETUP/Recipe/cfgBoschPVMaxPos2" type="I" min="0" max="1000" descriptorList="" units="" default="250" />
+    <Param name="BoschPVMinPos2" dataObject="/SETUP/Recipe/cfgBoschPVMinPos2" type="I" min="0" max="1000" descriptorList="" units="" default="30" />
+    <Param name="PVchangeLimit2" dataObject="/SETUP/Recipe/cfgPVchangeLimit2" type="I" min="0" max="50" descriptorList="" units="ms" default="3" />
+    <Param name="GainP2" dataObject="/SETUP/Recipe/cfgGainP2" type="D" min="0" max="5" units="" accuracy="0.1" default="0.2" />
+    <Param name="GainI2" dataObject="/SETUP/Recipe/cfgGainI2" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="GainD2" dataObject="/SETUP/Recipe/cfgGainD2" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="BoschPVMaxPos3" dataObject="/SETUP/Recipe/cfgBoschPVMaxPos3" type="I" min="0" max="1000" descriptorList="" units="" default="250" />
+    <Param name="BoschPVMinPos3" dataObject="/SETUP/Recipe/cfgBoschPVMinPos3" type="I" min="0" max="1000" descriptorList="" units="" default="30" />
+    <Param name="PVchangeLimit3" dataObject="/SETUP/Recipe/cfgPVchangeLimit3" type="I" min="0" max="50" descriptorList="" units="ms" default="3" />
+    <Param name="GainP3" dataObject="/SETUP/Recipe/cfgGainP3" type="D" min="0" max="5" units="" accuracy="0.1" default="0.2" />
+    <Param name="GainI3" dataObject="/SETUP/Recipe/cfgGainI3" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Param name="GainD3" dataObject="/SETUP/Recipe/cfgGainD3" type="D" min="0" max="5" units="" accuracy="0.1" default="0.1" />
+    <Option index="1">
+      <Value paramName="SamplingTime">50</Value>
+      <Value paramName="BoschPVMaxPos">250</Value>
+      <Value paramName="BoschPVMinPos">30</Value>
+      <Value paramName="PVchangeLimit">3</Value>
+      <Value paramName="GainP">0.2</Value>
+      <Value paramName="GainI">0.1</Value>
+      <Value paramName="GainD">0.1</Value>
+      <Value paramName="BoschPVMaxPos1">250</Value>
+      <Value paramName="BoschPVMinPos1">30</Value>
+      <Value paramName="PVchangeLimit1">3</Value>
+      <Value paramName="GainP1">0.2</Value>
+      <Value paramName="GainI1">0.1</Value>
+      <Value paramName="GainD1">0.1</Value>
+      <Value paramName="BoschPVMaxPos2">250</Value>
+      <Value paramName="BoschPVMinPos2">30</Value>
+      <Value paramName="PVchangeLimit2">3</Value>
+      <Value paramName="GainP2">0.2</Value>
+      <Value paramName="GainI2">0.1</Value>
+      <Value paramName="GainD2">0.1</Value>
+      <Value paramName="BoschPVMaxPos3">250</Value>
+      <Value paramName="BoschPVMinPos3">30</Value>
+      <Value paramName="PVchangeLimit3">3</Value>
+      <Value paramName="GainP3">0.2</Value>
+      <Value paramName="GainI3">0.1</Value>
+      <Value paramName="GainD3">0.1</Value>
+    </Option>
+  </PVControlConfig>

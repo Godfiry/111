@@ -1,0 +1,186 @@
+<addCheckItem type="method">./ESCChuckInner</addCheckItem>
+<addCheckItem type="method">./ESCChuckOuter</addCheckItem>
+<addCheckItem type="method">./DeChuckMinFlow</addCheckItem>
+<addCheckItem type="method">./ESCVoltage</addCheckItem>
+<addCheckItem type="method">./RingUp</addCheckItem>
+<addCheckItem type="method">./RingDown</addCheckItem>
+<addCheckItem type="method">./ESCTemp</addCheckItem>
+
+<ESCChuckInner type="instance" class="GroupedCheckItem">
+	<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>
+	<addCheckItem type="method">./ESCHeFlowInner</addCheckItem>
+	
+	<addCheckItem type="method">./ESCHePressureInner</addCheckItem>
+	
+	<addCheckItem type="method">./DCBias</addCheckItem>
+	
+	
+	<ESCHeFlowInner type="instance" class="RatioProcessCheckItem">
+		<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>	
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>	
+		<!--setAlarmMessage type="method">ESC HeFlow exceeded max flow per torr threshold</setAlarmMessage-->
+		<setAlarmMessageID type="method">44</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/PCFlowOutAI</setSensor>
+		<setRatioThreshold type="method">/SETUP/EChuck/cfgHeMaxFlowPerTorrThreshold</setRatioThreshold>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>	
+		<setMyLightColor type="method">2</setMyLightColor>	
+		<setNextCheckItem type="method">./CheckMinTolerance</setNextCheckItem>	
+		<setZeroTolerance type="method">2</setZeroTolerance>
+		
+		<CheckMinTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+			<setTriggerCondition type="method">((/Control/PMCExports/Datas/PCFlowOutAI&lt;/SETUP/EChuck/cfgHeMinFlowAlarmThreshold)&amp;&amp;(/Control/PMCExports/Datas/ESCHePressureSPAO&gt;0.0))</setTriggerCondition>	
+			<!--setAlarmMessage type="method">ESC HeFlow under min flow alarm threshold</setAlarmMessage-->
+			<setAlarmMessageID type="method">45</setAlarmMessageID>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>			
+		</CheckMinTolerance>		
+	</ESCHeFlowInner>
+	
+	<ESCHePressureInner type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">HePressure_Inner(T)</setSetPointID>	
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>	
+		<!--setAlarmMessage type="method">ESC HePressure exceeded soft tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">46</setAlarmMessageID>	
+		<setSensor type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgHePressureSoftTol</setTolerance>		
+		<setZeroTolerance type="method">2</setZeroTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureSoftToleranceTimeout</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>			
+			<!--setAlarmMessage type="method">ESC HePressure exceeded hard tolerance</setAlarmMessage-->	
+			<setAlarmMessageID type="method">47</setAlarmMessageID>	
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setSensor>
+			<setTolerance type="method">/SETUP/Recipe/cfgHePressureHardTol</setTolerance>
+			<setZeroTolerance type="method">2</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureHardToleranceTimeout</setDurativeTimeSCh>	
+		</CheckHardTolerance>		
+	</ESCHePressureInner>	
+	
+	<DCBias type="instance" class="ProcessCheckItem">
+		<setTriggerCondition type="method">(/Control/PMCExports/Datas/LFDCBias&gt;/SETUP/EChuck/cfgESCBiasMaxVoltage)</setTriggerCondition>	
+		<!--setAlarmMessage type="method">DCBias exceeded max value</setAlarmMessage-->
+		<setAlarmMessageID type="method">49</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<!--setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh-->	
+	</DCBias>
+</ESCChuckInner>	
+
+<ESCChuckOuter type="instance" class="GroupedCheckItem">
+	<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>
+	<addCheckItem type="method">./ESCHeFlowOuter</addCheckItem>
+	<addCheckItem type="method">./ESCHePressureOuter</addCheckItem>
+	
+	<ESCHeFlowOuter type="instance" class="RatioProcessCheckItem">
+		<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>	
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+		<setAlarmMessageID type="method">127</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/PMFlowOut2AI</setSensor>
+		<setRatioThreshold type="method">/SETUP/EChuck/cfgHeMaxFlowPerTorrThreshold</setRatioThreshold>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>	
+		<setMyLightColor type="method">2</setMyLightColor>	
+		<setNextCheckItem type="method">./CheckMinTolerance</setNextCheckItem>	
+		<setZeroTolerance type="method">2</setZeroTolerance>
+		
+		<CheckMinTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>
+			<setTriggerCondition type="method">((/Control/PMCExports/Datas/PMFlowOut2AI&lt;/SETUP/EChuck/cfgHeMinFlowAlarmThreshold)&amp;&amp;(/Control/PMCExports/Datas/ESCHePressureSP2AO&gt;0.0))</setTriggerCondition>	
+			<!--setAlarmMessage type="method">ESC HeFlow under min flow alarm threshold</setAlarmMessage-->
+			<setAlarmMessageID type="method">128</setAlarmMessageID>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>			
+		</CheckMinTolerance>	
+	</ESCHeFlowOuter>	
+	
+	<ESCHePressureOuter type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">HePressure_Outer(T)</setSetPointID>	
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>	
+		<setAlarmMessageID type="method">129</setAlarmMessageID>
+		<setSensor type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgHePressureSoftTol</setTolerance>		
+		<setZeroTolerance type="method">2</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureSoftToleranceTimeout</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="ProcessCheckItem">
+			<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh>			
+			<setAlarmMessageID type="method">130</setAlarmMessageID>
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setSensor>
+			<setTolerance type="method">/SETUP/Recipe/cfgHePressureHardTol</setTolerance>
+			<setZeroTolerance type="method">2</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHePressureHardToleranceTimeout</setDurativeTimeSCh>	
+		</CheckHardTolerance>
+	</ESCHePressureOuter>	
+</ESCChuckOuter>	
+
+<DeChuckMinFlow type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">DeChuckMinFlow</setSetPointID>	
+		<setCheckDelaySCh type="method">/SETUP/EChuck/cfgHeFlowToleranceCheckDelay</setCheckDelaySCh>	
+		<setTriggerCondition type="method">((/Control/PMCExports/Datas/PCFlowOutAI&lt;/SETUP/EChuck/cfgDeChuckHeMinFlow)||(/Control/PMCExports/Datas/PMFlowOut2AI&lt;/SETUP/EChuck/cfgDeChuckHeMinFlow))</setTriggerCondition>	
+		<!--setAlarmMessage type="method">ESC HeFlow is less than min flow value after dechuck</setAlarmMessage-->	
+		<setAlarmMessageID type="method">52</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgHeFlowToleranceTimeout</setDurativeTimeSCh>			
+</DeChuckMinFlow>	
+
+<ESCVoltage type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">ESCVoltage(V)</setSetPointID>
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgESCClampVoltageSetpoint</setSetPoint-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgHePressureToleranceCheckDelay</setCheckDelaySCh-->	
+		<!--setAlarmMessage type="method">ESC Voltage exceeded tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">48</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/DCOutputAI</setSensor>
+		<setZeroTolerance type="method">20</setZeroTolerance>
+		<setTolerance type="method">/SETUP/EChuck/cfgESCClampVoltageDefaultTolerance</setTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCClampVoltageToleranceTimeout</setDurativeTimeSCh>	
+		<!--setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem-->	
+</ESCVoltage>
+
+<RingUp type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">RingUp</setSetPointID>	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgRingUpCheckDelay</setCheckDelaySCh-->
+		<setAlarmMessage type="method">Ring up failed</setAlarmMessage>	
+		<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/EPRUpDI==0)||(/Control/PMCExports/InnerDatas/EPRDownDI==1))</setTriggerCondition>		
+		<!--setAlarmMessageID type="method">160</setAlarmMessageID-->
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgRingUpTimeout</setDurativeTimeSCh>		
+</RingUp>
+
+<RingDown type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">RingDown</setSetPointID>	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgRingDownCheckDelay</setCheckDelaySCh-->
+		<setAlarmMessage type="method">Ring down failed</setAlarmMessage>	
+		<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/EPRUpDI==1)||(/Control/PMCExports/InnerDatas/EPRDownDI==0))</setTriggerCondition>	
+		<!--setAlarmMessageID type="method">161</setAlarmMessageID-->
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgRingDownTimeout</setDurativeTimeSCh>		
+</RingDown>
+
+<ESCTemp type="instance" class="TempProcessCheckItem">
+		<setSetPointID type="method">ESCTempCheck(degC)</setSetPointID>		
+		<!--setSetPoint type="method">/SETUP/EChuck/cfgESCTempSetpoint</setSetPoint-->	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+		<!--setAlarmMessage type="method">ESC temp exceeded soft tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">50</setAlarmMessageID>	
+		<setSensor type="method">/Control/PMCExports/Datas/BiasTemp</setSensor>
+		<setTolerance type="method">/SETUP/EChuck/cfgESCTempSoftTolerance</setTolerance>		
+		<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCTempSoftToleranceTime</setDurativeTimeSCh>	
+		<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+		
+		<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+			<!--setSetPoint type="method">/SETUP/EChuck/cfgESCTempSetpoint</setSetPoint-->	
+			<!--setAlarmMessage type="method">ESC temp exceeded hard tolerance</setAlarmMessage-->	
+			<setAlarmMessageID type="method">51</setAlarmMessageID>
+			<setAlarmSeverity type="method">1</setAlarmSeverity>
+			<setSensor type="method">/Control/PMCExports/Datas/BiasTemp</setSensor>
+			<setTolerance type="method">/SETUP/EChuck/cfgESCTempHardTolerance</setTolerance>
+			<setZeroTolerance type="method">1</setZeroTolerance>
+			<setDurativeTimeSCh type="method">/SETUP/EChuck/cfgESCTempHardToleranceTime</setDurativeTimeSCh>	
+		</CheckHardTolerance>		
+</ESCTemp>

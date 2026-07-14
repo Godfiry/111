@@ -1,0 +1,24 @@
+<addCheckItem type="method">./BoschSRFReflPowerJitter</addCheckItem>	
+<addCheckItem type="method">./BoschLFReflPowerJitter</addCheckItem>	
+
+<BoschSRFReflPowerJitter type="instance" class="JitterCountCheckItem">
+	<setSetPointID type="method">SRFMaxReflectedPower(W)</setSetPointID>	
+	<!--setAlarmMessage type="method">LF reflected power exceeded max value</setAlarmMessage -->
+	<setAlarmMessageID type="method">157</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/SRFReflectPWRAI</setSensor>	
+	<setSoftToleranceNum type="method">/SETUP/CycleRecipe/BoschSRFReflectAbnormalPointNumSoftTol</setSoftToleranceNum>	
+	<setHardToleranceNum type="method">/SETUP/CycleRecipe/BoschSRFReflectAbnormalPointNumHardTol</setHardToleranceNum>
+	<setCheckDelaySCh type="method">/SETUP/CycleRecipe/BoschSRFReflectCheckDelay</setCheckDelaySCh>
+</BoschSRFReflPowerJitter>
+
+<BoschLFReflPowerJitter type="instance" class="JitterCountCheckItem">
+	<setSetPointID type="method">LFMaxReflectedPower(W)</setSetPointID>	
+	<!--setAlarmMessage type="method">LF reflected power exceeded max value</setAlarmMessage -->
+	<setAlarmMessageID type="method">159</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/LFReflectPWRAI</setSensor>	
+	<setSoftToleranceNum type="method">/SETUP/CycleRecipe/BoschLFReflectAbnormalPointNumSoftTol</setSoftToleranceNum>	
+	<setHardToleranceNum type="method">/SETUP/CycleRecipe/BoschLFReflectAbnormalPointNumHardTol</setHardToleranceNum>
+	<setCheckDelaySCh type="method">/SETUP/CycleRecipe/BoschLFReflectCheckDelay</setCheckDelaySCh>
+</BoschLFReflPowerJitter>

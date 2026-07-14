@@ -1,0 +1,298 @@
+<BoshProcessExecuter type="instance" class="FunV300RampBoshProcessExecuter" alias="">
+<setProcessDataCollector type="method">../ProcessDataCollector</setProcessDataCollector>	
+	<addGasLine type="method">&Gas1Name;,./GasLine1</addGasLine>
+	<addGasLine type="method">&Gas2Name;,./GasLine2</addGasLine>
+	<addGasLine type="method">&Gas3Name;,./GasLine3</addGasLine>
+	<addGasLine type="method">&Gas4Name;,./GasLine4</addGasLine>
+	<addGasLine type="method">&Gas5Name;,./GasLine5</addGasLine>
+	<addGasLine type="method">&Gas6Name;,./GasLine6</addGasLine>
+	<addGasLine type="method">&Gas7Name;,./GasLine7</addGasLine>
+	<addGasLine type="method">&Gas8Name;,./GasLine8</addGasLine>
+	<addGasLine type="method">&Gas9Name;,./GasLine9</addGasLine>
+	<addGasLine type="method">&Gas10Name;,./GasLine10</addGasLine>
+	<addGasLine type="method">&Gas11Name;,./GasLine11</addGasLine>
+	<addGasLine type="method">&Gas12Name;,./GasLine12</addGasLine>
+	<addGasLine type="method">&Gas13Name;,./GasLine13</addGasLine>
+	<addGasLine type="method">&Gas14Name;,./GasLine14</addGasLine>
+	<addGasLine type="method">&Gas15Name;,./GasLine15</addGasLine>
+	<addGasLine type="method">&Gas16Name;,./GasLine16</addGasLine>
+	<addGasLine type="method">&Gas17Name;,./GasLine17</addGasLine>
+	<addGasLine type="method">&Gas18Name;,./GasLine18</addGasLine>
+	
+	<addGroupFinalGasID type="method">&Gas1Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas2Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas3Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas4Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas5Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas6Name;,FV22</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas7Name;,FV21</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas8Name;,FV21</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas9Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas10Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas11Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas12Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas13Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas14Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas15Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas16Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas17Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas18Name;,FV11</addGroupFinalGasID>
+	
+
+	<!--addChamberValveControl type="method">V5,/Control/PMCExports/InnerDatas/ChamberDeliveryV5DO</addChamberValveControl>
+	<addChamberValveControl type="method">V501,/Control/PMCExports/InnerDatas/ChamberDeliveryV501DO</addChamberValveControl>
+	<addChamberValveControl type="method">V502,/Control/PMCExports/InnerDatas/ChamberDeliveryV502DO</addChamberValveControl>
+	<addChamberValveControl type="method">V503,/Control/PMCExports/InnerDatas/ChamberDeliveryV503DO</addChamberValveControl-->
+
+	<addFinalValveControl type="method">FV11,./FV11</addFinalValveControl>
+	<addFinalValveControl type="method">FV12,./FV12</addFinalValveControl>
+	<addFinalValveControl type="method">FV21,./FV21</addFinalValveControl>
+	<addFinalValveControl type="method">FV22,./FV22</addFinalValveControl>
+  
+	<addRF type="method">SRF,./SRF</addRF>
+	<addRF type="method">LF,./LF</addRF>
+	
+	<setPenVlv type="method">./PenVlv</setPenVlv>
+	<setPhyEPD type="method">../EPD/PhyEPD</setPhyEPD>
+	<setHistoryStepData type="method">/Control/Operational/HistoryStepData</setHistoryStepData>	
+	
+
+	<FV11 type="instance" class="BoschFinalValveController" alias="">
+		<addValveWCh type="method">FV,/Control/PMCExports/Datas/FV11ValveDO</addValveWCh>
+		<addValveWCh type="method">FP,/Control/PMCExports/Datas/FP11ValveDO</addValveWCh>
+		
+		<addOpenInterlocks type="method">FV,./OpenInterlocks</addOpenInterlocks>
+		&FV11ValveInterlock;
+	</FV11>
+
+	<FV12 type="instance" class="BoschFinalValveController" alias="">
+		<addValveWCh type="method">FV,/Control/PMCExports/Datas/FV12ValveDO</addValveWCh>
+		<addValveWCh type="method">FP,/Control/PMCExports/Datas/FP12ValveDO</addValveWCh>
+		
+		<addOpenInterlocks type="method">FV,./OpenInterlocks</addOpenInterlocks>
+		&FV12ValveInterlock;
+	</FV12>
+	
+	<FV21 type="instance" class="BoschFinalValveController" alias="">
+		<addValveWCh type="method">FV,/Control/PMCExports/Datas/FV21ValveDO</addValveWCh>
+		<addValveWCh type="method">FP,/Control/PMCExports/Datas/FP21ValveDO</addValveWCh>
+		
+		<addOpenInterlocks type="method">FV,./OpenInterlocks</addOpenInterlocks>
+		&FV21ValveInterlock;
+	</FV21>
+	
+	<FV22 type="instance" class="BoschFinalValveController" alias="">
+		<addValveWCh type="method">FV,/Control/PMCExports/Datas/FV22ValveDO</addValveWCh>
+		<addValveWCh type="method">FP,/Control/PMCExports/Datas/FP22ValveDO</addValveWCh>
+		
+		<addOpenInterlocks type="method">FV,./OpenInterlocks</addOpenInterlocks>
+		&FV22ValveInterlock;
+	</FV22>
+	
+	<GasLine1 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve11DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve12DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas1SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Chamber,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine1>
+
+	<GasLine2 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve21DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve22DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas2SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine2>
+	
+	<GasLine3 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve31DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve32DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas3SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine3>
+
+	<GasLine4 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve41DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve42DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas4SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine4>
+
+	<GasLine5 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve51DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve52DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas5SP</setMFCWCh>
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine5>
+
+	<GasLine6 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve61DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve62DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas6SP</setMFCWCh>
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine6>
+	
+	<GasLine7 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve71DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve72DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas7SP</setMFCWCh>
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine7>
+
+	<GasLine8 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve81DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve82DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas8SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine8>
+
+	<GasLine9 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve91DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve92DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas9SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine9>
+
+	<GasLine10 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve101DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve102DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas10SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine10>
+	
+	<GasLine11 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve111DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve112DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas11SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine11>
+	
+	<GasLine12 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve121DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve122DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas12SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine12>
+	
+	<GasLine13 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve131DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve132DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas13SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine13>
+	
+	<GasLine14 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve141DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve142DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas14SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine14>
+	
+	<GasLine15 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve151DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve152DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas15SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine15>
+	
+	<GasLine16 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve161DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve162DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas16SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine16>
+	
+	<GasLine17 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve171DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve172DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas17SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine17>
+	
+	<GasLine18 type="instance" class="BoshGasLineController" alias="">
+		<addValveWCh type="method">Primary,/Control/PMCExports/InnerDatas/GasPrimaryValve181DO</addValveWCh>
+		<addValveWCh type="method">Secondary,/Control/PMCExports/InnerDatas/GasSecondValve182DO</addValveWCh>
+		<setMFCWCh type="method">/Control/PMCExports/Datas/Gas18SP</setMFCWCh>
+		
+		<addOpenInterlocks type="method">Primary,./OpenInterlocks</addOpenInterlocks>
+		<addOpenInterlocks type="method">Secondary,./OpenInterlocks</addOpenInterlocks>
+		&GasValveInterlock;
+	</GasLine18>
+
+	<PenVlv type="instance" class="BoshPenVlvController" alias="">
+		<setPressureWCh type="method">/Control/PMCExports/Datas/VATPressureSP</setPressureWCh>
+		<setPositionWCh type="method">/Control/PMCExports/Datas/VATPositionSP</setPositionWCh>
+	</PenVlv>
+	
+	<SRF type="instance" class="BoshRFController" alias="">
+		<setLearnedC1WCh type="method">/Control/PMCExports/Datas/SRFC1SP</setLearnedC1WCh>
+		<setLearnedC2WCh type="method">/Control/PMCExports/Datas/SRFC2SP</setLearnedC2WCh>
+		<setMatchModeWCh type="method">/Control/PMCExports/Datas/SRF_OperateModeSP</setMatchModeWCh>
+		<setFrequencyModeWCh type="method">/Control/PMCExports/Datas/SRFFrequencyMode</setFrequencyModeWCh>
+        <setBoschFlagWCh type="method">/Control/PMCExports/InnerDatas/SMatch_FlagBoschSetpointDO</setBoschFlagWCh>
+		<setRFOnWCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setRFOnWCh>
+		<setRFPowerWCh type="method">/Control/PMCExports/Datas/SRFSetpointAO</setRFPowerWCh>
+		<setRFLinerAdjust type="method">/SETUP/RF/cfgSRFLinerAdjust</setRFLinerAdjust>
+		<setOnInterlocks type="method">./OpenInterlocks</setOnInterlocks>
+		<setOffInterlocks type="method">./CloseInterlocks</setOffInterlocks>
+		&SRFInterlock;
+	</SRF>
+	
+	<LF type="instance" class="BoshRFController" alias="">
+		<setRFOnWCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setRFOnWCh>
+		<setRFPowerWCh type="method">/Control/PMCExports/Datas/LFSetpointAO</setRFPowerWCh>
+		<setRFLinerAdjust type="method">/SETUP/RF/cfgLFLinerAdjust</setRFLinerAdjust>
+		<setOnInterlocks type="method">./OpenInterlocks</setOnInterlocks>
+		<setOffInterlocks type="method">./CloseInterlocks</setOffInterlocks>
+		&LFInterlock;
+	</LF>		
+	&SetSimulated;	
+</BoshProcessExecuter>

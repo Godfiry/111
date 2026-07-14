@@ -1,0 +1,29 @@
+<Open type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./OpenedState</addToActuatorStates>
+	<!--addToSensorStates type="method"></addToSensorStates-->
+	<setInterlocks type="method">../OpenInterlocks</setInterlocks>
+	<setPositionID type="method">1</setPositionID>
+	<setTimeoutSeconds type="method">8</setTimeoutSeconds>
+	
+	<OpenedState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../Actuator</setActuator>
+		<setActuatorState type="method">true</setActuatorState>
+	</OpenedState>
+	
+	&SetSimulated;
+</Open>
+
+<Close type="instance" class="IOPosition">
+	<addToActuatorStates type="method">./ClosedState</addToActuatorStates>
+	<!--addToSensorStates type="method"></addToSensorStates-->
+	<setInterlocks type="method">../CloseInterlocks</setInterlocks>
+	<setPositionID type="method">0</setPositionID>
+	<setTimeoutSeconds type="method">8</setTimeoutSeconds>
+	
+	<ClosedState type="instance" class="IOActuatorState">
+		<setActuator type="method">../../Actuator</setActuator>
+		<setActuatorState type="method">false</setActuatorState>
+	</ClosedState>
+	
+	&SetSimulated;
+</Close>

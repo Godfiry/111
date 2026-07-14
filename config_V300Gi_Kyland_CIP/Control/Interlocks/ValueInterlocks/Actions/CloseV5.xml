@@ -1,0 +1,28 @@
+<addActuator type="method">./CloseV5</addActuator>
+<addActuator type="method">./CloseV501</addActuator>
+<addActuator type="method">./CloseV502</addActuator>
+<addActuator type="method">./CloseV503</addActuator>
+
+<CloseV5 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV5DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV5>
+
+<CloseV501 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV501DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV501>
+
+<CloseV502 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV502DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV502>
+
+<CloseV503 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV503DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV503>	
+
+	
+
+

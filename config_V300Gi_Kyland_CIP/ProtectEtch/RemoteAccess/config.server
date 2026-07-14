@@ -1,0 +1,33 @@
+#
+# Callback strategy config: IceStorm or Bidirection
+#
+CallbackManager.Type=Bidirection
+#CallbackManager.Type=IceStorm
+#
+# Only for IceStorm
+# This property is used by the clients to connect to IceStorm.
+#
+IceStorm.TopicManager.Proxy=MyIceStorm/TopicManager:default -p 9999
+
+IComObjectAdapter.Endpoints=default -p 20000 -t 100000
+
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+Ice.Trace.Network=1
+
+# Config server's Communicator's ThreadPool
+Ice.ThreadPool.Server.SizeMax=100
+Ice.ThreadPool.Server.Size=10
+
+
+#no use now
+#Ice.ThreadPool.Client.SizeMax=10
+#Ice.ThreadPool.Client.Size=1
+
+# Disable client's ACM
+Ice.ACM.Client=0

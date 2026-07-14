@@ -1,0 +1,223 @@
+
+<nServiceStateOfflineAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nServiceStateOfflineAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">501</setMessage>
+	<setDescription type="method">501</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nServiceStateOfflineAlarm>
+
+<nActionFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nActionFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">502</setMessage>
+	<setDescription type="method">503</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nActionFailedAlarm>
+
+<nDeviceOfflineAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nDeviceOfflineAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">511</setMessage>
+	<setDescription type="method">512</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nDeviceOfflineAlarm>
+
+<nQueueTooLongAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nQueueTooLongAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">515</setMessage>
+	<setDescription type="method">516</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nQueueTooLongAlarm>
+
+<bCommunicationErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCommunicationErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">517</setMessage>
+	<setDescription type="method">518</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bCommunicationErrorAlarm>
+
+<bModuleNotInTransferPositionAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bModuleNotInTransferPositionAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">519</setMessage>
+	<setDescription type="method">520</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bModuleNotInTransferPositionAlarm>
+
+<bNotPreparedToProcessAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bNotPreparedToProcessAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">521</setMessage>
+	<setDescription type="method">522</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bNotPreparedToProcessAlarm>
+
+<nProcessFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nProcessFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">523</setMessage>
+	<setDescription type="method">524</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nProcessFailedAlarm>
+
+<bModuleNotPreparedForMaterialAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bModuleNotPreparedForMaterialAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">525</setMessage>
+	<setDescription type="method">526</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bModuleNotPreparedForMaterialAlarm>
+
+<bRobotExtendedTimeoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRobotExtendedTimeoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">527</setMessage>
+	<setDescription type="method">529</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bRobotExtendedTimeoutAlarm>
+
+<bSlotValveNotClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotValveNotClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">538</setMessage>
+	<setDescription type="method">539</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bSlotValveNotClosedAlarm>
+
+<bRecipeNameNullAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRecipeNameNullAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">540</setMessage>
+	<setDescription type="method">541</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bRecipeNameNullAlarm>
+
+<nActiveHandoffTimeoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nActiveHandoffTimeoutAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">542</setMessage>
+	<setDescription type="method">543</setDescription>
+	<setSeverity type="method">4</setSeverity>
+		
+</nActiveHandoffTimeoutAlarm>
+
+<bInvalidModeAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bInvalidModeAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">544</setMessage>
+	<setDescription type="method">545</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecoveryWithName type="method">Retry request,retry</addRecoveryWithName>
+	<addRecoveryWithName type="method">Override restriction,continue</addRecoveryWithName>
+		
+</bInvalidModeAlarm>
+
+<bNotInMaintenanceAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bNotInMaintenanceAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">546</setMessage>
+	<setDescription type="method">547</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecoveryWithName type="method">Retry request,retry</addRecoveryWithName>
+		
+</bNotInMaintenanceAlarm>
+
+<nModuleAbortedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nModuleAbortedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">548</setMessage>
+	<setDescription type="method">549</setDescription>
+	<setSeverity type="method">3</setSeverity>
+		
+</nModuleAbortedAlarm>
+
+<bRecipeRetrievalFailureAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRecipeRetrievalFailureAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">550</setMessage>
+	<setDescription type="method">551</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bRecipeRetrievalFailureAlarm>
+
+<bProcessRecipeEmptyAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bProcessRecipeEmptyAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">552</setMessage>
+	<setDescription type="method">553</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bProcessRecipeEmptyAlarm>
+
+<nIOFailedAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nIOFailedAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">686</setMessage>
+	<setDescription type="method">687</setDescription>
+	<setSeverity type="method">1</setSeverity>
+		
+</nIOFailedAlm>
+
+<nServiceFailedAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nServiceFailedAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">688</setMessage>
+	<setDescription type="method">689</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nServiceFailedAlm>
+
+<bSlotHasNoWaferBeforePickAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotHasNoWaferBeforePickAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">554</setMessage>
+	<setDescription type="method">555</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bSlotHasNoWaferBeforePickAlm>
+
+<bSlotHasWaferBeforePlaceAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotHasWaferBeforePlaceAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">556</setMessage>
+	<setDescription type="method">557</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bSlotHasWaferBeforePlaceAlm>

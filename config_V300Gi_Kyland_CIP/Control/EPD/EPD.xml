@@ -1,0 +1,51 @@
+<EPD type="instance" class="EPDSource" alias="">
+	<setPhyEPD type="method">./PhyEPD</setPhyEPD>
+	<setHasTempEndMode type="method">false</setHasTempEndMode>
+	<setFuncGasRamp type="method">/Control/Functional/PM/FuncGasRamp</setFuncGasRamp>
+	
+	<PhyEPD type="instance" class="PhyCheTianEPD" alias="">
+		<setStartCh type="method">/Control/PMCExports/InnerDatas/EPDStartSP</setStartCh>	
+		<setStopCh type="method">/Control/PMCExports/InnerDatas/EPDStopSP</setStopCh>	
+		<setRecipeStartCh type="method">/Control/PMCExports/InnerDatas/EPDRecipeStartSP</setRecipeStartCh>		
+		<setRecipeStopCh type="method">/Control/PMCExports/InnerDatas/EPDRecipeStopSP</setRecipeStopCh>	
+		<setCompleteCh type="method">/Control/PMCExports/InnerDatas/EPDCompleteSP</setCompleteCh>	
+		<setConfigNameCh type="method">/Control/PMCExports/Datas/ConfigureName</setConfigNameCh>
+		<setEndPointCh type="method">/Control/PMCExports/Datas/EndPoint</setEndPointCh>
+		<setEdpTimeCh type="method">/Control/PMCExports/Datas/EPDTime</setEdpTimeCh>
+		<setEpdStatusCh type="method">/Control/PMCExports/InnerDatas/EpdStatus</setEpdStatusCh>
+		<setEpdErrorStrCh type="method">/Control/PMCExports/InnerDatas/EPDError</setEpdErrorStrCh>
+		<setRecpNameCh type="method">/Control/PMCExports/InnerDatas/EPDRecipeSP</setRecpNameCh>
+		<addWaferInfoCh type="method">Lot,/Control/PMCExports/InnerDatas/EPDLotSP</addWaferInfoCh>	
+		<addWaferInfoCh type="method">Slot,/Control/PMCExports/InnerDatas/EPDSlotSP</addWaferInfoCh>	
+		<addWaferInfoCh type="method">Wafer,/Control/PMCExports/InnerDatas/EPDWaferSP</addWaferInfoCh>
+		<addWaferInfoCh type="method">Recipe,/Control/PMCExports/InnerDatas/EPDRecipeSP</addWaferInfoCh>
+		<addWaferInfoCh type="method">Step,/Control/PMCExports/InnerDatas/EPDStepSP</addWaferInfoCh>
+		<setX1Ch type="method">/Control/PMCExports/InnerDatas/EPDSetX1SP</setX1Ch>
+		<setX2Ch type="method">/Control/PMCExports/InnerDatas/EPDSetX2SP</setX2Ch>
+		&SetSimulated;
+	</PhyEPD>	
+	&SetSimulated;
+</EPD>
+<FuncGasRamp type="instance" class="FuncGasRamp" alias="">
+		<addMFCSetpointCh type="method">&Gas1Name;,/Control/PMCExports/Datas/Gas1SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas2Name;,/Control/PMCExports/Datas/Gas2SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas3Name;,/Control/PMCExports/Datas/Gas3SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas4Name;,/Control/PMCExports/Datas/Gas4SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas5Name;,/Control/PMCExports/Datas/Gas5SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas6Name;,/Control/PMCExports/Datas/Gas6SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas7Name;,/Control/PMCExports/Datas/Gas7SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas8Name;,/Control/PMCExports/Datas/Gas8SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas9Name;,/Control/PMCExports/Datas/Gas9SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas10Name;,/Control/PMCExports/Datas/Gas10SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas11Name;,/Control/PMCExports/Datas/Gas11SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas12Name;,/Control/PMCExports/Datas/Gas12SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas13Name;,/Control/PMCExports/Datas/Gas13SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas14Name;,/Control/PMCExports/Datas/Gas14SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas15Name;,/Control/PMCExports/Datas/Gas15SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas16Name;,/Control/PMCExports/Datas/Gas16SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas17Name;,/Control/PMCExports/Datas/Gas17SP</addMFCSetpointCh>
+		<addMFCSetpointCh type="method">&Gas18Name;,/Control/PMCExports/Datas/Gas18SP</addMFCSetpointCh>
+		<addRFSetpointCh type="method">LFPower(W),/Control/PMCExports/Datas/LFSetpointAO</addRFSetpointCh>
+		<addRFSetpointCh type="method">SRFPower(W),/Control/PMCExports/Datas/SRFSetpointAO</addRFSetpointCh> 
+		&SetSimulated;
+</FuncGasRamp>

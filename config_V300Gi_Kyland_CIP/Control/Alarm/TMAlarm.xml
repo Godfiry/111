@@ -1,0 +1,2280 @@
+<!--USED IN Aligner Folder Code-->
+
+	<bNoMaterialInAlignerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bNoMaterialInAlignerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30001</setMessage>
+		<setDescription type="method">30002</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+	</bNoMaterialInAlignerAlarm>
+	
+	<bInvalidMaterialSizeInAlignerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidMaterialSizeInAlignerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30004</setMessage>
+		<setDescription type="method">30005</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidMaterialSizeInAlignerAlarm>
+	
+	<bInvalidMaterialAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidMaterialAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30004</setMessage>
+		<setDescription type="method">30006</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidMaterialAlarm>
+	
+	<bAlignerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAlignerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30007</setMessage>
+		<setDescription type="method">30007</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAlignerAlarm>	
+	
+	<bAlignerCommErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAlignerCommErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30008</setMessage>
+		<setDescription type="method">30009</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAlignerCommErrorAlarm>
+	
+	<bAlignerCommTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAlignerCommTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30010</setMessage>
+		<setDescription type="method">30010</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>>
+	</bAlignerCommTimeoutAlarm>
+	
+	<bAlignerCommNotInittedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAlignerCommNotInittedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30011</setMessage>
+		<setDescription type="method">30011</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAlignerCommNotInittedAlarm>	
+	
+	<bServiceTimeOutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bServiceTimeOutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30012</setMessage>
+		<setDescription type="method">30012</setDescription>
+		<setSeverity type="method">3</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bServiceTimeOutAlarm>
+	
+	<nIOFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nIOFailedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30015</setMessage>
+		<setDescription type="method">30016</setDescription>
+		<setSeverity type="method">1</setSeverity>
+	</nIOFailedAlarm>
+	
+	<bBrooksAlignerCommPortDriverAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerCommPortDriverAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30017</setMessage>
+		<setDescription type="method">30018</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerCommPortDriverAlarm>	
+	
+	<nBrooksAlignerHardwareAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nBrooksAlignerHardwareAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30019</setMessage>
+		<setDescription type="method">30019</setDescription>
+		<setSeverity type="method">2</setSeverity>
+	</nBrooksAlignerHardwareAlarm>
+	
+	<bBrooksAlignerCommNotInitedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerCommNotInitedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30020</setMessage>
+		<setDescription type="method">30021</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerCommNotInitedAlarm>
+	
+	<bBrooksAlignerCommTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerCommTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30022</setMessage>
+		<setDescription type="method">30023</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerCommTimeoutAlarm>
+	
+	<bBrooksAlignerInvalidWaferSizeAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerInvalidWaferSizeAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30024</setMessage>
+		<setDescription type="method">30025</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerInvalidWaferSizeAlarm>	
+	
+	<bBrooksAlignerNoWaferDetectedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerNoWaferDetectedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30026</setMessage>
+		<setDescription type="method">30027</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerNoWaferDetectedAlarm>	
+	
+	<bBrooksAlignerOutOfCCDRangeAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerOutOfCCDRangeAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30028</setMessage>
+		<setDescription type="method">30029</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerOutOfCCDRangeAlarm>	
+	
+	<bBrooksAlignerWaferCharacterizationFailureAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerWaferCharacterizationFailureAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30030</setMessage>
+		<setDescription type="method">30031</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bBrooksAlignerWaferCharacterizationFailureAlarm>
+	
+	<bBrooksAlignerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30075</setMessage>
+		<setDescription type="method">30076</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerAlarm>
+	
+<!--USED IN Heater Folder Code-->
+
+	<bHeaterExecCommandAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bHeaterExecCommandAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30053</setMessage>
+		<setDescription type="method">30054</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bHeaterExecCommandAlarm>
+
+<!--USED IN LoadLock Folder Code-->
+
+	<bSpiderFailedToRaiseAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bSpiderFailedToRaiseAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30055</setMessage>
+		<setDescription type="method">30056</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bSpiderFailedToRaiseAlarm>
+	
+	<bSpiderFailedToLowerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bSpiderFailedToLowerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30057</setMessage>
+		<setDescription type="method">30058</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bSpiderFailedToLowerAlarm>
+	
+   <nBrooksIOFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nBrooksIOFailedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30059</setMessage>
+		<setDescription type="method">30060</setDescription>
+		<setSeverity type="method">1</setSeverity>
+	</nBrooksIOFailedAlarm>
+	
+	<bVbeRobotExtendedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bVbeRobotExtendedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30063</setMessage>
+		<setDescription type="method">30064</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bVbeRobotExtendedAlarm>	
+	
+	<bAtmRobotExtendedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAtmRobotExtendedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30065</setMessage>
+		<setDescription type="method">30066</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAtmRobotExtendedAlarm>	
+	
+	<bElevatorserviceTimeOutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bElevatorserviceTimeOutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30069</setMessage>
+		<setDescription type="method">30070</setDescription>
+		<setSeverity type="method">3</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bElevatorserviceTimeOutAlarm>	
+	
+	<nElevatorIOFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nElevatorIOFailedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30071</setMessage>
+		<setDescription type="method">30072</setDescription>
+		<setSeverity type="method">1</setSeverity>
+	</nElevatorIOFailedAlarm>
+	
+	<bAirNotAvailableAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAirNotAvailableAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30077</setMessage>
+		<setDescription type="method">30078</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAirNotAvailableAlarm>	
+	
+	<bAtmosphericDoorFailedToCloseAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAtmosphericDoorFailedToCloseAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30081</setMessage>
+		<setDescription type="method">30082</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecoveryWithName type="method">Acknowledge and continue,continue</addRecoveryWithName>
+	</bAtmosphericDoorFailedToCloseAlarm>
+	
+	<bVacuumSlotValveFailedToCloseAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bVacuumSlotValveFailedToCloseAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30084</setMessage>
+		<setDescription type="method">30085</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bVacuumSlotValveFailedToCloseAlarm>	
+	
+	<bVacuumSlotValveFailedToOpenAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bVacuumSlotValveFailedToOpenAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30089</setMessage>
+		<setDescription type="method">30090</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bVacuumSlotValveFailedToOpenAlarm>
+	
+	<bVacuumSlotValveNotClosedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bVacuumSlotValveNotClosedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30093</setMessage>
+		<setDescription type="method">30094</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bVacuumSlotValveNotClosedAlarm>
+	
+	<bVacuumSlotValveNotOpenAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bVacuumSlotValveNotOpenAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30097</setMessage>
+		<setDescription type="method">30098</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bVacuumSlotValveNotOpenAlarm>
+	
+	<bAtmosphericDoorCloseInterlockAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAtmosphericDoorCloseInterlockAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30101</setMessage>
+		<setDescription type="method">30102</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAtmosphericDoorCloseInterlockAlarm>	
+
+	<bMappingErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bMappingErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30105</setMessage>
+		<setDescription type="method">30106</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bMappingErrorAlarm>	
+	
+	<bAtmosphericDoorFailedToOpenAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAtmosphericDoorFailedToOpenAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30109</setMessage>
+		<setDescription type="method">30110</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAtmosphericDoorFailedToOpenAlarm>
+
+	<bPressureControllerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bPressureControllerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30111</setMessage>
+		<setDescription type="method">30112</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+	</bPressureControllerAlarm>
+		
+   <nLoadBlockIOFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nLoadBlockIOFailedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30113</setMessage>
+		<setDescription type="method">30114</setDescription>
+		<setSeverity type="method">1</setSeverity>
+	</nLoadBlockIOFailedAlarm>	
+	
+   <bAtmosphericDoorOpenInterlockAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAtmosphericDoorOpenInterlockAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30115</setMessage>
+		<setDescription type="method">30116</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAtmosphericDoorOpenInterlockAlarm>		
+
+   <bReadCodeTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bReadCodeTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30117</setMessage>
+		<setDescription type="method">30118</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">abort</addRecovery>
+	</bReadCodeTimeoutAlarm>
+	
+<!--USED IN LoadPort Folder Code-->
+
+<bSlotOutOfRangeAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotOutOfRangeAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10010</setMessage>
+	<setDescription type="method">10011</setDescription>
+	<setSeverity type="method">3</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bSlotOutOfRangeAlm>
+<bPlateformExtendFailedAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPlateformExtendFailedAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10020</setMessage>
+	<setDescription type="method">10021</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPlateformExtendFailedAlm>
+<bPlateformRetractFailedAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPlateformRetractFailedAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10030</setMessage>
+	<setDescription type="method">10031</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPlateformRetractFailedAlm>
+<bGoLoadPosFailedAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bGoLoadPosFailedAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10040</setMessage>
+	<setDescription type="method">10041</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bGoLoadPosFailedAlm>
+<nVCEIOFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nVCEIOFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">10050</setMessage>
+	<!--setDescription type="method">10051</setDescription-->
+	<setSeverity type="method">1</setSeverity>
+</nVCEIOFailedAlarm>
+<nPalUnknownIOException type="instance" class="AlarmResource" alias="">
+	<setName type="method">nPalUnknownIOException</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">10060</setMessage>
+	<!--setDescription type="method">10061</setDescription-->
+	<setSeverity type="method">1</setSeverity>
+</nPalUnknownIOException>
+<bPalLPIERALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIERALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10070</setMessage>
+	<setDescription type="method">10071</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIERALM>
+<bPalLPIBUSYALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIBUSYALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10080</setMessage>
+	<setDescription type="method">10081</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIBUSYALM>
+<bPalNOPODALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalNOPODALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10090</setMessage>
+	<setDescription type="method">10091</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalNOPODALM>
+<bPalNOTRDYALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalNOTRDYALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10100</setMessage>
+	<setDescription type="method">10101</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalNOTRDYALM>
+<bPalINVALARGALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalINVALARGALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10110</setMessage>
+	<setDescription type="method">10111</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalINVALARGALM>
+<bPalCANTPERFORM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCANTPERFORM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10120</setMessage>
+	<setDescription type="method">10121</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCANTPERFORM>
+<nHardwareAlarmAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nHardwareAlarmAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">10130</setMessage>
+	<setDescription type="method">10131</setDescription>
+	<setSeverity type="method">1</setSeverity>
+</nHardwareAlarmAlm>
+<nHardwareErrorAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nHardwareErrorAlm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">10140</setMessage>
+	<setDescription type="method">10141</setDescription>
+	<setSeverity type="method">1</setSeverity>
+</nHardwareErrorAlm>
+<bPalPODOPNALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalPODOPNALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10150</setMessage>
+	<setDescription type="method">10151</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalPODOPNALM>
+<bPalPODCLSALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalPODCLSALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10160</setMessage>
+	<setDescription type="method">10161</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalPODCLSALM>
+<bPalHOMEALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalHOMEALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10170</setMessage>
+	<setDescription type="method">10171</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalHOMEALM>
+<bPalCASUNLDALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCASUNLDALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10180</setMessage>
+	<setDescription type="method">10181</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCASUNLDALM>
+<bPalCASLOADALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCASLOADALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10190</setMessage>
+	<setDescription type="method">10191</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCASLOADALM>
+<bPalFETCHALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalFETCHALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10200</setMessage>
+	<setDescription type="method">10201</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalFETCHALM>
+<bPalCLOSELATCHALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCLOSELATCHALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10210</setMessage>
+	<setDescription type="method">10211</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCLOSELATCHALM>
+<bPalOPENLATCHALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalOPENLATCHALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10220</setMessage>
+	<setDescription type="method">10221</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalOPENLATCHALM>
+<bCmdTimeOutAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCmdTimeOutAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10230</setMessage>
+	<setDescription type="method">10231</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bCmdTimeOutAlm>
+
+<bAlarmVetoCarrierPropertyUpdate type="instance" class="AlarmResource" alias="">
+	<setName type="method">bAlarmVetoCarrierPropertyUpdate</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10250</setMessage>
+	<setDescription type="method">10251</setDescription>
+	<setSeverity type="method">3</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bAlarmVetoCarrierPropertyUpdate>
+<bCoverCloseAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCoverCloseAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10260</setMessage>
+	<setDescription type="method">10261</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bCoverCloseAlarm>
+<bCoverOpenAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCoverOpenAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10270</setMessage>
+	<setDescription type="method">10271</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bCoverOpenAlarm>
+<bDoorCloseAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorCloseAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10280</setMessage>
+	<setDescription type="method">10281</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bDoorCloseAlarm>
+<bDoorOpenAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10290</setMessage>
+	<setDescription type="method">10291</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bDoorOpenAlarm>
+<bLatchCloseAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchCloseAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10300</setMessage>
+	<setDescription type="method">10301</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bLatchCloseAlarm>
+<bLatchOpenAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchOpenAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10310</setMessage>
+	<setDescription type="method">10311</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bLatchOpenAlarm>
+<bPaddleExtendAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPaddleExtendAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10320</setMessage>
+	<setDescription type="method">10321</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bPaddleExtendAlarm>
+<bPaddleRetractAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPaddleRetractAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10330</setMessage>
+	<setDescription type="method">10331</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bPaddleRetractAlarm>
+<bPodClampAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodClampAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10340</setMessage>
+	<setDescription type="method">10341</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bPodClampAlarm>
+<bPodUnclampAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodUnclampAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10350</setMessage>
+	<setDescription type="method">10351</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bPodUnclampAlarm>
+<bShuttleDockAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bShuttleDockAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10360</setMessage>
+	<setDescription type="method">10361</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bShuttleDockAlarm>
+<bShuttleUndockAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bShuttleUndockAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10370</setMessage>
+	<setDescription type="method">10371</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bShuttleUndockAlarm>
+<bVacuumOffAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVacuumOffAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10380</setMessage>
+	<setDescription type="method">10381</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bVacuumOffAlarm>
+<bVacuumOnAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVacuumOnAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10390</setMessage>
+	<setDescription type="method">10391</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bVacuumOnAlarm>
+<bVceRbtIntlk type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVceRbtIntlk</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10400</setMessage>
+	<setDescription type="method">10401</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bVceRbtIntlk>
+<bCarrierAbsAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCarrierAbsAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10410</setMessage>
+	<setDescription type="method">10411</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bCarrierAbsAlm>
+<bDoorOpenAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10420</setMessage>
+	<setDescription type="method">10421</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bDoorOpenAlm>
+<bWaferslideoutAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bWaferslideoutAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10430</setMessage>
+	<setDescription type="method">10431</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bWaferslideoutAlm>
+<bPltOut4IDxAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPltOut4IDxAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10440</setMessage>
+	<setDescription type="method">10441</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPltOut4IDxAlarm>
+<bNotLoad4ExtAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bNotLoad4ExtAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10450</setMessage>
+	<setDescription type="method">10451</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bNotLoad4ExtAlm>
+<bVceInitSlideOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVceInitSlideOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10460</setMessage>
+	<setDescription type="method">10461</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bVceInitSlideOut>
+<bSlotIndexOutOfRange type="instance" class="AlarmResource" alias="">
+	<setName type="method">bSlotIndexOutOfRange</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10470</setMessage>
+	<setDescription type="method">10471</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bSlotIndexOutOfRange>
+<bAirOffAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bAirOffAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10480</setMessage>
+	<setDescription type="method">10481</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bAirOffAlarm>
+<bIsWaferSlideOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bIsWaferSlideOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10490</setMessage>
+	<setDescription type="method">10491</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bIsWaferSlideOut>
+<bDoorPresentIntlk type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorPresentIntlk</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10500</setMessage>
+	<setDescription type="method">10501</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bDoorPresentIntlk>
+<bInitCassetteAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bInitCassetteAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10510</setMessage>
+	<setDescription type="method">10511</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+</bInitCassetteAlm>
+<bErrorGettingElevErrorExcAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bErrorGettingElevErrorExcAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10520</setMessage>
+	<setDescription type="method">10521</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bErrorGettingElevErrorExcAlarm>
+<bElevatorCommErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorCommErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10530</setMessage>
+	<setDescription type="method">10531</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorCommErrorAlarm>
+<bElevatorActionErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorActionErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10540</setMessage>
+	<setDescription type="method">10541</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorActionErrorAlarm>
+<bElevatorCommandErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorCommandErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10550</setMessage>
+	<setDescription type="method">10551</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorCommandErrorAlarm>
+<bElevatorLoadErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorLoadErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10560</setMessage>
+	<setDescription type="method">10561</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorLoadErrorAlarm>
+<bElevatorMotionErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorMotionErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10570</setMessage>
+	<setDescription type="method">10571</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorMotionErrorAlarm>
+<bElevatorRAxisErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorRAxisErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10580</setMessage>
+	<setDescription type="method">10581</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorRAxisErrorAlarm>
+<bElevatorSErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorSErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10590</setMessage>
+	<setDescription type="method">10591</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorSErrorAlarm>
+<bElevatorEnvErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorEnvErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10600</setMessage>
+	<setDescription type="method">10601</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorEnvErrorAlarm>
+<bElevatorM0ErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorM0ErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10610</setMessage>
+	<setDescription type="method">10611</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorM0ErrorAlarm>
+<bElevatorS4ErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorS4ErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">106120</setMessage>
+	<setDescription type="method">10621</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorS4ErrorAlarm>
+<bElevatorErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bElevatorErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10630</setMessage>
+	<setDescription type="method">10631</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bElevatorErrorAlarm>
+<bMaterialSlideoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bMaterialSlideoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10640</setMessage>
+	<setDescription type="method">10641</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bMaterialSlideoutAlarm>
+
+<bPalLPIHOMEPLTINALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIHOMEPLTINALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10650</setMessage>
+	<setDescription type="method">10651</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIHOMEPLTINALM>
+<bPalLPIFETCHWITHOUTPODALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIFETCHWITHOUTPODALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10660</setMessage>
+	<setDescription type="method">10661</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIFETCHWITHOUTPODALM>
+<bPalLPICLOSEVCEERALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPICLOSEVCEERALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10670</setMessage>
+	<setDescription type="method">10671</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPICLOSEVCEERALM>
+<bPalLPIPODOPNALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIPODOPNALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10680</setMessage>
+	<setDescription type="method">10681</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIPODOPNALM>
+<bPalLPIUNLODCASSERR type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPIUNLODCASSERR</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10690</setMessage>
+	<setDescription type="method">10691</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPIUNLODCASSERR>
+<bPalLPILOADUNFIT type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPILOADUNFIT</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10700</setMessage>
+	<setDescription type="method">10701</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPILOADUNFIT>
+<bPalLPILOADPLTOUT type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPILOADPLTOUT</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10710</setMessage>
+	<setDescription type="method">10711</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPILOADPLTOUT>
+<bPalLPILOADPLACEER type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalLPILOADPLACEER</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10720</setMessage>
+	<setDescription type="method">10721</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalLPILOADPLACEER>
+<bPalCASSABALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCASSABALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10730</setMessage>
+	<setDescription type="method">10731</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCASSABALM>
+<bPalCSTPRSALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCSTPRSALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10740</setMessage>
+	<setDescription type="method">10741</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCSTPRSALM>
+<bPalCOMPWAFPREALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCOMPWAFPREALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10750</setMessage>
+	<setDescription type="method">10751</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCOMPWAFPREALM>
+<bRecoveryPLOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRecoveryPLOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10760</setMessage>
+	<setDescription type="method">10761</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bRecoveryPLOut>
+<bErrorLoadPLOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bErrorLoadPLOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10770</setMessage>
+	<setDescription type="method">10771</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bErrorLoadPLOut>
+<bErrorUnloadPLOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bErrorUnloadPLOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10780</setMessage>
+	<setDescription type="method">10781</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bErrorUnloadPLOut>
+<bErrorHomePLOut type="instance" class="AlarmResource" alias="">
+	<setName type="method">bErrorHomePLOut</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10790</setMessage>
+	<setDescription type="method">10791</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bErrorHomePLOut>
+<bPalPERPWFRABALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalPERPWFRABALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10800</setMessage>
+	<setDescription type="method">10801</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalPERPWFRABALM>
+<bPalCOMPWAFABSALM type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPalCOMPWAFABSALM</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10810</setMessage>
+	<setDescription type="method">10811</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bPalCOMPWAFABSALM>
+<bLatchAbsentPodAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchAbsentPodAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10820</setMessage>
+	<setDescription type="method">10821</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bLatchAbsentPodAlm>
+<bUnloadAbsentCassAlm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bUnloadAbsentCassAlm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10830</setMessage>
+	<setDescription type="method">10831</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+</bUnloadAbsentCassAlm>
+<bCloseLatchDoorOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCloseLatchDoorOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10840</setMessage>
+	<setDescription type="method">10841</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bCloseLatchDoorOpenedAlarm>
+<bDockCarrierDoorClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDockCarrierDoorClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10850</setMessage>
+	<setDescription type="method">10851</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDockCarrierDoorClosedAlarm>
+<bDoorCloseCarrierDockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorCloseCarrierDockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10860</setMessage>
+	<setDescription type="method">10861</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorCloseCarrierDockedAlarm>
+<bDoorOpenLatchClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenLatchClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10870</setMessage>
+	<setDescription type="method">10871</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorOpenLatchClosedAlarm>
+<bDoorOpenVacuumOff type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenVacuumOff</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10880</setMessage>
+	<setDescription type="method">10881</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorOpenVacuumOff>
+<bLatchOpenPodUnclampedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchOpenPodUnclampedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10890</setMessage>
+	<setDescription type="method">10891</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bLatchOpenPodUnclampedAlarm>
+<bPodClampCarrierAbsentAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodClampCarrierAbsentAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10900</setMessage>
+	<setDescription type="method">10901</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPodClampCarrierAbsentAlarm>
+<bPodUnclampLatchOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodUnclampLatchOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10910</setMessage>
+	<setDescription type="method">10911</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPodUnclampLatchOpenedAlarm>
+<bPodClampCarrierDockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodClampCarrierDockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10920</setMessage>
+	<setDescription type="method">10921</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPodClampCarrierDockedAlarm>
+<bPodUnclampCarrierDockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodUnclampCarrierDockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10930</setMessage>
+	<setDescription type="method">10931</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPodUnclampCarrierDockedAlarm>
+<bDoorClosePaddleRetractedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorClosePaddleRetractedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10940</setMessage>
+	<setDescription type="method">10941</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorClosePaddleRetractedAlarm>
+<bDoorOpenPaddleRetractedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenPaddleRetractedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10950</setMessage>
+	<setDescription type="method">10951</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorOpenPaddleRetractedAlarm>
+<bDockCarrierPodUnclampedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDockCarrierPodUnclampedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10960</setMessage>
+	<setDescription type="method">10961</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDockCarrierPodUnclampedAlarm>
+<bDockCarrierCarrierAbsentAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDockCarrierCarrierAbsentAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10970</setMessage>
+	<setDescription type="method">10971</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDockCarrierCarrierAbsentAlarm>
+<bVacuumOnCarrierUndockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVacuumOnCarrierUndockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10980</setMessage>
+	<setDescription type="method">10981</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bVacuumOnCarrierUndockedAlarm>
+<bLatchOpenCarrierUndockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchOpenCarrierUndockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">10990</setMessage>
+	<setDescription type="method">10991</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bLatchOpenCarrierUndockedAlarm>
+<bLatchOpenVacuumOffAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchOpenVacuumOffAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11000</setMessage>
+	<setDescription type="method">11001</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bLatchOpenVacuumOffAlarm>
+<bPaddleExtendLatchClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPaddleExtendLatchClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11010</setMessage>
+	<setDescription type="method">11011</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPaddleExtendLatchClosedAlarm>
+<bPaddleRetractDoorOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPaddleRetractDoorOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11020</setMessage>
+	<setDescription type="method">11021</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPaddleRetractDoorOpenedAlarm>
+<bVacuumOffPaddleExtendedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVacuumOffPaddleExtendedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11030</setMessage>
+	<setDescription type="method">11031</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bVacuumOffPaddleExtendedAlarm>
+<bUndockCarrierLatchOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bUndockCarrierLatchOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11040</setMessage>
+	<setDescription type="method">11041</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bUndockCarrierLatchOpenedAlarm>
+<bUndockCarrierVacuumOnAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bUndockCarrierVacuumOnAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11050</setMessage>
+	<setDescription type="method">11051</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bUndockCarrierVacuumOnAlarm>
+<bUndockCarrierCoverClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bUndockCarrierCoverClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11060</setMessage>
+	<setDescription type="method">11061</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bUndockCarrierCoverClosedAlarm>
+<bCloseCoverCarrierUndockedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bCloseCoverCarrierUndockedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11070</setMessage>
+	<setDescription type="method">11071</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bCloseCoverCarrierUndockedAlarm>
+<bDoorLockDoorOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorLockDoorOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11080</setMessage>
+	<setDescription type="method">11081</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorLockDoorOpenedAlarm>
+<bDoorOpenedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bDoorOpenedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11090</setMessage>
+	<setDescription type="method">11091</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bDoorOpenedAlarm>
+<bWaferSlideOutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bWaferSlideOutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11100</setMessage>
+	<setDescription type="method">11101</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bWaferSlideOutAlarm>
+<bRobotExtendedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRobotExtendedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11110</setMessage>
+	<setDescription type="method">11111</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bRobotExtendedAlarm>
+<bRobotNotReadyToMapAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bRobotNotReadyToMapAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11120</setMessage>
+	<setDescription type="method">11121</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bRobotNotReadyToMapAlarm>
+<bMapNoCarrierAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bMapNoCarrierAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11130</setMessage>
+	<setDescription type="method">11131</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bMapNoCarrierAlarm>
+<bMapDoorClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bMapDoorClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11140</setMessage>
+	<setDescription type="method">11141</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bMapDoorClosedAlarm>
+<bFindBiasOrMappingAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bFindBiasOrMappingAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11150</setMessage>
+	<setDescription type="method">11151</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bFindBiasOrMappingAlarm>
+<bBrooksRobotCommErrorAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bBrooksRobotCommErrorAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11160</setMessage>
+	<setDescription type="method">11161</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bBrooksRobotCommErrorAlarm>
+<bBrooksCDMOnAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bBrooksCDMOnAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11170</setMessage>
+	<setDescription type="method">11171</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bBrooksCDMOnAlarm>
+<bBrooksEStopOnAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bBrooksEStopOnAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11180</setMessage>
+	<setDescription type="method">11181</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bBrooksEStopOnAlarm>
+<bBrooksRobotAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bBrooksRobotAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11190</setMessage>
+	<setDescription type="method">11191</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bBrooksRobotAlarm>
+<bInvalidPlacedWaferAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bInvalidPlacedWaferAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11200</setMessage>
+	<setDescription type="method">11201</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bInvalidPlacedWaferAlarm>
+<bObstructionAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bObstructionAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11210</setMessage>
+	<setDescription type="method">11211</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bObstructionAlarm>
+<bLoadPortInvalidSlotAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLoadPortInvalidSlotAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11220</setMessage>
+	<setDescription type="method">11221</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bLoadPortInvalidSlotAlarm>
+<bReadWriteCarrierIdAbsentAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bReadWriteCarrierIdAbsentAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11230</setMessage>
+	<setDescription type="method">11231</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bReadWriteCarrierIdAbsentAlarm>
+<nReadWriteCarrierTimeOutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nReadWriteCarrierTimeOutAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">11240</setMessage>
+	<setDescription type="method">11241</setDescription>
+	<setSeverity type="method">2</setSeverity>
+</nReadWriteCarrierTimeOutAlarm>
+<nReadWriteCarrierFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nReadWriteCarrierFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">11250</setMessage>
+	<setDescription type="method">11251</setDescription>
+	<setSeverity type="method">2</setSeverity>
+</nReadWriteCarrierFailedAlarm>
+<nReadWriteCarrierTagAbsentAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nReadWriteCarrierTagAbsentAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">11260</setMessage>
+	<setDescription type="method">11261</setDescription>
+	<setSeverity type="method">2</setSeverity>
+</nReadWriteCarrierTagAbsentAlarm>
+<nReadCarrierTagFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nReadCarrierTagFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">11270</setMessage>
+	<setDescription type="method">11271</setDescription>
+	<setSeverity type="method">2</setSeverity>
+</nReadCarrierTagFailedAlarm>
+<nWriteCarrierTagFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nWriteCarrierTagFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">11280</setMessage>
+	<setDescription type="method">11281</setDescription>
+	<setSeverity type="method">2</setSeverity>
+</nWriteCarrierTagFailedAlarm>
+<bLatchClosedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bLatchClosedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11290</setMessage>
+	<setDescription type="method">11291</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bLatchClosedAlarm>
+<bPodClampCarrierNotProperlyPlacedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPodClampCarrierNotProperlyPlacedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">11300</setMessage>
+	<setDescription type="method">11301</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+</bPodClampCarrierNotProperlyPlacedAlarm>
+
+<!--USED IN MaterialIDreader Folder Code-->
+
+	<nIdReadFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nIdReadFailedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30141</setMessage>
+		<setDescription type="method">30142</setDescription>
+		<setSeverity type="method">2</setSeverity>
+	</nIdReadFailedAlarm>
+
+	<nIdReaderOfflineAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nIdReaderOfflineAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30143</setMessage>
+		<setDescription type="method">30144</setDescription>
+		<setSeverity type="method">2</setSeverity>
+	</nIdReaderOfflineAlarm>
+	
+	<bBadReadAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBadReadAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30145</setMessage>
+		<setDescription type="method">30146</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBadReadAlarm>
+	
+	<bComErrAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bComErrAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30149</setMessage>
+		<setDescription type="method">30150</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bComErrAlarm>
+
+<!--USED IN OCD Folder Code-->
+
+	<bExecCommandAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bExecCommandAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30119</setMessage>
+		<setDescription type="method">30120</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bExecCommandAlarm>
+
+	<bprocessTimedOutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bprocessTimedOutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30133</setMessage>
+		<setDescription type="method">30134</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bprocessTimedOutAlarm>	
+	
+	<bprocessFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bprocessFailedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30135</setMessage>
+		<setDescription type="method">30136</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bprocessFailedAlarm>	
+
+	<bstatusNotMapAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bstatusNotMapAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">30137</setMessage>
+		<setDescription type="method">30138</setDescription>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bstatusNotMapAlarm>	
+	
+	<nOperationNotAllowedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">nOperationNotAllowedAlarm</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">30059</setMessage>
+		<setDescription type="method">30060</setDescription>
+		<setSeverity type="method">1</setSeverity>
+	</nOperationNotAllowedAlarm>	
+
+<!--USED IN Robot Folder code-->
+
+	<bRobotInnerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bRobotInnerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20000</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bRobotInnerAlarm>	
+
+	<bDeltaRTooLargeAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bDeltaRTooLargeAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20020</setMessage>
+		<setDescription type="method">20021</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bDeltaRTooLargeAlarm>
+
+
+	<bBrooksPhysicalRobotAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksPhysicalRobotAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20030</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksPhysicalRobotAlarm>
+	
+	
+	
+	
+	<bBrooksRobotHardwareAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotHardwareAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20040</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotHardwareAlarm>
+	
+	<bBrooksRobotEStopOnAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotEStopOnAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20050</setMessage>
+		<setDescription type="method">20051</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotEStopOnAlarm>	
+	
+	<bBrooksRobotCDMOnAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotCDMOnAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20060</setMessage>
+		<setDescription type="method">20061</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotCDMOnAlarm>	
+	
+	<bBrooksPhysicalRobotCommErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksPhysicalRobotCommErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20070</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksPhysicalRobotCommErrorAlarm>		
+		
+	
+	<bInvalidMapperStateAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidMapperStateAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20080</setMessage>
+		<setDescription type="method">20081</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidMapperStateAlarm>	
+	
+	<bBrooksMapperFailedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksMapperFailedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20090</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksMapperFailedAlarm>	
+
+	<bBrooksMapperFindBiasRequiredAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksMapperFindBiasRequiredAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20100</setMessage>
+		<setDescription type="method">20101</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksMapperFindBiasRequiredAlarm>		
+	
+	<bBrooksAlignerHardwareAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerHardwareAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20160</setMessage>
+		<setDescription type="method">20161</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerHardwareAlarm>	
+	
+	<bBrooksAlignerSerialPortTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerSerialPortTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20180</setMessage>
+		<setDescription type="method">20181</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerSerialPortTimeoutAlarm>	
+	
+	<bBrooksAlignerSerialPortBusyAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerSerialPortBusyAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20190</setMessage>
+		<setDescription type="method">20191</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerSerialPortBusyAlarm>	
+	
+	<bBrooksAlignerErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20200</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerErrorAlarm>
+	
+	<bBrooksAlignerWaferInterlockAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerWaferInterlockAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20210</setMessage>
+		<setDescription type="method">20211</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bBrooksAlignerWaferInterlockAlarm>
+
+	
+	<bBrooksAlignerAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20220</setMessage>
+		<setDescription type="method">20221</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerAlarmForSetVacuum>
+	
+	<bBrooksAlignerCommTimeoutAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerCommTimeoutAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20230</setMessage>
+		<setDescription type="method">20231</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerCommTimeoutAlarmForSetVacuum>
+	
+	<bBrooksAlignerCommNotInitedAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksAlignerCommNotInitedAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20240</setMessage>
+		<setDescription type="method">20241</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksAlignerCommNotInitedAlarmForSetVacuum>
+	
+	<bBrooksRobotSerialPortTimeoutAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotSerialPortTimeoutAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20250</setMessage>
+		<setDescription type="method">20251</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotSerialPortTimeoutAlarmForSetVacuum>
+	
+	<bBrooksRobotSerialPortBusyAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotSerialPortBusyAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20260</setMessage>
+		<setDescription type="method">20261</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotSerialPortBusyAlarmForSetVacuum>
+	
+	<bBrooksRobotAlignerCommPortDriverAlarmForSetVacuum type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotAlignerCommPortDriverAlarmForSetVacuum</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20270</setMessage>
+		<setDescription type="method">20271</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotAlignerCommPortDriverAlarmForSetVacuum>
+	
+	<bSlotWasExtendedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bSlotWasExtendedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20280</setMessage>
+		<setDescription type="method">20281</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bSlotWasExtendedAlarm>
+	
+	<bBrooksRobotPostPlaceErrorAlarmForRetract type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotPostPlaceErrorAlarmForRetract</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20290</setMessage>
+		<setDescription type="method">20291</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotPostPlaceErrorAlarmForRetract>
+	
+	<bBrooksRobotPostPickErrorAlarmForRetract type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBrooksRobotPostPickErrorAlarmForRetract</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20300</setMessage>
+		<setDescription type="method">20301</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBrooksRobotPostPickErrorAlarmForRetract>
+	
+	<bCarrierAbsentAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bCarrierAbsentAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20310</setMessage>
+		<setDescription type="method">20311</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bCarrierAbsentAlarm>
+	
+	<bRetractLockRequestTimedOutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bRetractLockRequestTimedOutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20320</setMessage>
+		<setDescription type="method">20321</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bRetractLockRequestTimedOutAlarm>	
+	
+	<bExtendLockRequestTimedOutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bExtendLockRequestTimedOutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20330</setMessage>
+		<setDescription type="method">20331</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bExtendLockRequestTimedOutAlarm>
+	
+	<bInvalidArmAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidArmAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20340</setMessage>
+		<setDescription type="method">20341</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidArmAlarm>
+	
+	<bInvalidSlotAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidSlotAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20350</setMessage>
+		<setDescription type="method">20351</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidSlotAlarm>	
+	
+	<bInvalidStationAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidStationAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20360</setMessage>
+		<setDescription type="method">20361</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidStationAlarm>	
+		
+	<bIncompatibleMaterialReceiveAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bIncompatibleMaterialReceiveAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20370</setMessage>
+		<setDescription type="method">20371</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bIncompatibleMaterialReceiveAlarm>	
+		
+	<bIncompatibleMaterialSendAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bIncompatibleMaterialSendAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20380</setMessage>
+		<setDescription type="method">20381</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bIncompatibleMaterialSendAlarm>
+	
+	<bRobotUnableToSwapAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bRobotUnableToSwapAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20390</setMessage>
+		<setDescription type="method">20391</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bRobotUnableToSwapAlarm>
+	
+	<bNoPreviousAlignmentAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bNoPreviousAlignmentAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20400</setMessage>
+		<setDescription type="method">20401</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bNoPreviousAlignmentAlarm>
+	
+	<bAlignerNotPresentAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bAlignerNotPresentAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20410</setMessage>
+		<setDescription type="method">20411</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bAlignerNotPresentAlarm>
+	
+	
+	<bIncorrectDownUpPositionAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bIncorrectDownUpPositionAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20420</setMessage>
+		<setDescription type="method">20421</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bIncorrectDownUpPositionAlarm>	
+	
+	<bSlotValveIsClosedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bSlotValveIsClosedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20430</setMessage>
+		<setDescription type="method">20431</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bSlotValveIsClosedAlarm>	
+	
+	<bOtherStationIsOccupiedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOtherStationIsOccupiedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20440</setMessage>
+		<setDescription type="method">20441</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bOtherStationIsOccupiedAlarm>	
+	
+	<bOtherStationIsEmptyAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOtherStationIsEmptyAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20450</setMessage>
+		<setDescription type="method">20451</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bOtherStationIsEmptyAlarm>	
+	
+	<bArmBIsEmptyAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bArmBIsEmptyAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20460</setMessage>
+		<setDescription type="method">20461</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bArmBIsEmptyAlarm>	
+	
+	<bArmAIsEmptyAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bArmAIsEmptyAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20470</setMessage>
+		<setDescription type="method">20471</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bArmAIsEmptyAlarm>	
+		
+	<bArmBIsOccupiedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bArmBIsOccupiedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20480</setMessage>
+		<setDescription type="method">20481</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bArmBIsOccupiedAlarm>		
+	
+	<bArmAIsOccupiedAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bArmAIsOccupiedAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20490</setMessage>
+		<setDescription type="method">20491</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bArmAIsOccupiedAlarm>	
+		
+	<bBadPhysicalCall type="instance" class="AlarmResource" alias="">
+		<setName type="method">bBadPhysicalCall</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20500</setMessage>
+		<setDescription type="method">20501</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bBadPhysicalCall>	
+		
+	
+	<bInvalidNumberOfWafersAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bInvalidNumberOfWafersAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">20510</setMessage>
+		<setDescription type="method">20511</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bInvalidNumberOfWafersAlarm>	
+	
+	<nInvalidModeAlarmFFU type="instance" class="AlarmResource" alias="">
+		<setName type="method">nInvalidModeAlarmFFU</setName>
+		<setBlockingType type="method">nonblocking</setBlockingType>
+		<setMessage type="method">20520</setMessage>
+		<setDescription type="method">20521</setDescription>
+		<setSeverity type="method">2</setSeverity>
+	</nInvalidModeAlarmFFU>	
+
+<!--USED IN Station Folder code-->
+
+	<bIsolationInvalidModeAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bIsolationInvalidModeAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21000</setMessage>
+		<setDescription type="method">21001</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecoveryWithName type="method">Override restriction,continue</addRecoveryWithName>
+	</bIsolationInvalidModeAlarm>
+
+	<bNoAlignerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bNoAlignerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21010</setMessage>
+		<setDescription type="method">21011</setDescription>
+		<setSeverity type="method">3</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecoveryWithName type="method">Ignore and Continue,continue</addRecoveryWithName>
+	</bNoAlignerAlarm>
+
+	<bModuleNotExistsToOpenAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bModuleNotExistsToOpenAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21020</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bModuleNotExistsToOpenAlarm>
+	
+	<bModuleNotExistsToOpenManagerAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bModuleNotExistsToOpenManagerAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21030</setMessage>
+		<setDescription type="method">21031</setDescription>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bModuleNotExistsToOpenManagerAlarm>
+		
+	<bModuleNotExistsToCloseAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bModuleNotExistsToCloseAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21040</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bModuleNotExistsToCloseAlarm>	
+	
+	<bOpenIOOfflineAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOpenIOOfflineAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21050</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bOpenIOOfflineAlarm>		
+	
+	<bOpenInterlockAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOpenInterlockAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21060</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bOpenInterlockAlarm>
+	
+	<bOpenTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOpenTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21070</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bOpenTimeoutAlarm>	
+	
+	<bOpenErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bOpenErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21080</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bOpenErrorAlarm>
+		
+
+	<bCloseIOOfflineAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bCloseIOOfflineAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21090</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bCloseIOOfflineAlarm>	
+	
+	<bCloseTimeoutAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bCloseTimeoutAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21100</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bCloseTimeoutAlarm>	
+	
+	<bCloseErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bCloseErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21110</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bCloseErrorAlarm>	
+	
+	<bObstructionErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bObstructionErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21120</setMessage>
+		<setSeverity type="method">2</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+	</bObstructionErrorAlarm>	
+	
+	<bPressureDifferenceErrorAlarm type="instance" class="AlarmResource" alias="">
+		<setName type="method">bPressureDifferenceErrorAlarm</setName>
+		<setBlockingType type="method">blocking</setBlockingType>
+		<setMessage type="method">21130</setMessage>
+		<setSeverity type="method">1</setSeverity>
+		<addRecovery type="method">abort</addRecovery>
+		<addRecovery type="method">retry</addRecovery>
+		<addRecovery type="method">continue</addRecovery>
+	</bPressureDifferenceErrorAlarm>	
+	

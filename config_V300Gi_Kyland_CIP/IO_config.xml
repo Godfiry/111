@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE IO [
+<!ENTITY SetSimulated SYSTEM "./VariableSettings/Simulated/SetSimulated.xml">
+<!ENTITY SetNotSimulated SYSTEM "./VariableSettings/Simulated/SetNotSimulated.xml">
+
+<!ENTITY SRFPowerValue SYSTEM "./VariableSettings/RFPowerValue/SRFPowerValue.xml">
+<!ENTITY BRFPowerValue SYSTEM "./VariableSettings/RFPowerValue/BRFPowerValue.xml">
+<!ENTITY LFPowerValue SYSTEM "./VariableSettings/RFPowerValue/LFPowerValue.xml">
+<!ENTITY ESCDCValue SYSTEM "./VariableSettings/ESCDCValue.xml">
+
+<!ENTITY Gas1Simulated SYSTEM "./VariableSettings/GasSimulated/Gas1Simulated.xml">
+<!ENTITY Gas2Simulated SYSTEM "./VariableSettings/GasSimulated/Gas2Simulated.xml">
+<!ENTITY Gas3Simulated SYSTEM "./VariableSettings/GasSimulated/Gas3Simulated.xml">
+<!ENTITY Gas4Simulated SYSTEM "./VariableSettings/GasSimulated/Gas4Simulated.xml">
+<!ENTITY Gas5Simulated SYSTEM "./VariableSettings/GasSimulated/Gas5Simulated.xml">
+<!ENTITY Gas6Simulated SYSTEM "./VariableSettings/GasSimulated/Gas6Simulated.xml">
+<!ENTITY Gas7Simulated SYSTEM "./VariableSettings/GasSimulated/Gas7Simulated.xml">
+<!ENTITY Gas8Simulated SYSTEM "./VariableSettings/GasSimulated/Gas8Simulated.xml">
+<!ENTITY Gas9Simulated SYSTEM "./VariableSettings/GasSimulated/Gas9Simulated.xml">
+<!ENTITY Gas10Simulated SYSTEM "./VariableSettings/GasSimulated/Gas10Simulated.xml">
+<!ENTITY Gas11Simulated SYSTEM "./VariableSettings/GasSimulated/Gas11Simulated.xml">
+<!ENTITY Gas12Simulated SYSTEM "./VariableSettings/GasSimulated/Gas12Simulated.xml">
+<!ENTITY Gas13Simulated SYSTEM "./VariableSettings/GasSimulated/Gas13Simulated.xml">
+<!ENTITY Gas14Simulated SYSTEM "./VariableSettings/GasSimulated/Gas14Simulated.xml">
+<!ENTITY Gas15Simulated SYSTEM "./VariableSettings/GasSimulated/Gas15Simulated.xml">
+<!ENTITY Gas16Simulated SYSTEM "./VariableSettings/GasSimulated/Gas16Simulated.xml">
+<!ENTITY Gas17Simulated SYSTEM "./VariableSettings/GasSimulated/Gas17Simulated.xml">
+<!ENTITY Gas18Simulated SYSTEM "./VariableSettings/GasSimulated/Gas18Simulated.xml">
+
+<!ENTITY Gas1Value SYSTEM "./VariableSettings/GasValue/Gas1Value.xml">
+<!ENTITY Gas2Value SYSTEM "./VariableSettings/GasValue/Gas2Value.xml">
+<!ENTITY Gas3Value SYSTEM "./VariableSettings/GasValue/Gas3Value.xml">
+<!ENTITY Gas4Value SYSTEM "./VariableSettings/GasValue/Gas4Value.xml">
+<!ENTITY Gas5Value SYSTEM "./VariableSettings/GasValue/Gas5Value.xml">
+<!ENTITY Gas6Value SYSTEM "./VariableSettings/GasValue/Gas6Value.xml">
+<!ENTITY Gas7Value SYSTEM "./VariableSettings/GasValue/Gas7Value.xml">
+<!ENTITY Gas8Value SYSTEM "./VariableSettings/GasValue/Gas8Value.xml">
+<!ENTITY Gas9Value SYSTEM "./VariableSettings/GasValue/Gas9Value.xml">
+<!ENTITY Gas10Value SYSTEM "./VariableSettings/GasValue/Gas10Value.xml">
+<!ENTITY Gas11Value SYSTEM "./VariableSettings/GasValue/Gas11Value.xml">
+<!ENTITY Gas12Value SYSTEM "./VariableSettings/GasValue/Gas12Value.xml">
+<!ENTITY Gas13Value SYSTEM "./VariableSettings/GasValue/Gas13Value.xml">
+<!ENTITY Gas14Value SYSTEM "./VariableSettings/GasValue/Gas14Value.xml">
+<!ENTITY Gas15Value SYSTEM "./VariableSettings/GasValue/Gas15Value.xml">
+<!ENTITY Gas16Value SYSTEM "./VariableSettings/GasValue/Gas16Value.xml">
+<!ENTITY Gas17Value SYSTEM "./VariableSettings/GasValue/Gas17Value.xml">
+<!ENTITY Gas18Value SYSTEM "./VariableSettings/GasValue/Gas18Value.xml">
+<!ENTITY EPDSimulated SYSTEM "./VariableSettings/Simulated/EPDSimulated.xml">
+<!ENTITY ChillerSimulated SYSTEM "./VariableSettings/Simulated/ChillerSimulated.xml">
+<!ENTITY SrcMatchSimulated SYSTEM "./VariableSettings/Simulated/SrcMatchSimulated.xml">
+<!ENTITY BiasMatchSimulated SYSTEM "./VariableSettings/Simulated/BiasMatchSimulated.xml">
+<!ENTITY LFMatchSimulated SYSTEM "./VariableSettings/Simulated/LFMatchSimulated.xml">
+<!ENTITY IO_Kyland SYSTEM "./IO_Kyland.xml">
+<!ENTITY PLCSimulated SYSTEM "./VariableSettings/Simulated/PLCSimulated.xml">
+<!ENTITY TempControlSimulated SYSTEM "./VariableSettings/Simulated/TempControlSimulated.xml">
+<!ENTITY ForlineTempCtlSimulated SYSTEM "./VariableSettings/Simulated/ForlineTempCtlSimulated.xml">
+<!ENTITY TempCtlF4TSimulated SYSTEM "./VariableSettings/Simulated/TempCtlF4TSimulated.xml">
+<!ENTITY GaslineTempCtlSimulated SYSTEM "./VariableSettings/Simulated/GaslineTempCtlSimulated.xml">
+<!ENTITY GaugeSimulated SYSTEM "./VariableSettings/Simulated/GaugeSimulated.xml">
+<!ENTITY KylandShmSimulated SYSTEM "./VariableSettings/Simulated/KylandShmSimulated.xml">
+]>
+<IO>
+    &IO_Kyland;
+
+	<Datas>
+	    <ProcessFlag dataType="I" accessMode="RW" alias="">
+			<Bd></Bd>
+			<Ch></Ch>
+		</ProcessFlag>
+		<ProcessHasWaferFlag dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/ProcessHasWaferFlag">
+			<Bd></Bd>
+			<Ch></Ch>
+		</ProcessHasWaferFlag>
+	    <BRForLF dataType="I" accessMode="RW" alias="">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>LF</DescriptorList>
+			&SetSimulated;
+		</BRForLF>	
+		<GasPartialPressureId type="data" dataType="S" accessMode="RW">
+			<Bd></Bd>
+			<Ch></Ch>
+			<MaxLength>100</MaxLength>
+		</GasPartialPressureId>
+		<ProcessTheRecipeFlag dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/ProcessTheRecipeFlag">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>Off,On</DescriptorList>
+		</ProcessTheRecipeFlag>
+		<MaxProcessTime dataType="D" accessMode="RW" alias="/Control/PMCExports/InnerDatas/MaxProcessTime">
+			<Bd></Bd>
+			<Ch></Ch>
+		</MaxProcessTime>
+		<RecipeType dataType="I" accessMode="RW" alias="">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>GroupRecipe</DescriptorList>
+		</RecipeType>
+		<ParentStepIdForPSD dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/PM_S1_ParentStepId_PSD">
+			<Bd></Bd>
+			<Ch></Ch>
+			&SetNotSimulated;
+		</ParentStepIdForPSD>
+		<RcpStepTime dataType="D" accessMode="RW" alias="">
+			<Bd></Bd>
+			<Ch></Ch>
+		</RcpStepTime>
+		<RedisConnectStatus dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/RedisConnectStatus">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>disconnect,connect</DescriptorList>
+		</RedisConnectStatus>
+	</Datas>
+
+	<ForlineTempCtl>
+		 <ForLineTempSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/ForlineTempSP">
+			  <Bd>60</Bd>
+			  <Ch>201</Ch>
+			  <Min>0</Min>
+			  <Max>150</Max>
+			  <Accuracy>0.1</Accuracy>
+			  <Unit>degC</Unit>
+			  &ForlineTempCtlSimulated;
+		  </ForLineTempSP>
+		
+		   <ChannelSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ForlineSensorTemp">
+			  <Bd>60</Bd>
+			  <Ch>1</Ch>
+			  <Min>0</Min>
+			  <Max>150</Max>
+			  <Accuracy>0.1</Accuracy>
+			  <Unit>degC</Unit>
+			  &ForlineTempCtlSimulated;
+		  </ChannelSensor>
+		  
+		   <Channel1Current dataType="D" accessMode="R" alias="">
+			<Bd>60</Bd>
+			<Ch>0</Ch>
+			<Min>0</Min>
+			<Max>150</Max>
+			<Accuracy>0.01</Accuracy>
+			<Unit>degC</Unit>
+			&ForlineTempCtlSimulated;
+		  </Channel1Current>
+	</ForlineTempCtl>
+
+	<GaslineTempCtl>
+		 <GateValveTempSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/GaslineTempSP">
+			  <Bd>61</Bd>
+			  <Ch>201</Ch>
+			  <Min>0</Min>
+			  <Max>150</Max>
+			  <Accuracy>0.1</Accuracy>
+			  <Unit>degC</Unit>
+			  &SetNotSimulated;
+		  </GateValveTempSP>
+
+		   <ChannelSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/GaslineTemp">
+			  <Bd>61</Bd>
+			  <Ch>1</Ch>
+			  <Min>0</Min>
+			  <Max>150</Max>
+			  <Accuracy>0.1</Accuracy>
+			  <Unit>degC</Unit>
+			  &SetNotSimulated;
+		  </ChannelSensor>
+		  
+		   <Channel1Current dataType="D" accessMode="R" alias="">
+			<Bd>61</Bd>
+			<Ch>0</Ch>
+			<Min>0</Min>
+			<Max>150</Max>
+			<Accuracy>0.01</Accuracy>
+			<Unit>degC</Unit>
+			&SetNotSimulated;
+		  </Channel1Current>
+	</GaslineTempCtl>
+<!--MKS 4K dual Match Naura-->		
+<SRCMatch>
+	   <SRFMatchType dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/SRF_MatchOutType">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <DescriptorList>MKS4KDual</DescriptorList>
+	      &SrcMatchSimulated;
+	   </SRFMatchType>	    
+</SRCMatch>
+
+	<LFMatch>
+
+	<ReadC2 dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LFC2">
+		<Bd>42</Bd>
+		<Ch>13</Ch>
+		<Min>0</Min>
+		<Max>999</Max>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</ReadC2>	
+	
+	<SetC2 dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFC2SP">
+		<Bd>42</Bd>
+		<Ch>9</Ch>
+		<Min>0</Min>
+		<Max>999</Max>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</SetC2>
+	
+	<!--ReadC2Preset dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>3</Ch>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</ReadC2Preset-->	
+	
+	<!--SetC2Preset dataType="I" accessMode="RW" alias="">
+		<Bd>42</Bd>
+		<Ch>4</Ch>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</SetC2Preset>	
+	
+	<SetC2PresetCall dataType="I" accessMode="RW" alias="">
+		<Bd>42</Bd>
+		<Ch>5</Ch>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</SetC2PresetCall-->	
+	
+	<ReadVdc dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/LFDCBias">
+	      <Bd>42</Bd>
+	      <Ch>15</Ch>
+	      <Min>0</Min>
+	      <Max>10000</Max>
+	      <Accuracy>0.001</Accuracy>
+	      <Unit>v</Unit>
+	     &LFMatchSimulated;
+	</ReadVdc>		
+	
+	<!--SetC2Max dataType="I" accessMode="RW" alias="">
+		<Bd>42</Bd>
+		<Ch>7</Ch>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</SetC2Max>		
+	
+	<SetC2Min dataType="I" accessMode="RW" alias="">
+		<Bd>42</Bd>
+		<Ch>8</Ch>
+		<DescriptorList></DescriptorList>
+		&LFMatchSimulated;
+	</SetC2Min>		
+	
+	<SetRelay2 dataType="I" accessMode="RW" alias="">
+		<Bd>42</Bd>
+		<Ch>9</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</SetRelay2>
+	
+	<ReadRelay1 dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>10</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadRelay1>
+
+	<ReadRelay2 dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>11</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadRelay2>
+	
+	<ReadRelay3 dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>12</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadRelay3>
+
+	<ReadMotor1 dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>13</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadMotor1>
+
+	<ReadMotor2 dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>14</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadMotor2>
+	
+	<ReadInterlock dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>15</Ch>
+		<DescriptorList>OFF:0,ON:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadInterlock>
+
+	<ReadTempOverTemp dataType="I" accessMode="R" alias="">
+		<Bd>42</Bd>
+		<Ch>16</Ch>
+		<DescriptorList>NO:0,YES:1</DescriptorList>
+		&LFMatchSimulated;
+	</ReadTempOverTemp-->
+
+	     <ReadC1 dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LFC1">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	     &LFMatchSimulated;
+	    </ReadC1>
+	    <!--ReadC2 dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LFC2">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+          <DescriptorList></DescriptorList>
+	     &LFMatchSimulated;
+	    </ReadC2>
+	    <ReadC3 dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LFC3">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	     &SetNotSimulated;
+	    </ReadC3-->
+	    <!--ReadDCBias dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/ReadDCBias">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>10000</Max>
+	      <Accuracy>0.1</Accuracy>
+	      <Unit>v</Unit>
+	     &LFMatchSimulated;
+	    </ReadDCBias-->
+	    <SetC1 dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFC1SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	     &LFMatchSimulated;
+	    </SetC1>
+	    <!--SetC2 dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFC2SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	     &LFMatchSimulated;
+	    </SetC2>
+	    <SetC3 dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFC3SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	     &SetNotSimulated;
+	    </SetC3-->
+	    <presetC1PositionSP dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFPresetC1SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+	  	   &LFMatchSimulated;
+	    </presetC1PositionSP>
+	    <presetC2PositionSP dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFPresetC2SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>999</Max>
+	      <DescriptorList></DescriptorList>
+		   &LFMatchSimulated;   		
+	    </presetC2PositionSP> 
+	    <!--presetC3PositionSP dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LFPresetC3SP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>9999</Max>
+	      <DescriptorList></DescriptorList> 
+	      &SetNotSimulated; 		
+	    </presetC3PositionSP-->
+	  	<ManualAutoSP dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LF_OperateModeSP">
+	      <Bd>42</Bd>
+	      <Ch>1</Ch>
+	      <DescriptorList>Manual,Auto</DescriptorList>
+	     &LFMatchSimulated;
+	    </ManualAutoSP>
+	    <presetModeSP dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LF_PresetModeSP">
+	      <Bd>42</Bd>
+	      <Ch>5</Ch>
+	      <DescriptorList>Disable,Enable</DescriptorList>
+	  		&LFMatchSimulated;
+	    </presetModeSP>
+	    <pulseModeSP dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/LF_PulseModeSP">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <DescriptorList>CW,SlowPulse,FastPulse</DescriptorList>
+	  		&LFMatchSimulated;
+	    </pulseModeSP>
+	    <frequencyModeSP dataType="I" accessMode="RW">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <DescriptorList>FixedFreq,Tracking,TrackingAndCollaborating</DescriptorList>
+	  		&LFMatchSimulated;
+	    </frequencyModeSP>
+	    <Recall dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LF_Recall">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>7</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit></Unit>
+	     &SetNotSimulated;
+	    </Recall>
+	    <ManualAuto dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LF_OperateMode">
+	      <Bd>42</Bd>
+	      <Ch>11</Ch>
+	      <DescriptorList>Manual,Auto</DescriptorList>
+	     &LFMatchSimulated;
+	    </ManualAuto>
+	    <SetDelayTime dataType="D" accessMode="RW" alias="/Control/PMCExports/InnerDatas/LF_SetDelayTime">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>10</Max>
+	      <Accuracy>0.1</Accuracy>
+	      <Unit>s</Unit>
+	     &LFMatchSimulated;
+	    </SetDelayTime> 
+	    <LocalRemoteSP dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/LF_LocalRemoteSP">
+	      <Bd>42</Bd>
+	      <Ch>3</Ch>
+	      <DescriptorList>Local,Remote</DescriptorList>
+	     &SetSimulated;
+	    </LocalRemoteSP> 
+	    <LocalRemote dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LF_RunMode">
+	      <Bd>42</Bd>
+	      <Ch>12</Ch>
+	      <DescriptorList>Local,Remote</DescriptorList>
+	     &SetSimulated;
+	    </LocalRemote>  
+	    <Store dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/LF_Store">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <Min>0</Min>
+	      <Max>29</Max>
+	      <DescriptorList></DescriptorList>
+	     &SetNotSimulated;
+	    </Store>
+	    <FaultReset dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/LF_FaultReset">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <DescriptorList>ON,OFF</DescriptorList>
+	     &SetNotSimulated;
+	    </FaultReset>
+	    <LFMatchType dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/LF_MatchOutType">
+	      <Bd></Bd>
+	      <Ch></Ch>
+	      <DescriptorList>NMCMatch</DescriptorList>
+	      &SetSimulated;
+	    </LFMatchType>
+	</LFMatch>
+
+  <TurboMolecularPump>
+	<TurboReadSpeed dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TurboReadSpeed">
+      		<Bd>40</Bd>
+      		<Ch>01</Ch>
+      		<Min>0</Min>
+      		<Max>90000</Max>
+      		<Accuracy>0.1</Accuracy>
+      		<Unit>rpm</Unit>
+      		&SetSimulated;
+    	</TurboReadSpeed>
+	<TurboReadTemp dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TurboReadTemp">
+      		<Bd>40</Bd>
+      		<Ch>02</Ch>
+      		<Min>0</Min>
+      		<Max>9000</Max>
+      		<Accuracy>0.1</Accuracy>
+      		<Unit>degC</Unit>
+      		&SetSimulated;
+    	</TurboReadTemp>
+
+    	<TurboReadCurrent dataType="D" accessMode="R" alias="">
+      		<Bd>40</Bd>
+      		<Ch>03</Ch>
+      		<Min>0</Min>
+      		<Max>100</Max>
+      		<Accuracy>0.1</Accuracy>
+      		<Unit>A</Unit>
+      		&SetNotSimulated;
+    	</TurboReadCurrent>
+
+    	<TurboReadError dataType="S" accessMode="R" alias="">
+      		<Bd>40</Bd>
+      		<Ch>04</Ch>
+     	 	&SetNotSimulated;
+    	</TurboReadError>
+
+    	<TurboReadWarning dataType="S" accessMode="R" alias="">
+      		<Bd>40</Bd>
+      		<Ch>05</Ch>
+      		&SetNotSimulated;
+    	</TurboReadWarning>
+  </TurboMolecularPump>
+
+<!--TaiDa-->
+  <TempCtl>
+		<ConnectStatus dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/TempCtlConnectStatus">
+			<Bd>43</Bd>
+			<Ch>1000</Ch>
+			<DescriptorList>disconnect,connect</DescriptorList>
+			&SetSimulated;
+		</ConnectStatus>
+
+		<HasAlarm dataType="I" accessMode="R" alias="">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>NoAlarm,HasAlarm</DescriptorList>
+			&SetNotSimulated;
+	    </HasAlarm> 
+		
+		<!--Band 1&2-->
+		<Middle1SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/MC1TempSP">
+			<Bd>43</Bd>
+		 	<Ch>1</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle1SP>
+		
+	    <Middle2SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/MC2TempSP">
+			<Bd>43</Bd>
+		 	<Ch>2</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle2SP>
+	
+		<Middle3SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/MC3TempSP">
+			<Bd>43</Bd>
+		  	<Ch>3</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle3SP>
+		
+	    <Middle4SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/MC4TempSP">
+			<Bd>43</Bd>
+		  	<Ch>4</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle4SP>
+		<BaseHeater1SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/BaseHeater1SP">
+			<Bd>43</Bd>
+		  	<Ch>6</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</BaseHeater1SP>
+		
+		<BaseHeater2SP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/BaseHeater2SP">
+			<Bd>43</Bd>
+		  	<Ch>7</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</BaseHeater2SP>
+
+		<SetMid1Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid1Power">
+			<Bd>43</Bd>
+		  	<Ch>17</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetMid1Power>
+		<SetMid2Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid2Power">
+			<Bd>43</Bd>
+		  	<Ch>18</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetMid2Power>
+		<SetMid3Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid3Power">
+			<Bd>43</Bd>
+		  	<Ch>19</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetMid3Power>
+	    <SetMid4Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid4Power">
+			<Bd>43</Bd>
+		  	<Ch>20</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetMid4Power>
+		<SetBaseHeater1Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetBaseHeater1Power">
+			<Bd>43</Bd>
+		  	<Ch>22</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetBaseHeater1Power>
+		<SetBaseHeater2Power dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetBaseHeater2Power">
+			<Bd>43</Bd>
+		  	<Ch>23</Ch>
+		  	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetBaseHeater2Power>	
+		
+		<SetMid1Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid1Mode">
+			<Bd>43</Bd>
+		  	<Ch>33</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetMid1Mode>
+		<SetMid2Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid2Mode">
+			<Bd>43</Bd>
+		  	<Ch>34</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetMid2Mode>
+		<SetMid3Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid3Mode">
+			<Bd>43</Bd>
+		  	<Ch>35</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetMid3Mode>
+	    <SetMid4Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetMid4Mode">
+			<Bd>43</Bd>
+		  	<Ch>36</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetMid4Mode>
+		<SetBaseHeater1Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetBaseHeater1Mode">
+			<Bd>43</Bd>
+		  	<Ch>38</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetBaseHeater1Mode>
+		<SetBaseHeater2Mode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetBaseHeater2Mode">
+			<Bd>43</Bd>
+		  	<Ch>39</Ch>
+		  	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetBaseHeater2Mode>
+
+		<Middle1Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/MC1Temp">
+			<Bd>43</Bd>
+		  	<Ch>49</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle1Sensor>
+		<Middle2Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/MC2Temp">
+			<Bd>43</Bd>
+		  	<Ch>50</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle2Sensor>	
+		<Middle3Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/MC3Temp">
+			<Bd>43</Bd>
+		  	<Ch>51</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle3Sensor>
+		<Middle4Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/MC4Temp">
+			<Bd>43</Bd>
+		  	<Ch>52</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</Middle4Sensor>
+		<BaseHeater1Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/BaseHeater1SensorTemp">
+			<Bd>43</Bd>
+		  	<Ch>54</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</BaseHeater1Sensor>	
+		<BaseHeater2Sensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/BaseHeater2SensorTemp">
+			<Bd>43</Bd>
+		  	<Ch>55</Ch>
+		  	<Min>0</Min>
+		  	<Max>120</Max>
+		  	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</BaseHeater2Sensor>		
+		
+		<ReadMid1Power dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ReadMid1Power">
+			<Bd>43</Bd>
+		  	<Ch>65</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</ReadMid1Power>
+		<ReadMid2Power dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ReadMid2Power">
+			<Bd>43</Bd>
+		  	<Ch>66</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</ReadMid2Power>
+		<ReadMid3Power dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ReadMid3Power">
+			<Bd>43</Bd>
+		  	<Ch>67</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</ReadMid3Power>
+		<ReadMid4Power dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ReadMid4Power">
+			<Bd>43</Bd>
+		  	<Ch>68</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</ReadMid4Power>
+
+	        <GridHeaterSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/GDPTempSP">
+			<Bd>43</Bd>
+		 	<Ch>83</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&TempControlSimulated;
+		</GridHeaterSP>	
+		 <WindowOuterSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/WindowOuterTempSP">
+			<Bd>43</Bd>
+		 	<Ch>84</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&SetSimulated;
+	   </WindowOuterSP>
+	    <WindowInnerSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/WindowInnerTempSP">
+			<Bd>43</Bd>
+		 	<Ch>85</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&SetSimulated;
+		</WindowInnerSP>	
+		<AirHeaterSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/AirTempSP">
+			<Bd>43</Bd>
+		 	<Ch>86</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&SetNotSimulated;
+		</AirHeaterSP>
+	    <PendulumValveHeaterSP dataType="D" accessMode="RW" alias="">
+			<Bd>43</Bd>
+		 	<Ch>87</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		 	<Accuracy>0.1</Accuracy>
+		 	<Unit>degC</Unit>
+		  	&SetNotSimulated;
+		</PendulumValveHeaterSP>
+
+	   <SetGridHeaterPower dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/SetGridHeaterPower">
+			<Bd>43</Bd>
+		 	<Ch>99</Ch>
+		  	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&TempControlSimulated;
+		</SetGridHeaterPower>	
+	    <SetWindowInnerHeaterPower dataType="D" accessMode="RW" alias="">
+			<Bd>43</Bd>
+		 	<Ch>100</Ch>
+		  	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&SetSimulated;
+		</SetWindowInnerHeaterPower>
+	    <SetWindowOuterHeaterPower dataType="D" accessMode="RW" alias="">
+			<Bd>43</Bd>
+		 	<Ch>101</Ch>
+		  	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&SetSimulated;
+		</SetWindowOuterHeaterPower>	
+		
+     	<SetGridHeaterMode dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SetGridHeaterMode">
+			<Bd>43</Bd>
+		  	<Ch>115</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&TempControlSimulated;
+		</SetGridHeaterMode>
+		<SetWindowInnerHeaterMode dataType="I" accessMode="RW" alias="">
+			<Bd>43</Bd>
+		  	<Ch>116</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&SetSimulated;
+		</SetWindowInnerHeaterMode>
+		<SetWindowOuterHeaterMode dataType="I" accessMode="RW" alias="">
+			<Bd>43</Bd>
+		  	<Ch>117</Ch>
+		 	<DescriptorList>AUTO:0,MANNUL:1</DescriptorList>
+		  	&SetSimulated;
+		</SetWindowOuterHeaterMode>
+		
+		<GridHeaterSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/GDPTemp">
+			<Bd>43</Bd>
+		  	<Ch>131</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&SetSimulated;
+		</GridHeaterSensor>
+		<WindowOuterSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/WindowOuterTemp">
+			<Bd>43</Bd>
+		  	<Ch>132</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&SetSimulated;
+		</WindowOuterSensor>
+		<WindowInnerSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/WindowInnerTemp">
+			<Bd>43</Bd>
+		  	<Ch>133</Ch>
+		  	<Min>0</Min>
+		  	<Max>150</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&SetSimulated;
+		</WindowInnerSensor>
+		<AirSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/AirSensor">   
+			<Bd>43</Bd>
+		  	<Ch>134</Ch>
+		  	<Min>0</Min>
+		  	<Max>700</Max>
+		  	<Accuracy>0.1</Accuracy>
+		  	<Unit>degC</Unit>
+		  	&SetSimulated;
+		</AirSensor>
+
+		<ReadGridHeaterPower dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ReadGridHeaterPower">
+			<Bd>43</Bd>
+		  	<Ch>147</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&SetSimulated;
+		</ReadGridHeaterPower>
+		<ReadWindowInnerHeaterPower dataType="D" accessMode="R" alias="">
+			<Bd>43</Bd>
+		  	<Ch>149</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&SetSimulated;
+		</ReadWindowInnerHeaterPower>
+		<ReadWindowOuterHeaterPower dataType="D" accessMode="R" alias="">
+			<Bd>43</Bd>
+		  	<Ch>148</Ch>
+		 	<Min>0</Min>
+		  	<Max>100</Max>
+		  	&SetSimulated;
+		</ReadWindowOuterHeaterPower>
+  </TempCtl>
+  
+	<ESCBaseTemp>
+	 <BiasSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/BiasTemp">
+         <Bd>55</Bd>
+         <Ch>1</Ch>
+		 <Min></Min>
+		 <Max>150</Max>
+		 <Accuracy>0.01</Accuracy>
+		 <Unit>degC</Unit>
+         &SetSimulated;
+	 </BiasSensor>
+	</ESCBaseTemp>
+
+	<!--SMCChiller-->
+	<!--Chiller-->	
+	<!--Chiller>	
+	  <ConnectStatus dataType="I" accessMode="R"  alias="">
+		<Bd>23</Bd>
+		<Ch>1000</Ch>
+		<DescriptorList>Disconnect,Connect</DescriptorList>
+		&ChillerSimulated;
+	 </ConnectStatus>	
+		<StartSP dataType="I" accessMode="RW" alias="">
+		  <Bd>23</Bd>
+		  <Ch>1</Ch>
+		  <DescriptorList>Stop,Start</DescriptorList>
+		  &ChillerSimulated;
+		</StartSP>		
+		<TempSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/ChillerTemp_SetPoint">
+		  <Bd>23</Bd>
+		  <Ch>2</Ch>
+		  <Min>-20</Min>
+		  <Max>90</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>degC</Unit>
+		  &ChillerSimulated;
+		</TempSP>	
+		<TempSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ChillerTemp">
+		  <Bd>23</Bd>
+		  <Ch>3</Ch>
+		  <Min>-50</Min>
+		  <Max>150</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>degC</Unit>
+		  &ChillerSimulated;
+		</TempSensor>	
+		<PumpPressure dataType="D" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>4</Ch>
+		  <Min>0</Min>
+		  <Max>2</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>MPa</Unit>
+		  &ChillerSimulated;
+		</PumpPressure>	
+		<WaterFlow dataType="D" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>5</Ch>
+		  <Min>0</Min>
+		  <Max>40</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>GPM</Unit>
+		  &ChillerSimulated;
+		</WaterFlow>	
+		<Fault dataType="I" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>6</Ch>
+		  <DescriptorList>NoFault,Fault</DescriptorList>
+		  &ChillerSimulated;
+		</Fault>
+		<Warning dataType="I" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>7</Ch>
+		  <DescriptorList>NoWarn,Warn</DescriptorList>
+		  &ChillerSimulated;
+		</Warning>
+		<Remote dataType="I" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>8</Ch>
+		  <DescriptorList>Local,Remote</DescriptorList>
+		  &ChillerSimulated;
+		</Remote>		
+		<Alarm dataType="I" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>9</Ch>
+		  <DescriptorList>NoAlarm,Alarm</DescriptorList>
+		  &ChillerSimulated;
+		</Alarm>
+     	<RunStatusAT dataType="I" accessMode="R" alias="">
+       	<Bd>23</Bd>
+       	<Ch>10</Ch>
+       	<DescriptorList>Stop,Run</DescriptorList>
+       	&ChillerSimulated;
+     	</RunStatusAT>														
+	</Chiller-->
+	
+	<!--ATS Chiller-->
+	<Chiller>	
+	  <ConnectStatus dataType="I" accessMode="R"  alias="/Control/PMCExports/InnerDatas/ChillerConnectStatus">
+		<Bd>23</Bd>
+		<Ch>1000</Ch>
+		<DescriptorList>Disconnect,Connect</DescriptorList>
+		&ChillerSimulated;
+	 </ConnectStatus>	
+		<StartSP dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/ChillerStatusSP">
+		  <Bd>23</Bd>
+		  <Ch>1</Ch>
+		  <DescriptorList>Stop,Start</DescriptorList>
+		  &ChillerSimulated;
+		</StartSP>		
+		<TempSP dataType="D" accessMode="RW" alias="/Control/PMCExports/Datas/ChillerTemp_SetPoint">
+		  <Bd>23</Bd>
+		  <Ch>2</Ch>
+		  <Min>-40</Min>
+		  <Max>90</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>degC</Unit>
+		  &ChillerSimulated;
+		</TempSP>	
+		<TempSensor dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/ChillerTemp">
+		  <Bd>23</Bd>
+		  <Ch>3</Ch>
+		  <Min>-50</Min>
+		  <Max>150</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>degC</Unit>
+		  &ChillerSimulated;
+		</TempSensor>	
+		<PumpPressure dataType="D" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>4</Ch>
+		  <Min>0</Min>
+		  <Max>2</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>MPa</Unit>
+		  &ChillerSimulated;
+		</PumpPressure>	
+		<WaterFlow dataType="D" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>5</Ch>
+		  <Min>0</Min>
+		  <Max>40</Max>
+		  <Accuracy>0.1</Accuracy>
+		  <Unit>GPM</Unit>
+		  &ChillerSimulated;
+		</WaterFlow>	
+		<Fault dataType="I" accessMode="R" alias="">
+		  <Bd>23</Bd>
+		  <Ch>6</Ch>
+		  <DescriptorList>NoFault,Fault</DescriptorList>
+		  &ChillerSimulated;
+		</Fault>
+		<Warning dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/ChillerWarning">
+		  <Bd>23</Bd>
+		  <Ch>7</Ch>
+		  <DescriptorList>NoWarn,Warn</DescriptorList>
+		  &ChillerSimulated;
+		</Warning>
+		<Remote dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/ChillerRemote">
+		  <Bd>23</Bd>
+		  <Ch>8</Ch>
+		  <DescriptorList>Local,Remote</DescriptorList>
+		  &ChillerSimulated;
+		</Remote>		
+		<Alarm dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/ChillerAlarm">
+		  <Bd>23</Bd>
+		  <Ch>9</Ch>
+		  <DescriptorList>NoAlarm,Alarm</DescriptorList>
+		  &ChillerSimulated;
+		</Alarm>
+     	<RunStatusAT dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/ChillerRunStatusAT">
+       	<Bd>23</Bd>
+       	<Ch>10</Ch>
+       	<DescriptorList>Stop,Run</DescriptorList>
+       	&ChillerSimulated;
+     	</RunStatusAT>														
+	</Chiller>		
+
+	<!--CheTian TCP Device-->
+	 <!--TCP Device-->
+	   <EPD>
+	    <ConnectStatus dataType="I" accessMode="R"  alias="">
+			<Bd>27</Bd>
+			<Ch>1000</Ch>
+			<DescriptorList>Disconnect,Connect</DescriptorList>
+			&EPDSimulated;
+		</ConnectStatus>
+	  
+		  <Present dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDPresentSP">
+			  <Bd></Bd>
+			  <Ch></Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Present>
+		  <Reset dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDResetSP">
+			  <Bd>27</Bd>
+			  <Ch>26</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Reset>
+		  <Test dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDTestSP">
+			  <Bd></Bd>
+			  <Ch></Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Test>
+		  <RecipeStart dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDRecipeStartSP">
+			  <Bd>27</Bd>
+			  <Ch>1</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+	      </RecipeStart>
+		  <RecipeStop dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDRecipeStopSP">
+			<Bd>27</Bd>
+			<Ch>2</Ch>
+			<DescriptorList>Set</DescriptorList>
+			&EPDSimulated;
+		  </RecipeStop>
+		  <Complete dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDCompleteSP">
+			  <Bd>27</Bd>
+			  <Ch>3</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Complete>
+		  <Start dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDStartSP">
+			  <Bd>27</Bd>
+			  <Ch>4</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Start>
+		  <Stop dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDStopSP">
+			  <Bd>27</Bd>
+			  <Ch>5</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Stop>
+		  <CfgList dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/CfgList">
+			  <Bd>27</Bd>
+			  <Ch>12</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </CfgList>
+		  <ConfigureName dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/ConfigureName">
+			  <Bd>27</Bd>
+			  <Ch>6</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </ConfigureName>
+		  <Connect dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDConnectSP">
+			  <Bd>27</Bd>
+			  <Ch>27</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Connect>
+		  <Version dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDVersionSP">
+			  <Bd>27</Bd>
+			  <Ch>13</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Version>
+		  <Disconnect dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDDisconnectSP">
+			  <Bd>27</Bd>
+			  <Ch>28</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </Disconnect>
+		  <EpdStatus dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/EpdStatus">
+			  <Bd>27</Bd>
+			  <Ch>14</Ch>
+			  <DescriptorList>Unknown,Runing,Halting,Idle</DescriptorList>
+			  &EPDSimulated;
+		  </EpdStatus>
+		  <EndPoint dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/EndPoint">
+			  <Bd>27</Bd>
+			  <Ch>15</Ch>
+			  <DescriptorList>no, yes</DescriptorList>
+			  &EPDSimulated;
+		  </EndPoint>
+		  <ErrorSeverity dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDErrorSeverity">
+			  <Bd></Bd>
+			  <Ch></Ch>
+			  <DescriptorList>Normal,Notification,Warning,Error,Fault</DescriptorList>
+			  &EPDSimulated;
+		  </ErrorSeverity>
+		  
+		  <ClearErrorSeverity dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDClearErrorSeverity">
+			  <Bd></Bd>
+			  <Ch></Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </ClearErrorSeverity>
+		  
+		  <EPDTime dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/EPDTime">
+			  <Bd>27</Bd>
+			  <Ch>16</Ch>
+			  <Min>0</Min>
+			  <Max>20000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </EPDTime>
+		  <TrendData1 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData1">
+			  <Bd>27</Bd>
+	      <Ch>35</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData1>
+		  <TrendData2 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData2">
+			  <Bd>27</Bd>
+	      <Ch>36</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData2>
+		  <TrendData3 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData3">
+			  <Bd>27</Bd>
+	      <Ch>37</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData3>
+		  <TrendData4 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData4">
+			  <Bd>27</Bd>
+	      <Ch>38</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData4>
+		  <TrendData5 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData5">
+			  <Bd>27</Bd>
+	      <Ch>39</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData5>
+		  <TrendData6 dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDTrendData6">
+			  <Bd>27</Bd>
+	      <Ch>40</Ch>
+	      <Min>-20000000</Min>
+	      <Max>20000000</Max>
+			  <Accuracy>1</Accuracy>
+			  <Unit>unit</Unit>
+			  &EPDSimulated;
+		  </TrendData6>
+		  <Error dataType="S" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDError">
+			  <Bd>27</Bd>
+			  <Ch>23</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Error>
+		  <GetVersion dataType="S" accessMode="R" alias="/Control/PMCExports/InnerDatas/GetEPDVersion">
+			  <Bd>27</Bd>
+			  <Ch>25</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </GetVersion>
+		  
+		  <ErrorMoreInfo dataType="S" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDErrorMoreInfo">
+			  <Bd></Bd>
+			  <Ch></Ch>
+			  <MaxLength>1000</MaxLength>
+			  &EPDSimulated;
+		  </ErrorMoreInfo>
+		  
+		  <ConfigureList dataType="S" accessMode="R" alias="/Control/PMCExports/Datas/ConfigureList">
+			  <Bd>27</Bd>
+			  <Ch>24</Ch>
+			  <MaxLength>100000</MaxLength>
+			  &EPDSimulated;
+		  </ConfigureList>
+		  <Lot dataType="S" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDLotSP">
+			  <Bd>27</Bd>
+			  <Ch>7</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Lot>
+		  <Slot dataType="S" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDSlotSP">
+			  <Bd>27</Bd>
+			  <Ch>8</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Slot>
+		  <Wafer dataType="S" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDWaferSP">
+			  <Bd>27</Bd>
+			  <Ch>9</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Wafer>
+		  <Recipe dataType="S" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDRecipeSP">
+			  <Bd>27</Bd>
+			  <Ch>10</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Recipe>
+		  <Step dataType="S" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDStepSP">
+			  <Bd>27</Bd>
+			  <Ch>11</Ch>
+			  <MaxLength>100</MaxLength>
+			  &EPDSimulated;
+		  </Step>
+		  <HeatBeat dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDHeatBeat">
+			  <Bd>27</Bd>
+	          <Ch>29</Ch>
+		      <Min>0</Min>
+	          <Max>1</Max>
+	          &EPDSimulated;
+	      </HeatBeat>	
+	    <QueryRunStatus dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDQueryRunStatus">
+			  <Bd>27</Bd>
+	      <Ch>31</Ch>
+		<Min>0</Min>
+	      <Max>4</Max>
+	      <DescriptorList>null,Monitor,Save,Capture,Process</DescriptorList>
+	      &SetNotSimulated;
+	    </QueryRunStatus>				
+	    <SetRunStatus dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDSetRunStatus">
+			  <Bd>27</Bd>
+	      <Ch>32</Ch>
+		    <Min>0</Min>
+	      <Max>4</Max>
+	      <DescriptorList>null,Monitor,Save,Capture,Process</DescriptorList>
+	      &SetNotSimulated;
+	    </SetRunStatus>					
+	    <QueryOperateStatus dataType="I" accessMode="R" alias="/Control/PMCExports/InnerDatas/EPDQueryOperateStatus">
+			  <Bd>27</Bd>
+	      <Ch>33</Ch>
+		<Min>0</Min>
+	      <Max>2</Max>
+	      <DescriptorList>null,Local,Remote</DescriptorList>
+	      &SetNotSimulated;
+	    </QueryOperateStatus>				
+	    <SetOperateStatus dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDSetOperateStatus">
+			  <Bd>27</Bd>
+	      <Ch>34</Ch>
+		<Min>0</Min>
+	      <Max>2</Max>
+	      <DescriptorList>null,Local,Remote</DescriptorList>
+	      &SetNotSimulated;
+	    </SetOperateStatus>		
+	    <OverTimeAlarm dataType="I" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDOverTimeAlarmSP">
+			  <Bd>27</Bd>
+	      <Ch>35</Ch>
+		<Min>0</Min>
+	      <Max>1</Max>
+	      <DescriptorList></DescriptorList>
+	      &SetNotSimulated;
+	    </OverTimeAlarm>		
+            <SetX1 dataType="D" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDSetX1SP">
+			  <Bd>27</Bd>
+	      <Ch>36</Ch>
+	      <Min>-1</Min>
+	      <Max>5000</Max>
+	      <Accuracy>1</Accuracy>
+	      &SetNotSimulated;
+	    </SetX1>	
+	    <SetX2 dataType="D" accessMode="RW" alias="/Control/PMCExports/InnerDatas/EPDSetX2SP">
+			  <Bd>27</Bd>
+	      <Ch>37</Ch>
+	      <Min>-1</Min>
+	      <Max>5000</Max>
+	      <Accuracy>1</Accuracy>
+	      &SetNotSimulated;
+	    </SetX2>	
+	  </EPD>
+	
+	<!--EPD>
+	  	  <ConnectStatus dataType="I" accessMode="R"  alias="">
+			  <Bd>27</Bd>
+			  <Ch>1000</Ch>
+			  <DescriptorList>Disconnect,Connect</DescriptorList>
+          &EPDSimulated;
+		  </ConnectStatus>
+		  
+    	<Present dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Present">
+	      <Bd>27</Bd>
+	      <Ch>0</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Present>	
+	    <Reset dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Reset">
+	      <Bd>27</Bd>
+	      <Ch>1</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Reset>
+	    <Test dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Test">
+	      <Bd>27</Bd>
+	      <Ch>2</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Test>
+	    <Start dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Start">
+	      <Bd>27</Bd>
+	      <Ch>3</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Start>
+	    <Stop dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Stop">
+	      <Bd>27</Bd>
+	      <Ch>4</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Stop>
+	    <Complete dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Complete">
+	      <Bd>27</Bd>
+	      <Ch>5</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Complete>
+	    <CfgList dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/CfgList">
+	      <Bd>27</Bd>
+	      <Ch>6</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </CfgList>
+	    <Connect dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Connect">
+	      <Bd>27</Bd>
+	      <Ch>7</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Connect>
+	    <Version dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Version">
+	      <Bd>27</Bd>
+	      <Ch>8</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Version>	
+	    <Disconnect dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Disconnect">
+	      <Bd>27</Bd>
+	      <Ch>9</Ch>
+	      <DescriptorList>Set</DescriptorList>
+	      &EPDSimulated;
+	    </Disconnect>	        	    
+	    <EpdStatus dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/EpdStatus">
+	      <Bd>27</Bd>
+	      <Ch>10</Ch>
+	      <DescriptorList>Unknown,Disconnected,Ready,NotReady,Connected</DescriptorList>
+	      &EPDSimulated;
+	    </EpdStatus>
+	    <EndPoint dataType="I" accessMode="R" alias="/Control/PMCExports/Datas/EndPoint">
+	      <Bd>27</Bd>
+	      <Ch>11</Ch>
+	      <DescriptorList>no, yes</DescriptorList>
+	      &EPDSimulated;
+	    </EndPoint>
+		  <ErrorSeverity dataType="I" accessMode="R">
+			  <Bd>27</Bd>
+			  <Ch>12</Ch>
+			  <DescriptorList>Normal,Notification,Warning,Error,Fault</DescriptorList>
+			  &EPDSimulated;
+		  </ErrorSeverity>
+		  
+		  <ClearErrorSeverity dataType="I" accessMode="RW">
+			  <Bd>27</Bd>
+			  <Ch>13</Ch>
+			  <DescriptorList>Set</DescriptorList>
+			  &EPDSimulated;
+		  </ClearErrorSeverity>
+		  
+	    <EPDTime dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/EPDTime">
+	      <Bd>27</Bd>
+	      <Ch>20</Ch>
+	      <Min>0</Min>
+	      <Max>20000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	      &EPDSimulated;
+	    </EPDTime>
+	    <TrendData1 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData1">
+	      <Bd>27</Bd>
+	      <Ch>21</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	      &EPDSimulated;
+	    </TrendData1>
+	    <TrendData2 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData2">
+	      <Bd>27</Bd>
+	      <Ch>22</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	      &EPDSimulated;
+	    </TrendData2>
+	    <TrendData3 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData3">
+	      <Bd>27</Bd>
+	      <Ch>23</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	      &EPDSimulated;
+	    </TrendData3>
+	    <TrendData4 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData4">
+	      <Bd>27</Bd>
+	      <Ch>24</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	      &EPDSimulated;
+	    </TrendData4>
+	    <TrendData5 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData5">
+	      <Bd>27</Bd>
+	      <Ch>25</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	       &EPDSimulated;
+	    </TrendData5>
+	    <TrendData6 dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/TrendData6">
+	      <Bd>27</Bd>
+	      <Ch>26</Ch>
+	      <Min>0</Min>
+	      <Max>200000</Max>
+	      <Accuracy>1</Accuracy>
+	      <Unit>unit</Unit>
+	       &EPDSimulated;
+	    </TrendData6>
+	    <Error dataType="S" accessMode="R" alias="/Control/PMCExports/Datas/Error">
+	      <Bd>27</Bd>
+	      <Ch>30</Ch>
+	      <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </Error>
+	    <ConfigureList dataType="S" accessMode="R" alias="/Control/PMCExports/Datas/ConfigureList">
+	      <Bd>27</Bd>
+	      <Ch>31</Ch>
+	      <MaxLength>100000</MaxLength>
+	      &EPDSimulated;
+	    </ConfigureList>
+	    <GetVersion dataType="S" accessMode="R" alias="/Control/PMCExports/Datas/GetVersion">
+	      <Bd>27</Bd>
+	      <Ch>32</Ch>
+	      <MaxLength>100</MaxLength>
+	      &SetSimulated;
+	    </GetVersion>	    
+		  
+		  <ErrorMoreInfo dataType="S" accessMode="R">
+			  <Bd>27</Bd>
+			  <Ch>33</Ch>
+			  <MaxLength>1000</MaxLength>
+			  &EPDSimulated;
+		  </ErrorMoreInfo>
+		  
+	    <ConfigureName dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/ConfigureName">
+	      <Bd>27</Bd>
+	      <Ch>40</Ch>
+	      <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </ConfigureName>
+	    <Lot dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/Lot">
+	      <Bd>27</Bd>
+	      <Ch>41</Ch>
+	     <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </Lot>
+	    <Slot dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/Slot">
+	      <Bd>27</Bd>
+	      <Ch>42</Ch>
+	     <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </Slot>
+	    <Wafer dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/Wafer">
+	      <Bd>27</Bd>
+	      <Ch>43</Ch>
+	      <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </Wafer>
+	    <Recipe dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/Recipe">
+	      <Bd>27</Bd>
+	      <Ch>44</Ch>
+	      <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	    </Recipe>
+	    <Step dataType="S" accessMode="RW" alias="/Control/PMCExports/Datas/Step">
+	      <Bd>27</Bd>
+	      <Ch>45</Ch>
+	      <MaxLength>100</MaxLength>
+	      &EPDSimulated;
+	  </Step>		
+  </EPD-->  
+  
+  <PM>
+    <SRF_ForwardPower dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/SRF_ForwardPower">
+			<Bd></Bd>
+			<Ch></Ch>
+			<Min>0</Min>
+			<Max>&SRFPowerValue;</Max>
+			<Accuracy>0.1</Accuracy>
+			<Unit>W</Unit>
+	 </SRF_ForwardPower>
+
+    
+    <LF_ForwardPower dataType="D" accessMode="R" alias="/Control/PMCExports/Datas/LF_ForwardPower">
+			<Bd></Bd>
+			<Ch></Ch>
+			<Min>0</Min>
+			<Max>&LFPowerValue;</Max>
+			<Accuracy>0.1</Accuracy>
+			<Unit>W</Unit>
+	 </LF_ForwardPower>
+	</PM> 
+  
+  	<CPU>
+	   <CurrentUsedCpu dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/CurrentUsedCpu">
+			<Bd>50</Bd>
+			<Ch>1</Ch>
+			<Min>0</Min>
+			<Max>100</Max>
+			<Accuracy>0.1</Accuracy>
+			<Unit>%</Unit>
+			&SetNotSimulated;
+		</CurrentUsedCpu>
+		
+	   <CurrentUsedMem dataType="D" accessMode="R" alias="/Control/PMCExports/InnerDatas/CurrentUsedMem">
+			<Bd>50</Bd>
+			<Ch>2</Ch>
+			<Min>0</Min>
+			<Max>100</Max>
+			<Accuracy>0.1</Accuracy>
+			<Unit>%</Unit>
+			&SetNotSimulated;
+		</CurrentUsedMem>
+	</CPU>
+</IO>

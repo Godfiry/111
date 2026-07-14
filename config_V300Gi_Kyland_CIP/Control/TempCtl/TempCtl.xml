@@ -1,0 +1,32 @@
+<TempCtl class="TempCtlSource" type="instance" alias="">
+	<setPhyTempCtl type="method">./PhyTempCtl</setPhyTempCtl>
+	<setTempInitSetpoint type="method">gdp,/SETUP/TempCtl/cfgGDPTempSetpoint</setTempInitSetpoint>
+	<setTempInitSetpoint type="method">middle1,/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setTempInitSetpoint>
+	<setTempInitSetpoint type="method">middle2,/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setTempInitSetpoint>
+	<setTempInitSetpoint type="method">middle3,/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setTempInitSetpoint>
+	<setTempInitSetpoint type="method">middle4,/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setTempInitSetpoint>
+	<setTempInitSetpoint type="method">wininner,/SETUP/TempCtl/cfgWinInnerTempSetpoint</setTempInitSetpoint>
+	
+	<PhyTempCtl class="PhyTempCtl" type="instance" alias="">
+		<setTempPosList type="method">gdp,middle1,middle2,middle3,middle4,bias,wininner,winouter,air1</setTempPosList>
+		<setChamberTempPosList type="method">gdp,middle1,middle2,middle3,middle4,wininner</setChamberTempPosList>	
+		<addTempWCh type="method">gdp,/Control/PMCExports/Datas/GDPTempSP</addTempWCh>	
+		<addTempRCh type="method">gdp,/Control/PMCExports/Datas/GDPTemp</addTempRCh>			
+		<addTempWCh type="method">middle1,/Control/PMCExports/Datas/MC1TempSP</addTempWCh>	
+		<addTempRCh type="method">middle1,/Control/PMCExports/Datas/MC1Temp</addTempRCh>	
+		<addTempWCh type="method">middle2,/Control/PMCExports/Datas/MC2TempSP</addTempWCh>	
+		<addTempRCh type="method">middle2,/Control/PMCExports/Datas/MC2Temp</addTempRCh>	
+		<addTempWCh type="method">middle3,/Control/PMCExports/Datas/MC3TempSP</addTempWCh>	
+		<addTempRCh type="method">middle3,/Control/PMCExports/Datas/MC3Temp</addTempRCh>	
+		<addTempWCh type="method">middle4,/Control/PMCExports/Datas/MC4TempSP</addTempWCh>	
+		<addTempRCh type="method">middle4,/Control/PMCExports/Datas/MC4Temp</addTempRCh>
+		<addTempRCh type="method">bias,/Control/PMCExports/Datas/BiasTemp</addTempRCh>
+		<addTempWCh type="method">wininner,/Control/PMCExports/Datas/WindowInnerTempSP</addTempWCh>	
+		<addTempRCh type="method">wininner,/Control/PMCExports/Datas/WindowInnerTemp</addTempRCh>
+		<addTempRCh type="method">winouter,/Control/PMCExports/Datas/WindowOuterTemp</addTempRCh>	
+		<addTempRCh type="method">air1,/Control/PMCExports/Datas/AirSensor</addTempRCh>				
+		<setWindowInnerInterlocks type="method">./OpenInterlocks</setWindowInnerInterlocks>
+		&TempCtlInterlock;
+		&SetSimulated;														
+	</PhyTempCtl>
+</TempCtl>

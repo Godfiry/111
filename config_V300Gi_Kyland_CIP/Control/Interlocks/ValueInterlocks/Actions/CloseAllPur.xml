@@ -1,0 +1,116 @@
+<addActuator type="method">./CloseV11</addActuator>
+<addActuator type="method">./CloseV21</addActuator>
+
+<addActuator type="method">./CloseV31</addActuator>
+<addActuator type="method">./CloseV41</addActuator>
+
+<addActuator type="method">./CloseV51</addActuator>
+<addActuator type="method">./CloseV61</addActuator>
+
+<addActuator type="method">./CloseV71</addActuator>
+<addActuator type="method">./CloseV81</addActuator>
+
+<addActuator type="method">./CloseV91</addActuator>
+<addActuator type="method">./CloseV101</addActuator>
+
+<addActuator type="method">./CloseV111</addActuator>
+<addActuator type="method">./CloseV121</addActuator>
+
+<addActuator type="method">./CloseV131</addActuator>
+<addActuator type="method">./CloseV141</addActuator>
+
+<addActuator type="method">./CloseV151</addActuator>
+<addActuator type="method">./CloseV161</addActuator>
+
+<addActuator type="method">./CloseV171</addActuator>
+<addActuator type="method">./CloseV181</addActuator>
+
+<CloseV11 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve13DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV11>
+
+<CloseV21 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve23DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV21>
+		
+<CloseV31 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve33DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV31>
+
+<CloseV41 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve43DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV41>
+
+<CloseV51 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve53DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV51>
+
+<CloseV61 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve63DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV61>
+
+<CloseV71 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve73DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV71>
+
+<CloseV81 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve83DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV81>
+
+<CloseV91 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve93DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV91>
+
+<CloseV101 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve103DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV101>
+
+<CloseV111 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve113DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV111>
+
+<CloseV121 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve123DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV121>
+
+<CloseV131 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve133DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV131>
+
+<CloseV141 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve143DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV141>
+
+<CloseV151 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve153DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV151>
+
+<CloseV161 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve163DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV161>
+
+<CloseV171 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve173DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV171>
+
+<CloseV181 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve183DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseV181>

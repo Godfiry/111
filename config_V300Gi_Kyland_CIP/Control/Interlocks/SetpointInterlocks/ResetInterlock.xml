@@ -1,0 +1,75 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't do Reset.</setAlarmMessage>
+	<addToIOInterlocks type="method">./DPAlarmPresent</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ChamberIsOpen</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./SMatchConSW1DI</addToIOInterlocks>
+	<addToIOInterlocks type="method">./HeRFCoverOpen</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./HFOverHeat</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./ChamberPressAboveThreshold</addToIOInterlocks>
+	<addToIOInterlocks type="method">./CustomerGasDetectFail</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./HFOverHeat</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./GasBoxPressDiffl</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./ChamberCDANotOk</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./GasBoxDoorOpen</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./ChamberIsOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ChamberIsOpen</addToIOInterlocks-->
+    <addToIOInterlocks type="method">./CoilEnclosureSWOpen</addToIOInterlocks>
+    <addToIOInterlocks type="method">./ForlinePressureAbove750mT</addToIOInterlocks>
+	
+	<DPAlarmPresent type="instance" class="IOInterlockCondition">
+		<setMessage type="method">DryPump has alarm. The channel [/Control/PMCExports/Datas/DPAlarmPresenceDI] should be [NoAlarm]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DPAlarmPresent>	
+
+	<ChamberIsOpen type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Chamber lid is not close. The channel [/Control/PMCExports/InnerDatas/ChamberSW1DI] should be [Close]</setMessage>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberIsOpen>
+	
+	<SMatchConSW1DI type="instance" class="IOInterlockCondition">
+		<setMessage type="method">SMatch is not connect. The channel [/Control/PMCExports/Datas/SMatchConSW1DI] should be [Connect]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/SMatchConSW1DI==1)</setConditionStr>
+	</SMatchConSW1DI>
+	
+	<HeRFCoverOpen type="instance" class="IOInterlockCondition">
+		<setMessage type="method">HeRFCover is not close. The channel [/Control/PMCExports/Datas/HeRFCoverSWDI] should be [Close]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/HeRFCoverSWDI==1)</setConditionStr>
+	</HeRFCoverOpen>
+	
+	<ChamberPressAboveThreshold type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Chamber Pressure is above threshold. The channel [/Control/PMCExports/InnerDatas/ChamberPressureSW1DI] should be [LessThreshold]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/ChamberPressureSW1DI==1)</setConditionStr>
+	</ChamberPressAboveThreshold>
+	
+	<CustomerGasDetectFail type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Customer Gas Detect is abnormal. The channel [/Control/PMCExports/InnerDatas/CustomerGasDetectDI] should be [Normal]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==1)</setConditionStr>
+	</CustomerGasDetectFail>
+	
+	<GasBoxPressDiffl type="instance" class="IOInterlockCondition">
+		<setMessage type="method">GasBoxPressDiffl is abnormal. The channel [/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI] should be [Normal]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI==1)</setConditionStr>
+	</GasBoxPressDiffl>
+	
+	<GasBoxDoorOpen type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Gasbox Door is not close. The channel [/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI] should be [Close]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI==1)</setConditionStr>
+	</GasBoxDoorOpen>
+
+	<CoilEnclosureSWOpen type="instance" class="IOInterlockCondition">
+		<setMessage type="method">CoilEnclosureSWOpen is not close. The channel [/Control/PMCExports/Datas/CoilEnclosureSWDI] should be [Close]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/CoilEnclosureSWDI==1)</setConditionStr>
+	</CoilEnclosureSWOpen>
+
+    <ForlinePressureAbove750mT type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Forline Pressure is above 750mT. The channel [/Control/PMCExports/Datas/ForlinePressure1SWDI] should be [Less750mT]</setMessage>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ForlinePressure1SWDI==1)</setConditionStr>
+	</ForlinePressureAbove750mT>
+
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

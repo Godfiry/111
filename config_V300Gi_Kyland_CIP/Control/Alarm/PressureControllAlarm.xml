@@ -1,0 +1,283 @@
+<bPumpHasFaultAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpHasFaultAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">654</setMessage>
+	<setDescription type="method">655</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpHasFaultAlarm>
+
+<bPumpNotAtRemoteAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpNotAtRemoteAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">810</setMessage>
+	<setDescription type="method">811</setDescription>
+	<setSeverity type="method">1</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpNotAtRemoteAlarm>
+
+<bIOOfflineAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bIOOfflineAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">816</setMessage>
+	<setDescription type="method">817</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bIOOfflineAlarm>
+
+<bComponentIOFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bComponentIOFailedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">821</setMessage>
+	<setDescription type="method">822</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bComponentIOFailedAlarm>
+
+<bComponentActionFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bComponentActionFailedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">823</setMessage>
+	<setDescription type="method">824</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bComponentActionFailedAlarm>
+
+<nMaintenanceSignalAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nMaintenanceSignalAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">825</setMessage>
+	<setDescription type="method">826</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nMaintenanceSignalAlarm>
+
+<nVentTimoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nVentTimoutAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">827</setMessage>
+	<setDescription type="method">828</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nVentTimoutAlarm>
+
+<nPumpdownTimedOutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nPumpdownTimedOutAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">829</setMessage>
+	<setDescription type="method">830</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nPumpdownTimedOutAlarm>
+
+<nComponentIOFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nComponentIOFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">831</setMessage>
+	<setDescription type="method">832</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nComponentIOFailedAlarm>
+
+<nComponentTimedoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nComponentTimedoutAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">833</setMessage>
+	<setDescription type="method">834</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nComponentTimedoutAlarm>
+
+<nPressureCheckFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nPressureCheckFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">835</setMessage>
+	<setDescription type="method">836</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nPressureCheckFailedAlarm>
+
+<nMissingGasValveAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nMissingGasValveAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">837</setMessage>
+	<setDescription type="method">838</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nMissingGasValveAlarm>
+
+<bVentTimoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bVentTimoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">827</setMessage>
+	<setDescription type="method">828</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bVentTimoutAlarm>
+
+<bPumpdownTimedOutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpdownTimedOutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">829</setMessage>
+	<setDescription type="method">830</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bPumpdownTimedOutAlarm>
+
+<bComponentTimedoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bComponentTimedoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">833</setMessage>
+	<setDescription type="method">834</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+</bComponentTimedoutAlarm>
+
+<bPressureCheckFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPressureCheckFailedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">835</setMessage>
+	<setDescription type="method">836</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bPressureCheckFailedAlarm>
+
+<bMissingGasValveAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bMissingGasValveAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">837</setMessage>
+	<setDescription type="method">838</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bMissingGasValveAlarm>
+
+<bChamberNotIsolated type="instance" class="AlarmResource" alias="">
+	<setName type="method">bChamberNotIsolated</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">839</setMessage>
+	<setDescription type="method">840</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+	<addRecovery type="method">continue</addRecovery>
+		
+</bChamberNotIsolated>
+
+<nPressureControllFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">nPressureControllFailedAlarm</setName>
+	<setBlockingType type="method">nonblocking</setBlockingType>
+	<setMessage type="method">841</setMessage>
+	<setDescription type="method">842</setDescription>
+	<setSeverity type="method">2</setSeverity>
+		
+</nPressureControllFailedAlarm>
+
+<bPressureControllFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPressureControllFailedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">841</setMessage>
+	<setDescription type="method">842</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>	
+</bPressureControllFailedAlarm>
+
+<bPressureTooHigh type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPressureTooHigh</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">861</setMessage>
+	<setDescription type="method">862</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPressureTooHigh>
+
+<bPressureTooLow type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPressureTooLow</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">863</setMessage>
+	<setDescription type="method">864</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPressureTooLow>
+
+<bPumpIOFailedAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpIOFailedAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">865</setMessage>
+	<setDescription type="method">866</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpIOFailedAlarm>
+
+<bPumpStartTimeoutAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpStartTimeoutAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">867</setMessage>
+	<setDescription type="method">868</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpStartTimeoutAlarm>
+
+<bPumpMechanismFaultAlarm type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpMechanismFaultAlarm</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">869</setMessage>
+	<setDescription type="method">870</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpMechanismFaultAlarm>
+
+<bPumpRecoveryFailure type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpRecoveryFailure</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">871</setMessage>
+	<setDescription type="method">872</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+	<addRecovery type="method">retry</addRecovery>
+		
+</bPumpRecoveryFailure>
+
+<bPumpRecoveryFailed type="instance" class="AlarmResource" alias="">
+	<setName type="method">bPumpRecoveryFailed</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">873</setMessage>
+	<setDescription type="method">874</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">retry</addRecovery>	
+</bPumpRecoveryFailed>
+
+<bAlarmIOFailure type="instance" class="AlarmResource" alias="">
+	<setName type="method">bAlarmIOFailure</setName>
+	<setBlockingType type="method">blocking</setBlockingType>
+	<setMessage type="method">816</setMessage>
+	<setDescription type="method">817</setDescription>
+	<setSeverity type="method">2</setSeverity>
+	<addRecovery type="method">abort</addRecovery>
+		
+</bAlarmIOFailure>
+

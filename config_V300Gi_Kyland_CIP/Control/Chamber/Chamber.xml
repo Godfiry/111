@@ -1,0 +1,199 @@
+<Chamber type="instance" class="V300ProcessChamber" alias="">
+	<setN2BallastChamber type="method">./N2BallastChamber</setN2BallastChamber>
+	<setInnerDoor type="method">./InnerDoor</setInnerDoor>
+	<setProcessGasIDs type="method">./PC/ProcessGasIDs</setProcessGasIDs>
+	<setPressureController type="method">./PC</setPressureController>
+	<setDryPump type="method">./PC/DryPump</setDryPump>
+	<setTurboPump type="method">./PC/TurboPump</setTurboPump>
+	<!--setPurgeIntlkBypass type="method">/IO/PLC/DO/PurgeIntlkBypassDO</setPurgeIntlkBypass>
+	<setPMVacBypass type="method">/IO/PLC/DO/PMVacBypassDO</setPMVacBypass>	
+	<setChamberIntlkBypass type="method">/IO/PLC/DO/ChamberIntlkBypassDO</setChamberIntlkBypass-->
+		
+	<setGaslinePressureSWBypass type="method">/Control/PMCExports/InnerDatas/GaslinePressureSWBypassDO</setGaslinePressureSWBypass>	
+	<setPendulumBypass type="method">/Control/PMCExports/Datas/PendulumInterlockBypassDO</setPendulumBypass>	
+	<setTMPBypass type="method">/Control/PMCExports/Datas/TMPInterlockBypassDO</setTMPBypass>
+	<setISOBypass type="method">/Control/PMCExports/Datas/ISOValveBypassDO</setISOBypass>	
+	<setPMAtmSWBypass type="method">/Control/PMCExports/Datas/PMAtmSWBypassDO</setPMAtmSWBypass>	
+	
+	<addInterlockBypassDOMaps type="method">GaslinePressureSWBypass,/Control/PMCExports/InnerDatas/GaslinePressureSWBypassDO</addInterlockBypassDOMaps>	
+	<addInterlockBypassDIMaps type="method">GaslinePressureSWBypass,/Control/PMCExports/Datas/Chamber400TBypassFeedbackDI</addInterlockBypassDIMaps>	
+	
+	
+	<setGasCalibrationIdCh type="method">./GasCalibrationId</setGasCalibrationIdCh>
+	<setGasPurgeIdCh type="method">./GasPurgeId</setGasPurgeIdCh>
+	<setGasLeakRateIdCh type="method">./GasLeakRateId</setGasLeakRateIdCh>
+	<setGasCalibrationFlowRateCh type="method">./GasCalibrationFlowRate</setGasCalibrationFlowRateCh>
+	<setATMSensor type="method">/Control/PMCExports/Datas/ATMSwitchDI</setATMSensor>
+	<setFilePath type="method">PreservedValue</setFilePath>
+	<setPhyTempCtl type="method">../TempCtl/PhyTempCtl</setPhyTempCtl>
+	<setPhyRing type="method">../ESC/Ring</setPhyRing>
+	<setPhyChiller type="method">../ESC/Chiller</setPhyChiller>
+	<setCheckTempValueForVent type="method">25,1</setCheckTempValueForVent>
+	<setCheckBasePressure type="method">true</setCheckBasePressure>
+	<setSVOpenSensor type="method">/Control/PMCExports/InnerDatas/SlotValveOpenDI</setSVOpenSensor>
+	<setSVCloseSensor type="method">/Control/PMCExports/InnerDatas/SlotValveCloseDI</setSVCloseSensor>
+	<setForlinePressVIntlk type="method">/Control/Util/StatusMonitor/ForlinePressAbove1T</setForlinePressVIntlk>
+	<setChamberPressVIntlk type="method">/Control/Util/StatusMonitor/ChamberPressAbove1T</setChamberPressVIntlk>
+	<set400TorrPressSwitchVIntlk type="method">/Control/Util/StatusMonitor/Gasline500TorrSWDI</set400TorrPressSwitchVIntlk>
+	<!--setChamberPressAbove75TVIntlk type="method">/Control/Util/StatusMonitor/ChamberIsATM</setChamberPressAbove75TVIntlk-->
+	<!--setGasPrechgManVacVIntlk type="method">/Control/Util/StatusMonitor/GasPrechgManVacFail</setGasPrechgManVacVIntlk>
+	<setChamberDeliveryVacVIntlk type="method">/Control/Util/StatusMonitor/ChamberDeliveryVac</setChamberDeliveryVacVIntlk-->
+
+	<setForlinePressVIntlk type="method">/Control/Util/StatusMonitor/ForlinePressAbove1T</setForlinePressVIntlk>
+	<setForlinePress2VIntlk type="method">/Control/Util/StatusMonitor/TMPForlinePressAbove1T</setForlinePress2VIntlk>
+	<setChamberPressVIntlk type="method">/Control/Util/StatusMonitor/ChamberPressAbove1T</setChamberPressVIntlk>
+	<setGaslinePresVIntlk type="method">/Control/Util/StatusMonitor/Gasline1PressureAbove400T</setGaslinePresVIntlk>
+	<setGaslinePres2VIntlk type="method">/Control/Util/StatusMonitor/Gasline2PressureAbove400T</setGaslinePres2VIntlk>
+	<setGaslinePres3VIntlk type="method">/Control/Util/StatusMonitor/Gasline3PressureAbove400T</setGaslinePres3VIntlk>
+	<setGaslinePres4VIntlk type="method">/Control/Util/StatusMonitor/Gasline4PressureAbove400T</setGaslinePres4VIntlk>
+	<setChamberPressArrive735TVIntlk type="method">/Control/Util/StatusMonitor/ChamberPressAbove735T</setChamberPressArrive735TVIntlk>
+	<setChamberPressAbove75TVIntlk type="method">/Control/Util/StatusMonitor/ChamberPressAbove75T</setChamberPressAbove75TVIntlk>
+	<setChamberPressAbove20TVIntlk type="method">/Control/Util/StatusMonitor/ChamberPressAbove20T</setChamberPressAbove20TVIntlk>
+
+	<setChamberLeakRateLimit type="method">5</setChamberLeakRateLimit>
+
+	<setInnerDoorOpenSensor type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDI</setInnerDoorOpenSensor>
+	<setInnerDoorCloseSensor type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDI</setInnerDoorCloseSensor>
+	<setInnerDoorOpenWch type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDO</setInnerDoorOpenWch>
+	<setInnerDoorCloseWch type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDO</setInnerDoorCloseWch>
+
+	<setMFCPressureRCh type="method">&Gas1Name;,/Control/PMCExports/Datas/Gas1Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas2Name;,/Control/PMCExports/Datas/Gas2Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas3Name;,/Control/PMCExports/Datas/Gas3Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas4Name;,/Control/PMCExports/Datas/Gas4Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas5Name;,/Control/PMCExports/Datas/Gas5Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas6Name;,/Control/PMCExports/Datas/Gas6Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas7Name;,/Control/PMCExports/Datas/Gas7Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas8Name;,/Control/PMCExports/Datas/Gas8Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas9Name;,/Control/PMCExports/Datas/Gas9Pressure</setMFCPressureRCh>	
+	<setMFCPressureRCh type="method">&Gas10Name;,/Control/PMCExports/Datas/Gas10Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas11Name;,/Control/PMCExports/Datas/Gas11Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas12Name;,/Control/PMCExports/Datas/Gas12Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas13Name;,/Control/PMCExports/Datas/Gas13Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas14Name;,/Control/PMCExports/Datas/Gas14Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas15Name;,/Control/PMCExports/Datas/Gas15Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas16Name;,/Control/PMCExports/Datas/Gas16Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas17Name;,/Control/PMCExports/Datas/Gas17Pressure</setMFCPressureRCh>
+	<setMFCPressureRCh type="method">&Gas18Name;,/Control/PMCExports/Datas/Gas18Pressure</setMFCPressureRCh>
+
+	<setGasPurgeVentPressureThresholdWCh type="method">/SETUP/Vacuum/cfgGasPurgeVentPressureThreshold</setGasPurgeVentPressureThresholdWCh>
+	<setGasPurgePumpPressureThresholdWCh type="method">/SETUP/Vacuum/cfgGasPurgePumpPressureThreshold</setGasPurgePumpPressureThresholdWCh>
+	<setGaslinePumpPurgeFullVentSecWCh type="method">/SETUP/Vacuum/cfgGaslinePumpPurgeFullVentSeconds</setGaslinePumpPurgeFullVentSecWCh>
+	<setGaslinePumpPurgeFullPumpSecWCh type="method">/SETUP/Vacuum/cfgGaslinePumpPurgeFullPumpSeconds</setGaslinePumpPurgeFullPumpSecWCh>
+
+	<setPendulumZeroCh type="method">/Control/PMCExports/InnerDatas/PV_ZeroTargetPressureAO</setPendulumZeroCh>
+	<setPendulumProcGaugeRCh type="method">/Control/PMCExports/Datas/ProcessPressure</setPendulumProcGaugeRCh>
+	<setPendulumProcGaugeOffsetRCh type="method">/Control/PMCExports/Datas/PendulumValve_Sensor1ZeroOffset</setPendulumProcGaugeOffsetRCh>
+	<setProcessPressureRCh type="method">/Control/PMCExports/Datas/ProcessPressure</setProcessPressureRCh>
+
+	<addSDOExcute type="method">PVZero,/Control/PMCExports/InnerDatas/PV_SDOBusyDI,/Control/PMCExports/InnerDatas/PV_SDOWriteExecuteDO</addSDOExcute>
+	
+	&SetSimulated;	
+	
+	<InnerDoor type="instance" class="ValveController">
+		<setClosePosition type="method">./Close</setClosePosition>
+		<setOpenPosition type="method">./Open</setOpenPosition>
+		<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+		<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+		<setActionTimeName type="method">InnerDoor</setActionTimeName>
+
+		<InterlockData type="data" dataType="I" accessMode="RW"  alias="/Control/PMCExports/Datas/InnerDoor_Sns">
+			<Bd></Bd>
+			<Ch></Ch>
+			<DescriptorList>UNKNOW:-1, Close, Open</DescriptorList>
+		</InterlockData>					
+		
+		<PositionIndication type="data" dataType="S" accessMode="RW">
+			<Bd></Bd>
+			<Ch></Ch>
+			<MaxLength>100</MaxLength>
+		</PositionIndication>
+						
+		<OpenActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDO</setActuatorCh>
+			
+		</OpenActuator>
+
+		<CloseActuator type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDO</setActuatorCh>
+			
+		</CloseActuator>		
+
+		<OpenedSensor type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDI</setSensorCh>
+			
+		</OpenedSensor>
+		
+		<ClosedSensor type="instance" class="Sensor">
+			<setSensorCh type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDI</setSensorCh>
+			
+		</ClosedSensor>	
+		
+		&InnerDoorInterlock;
+		&twoActuatorTwoSensor;
+	</InnerDoor>
+
+	<PC type="instance" class="PressureController">
+		<setGaugeSource type="method">./ChamberGaugeSource</setGaugeSource>
+		<setGasSource type="method">./GasSource</setGasSource>
+		<setRoughSource type="method">./SlowRoughSource</setRoughSource>
+		<setPressureSequences type="method">./PCSeqs</setPressureSequences>
+		<!--setHighVacuumSource type="method"></setHighVacuumSource-->
+		<!--setVentCycleCount type="method"></setVentCycleCount-->
+		<!--setPumpCycleCount type="method"></setPumpCycleCount-->	
+			
+		<PCSeqs type="instance" class="PCSequences">
+			&VentSequence;
+			&PumpSequence;
+			&PurgeChamberSequence;
+			&PurgeGasSequence;
+			&GasLeakRateSequence;
+			&N2BallastSequence;
+			&GasCalibrationSequence;
+			&OtherSequence;
+		</PCSeqs>
+				
+		&GasSource;
+		&GaugeSource;
+		&PumpSource;			
+	</PC>
+	
+	<GasCalibrationFlowRate type="data" dataType="D" accessMode="RW" alias="">
+	  <Bd></Bd>
+	  <Ch></Ch>
+	  <Min>0</Min>
+	  <Max>100000</Max>
+	  <Accuracy>0.1</Accuracy>
+	  <Unit></Unit>		 
+	</GasCalibrationFlowRate>	
+	
+	<GasCalibrationId type="data" dataType="S" accessMode="RW">
+		<Bd></Bd>
+		<Ch></Ch>
+		<MaxLength>100</MaxLength>
+	</GasCalibrationId>	
+	
+	<GasPurgeId type="data" dataType="S" accessMode="RW">
+		<Bd></Bd>
+		<Ch></Ch>
+		<MaxLength>100</MaxLength>
+	</GasPurgeId>	
+	
+	<GasLeakRateId type="data" dataType="S" accessMode="RW">
+		<Bd></Bd>
+		<Ch></Ch>
+		<MaxLength>100</MaxLength>
+	</GasLeakRateId>		
+	
+	<N2BallastChamber type="instance" class="N2BallastChamber" alias="">
+		<setInnerDoor type="method">../InnerDoor</setInnerDoor>
+		<setInnerDoorOpenSensor type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDI</setInnerDoorOpenSensor>
+		<setInnerDoorCloseSensor type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDI</setInnerDoorCloseSensor>
+		<setInnerDoorOpenWch type="method">/Control/PMCExports/InnerDatas/InnerDoorOpenDO</setInnerDoorOpenWch>
+		<setInnerDoorCloseWch type="method">/Control/PMCExports/InnerDatas/InnerDoorCloseDO</setInnerDoorCloseWch>
+		
+		<setProcessGasIDs type="method">../PC/ProcessGasIDs</setProcessGasIDs>
+		<setPressureController type="method">../PC</setPressureController>
+	</N2BallastChamber>	
+</Chamber>
+

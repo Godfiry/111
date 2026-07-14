@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <RFConfig comments="RFConfig">
+    <Param name="SRFRunMode" dataObject="/SETUP/RF/cfgSRFRunMode" type="I" min="0" max="1" descriptorList="Forward:0,Load:1" units="" default="Load" />
+    <Param name="SRFRampEnable" dataObject="/SETUP/Recipe/cfgSRFRampEnable" type="I" min="0" max="1" descriptorList="No:0,Yes:1" units="" default="No" />
+    <Param name="SRFRampTime" dataObject="/SETUP/Recipe/cfgSRFRampTime" type="D" min="1" max="10" units="s" accuracy="0.1" default="1" />
+    <Param name="SRFDelayTime" dataObject="/SETUP/Recipe/cfgSRFDelayTime" type="D" min="0" max="10" units="s" accuracy="0.1" default="0" />
+    <Param name="SRFStableTimeout" dataObject="/SETUP/Recipe/cfgSRFStableTimeout" type="D" min="0" max="60" units="sec" accuracy="0.1" default="4" />
+    <Param name="SRFStableThreadhold" dataObject="/SETUP/Recipe/cfgSRFStableThreadhold" type="D" min="0" max="1000" units="watt" accuracy="1" default="50" />
+    <Param name="SRFMatchCurrRatioStableThreshold" dataObject="/SETUP/RF/cfgSRFMatchCurrRatioStableThreshold" type="D" min="0" max="99" units="" accuracy="0.1" default="10" />
+    <Param name="SRFTuningGain" dataObject="/SETUP/RF/cfgSRFTuningGain" type="I" min="0" max="1000" descriptorList="" units="" default="10" />
+    <Param name="SRFTuningModDeviation" dataObject="/SETUP/RF/cfgSRFTuningModDeviation" type="I" min="0" max="1000" descriptorList="" units="" default="10" />
+    <Param name="SRFReflectedTuneLimit" dataObject="/SETUP/RF/cfgSRFReflectedTuneLimit" type="I" min="163" max="1638" descriptorList="" units="" default="819" />
+    <Param name="BRFRunMode" dataObject="/SETUP/RF/cfgBRFRunMode" type="I" min="0" max="1" descriptorList="Forward:0,Load:1" units="" default="Forward" />
+    <Param name="BRFRampEnable" dataObject="/SETUP/Recipe/cfgBRFRampEnable" type="I" min="0" max="1" descriptorList="No:0,Yes:1" units="" default="No" />
+    <Param name="BRFRampTime" dataObject="/SETUP/Recipe/cfgBRFRampTime" type="D" min="1" max="10" units="s" accuracy="0.1" default="1" />
+    <Param name="BRFStableTimeout" dataObject="/SETUP/Recipe/cfgBRFStableTimeout" type="D" min="0" max="60" units="sec" accuracy="0.1" default="4" />
+    <Param name="BRFStableThreadhold" dataObject="/SETUP/Recipe/cfgBRFStableThreadhold" type="D" min="0" max="100" units="watt" accuracy="1" default="50" />
+    <Param name="LFRunMode" dataObject="/SETUP/RF/cfgLFRunMode" type="I" min="0" max="1" descriptorList="Forward:0,Load:1" units="" default="Forward" />
+    <Param name="LFRampEnable" dataObject="/SETUP/Recipe/cfgLFRampEnable" type="I" min="0" max="1" descriptorList="No:0,Yes:1" units="" default="No" />
+    <Param name="LFRampTime" dataObject="/SETUP/Recipe/cfgLFRampTime" type="D" min="1" max="10" units="s" accuracy="0.1" default="1" />
+    <Param name="LFPowerOnHoldDelay" dataObject="/SETUP/RF/cfgLFPowerOnHoldDelay" type="D" min="0" max="3" units="s" accuracy="0.1" default="1" />
+    <Param name="SRFLinerAdjust" dataObject="/SETUP/RF/cfgSRFLinerAdjust" type="D" min="4950" max="6000" units="w" accuracy="0.001" default="5999" />
+    <Param name="BRFLinerAdjust" dataObject="/SETUP/RF/cfgBRFLinerAdjust" type="D" min="1410" max="1500" units="w" accuracy="0.001" default="1499" />
+    <Param name="LFLinerAdjust" dataObject="/SETUP/RF/cfgLFLinerAdjust" type="D" min="1410" max="1500" units="w" accuracy="0.001" default="1499" />
+    <Param name="SRFCaliMode" dataObject="/SETUP/RF/cfgSRCGeneratorCaliMode" type="I" min="0" max="1" descriptorList="Single:0,Multiple:1" units="" default="Single" />
+    <Param name="LFCaliMode" dataObject="/SETUP/RF/cfgLFGeneratorCaliMode" type="I" min="0" max="1" descriptorList="Single:0,Multiple:1" units="" default="Single" />
+    <Param name="SRFLinerAdjTune" dataObject="/SETUP/RF/cfgSRFGeneratorLinerAdjustTune" type="D" min="0.95" max="1.05" units="" accuracy="0.00001" default="1" />
+    <Param name="LFLinerAdjTune" dataObject="/SETUP/RF/cfgLFGeneratorLinerAdjustTune" type="D" min="0.95" max="1.05" units="" accuracy="0.00001" default="1" />
+    <Param name="SRFCaliPreheatWarmTime" dataObject="/SETUP/RF/cfgSRCGeneratorCaliPreheatWarmTime" type="I" min="1" max="9999" descriptorList="" units="sec" default="300" />
+    <Param name="LFCaliPreheatWarmTime" dataObject="/SETUP/RF/cfgLFGeneratorCaliPreheatWarmTime" type="I" min="1" max="9999" descriptorList="" units="sec" default="300" />
+    <Option index="1">
+      <Value paramName="SRFRunMode">Load</Value>
+      <Value paramName="SRFRampEnable">No</Value>
+      <Value paramName="SRFRampTime">1</Value>
+      <Value paramName="SRFDelayTime">0</Value>
+      <Value paramName="SRFStableTimeout">4</Value>
+      <Value paramName="SRFStableThreadhold">50</Value>
+      <Value paramName="SRFMatchCurrRatioStableThreshold">10</Value>
+      <Value paramName="SRFTuningGain">100</Value>
+      <Value paramName="SRFTuningModDeviation">150</Value>
+      <Value paramName="SRFReflectedTuneLimit">819</Value>
+      <Value paramName="BRFRunMode">Forward</Value>
+      <Value paramName="BRFRampEnable">No</Value>
+      <Value paramName="BRFRampTime">1</Value>
+      <Value paramName="BRFStableTimeout">4</Value>
+      <Value paramName="BRFStableThreadhold">50</Value>
+      <Value paramName="LFRunMode">Forward</Value>
+      <Value paramName="LFRampEnable">No</Value>
+      <Value paramName="LFRampTime">1</Value>
+      <Value paramName="LFPowerOnHoldDelay">2</Value>
+      <Value paramName="SRFLinerAdjust">6000</Value>
+      <Value paramName="BRFLinerAdjust">1499</Value>
+      <Value paramName="LFLinerAdjust">1500</Value>
+      <Value paramName="SRFCaliMode">Multiple</Value>
+      <Value paramName="LFCaliMode">Multiple</Value>
+      <Value paramName="SRFLinerAdjTune">1</Value>
+      <Value paramName="LFLinerAdjTune">1</Value>
+      <Value paramName="SRFCaliPreheatWarmTime">300</Value>
+      <Value paramName="LFCaliPreheatWarmTime">300</Value>
+    </Option>
+  </RFConfig>
+

@@ -1,0 +1,12 @@
+<addActuator type="method">./SRFPowerOff</addActuator>
+<addActuator type="method">./LFPowerOff</addActuator>
+
+<SRFPowerOff type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/SRFPowerOnDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</SRFPowerOff>
+
+<LFPowerOff type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/LFPowerOnDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</LFPowerOff>

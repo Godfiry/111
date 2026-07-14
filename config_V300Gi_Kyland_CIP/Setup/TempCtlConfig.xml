@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+  <TempCtlConfig comments="TempCtlConfig">
+    <Param name="SiCl4HeaterTempSetpoint" dataObject="/SETUP/TempCtl/cfgSiCl4HeaterTempSetpoint" type="D" min="0" max="100" units="degC" accuracy="0.1" default="38" />
+    <Param name="MiddleChamberTempSetpoint" dataObject="/SETUP/TempCtl/cfgMiddleChamberTempSetpoint" type="D" min="0" max="100" units="degC" accuracy="0.1" default="65" />
+    <Param name="WinInnerTempSetpoint" dataObject="/SETUP/TempCtl/cfgWinInnerTempSetpoint" type="D" min="0" max="120" units="degC" accuracy="0.1" default="100" />
+    <Param name="GDPTempSetpoint" dataObject="/SETUP/TempCtl/cfgGDPTempSetpoint" type="D" min="0" max="100" units="degC" accuracy="0.1" default="80" />
+    <Param name="BaseHeater1TempSetpoint" dataObject="/SETUP/TempCtl/cfgBaseHeater1TempSetpoint" type="D" min="0" max="100" units="degC" accuracy="0.1" default="65" />
+    <Param name="BaseHeater2TempSetpoint" dataObject="/SETUP/TempCtl/cfgBaseHeater2TempSetpoint" type="D" min="0" max="100" units="degC" accuracy="0.1" default="65" />
+    <Option index="1">
+      <Value paramName="SiCl4HeaterTempSetpoint">38</Value>
+      <Value paramName="MiddleChamberTempSetpoint">60</Value>
+      <Value paramName="WinInnerTempSetpoint">100</Value>
+      <Value paramName="GDPTempSetpoint">80</Value>
+      <Value paramName="BaseHeater1TempSetpoint">65</Value>
+      <Value paramName="BaseHeater2TempSetpoint">65</Value>
+    </Option>
+  </TempCtlConfig>
+

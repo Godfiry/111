@@ -1,0 +1,11 @@
+<addAlarm type="method">SRCGenerator_ServiceFailed,160000</addAlarm>
+<addAlarm type="method">SRFOpenFailed,160001</addAlarm>
+<addAlarm type="method">SRF_nRFIsOn,160002</addAlarm>
+<addAlarm type="method">SRF_nRFVoltageAbn,160003</addAlarm>
+<addAlarm type="method">SRF_nRFSetAbn,160004</addAlarm>
+<addAlarm type="method">BiasGenerator_ServiceFailed,161000</addAlarm>
+<addAlarm type="method">LFGenerator_ServiceFailed,162000</addAlarm>
+<addAlarm type="method">BRFGenerator_ServiceFailed,163000</addAlarm>
+<addAlarm type="method">SRFCenterGenerator_ServiceFailed,164000</addAlarm>
+<addAlarm type="method">SRFEdgeGenerator_ServiceFailed,165000</addAlarm>
+<addAlarm type="method">PhyRF_nBulidUpTout,166000</addAlarm>

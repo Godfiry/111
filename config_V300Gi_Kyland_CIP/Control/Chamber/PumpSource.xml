@@ -1,0 +1,240 @@
+ <SlowRoughSource type="instance" class="PumpSource">
+	<setPumpValve type="method">./SlowRoughValve</setPumpValve>
+	<setLowerPumpingLimit type="method">10</setLowerPumpingLimit>
+	<setUpperPumpingLimit type="method">1000</setUpperPumpingLimit>
+	<setTimeBased type="method">true</setTimeBased>			
+	<setNextPumpSource type="method">../FastRoughSource</setNextPumpSource>
+
+	<SlowRoughValve type="instance" class="SetpointPumpValve">
+		<setValveID type="method">SlowRough</setValveID>
+		<addGaugeSource type="method">../../VACPressureSwitch</addGaugeSource>
+		<addGaugeSource type="method">../../ForlinePressureSwitch</addGaugeSource>
+		<setPump type="method">../../DryPump</setPump>
+		<setValveController type="method">./SlowRoughController</setValveController>
+
+		<SlowRoughController type="instance" class="ValveController">
+			<setClosePosition type="method">./Close</setClosePosition>
+			<setOpenPosition type="method">./Open</setOpenPosition>				
+			<setInterlockChannel type="method">./InterlockData</setInterlockChannel>				
+			<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+
+			<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/SlowRough_Sns">
+				<Bd></Bd>
+				<Ch></Ch>
+				<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+			</InterlockData>					
+			
+			<PositionIndication type="data" dataType="S" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<MaxLength>100</MaxLength>
+			</PositionIndication>
+		
+			<Actuator type="instance" class="Actuator">
+				<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve2DO</setActuatorCh>
+				<!--setDelayMS type="method">500</setDelayMS-->
+			</Actuator>
+				
+			&BypassValveInterlock;
+			&oneActuator;					
+		</SlowRoughController>
+
+		&SetSimulated;
+	</SlowRoughValve>
+</SlowRoughSource>
+
+<FastRoughSource type="instance" class="PumpSource">
+	<setPumpValve type="method">./FastRoughValve</setPumpValve>
+	<setLowerPumpingLimit type="method">0.1</setLowerPumpingLimit>
+	<setUpperPumpingLimit type="method">10</setUpperPumpingLimit>
+	<setNextPumpSource type="method">../TruboPumpSource</setNextPumpSource>
+	<!--setTimeBased type="method">true</setTimeBased-->
+
+	<FastRoughValve type="instance" class="SetpointPumpValve">
+		<setValveID type="method">FastRough</setValveID>
+		<addGaugeSource type="method">../../ProcessGaugeSource/GaugeMechanism</addGaugeSource>
+		<addGaugeSource type="method">../../ForlineGaugeSource/GaugeMechanism</addGaugeSource>
+		<addGaugeSource type="method">../../ChamberGaugeSource/GaugeMechanism</addGaugeSource>
+		<setPump type="method">../../DryPump</setPump>
+		<setValveController type="method">./FastRoughController</setValveController>
+
+		<FastRoughController type="instance" class="ValveController">
+			<setClosePosition type="method">./Close</setClosePosition>
+			<setOpenPosition type="method">./Open</setOpenPosition>
+			<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+			<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+			
+			<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/FastRough_Sns">
+				<Bd></Bd>
+				<Ch></Ch>
+				<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+			</InterlockData>					
+			
+			<PositionIndication type="data" dataType="S" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<MaxLength>100</MaxLength>
+			</PositionIndication>	
+					
+			<Actuator type="instance" class="Actuator">
+				<setActuatorCh type="method">/Control/PMCExports/Datas/BypassValve1DO</setActuatorCh>
+				<!--setDelayMS type="method">500</setDelayMS-->
+				<!--setExportName type="method">dLAC/ATMSns</setExportName-->
+			</Actuator>
+							
+			&BypassValveInterlock;
+			&oneActuator;					
+		</FastRoughController>
+		
+		&SetSimulated;
+	</FastRoughValve>
+</FastRoughSource>	
+
+<TruboPumpSource type="instance" class="PumpSource">
+	<setPumpValve type="method">./SimulatedTruboPumpValve</setPumpValve>
+	<setLowerPumpingLimit type="method">0.0</setLowerPumpingLimit>
+	<setUpperPumpingLimit type="method">1.0</setUpperPumpingLimit>
+	<setNextPumpSource type="method">../DryPumpSource</setNextPumpSource>
+	<!--setTimeBased type="method">true</setTimeBased-->
+
+	<SimulatedTruboPumpValve type="instance" class="SetpointPumpValve">
+		<setValveID type="method">SimulatedTruboPumpValve</setValveID>
+		<setGaugeSource type="method">../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+		<setPump type="method">../../TurboPump</setPump>
+		<!--setValveController type="method">./SimulatedTruboPumpValveController</setValveController-->
+
+		<SimulatedTruboPumpValveController type="instance" class="ValveController">
+			<setClosePosition type="method">./Close</setClosePosition>
+			<setOpenPosition type="method">./Open</setOpenPosition>
+			<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+			<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+			
+			<InterlockData type="data" dataType="I" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+			</InterlockData>					
+			
+			<PositionIndication type="data" dataType="S" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<MaxLength>100</MaxLength>
+			</PositionIndication>	
+					
+			<Actuator type="instance" class="Actuator">
+				<setActuatorCh type="method">./SimulatedCh</setActuatorCh>
+				
+					<SimulatedCh type="data" dataType="I" accessMode="RW">
+						<Bd></Bd>
+						<Ch></Ch>
+						<DescriptorList>Close,Open</DescriptorList>
+					</SimulatedCh>
+			</Actuator>
+							
+			&NoInterlock;
+			&oneActuator;					
+		</SimulatedTruboPumpValveController>
+		
+		&SetSimulated;
+	</SimulatedTruboPumpValve>
+</TruboPumpSource>
+
+<DryPumpSource type="instance" class="PumpSource">
+	<setPumpValve type="method">./SimulatedDryPumpValve</setPumpValve>
+	<setLowerPumpingLimit type="method">0.08</setLowerPumpingLimit>
+	<setUpperPumpingLimit type="method">1000</setUpperPumpingLimit>
+	<!--setNextPumpSource type="method"></setNextPumpSource-->
+	<!--setTimeBased type="method">true</setTimeBased-->
+
+	<SimulatedDryPumpValve type="instance" class="SetpointPumpValve">
+		<setValveID type="method">SimulatedDryPumpValve</setValveID>
+		<setGaugeSource type="method">../../ChamberGaugeSource/GaugeMechanism</setGaugeSource>
+		<setPump type="method">../../DryPump</setPump>
+		<!--setValveController type="method">./SimulatedDryPumpValveController</setValveController-->
+
+		<SimulatedDryPumpValveController type="instance" class="ValveController">
+			<setClosePosition type="method">./Close</setClosePosition>
+			<setOpenPosition type="method">./Open</setOpenPosition>
+			<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+			<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+			
+			<InterlockData type="data" dataType="I" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+			</InterlockData>					
+			
+			<PositionIndication type="data" dataType="S" accessMode="RW">
+				<Bd></Bd>
+				<Ch></Ch>
+				<MaxLength>100</MaxLength>
+			</PositionIndication>	
+					
+			<Actuator type="instance" class="Actuator">
+				<setActuatorCh type="method">./SimulatedCh</setActuatorCh>
+				
+					<SimulatedCh type="data" dataType="I" accessMode="RW">
+						<Bd></Bd>
+						<Ch></Ch>
+						<DescriptorList>Close,Open</DescriptorList>
+					</SimulatedCh>
+			</Actuator>
+							
+			&NoInterlock;
+			&oneActuator;					
+		</SimulatedDryPumpValveController>
+		
+		&SetSimulated;
+	</SimulatedDryPumpValve>
+</DryPumpSource>
+
+<DryPump type="instance" class="Pump">
+	<!--setPumpOnInterlockCondition type="method"></setPumpOnInterlockCondition-->
+	<setPumpController type="method">./DryPumpController</setPumpController>
+	
+	<DryPumpController type="instance" class="DryPumpController">
+		<setPumpMechanism type="method">./DryPumpMechanism</setPumpMechanism>
+		
+		<DryPumpMechanism type="instance" class="DirectIODryPump">
+			<!--setPumpOnInterlocks type="method">./OpenInterlocks</setPumpOnInterlocks-->
+			<setStartWCh type="method">/Control/PMCExports/Datas/DPStartDO</setStartWCh>
+			<setControlModeWCh type="method">/Control/PMCExports/Datas/DPControlDO</setControlModeWCh>
+			<setStartRCh type="method">/Control/PMCExports/Datas/DPOnDI</setStartRCh>
+			<setWarningRCh type="method">/Control/PMCExports/Datas/DPAlertPresenceDI</setWarningRCh>
+			<setAlarmRCh type="method">/Control/PMCExports/Datas/DPAlarmPresenceDI</setAlarmRCh>
+			<!--setPumpReadyCondition type="method">((/IO/PLC/AI/ForlinePressureAI&lt;=/Control/PMCExports/Datas/ChamberPressure)||(/IO/PLC/AI/ForlinePressureAI&lt;0.1))</setPumpReadyCondition-->
+			<setPumpReadyCondition type="method">(/Control/PMCExports/Datas/ForlinePressure1SWDI==1)</setPumpReadyCondition>
+			&SetSimulated;
+		</DryPumpMechanism>			
+	</DryPumpController>
+</DryPump>		
+
+<TurboPump type="instance" class="Pump">
+	<!--setPumpOnInterlockCondition type="method"></setPumpOnInterlockCondition-->
+	<setPumpController type="method">./TurboPumpController</setPumpController>
+	
+	<TurboPumpController type="instance" class="TurboPumpController">
+		<setTurboPumpMechanism type="method">./TurboPumpMechanism</setTurboPumpMechanism>
+		
+		<TurboPumpMechanism type="instance" class="DirectIOTurboPump">
+			<setStartIOPosition type="method">./Open</setStartIOPosition>
+			<setStopIOPosition type="method">./Close</setStopIOPosition>
+			<!--setPumpReadyCondition type="method">((/IO/PLC/DO/TMPAtSpeedDI==1)||(/Control/PMCExports/Datas/TMPAcceleratingDI==1))</setPumpReadyCondition-->			
+			<setPumpReadyCondition type="method">(/Control/PMCExports/Datas/TMPAtSpeedDI==1)</setPumpReadyCondition>		
+
+			<OpenActuator type="instance" class="Actuator">
+				<setActuatorCh type="method">/Control/PMCExports/InnerDatas/TMPStartDO</setActuatorCh>
+			</OpenActuator>
+			
+			<CloseActuator type="instance" class="Actuator">
+				<setActuatorCh type="method">/Control/PMCExports/InnerDatas/TMPStopDO</setActuatorCh>
+			</CloseActuator>			
+			
+			&twoActuator;
+			&TMPInterlock;
+			&SetSimulated;			
+		</TurboPumpMechanism>					
+	</TurboPumpController>
+</TurboPump>	
+
+

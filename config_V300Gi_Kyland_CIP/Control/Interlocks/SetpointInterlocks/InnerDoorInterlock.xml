@@ -1,0 +1,27 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't close InnerDoor</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./SlotValveOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxCDAAbnormal</addToIOInterlocks>	
+	
+	<ChamberSWOpen type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">305</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberSWOpen>	
+	
+	<SlotValveOpen type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">306</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/SlotValveCloseDI==1)</setConditionStr>
+	</SlotValveOpen>
+	
+	<GasBoxCDAAbnormal type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">245</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</GasBoxCDAAbnormal>
+	&SetSimulated;
+</CloseInterlocks>

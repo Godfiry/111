@@ -1,0 +1,773 @@
+<StringResource type="instance" class="StringResource" alias="">
+	
+	&ValueInterlocksStrRC;
+	&SetpointInterlocksStrRC;
+	<!--USED IN CommonAlarm.xml-->
+	<AddString type="method">501,Offline data item</AddString>
+	<AddString type="method">502, failed to execute safe action </AddString>
+	<AddString type="method">503, for detail info please check log file </AddString>
+	<AddString type="method">511,device offline alarm. </AddString>
+	<AddString type="method">512,device offline alarm. </AddString>
+	<AddString type="method">513,'s Safety Action failed . </AddString>
+	<AddString type="method">514, Action failed. </AddString>
+	<AddString type="method">515, IOData Queue Too Long. </AddString>
+	<AddString type="method">516, IOData Queue Too Long. </AddString>
+	<AddString type="method">517, Communication Error. </AddString>
+	<AddString type="method">518, The module cannot operate due to a communication error. </AddString>
+	<AddString type="method">519, The module is not at its transfer [position] position. </AddString>
+	<AddString type="method">520, The module must be at the correct position for material transfer. </AddString>
+	<AddString type="method">521, The module is not prepared to process material. </AddString>
+	<AddString type="method">522, The module is not prepared for process material. </AddString>
+	<AddString type="method">523, The process is failed. </AddString>
+	<AddString type="method">524, The module was processing when an error occurred. </AddString>
+	<AddString type="method">525, The module is not prepared for material transfer. </AddString>
+	<AddString type="method">526, The module is not prepared for material transfer. </AddString>
+	<AddString type="method">527, robot extended into this module for over time. </AddString>
+	<AddString type="method">529, The robot has held the RequestToExtend signal high for over  </AddString>
+	<AddString type="method">538, The Slot Valve is not closed. </AddString>
+	<AddString type="method">539, This operation requires that the slot valve be closed. </AddString>
+	<AddString type="method">540, The recipe name is null. Can't process. </AddString>
+	<AddString type="method">541, The recipe name is null. Can't process. </AddString>
+	<AddString type="method">542, activeHandoff timed out on port.please see port detail at alarm description. A material transfer operation was armed on  port , but the expected transition of the 'Extended' signal to 'Active' did not occur before the operation timed out.</AddString>
+	<AddString type="method">543, activeHandoff timed out on port.please see port detail at alarm description. A material transfer operation was armed on  port , but the expected transition of the 'Extended' signal to 'Active' did not occur before the operation timed out.</AddString>
+	<AddString type="method">544, Module not in proper mode for this operation. </AddString>
+	<AddString type="method">545, A client has attempted to use a service of the module when its Status is not in the correct state.  Overriding this restriction may cause misoperation and damage to equipment. See the tool log for details. </AddString>
+	<AddString type="method">546, Module must be in maintenance mode for this operation. </AddString>
+	<AddString type="method">547, A client has attempted to use a service of the module when its Status is not Maintenance. See the tool log for details. </AddString>
+	<AddString type="method">548, Module has aborted due to internal error. </AddString>
+	<AddString type="method">549, Module has aborted. A request was made which could not be satisfied due an internal error. See the module syslog for details. </AddString>
+	<AddString type="method">550, Failed to retrieve process recipe. </AddString>
+	<AddString type="method">551, Failed to retrieve process recipe.Reasons for this alarm:1. The recipe is corrupt.2. The recipe does not exist in this PM.3. Recipe name does not match case of PM recipe ( Recipe and class names are case sensitive.) </AddString>
+	<AddString type="method">552, The recipe [recipe name] is invalid for the module. </AddString>
+	<AddString type="method">553, The  recipe for processing material is empty. </AddString>
+	<AddString type="method">554, Wafer status in PM is not Present before pick.please check.</AddString>
+	<AddString type="method">555,  Wafer status in PM is not Present before pick. </AddString>
+	<AddString type="method">556, Wafer status in PM is not Absent before place. please check.</AddString>
+	<AddString type="method">557, Wafer status in PM is not Absent before place. </AddString>
+
+	<!--USED IN PMAlarm.xml-->
+	<AddString type="method">654, Dry Pump has fault. </AddString>
+	<AddString type="method">655, Dry Pump has alarm or warning when turn on. </AddString>
+	<AddString type="method">656, more than max setup pressure. </AddString>
+	<AddString type="method">657, the chamber leakback rate is more than maximum setup pressure. </AddString>
+	<AddString type="method">658, the value of the chamber leakback is below zero. </AddString>
+	<AddString type="method">659, the value of the chamber leakback is below zero. </AddString>
+	<AddString type="method">660, out of normal leakback rate. </AddString>
+	<AddString type="method">661, The chamber leakback rate is bigger than the normal value. </AddString>
+	<AddString type="method">662, out of normal leakback rate. </AddString>
+	<AddString type="method">663, The gas leakback rate is bigger than the normal value. </AddString>
+	<AddString type="method">664, chamber leak rate is abnormal. </AddString>
+	<AddString type="method">665, chamber leak rate is abnormal when do gas leak rate. </AddString>
+	<AddString type="method">666, chamber temperature is abnormal. </AddString>
+	<AddString type="method">667, chamber temperature is abnormal when do gas leak rate. </AddString>
+	<AddString type="method">668, gas zero drift detected. </AddString>
+	<AddString type="method">669, gas zero drift soft alarm. </AddString>
+	<AddString type="method">670, gas zero drift detected. </AddString>
+	<AddString type="method">671, gas zero drift hard alarm. </AddString>
+	<AddString type="method">672, slot valve is open. </AddString>
+	<AddString type="method">673, the slot valve is open during the required action. </AddString>
+	<AddString type="method">674, Process failed to reach stable condition. </AddString>
+	<AddString type="method">675, Process failed to reach stable condition. </AddString>
+	<AddString type="method">676, Min endpoint time is greater than Max endpoint time. </AddString>
+	<AddString type="method">677, Min endpoint time is greater than Max endpoint time. /nMax has been set to Min plus 60 for this step but you need to modify the recipe. </AddString>
+	<AddString type="method">678, Endpoint signal was catched before Recipe parameter:MinEDPTime.</AddString>
+	<AddString type="method">679, Endpoint signal was catched before Recipe parameter:MinEDPTime.</AddString>
+	<AddString type="method">680, Endpoint type step failed to receive endpoint when max endpoint time is over.</AddString>
+	<AddString type="method">681, Failed to receive endpoint when max endpoint time is over. /nPlease modify the max endpoint time in the recipe.</AddString>
+	<AddString type="method">682, Recipe process stopped with end type step. </AddString>
+	<AddString type="method">683, Recipe process stopped with end type step. </AddString>
+	<AddString type="method">684, top temp failed to reach stable condition. </AddString>
+	<AddString type="method">685, top temp failed to reach stable condition. </AddString>
+	<AddString type="method">686, service execute failed for IO error. Please see alarm decription for details. </AddString>
+	<AddString type="method">687, IO error is </AddString>
+	<AddString type="method">688, service execute failed. Please see alarm decription for details. </AddString>
+	<AddString type="method">689, failed for </AddString>
+	<AddString type="method">690, ESCDC clamp voltage tolerance timeout occured. </AddString>
+	<AddString type="method">691, ESC failed to reach setpoint in time during Chuck. </AddString>
+	<AddString type="method">692, Helium Evac timeout occured. </AddString>
+	<AddString type="method">693, Helium failed to evac in time during DECHUCK. </AddString>
+	<AddString type="method">694, LFMatch failed to set CControlTControl. </AddString>
+	<AddString type="method">695, LFMatch failed to set CControlTControl. </AddString>
+	<AddString type="method">696, RF failed to reach stable condition. </AddString>
+	<AddString type="method">697, RF failed to reach stable condition during process. </AddString>
+	<AddString type="method">698, Pressure failed to reach stable condition. </AddString>
+	<AddString type="method">699, Pressure failed to reach stable condition during process. </AddString>
+	<AddString type="method">700, LifeCounter exeed soft threshold. </AddString>
+	<AddString type="method">701, LifeCounter exeed soft threshold. </AddString>
+	<AddString type="method">702, LifeCounter exeed hard threshold. </AddString>
+	<AddString type="method">703, LifeCounter exeed hard threshold. </AddString>
+	<AddString type="method">704, Error or Fatal alarm exist. </AddString>
+	<AddString type="method">705, Error or Fatal alarm exist! Operation can not be done. </AddString>
+	<AddString type="method">706, Process is interrupted. </AddString>
+	<AddString type="method">707, Process is interrupted. </AddString>
+	<AddString type="method">708, DryClean is interrupted. </AddString>
+	<AddString type="method">709, DryClean is interrupted. </AddString>
+	<AddString type="method">710, the chiller Temprature in recipe differ from setup. </AddString>
+	<AddString type="method">711, the chiller Temprature in recipe differ from setup during executing recipe.</AddString>
+	<AddString type="method">712, chiller's temp not reach to the recipe's temp and timeout. </AddString>
+	<AddString type="method">713, chiller's temp not reach to the recipe's temp during executing recipe.</AddString>
+
+	<!--USED IN PressureControllAlarm.xml-->
+	<AddString type="method">810, Dry Pump is not at remote mode. </AddString>
+	<AddString type="method">811, Dry Pump can not execute command when it is not at remote mode. </AddString>
+	<AddString type="method">812, Dry Pump has fault. </AddString>
+	<AddString type="method">813, Dry Pump has alarm or warning. </AddString>
+	<AddString type="method">814, Cannot read pressure, reading the Gauge failed. </AddString>
+	<AddString type="method">815, An attempt was made to read an offline gauge. </AddString>
+	<AddString type="method">816, Alarm for io failure. </AddString>
+	<AddString type="method">817, Alarm for io failure. </AddString>
+	<AddString type="method">818, Alarm for interlock. </AddString>
+	
+	
+	<AddString type="method">821, Operation failed due to component IO Failed. </AddString>
+	<AddString type="method">822, Alarm for Component IO Failed. </AddString>
+	<AddString type="method">823, Operation failed due to component timeout. </AddString>
+	<AddString type="method">824, Alarm for Component timeout. </AddString>
+	<AddString type="method">825, Leaving maintenance mode. please turn off the maintenance KEY TC.MANF and KEY LID.DIS. </AddString>
+	<AddString type="method">826, Leaving maintenance mode. please turn off the maintenance KEY TC.MANF and KEY LID.DIS. </AddString>
+	<AddString type="method">827, Timout has occurred during vent. </AddString>
+	<AddString type="method">828, Alarm for vent time out. </AddString>
+	<AddString type="method">829, Timout has occurred during pumpdown. </AddString>
+	<AddString type="method">830, Alarm for pumpdown time out. </AddString>
+	<AddString type="method">831, Operation failed due to component IO Failed, </AddString>
+	<AddString type="method">832, Alarm for Component IO Failed. </AddString>
+	<AddString type="method">833, Operation failed due to component timeout. </AddString>
+	<AddString type="method">834, Alarm for Component timeout. </AddString>
+	<AddString type="method">835, Operation failed due to pressure out of tollerance. </AddString>
+	<AddString type="method">836, Alarm for Vacuum System state check failed pressure was not in tollerance after state was executed. </AddString>
+	<AddString type="method">837, Unable to locate the gas valve. </AddString>
+	<AddString type="method">838, Alarm for pressure controller. a sequence was created to flow a gas but the gas valve was not configured. </AddString>
+	<AddString type="method">839, The chamber is not isolated. </AddString>
+	<AddString type="method">840, Alarm for a vacuum operation that was requested but the chamber is not isloated. </AddString>
+	<AddString type="method">841, pressure Controll Failed. </AddString>
+	<AddString type="method">842, Can not do pressure controll when MFC calibration is not done. </AddString>
+	
+	<AddString type="method">861, The pressure has exceeded the setpoint. </AddString>
+	<AddString type="method">862, The pressure monitor detected that the pressure has exceeded setpoint. </AddString>
+	<AddString type="method">863, Pressure is below setpoint. </AddString>
+	<AddString type="method">864, The pressure monitor detected that the pressure has gone below the setpoint. </AddString>
+	<AddString type="method">865, IO failed for the deivce. </AddString>
+	<AddString type="method">866, operate the device failed . please check the driver or device. </AddString>
+	<AddString type="method">867, Pump start timed out. </AddString>
+	<AddString type="method">868, Alarm for pump not starting within specified time. </AddString>
+	<AddString type="method">869, Pump error has occured. </AddString>
+	<AddString type="method">870, Alarm for pump detected error. </AddString>
+	<AddString type="method">871, The pump was unable to reach the setpoint for use. </AddString>
+	<AddString type="method">872, Alarm for pump not reaching setpoint. </AddString>
+	<AddString type="method">873, The recovery of the shared pump failed. </AddString>
+	<AddString type="method">874, The shared pump was unable to restore the shared pump users. </AddString>
+
+	<!--USED IN LoadPortAalarm.xml-->
+	<AddString type="method">10010,Parameter of slot number is out of range!</AddString>
+	<AddString type="method">10011,Detect Wafer Service : Parameter of slot number is out of range!</AddString>
+	<AddString type="method">10020,Plateform Extend command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10021,Plateform Extend command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10030,Plateform Retract command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10031,Plateform Retract command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10040,Go Load Position command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10041,Go Load Position command has been issued. but action is not execute successfully!</AddString>
+	<AddString type="method">10050,service failed for IO error</AddString>
+	<AddString type="method">10051,Offline data item</AddString>
+	<AddString type="method">10060,Unknown IO Exception</AddString>
+	<AddString type="method">10061,Unknown IO Exception</AddString>
+	<AddString type="method">10070,LPI ERROR</AddString>
+	<AddString type="method">10071,LPI ERROR</AddString>
+	<AddString type="method">10080,LPI BUSY</AddString>
+	<AddString type="method">10081,LPI BUSY</AddString>
+	<AddString type="method">10090,NO POD</AddString>
+	<AddString type="method">10091,NO POD</AddString>
+	<AddString type="method">10100,NOT READY</AddString>
+	<AddString type="method">10101,NOT READY</AddString>
+	<AddString type="method">10110,INVALLD ARG</AddString>
+	<AddString type="method">10111,INVALLD ARG</AddString>
+	<AddString type="method">10120,Failed or Denied</AddString>
+	<AddString type="method">10121,Failed or Denied</AddString>
+	<AddString type="method">10130,hardware  Alarm</AddString>
+	<AddString type="method">10131,hardware  Alarm</AddString>
+	<AddString type="method">10140,hardware  Error</AddString>
+	<AddString type="method">10141,hardware  Error</AddString>
+	<AddString type="method">10150,POD OPEN</AddString>
+	<AddString type="method">10151,POD OPEN</AddString>
+	<AddString type="method">10160,POD CLOSE</AddString>
+	<AddString type="method">10161,POD CLOSE</AddString>
+	<AddString type="method">10170,Home ERR</AddString>
+	<AddString type="method">10171,Home ERR</AddString>
+	<AddString type="method">10180,CAS UnLoad</AddString>
+	<AddString type="method">10181,CAS UnLoad</AddString>
+	<AddString type="method">10190,CAS Load</AddString>
+	<AddString type="method">10191,CAS Load</AddString>
+	<AddString type="method">10200,Fetch</AddString>
+	<AddString type="method">10201,Fetch</AddString>
+	<AddString type="method">10210,CLOSE LATCH</AddString>
+	<AddString type="method">10211,CLOSE LATCH</AddString>
+	<AddString type="method">10220,OPEN LATCH</AddString>
+	<AddString type="method">10221,OPEN LATCH</AddString>
+	<AddString type="method">10230,command TimeOut</AddString>
+	<AddString type="method">10231,command TimeOut</AddString>
+	<AddString type="method">10240,IO failed</AddString>
+	<AddString type="method">10241,IO failed</AddString>
+	<AddString type="method">10250,Carrier property cannot be updated - carrier is Docked</AddString>
+	<AddString type="method">10251,Update property when carrier is Absent or not Docked yet.</AddString>
+	<AddString type="method">10260,Unsupported</AddString>
+	<AddString type="method">10261,Unsupported</AddString>
+	<AddString type="method">10270,Unsupported</AddString>
+	<AddString type="method">10271,Unsupported</AddString>
+	<AddString type="method">10280,Unsupported</AddString>
+	<AddString type="method">10281,Unsupported</AddString>
+	<AddString type="method">10290,Unsupported</AddString>
+	<AddString type="method">10291,Unsupported</AddString>
+	<AddString type="method">10300,Unsupported</AddString>
+	<AddString type="method">10301,Unsupported</AddString>
+	<AddString type="method">10310,Unsupported</AddString>
+	<AddString type="method">10311,Unsupported</AddString>
+	<AddString type="method">10320,Unsupported</AddString>
+	<AddString type="method">10321,Unsupported</AddString>
+	<AddString type="method">10330,Unsupported</AddString>
+	<AddString type="method">10331,Unsupported</AddString>
+	<AddString type="method">10340,Unsupported</AddString>
+	<AddString type="method">10341,Unsupported</AddString>
+	<AddString type="method">10350,Unsupported</AddString>
+	<AddString type="method">10351,Unsupported</AddString>
+	<AddString type="method">10360,Unsupported</AddString>
+	<AddString type="method">10361,Unsupported</AddString>
+	<AddString type="method">10370,Unsupported</AddString>
+	<AddString type="method">10371,Unsupported</AddString>
+	<AddString type="method">10380,Unsupported</AddString>
+	<AddString type="method">10381,Unsupported</AddString>
+	<AddString type="method">10390,Unsupported</AddString>
+	<AddString type="method">10391,Unsupported</AddString>
+	<AddString type="method">10400,Robot is extended into VCE when some action will be acted!</AddString>
+	<AddString type="method">10401,Robot is extended into VCE when some action will be acted!</AddString>
+	<AddString type="method">10410,Some action can't execute without Cassette!</AddString>
+	<AddString type="method">10411,Some action can't execute without Cassette!</AddString>
+	<AddString type="method">10420,doorOpenAlm</AddString>
+	<AddString type="method">10421,doorOpenAlm</AddString>
+	<AddString type="method">10430,waferslideoutAlm</AddString>
+	<AddString type="method">10431,waferslideoutAlm</AddString>
+	<AddString type="method">10440,pltOut4IDxAlarm</AddString>
+	<AddString type="method">10441,pltOut4IDxAlarm</AddString>
+	<AddString type="method">10450,notLoad4ExtAlm</AddString>
+	<AddString type="method">10451,notLoad4ExtAlm</AddString>
+	<AddString type="method">10460,vceInitSlideOut</AddString>
+	<AddString type="method">10461,vceInitSlideOut</AddString>
+	<AddString type="method">10470,slotIndexOutOfRange</AddString>
+	<AddString type="method">10471,slotIndexOutOfRange</AddString>
+	<AddString type="method">10480,airOffAlarm</AddString>
+	<AddString type="method">10481,airOffAlarm</AddString>
+	<AddString type="method">10490,isWaferSlideOut</AddString>
+	<AddString type="method">10491,isWaferSlideOut</AddString>
+	<AddString type="method">10500,Load lock chamber is not at atmosphere status when Open Door of VCE will be executed!</AddString>
+	<AddString type="method">10501,Load lock chamber is not at atmosphere status when Open Door of VCE will be executed!</AddString>
+	<AddString type="method">10510,initCassetteAlm</AddString>
+	<AddString type="method">10511,initCassetteAlm</AddString>
+	<AddString type="method">10520,errorGettingElevErrorExcAlarm</AddString>
+	<AddString type="method">10521,errorGettingElevErrorExcAlarm</AddString>
+	<AddString type="method">10530,elevatorCommErrorAlarm</AddString>
+	<AddString type="method">10531,elevatorCommErrorAlarm</AddString>
+	<AddString type="method">10540,elevatorActionErrorAlarm</AddString>
+	<AddString type="method">10541,elevatorActionErrorAlarm</AddString>
+	<AddString type="method">10550,elevatorCommandErrorAlarm</AddString>
+	<AddString type="method">10551,elevatorCommandErrorAlarm</AddString>
+	<AddString type="method">10560,elevatorLoadErrorAlarm</AddString>
+	<AddString type="method">10561,elevatorLoadErrorAlarm</AddString>
+	<AddString type="method">10570,elevatorMoveErrorAlarm</AddString>
+	<AddString type="method">10571,elevatorMoveErrorAlarm</AddString>
+	<AddString type="method">10580,elevatorRAxisErrorAlarm</AddString>
+	<AddString type="method">10581,elevatorRAxisErrorAlarm</AddString>
+	<AddString type="method">10590,elevatorSErrorAlarm</AddString>
+	<AddString type="method">10591,elevatorSErrorAlarm</AddString>
+	<AddString type="method">10600,elevatorEnvErrorAlarm</AddString>
+	<AddString type="method">10601,elevatorEnvErrorAlarm</AddString>
+	<AddString type="method">10610,elevatorM0ErrorAlarm</AddString>
+	<AddString type="method">10611,elevatorM0ErrorAlarm</AddString>
+	<AddString type="method">10620,elevatorS4ErrorAlarm</AddString>
+	<AddString type="method">10621,elevatorS4ErrorAlarm</AddString>
+	<AddString type="method">10630,elevatorErrorAlarm</AddString>
+	<AddString type="method">10631,elevatorErrorAlarm</AddString>
+	<AddString type="method">10640,materialSlideoutAlarm</AddString>
+	<AddString type="method">10641,materialSlideoutAlarm</AddString>
+	<AddString type="method">10650,Door is not closed or Plantform is not retract when Home LPI will be execute!</AddString>
+	<AddString type="method">10651,Door is not closed or Plantform is not retract when Home LPI will be execute!</AddString>
+	<AddString type="method">10660,There is no Cassette when Fetch will be executed!</AddString>
+	<AddString type="method">10661,There is no Cassette when Fetch will be executed!</AddString>
+	<AddString type="method">10670,Door is not closed or Plantform is not retract when Close Pod will be execute!</AddString>
+	<AddString type="method">10671,Door is not closed or Plantform is not retract when Close Pod will be execute!</AddString>
+	<AddString type="method">10680,There is not pod on LPI when OpenPod service running.</AddString>
+	<AddString type="method">10681,Pod is needed when open Pod is executed!</AddString>
+	<AddString type="method">10690,Plantform is not out Or Cassette is not present when Unload service will be run!</AddString>
+	<AddString type="method">10691,Plantform is not out Or Cassette is not present when Unload service will be run!</AddString>
+	<AddString type="method">10700,The previous service is not Fetch.</AddString>
+	<AddString type="method">10701,The previous service of Load service must be Fetch, but it is not true now!</AddString>
+	<AddString type="method">10710,Plantform of VCE is out when Load service of LPI will be run.</AddString>
+	<AddString type="method">10711,Plantform of VCE is out when Load service of LPI will be run.</AddString>
+	<AddString type="method">10720,LPI had run Load service more than 60s</AddString>
+	<AddString type="method">10721,LPI had run Load service more than 60s, so it think some error is happened.</AddString>
+	<AddString type="method">10730,Cassette is on VCE!</AddString>
+	<AddString type="method">10731,Cassette is not on VCE when Load will be going on LPI</AddString>
+	<AddString type="method">10740,Cassette is not on VCE!</AddString>
+	<AddString type="method">10741,Cassette is not on VCE when Unload will be going on LPI</AddString>
+	<AddString type="method">10750,Wafer is Present when Complete Wafer!</AddString>
+	<AddString type="method">10751,Wafer is Present when Complete Wafer!</AddString>
+	<AddString type="method">10760,VCE is not at correct status when Recovery</AddString>
+	<AddString type="method">10761,Plantform is not In when Recovery service is going to running.</AddString>
+	<AddString type="method">10770,VCE is not at correct status when ErrorLoad.</AddString>
+	<AddString type="method">10771,Plantform is not In when ErrorLoad service is going to running.</AddString>
+	<AddString type="method">10780,VCE is not at correct status when ErrorUnload.</AddString>
+	<AddString type="method">10781,Plantform is not In when ErrorUnload service is going to running.</AddString>
+	<AddString type="method">10790,VCE is not at correct status when ErrorHome.</AddString>
+	<AddString type="method">10791,Plantform is not In when ErrorHome service is going to running.</AddString>
+	<AddString type="method">10800,Error found in Prepare wafer service</AddString>
+	<AddString type="method">10801,Error found in Prepare wafer service: error status in the slot!</AddString>
+	<AddString type="method">10810,Error found in Complete wafer service</AddString>
+	<AddString type="method">10811,Error found in Complete wafer service: error status in the slot!</AddString>
+	<AddString type="method">10820,Latch started without pod</AddString>
+	<AddString type="method">10821,Latch started without pod!</AddString>
+	<AddString type="method">10830,Unload Sequence Started without Cassette on VCE!</AddString>
+	<AddString type="method">10831,Unload Sequence Started without Cassette on VCE!</AddString>
+	
+	<AddString type="method">10840,Unsupported</AddString>
+	<AddString type="method">10841,Unsupported</AddString>
+	<AddString type="method">10850,Unsupported</AddString>
+	<AddString type="method">10851,Unsupported</AddString>
+	<AddString type="method">10860,Unsupported</AddString>
+	<AddString type="method">10861,Unsupported</AddString>
+	<AddString type="method">10870,Unsupported</AddString>
+	<AddString type="method">10871,Unsupported</AddString>
+	<AddString type="method">10880,Unsupported</AddString>
+	<AddString type="method">10881,Unsupported</AddString>
+	<AddString type="method">10890,Unsupported</AddString>
+	<AddString type="method">10891,Unsupported</AddString>
+	<AddString type="method">10900,Unsupported</AddString>
+	<AddString type="method">10901,Unsupported</AddString>
+	<AddString type="method">10910,Unsupported</AddString>
+	<AddString type="method">10911,Unsupported</AddString>
+	<AddString type="method">10920,Unsupported</AddString>
+	<AddString type="method">10921,Unsupported</AddString>
+	<AddString type="method">10930,Unsupported</AddString>
+	<AddString type="method">10931,Unsupported</AddString>
+	<AddString type="method">10940,Unsupported</AddString>
+	<AddString type="method">10941,Unsupported</AddString>
+	<AddString type="method">10950,Unsupported</AddString>
+	<AddString type="method">10951,Unsupported</AddString>
+	<AddString type="method">10960,Unsupported</AddString>
+	<AddString type="method">10961,Unsupported</AddString>
+	<AddString type="method">10970,Unsupported</AddString>
+	<AddString type="method">10971,Unsupported</AddString>
+	<AddString type="method">10980,Unsupported</AddString>
+	<AddString type="method">10981,Unsupported</AddString>
+	<AddString type="method">10990,Unsupported</AddString>
+	<AddString type="method">10991,Unsupported</AddString>
+	<AddString type="method">11000,Unsupported</AddString>
+	<AddString type="method">11001,Unsupported</AddString>
+	<AddString type="method">11010,Unsupported</AddString>
+	<AddString type="method">11011,Unsupported</AddString>
+	<AddString type="method">11020,Unsupported</AddString>
+	<AddString type="method">11021,Unsupported</AddString>
+	<AddString type="method">11030,Unsupported</AddString>
+	<AddString type="method">11031,Unsupported</AddString>
+	<AddString type="method">11040,Unsupported</AddString>
+	<AddString type="method">11041,Unsupported</AddString>
+	<AddString type="method">11050,Unsupported</AddString>
+	<AddString type="method">11051,Unsupported</AddString>
+	<AddString type="method">11060,Unsupported</AddString>
+	<AddString type="method">11061,Unsupported</AddString>
+	<AddString type="method">11070,Unsupported</AddString>
+	<AddString type="method">11071,Unsupported</AddString>
+	<AddString type="method">11080,Unsupported</AddString>
+	<AddString type="method">11081,Unsupported</AddString>
+	<AddString type="method">11090,Unsupported</AddString>
+	<AddString type="method">11091,Unsupported</AddString>
+	
+	<AddString type="method">11100,Wafer slide out detected.</AddString>
+	<AddString type="method">11101,Wafer slide out detected during operation.</AddString>
+	<AddString type="method">11110,Robot arm extended in load port module.</AddString>
+	<AddString type="method">11111,Robot arm extended in load port module.</AddString>
+	<AddString type="method">11120,Robot is not ready to map.</AddString>
+	<AddString type="method">11121,Robot can not map station with wafer on arm.</AddString>
+	<AddString type="method">11130,Cannot map; no carrier detected.</AddString>
+	<AddString type="method">11131,The map service cannot be performed because no carrier is detected.</AddString>
+	<AddString type="method">11140,Cannot map; door is closed.</AddString>
+	<AddString type="method">11141,The map service cannot be performed because the load port door is closed.</AddString>
+	<AddString type="method">11150,Mapping failed. either FindBias error or MappingError reported</AddString>
+	<AddString type="method">11151,The map service failed to produce a correct mapping.</AddString>
+	<AddString type="method">11160,Communication Error with the mapper</AddString>
+	<AddString type="method">11161,The map service failed to produce a correct mapping.</AddString>
+	<AddString type="method">11170,Mapper cannot be controlled. locked out by CDM</AddString>
+	<AddString type="method">11171,The map service failed to produce a correct mapping.</AddString>
+	<AddString type="method">11180,Mapper cannot map due to tool emergency stop being active</AddString>
+	<AddString type="method">11181,The map service failed to produce a correct mapping.</AddString>
+	<AddString type="method">11190,General Undefined Robot Error during map</AddString>
+	<AddString type="method">11191,The map service failed to produce a correct mapping.</AddString>
+	<AddString type="method">11200,Invalid wafer placed detected.</AddString>
+	<AddString type="method">11201,A cross slotted wafer or a double placed wafer has been detected.</AddString>
+	<AddString type="method">11210,Obstruction detected in loadport.</AddString>
+	<AddString type="method">11211,There may be an obstruction in the loadport.</AddString>
+	<AddString type="method">11220,Invalid slot selected.</AddString>
+	<AddString type="method">11221,Invalid slot selected. The slot selected is out of range of the current configuration.</AddString>
+	<AddString type="method">11230,Cannot read carrier id. carrier absent.</AddString>
+	<AddString type="method">11231,The module cannot read the carrier id because the carrier is absent. Place the carrier onto the load port and retry.</AddString>
+	<AddString type="method">11240,Time out in read/write of carrier tag/id.</AddString>
+	<AddString type="method">11241,A time out has occured during the reading/writing of the carrier tag/id.</AddString>
+	<AddString type="method">11250,Read/write of carrier tag/id failed</AddString>
+	<AddString type="method">11251,The reading/writing of the carrier tag has failed. Possible causes are the device physically failed to read/write the carrier tag or the device/driver is offline.</AddString>
+	<AddString type="method">11260,Cannot read/write carrier tag. carrierTag absent.</AddString>
+	<AddString type="method">11261,The module cannot read or write to the carrier tag because the carrierTag is absent. Place a carrier with a tag onto the load port and retry.</AddString>
+	<AddString type="method">11270,Carrier tag read failure.</AddString>
+	<AddString type="method">11271,This module had a failure during the reading of the carrier tag</AddString>
+	<AddString type="method">11280,Carrier tag write failure.</AddString>
+	<AddString type="method">11281,This module had a failure during the writing of the carrier tag</AddString>
+	<AddString type="method">11290,latch closed.</AddString>
+	<AddString type="method">11291,latch closed when extended paddle.</AddString>
+	<AddString type="method">11300,Pod not properly placed.</AddString>
+	<AddString type="method">11301,Pod not properly placed when clamping the pod.</AddString>
+	
+	<!--USED IN ROBOTAlarm.xml-->
+	
+	<AddString type="method">20000,Operation Failed.please see ErrorId and Error massage in alarm description.</AddString>
+		
+	<AddString type="method">20010,Robot Service timed out</AddString>
+	<AddString type="method">20011,Robot Service timed out</AddString>
+		
+	<AddString type="method">20020,delta Radius too large to perform aligner pick</AddString>
+	<AddString type="method">20021,The robot has been asked to perform a delta pick with  too large a radial offset</AddString>
+		
+	<AddString type="method">20030,Robot operation failed.The robot module is either busy or in an error state or is offline.please see ErrorId and Error massage in alarm description.</AddString>
+		
+	<AddString type="method">20040,Unknown robot hardware failure.Verify the robot map before proceeding.please see Error message in alarm description.</AddString>
+		
+	<AddString type="method">20050,The tool emergency stop is currently active.</AddString>
+	<AddString type="method">20051,The operation failed because the tool emergency stop is currently active.</AddString>
+		
+	<AddString type="method">20060,Robot operation failed because the CDM is in control of the robot. The CDM must be off to perform this service.</AddString>
+	<AddString type="method">20061,Robot operation failed because the CDM is in control of the robot. The CDM must be off to perform this service.</AddString>
+		
+	<AddString type="method">20070,The robot operation failed for an error from device,please see ErrorId in alarm description.</AddString>
+		
+	<AddString type="method">20080,Mapper is not at right state when map station.</AddString>
+	<AddString type="method">20081,can not map station when robot has wafer on arm.</AddString>
+		
+	<AddString type="method">20090,Map station failed,Find bias or other map problem.please see ErrorId and Error massage in alarm description.</AddString>
+		
+	<AddString type="method">20100,Find Bias required before mapping station.</AddString>
+	<AddString type="method">20101,Robot has not been taught to map current station.</AddString>
+		
+	<AddString type="method">20110,Material at Aligner is out of CCD range.</AddString>
+	<AddString type="method">20111,Material at Aligner is out of CCD range and cannot be scanned.</AddString>
+		
+	<AddString type="method">20120,No wafer detected at Aligner.</AddString>
+	<AddString type="method">20121,No wafer detected at Aligner before scan.</AddString>
+		
+	<AddString type="method">20130,Invalid wafer size for Aligner.</AddString>
+	<AddString type="method">20131,Invalid wafer size for Aligner.</AddString>
+		
+	<AddString type="method">20140,Communication with Aligner timed out.</AddString>
+	<AddString type="method">20141,Communication with Aligner timed out during service.</AddString>
+		
+	<AddString type="method">20150,Communication with Aligner not initialized.</AddString>
+	<AddString type="method">20151,Communication with Aligner not initialized before attempting service.</AddString>
+		
+	<AddString type="method">20160,Aligner hardware failed.</AddString>
+	<AddString type="method">20161,Aligner hardware failed.</AddString>
+		
+	<AddString type="method">20170,Communication between Robot and Aligner failed.please see ErrorId and Error massage in alarm description.</AddString>
+		
+	<AddString type="method">20180,Secondary serial port timed out during service.</AddString>
+	<AddString type="method">20181,Robot did not receive confirmation that secondary serial port completed service.</AddString>
+		
+	<AddString type="method">20190,Secondary serial port busy.</AddString>
+	<AddString type="method">20191,Secondary serial port in use while another command was issued.</AddString>
+		
+	<AddString type="method">20200,Aligner had unknown failure during service.please see ErrorId and Error massage in alarm description.</AddString>
+		
+	<AddString type="method">20210,Command is dangerous when 300mm wafer is on aligner.</AddString>
+	<AddString type="method">20211,There is 300mm wafer on aligner. any command except Pick from Aligner may damage it.</AddString>
+		
+	<AddString type="method">20220,Aligner failed during Set Vacuum On/Off.</AddString>
+		<AddString type="method">20221,Aligner failed during Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20230,Communication with Aligner timed out.</AddString>
+		<AddString type="method">20231,Communication with Aligner timed out during Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20240,Communication not initialized.</AddString>
+		<AddString type="method">20241,Communication with Aligner not initialized before Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20250,Secondary serial port timed out.</AddString>
+		<AddString type="method">20251,Secondary serial port timed out during Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20260,Secondary serial port busy during Set Vacuum On/Off.</AddString>
+		<AddString type="method">20261,Secondary serial port busy during Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20270,Communication failed during Set Vacuum On/Off.</AddString>
+		<AddString type="method">20271,Communication between Acutran and Aligner failed during Set Vacuum On/Off.</AddString>
+		
+		<AddString type="method">20280,The given slot was already extended by other robot arm.</AddString>
+		<AddString type="method">20281,The robot cannot extend into the given slot. It might be extended by other robot.</AddString>
+		
+		<AddString type="method">20290,Place failed: Material found on arm after Place.</AddString>
+		<AddString type="method">20291,Place failed: Material found on arm after Place.</AddString>
+		
+		<AddString type="method">20300,Pick failed: Material not found on arm after Pick.</AddString>
+		<AddString type="method">20301,Pick failed: Material not found on arm after Pick.</AddString>
+		
+		<AddString type="method">20310,Robot cannot perform service: There is no carrier.</AddString>
+		<AddString type="method">20311,The robot cannot perform the service because there is no carrier present in the loadport station.</AddString>
+		
+		<AddString type="method">20320,The robot cannot retract from the station.</AddString>
+		<AddString type="method">20321,The robot has timed out waiting for the station to signal that it is okay to retract from the module.</AddString>
+		
+		<AddString type="method">20330,The robot cannot extend into the station.</AddString>
+		<AddString type="method">20331,The robot has timed out waiting for the station to signal that it is okay to extend into the module.</AddString>
+		
+		<AddString type="method">20340,Robot cannot perform service: Arm is out of range.</AddString>
+		<AddString type="method">20341,Robot cannot perform service because the arm is out of range.</AddString>
+		
+		<AddString type="method">20350,Robot cannot perform service: Slot is out of range.</AddString>
+		<AddString type="method">20351,Robot cannot perform service because the slot is out of range for the station.</AddString>
+		
+		<AddString type="method">20360,Robot cannot perform service: Station is out of range.</AddString>
+		<AddString type="method">20361,Robot cannot perform service because the station is out of range.</AddString>
+		
+		<AddString type="method">20370,Robot can't pick material, material properties can't be confirmed.</AddString>
+		<AddString type="method">20371,The robot can't pick material from the station because the station's material size. shape or other property is incompatible with the robot end-effector.</AddString>
+		
+		<AddString type="method">20380,Robot can't place material, material properties can't be confirmed.</AddString>
+		<AddString type="method">20381,The robot can't place material into the station because the current material size. shape or other property is incompatible with the station location.</AddString>
+		
+		<AddString type="method">20390,Unable to perform service, robot requires two arms.</AddString>
+		<AddString type="method">20391,Robot can't swap material because the robot is not configured for dual arms.</AddString>
+		
+		<AddString type="method">20400,material has not been aligned.</AddString>
+		<AddString type="method">20401,Robot cannot pick material from aligner as the material has not been aligned.</AddString>
+		
+		<AddString type="method">20410,Cannot perform service: no aligner in system. or invaild station.</AddString>
+		<AddString type="method">20411,Robot cannot perform the service because there is no aligner present in the system.or the station ready to pick is not a Aligner.</AddString>
+		
+		<AddString type="method">20420,Wrong Z position to extend.</AddString>
+		<AddString type="method">20421,Robot cannot perform service because the Z position is incorrect.</AddString>
+		
+		<AddString type="method">20430,There is an obstruction at the destination station.</AddString>
+		<AddString type="method">20431,Robot cannot perform service because the destination station is obstructed. Verify that slot valves or doors are not closed and that there are no wafer slide outs.</AddString>
+		
+		<AddString type="method">20440,Can't place: material present in station.</AddString>
+		<AddString type="method">20441,Robot can't place material because there is material present in the destination station.</AddString>
+		
+		<AddString type="method">20450,Can't pick:no material in station.</AddString>
+		<AddString type="method">20451,Robot can't pick material from the station because there is no material.</AddString>
+		
+		<AddString type="method">20460,Can't place: no material on Arm B.</AddString>
+		<AddString type="method">20461,Robot can't place material because there is no material present on Arm B.</AddString>
+		
+		<AddString type="method">20470,Can't place: no material on Arm A.</AddString>
+		<AddString type="method">20471,Robot can't place material because there is no material present on Arm A.</AddString>
+		
+		<AddString type="method">20480,Can't pick: material present on Arm B.</AddString>
+		<AddString type="method">20481,Robot can't pick material because there is already material present on Arm B.</AddString>
+		
+		<AddString type="method">20490,Can't pick: material present on Arm A.</AddString>
+		<AddString type="method">20491,Robot can't pick material because there is already material present on Arm A.</AddString>
+		
+		<AddString type="method">20500,Call to physical robot failed.</AddString>
+		<AddString type="method">20501,Due to exception received from physical robot this alarm posted.</AddString>
+		
+		<AddString type="method">20510,Invalid number of wafers in cassette.</AddString>
+		<AddString type="method">20511,Invalid number of wafers in cassette for wafer cycling.</AddString>
+		
+		<AddString type="method">20520,FFU in invalide mode.</AddString>
+		<AddString type="method">20521,Can't set value when FFU in AUTO mode(change to MANUAL mode first.).</AddString>	
+		
+		<AddString type="method">21000,Isolation Valve not in proper mode for this operation.</AddString>
+		<AddString type="method">21001,Isolation Valve not in proper mode for this operation.</AddString>
+		
+		<AddString type="method">21010,Material may need aligning but no aligner available.</AddString>
+		<AddString type="method">21011,Material may need aligning but no aligner available.</AddString>
+		
+		<AddString type="method">21020,Try to open but Module does not exist,please see alarm description.</AddString>
+		
+		<AddString type="method">21030,Module does not exist to open Slot Valve by Iso Policy Mgr</AddString>
+		<AddString type="method">21031,Module does not exist to open Slot Valve by Iso Policy Mgr</AddString>
+		
+		<AddString type="method">21040,Try to close but Module does not exist,please see alarm description.</AddString>
+		
+		<AddString type="method">21050,IO used for opening is offline which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21060,An interlock occurred while opening which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21070,A timeout has occured while opening which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21080, An error occured while opening which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21090, IO used for closing is offline which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21100, Timeout has occured while closing which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21110, An error occured while closing which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21120, There is an obstruction that has to be cleared before performing this operation,which Module please see alarm description.</AddString>
+		
+		<AddString type="method">21130, Pressure difference too great to open which Module please see alarm description.</AddString>
+		
+	    <!--USED IN AlignerAalarm.xml-->
+		<AddString type="method">30001,Can't align: no material in aligner</AddString>
+		<AddString type="method">30002,The aligner can't align because there is no material present in the aligner</AddString>
+		<AddString type="method">30003,Map material in aligner to determine material size</AddString>
+		<AddString type="method">30004,Invalid material in aligner</AddString>
+		<AddString type="method">30005,The aligner can't perform the intended function because the material size is unspecified</AddString>
+		<AddString type="method">30006,The aligner cannot set the material size because the material size cannot be determined</AddString>
+		<AddString type="method">30007,Aligner operation failed</AddString>
+		<AddString type="method">30008,Aligner communications error or bad parameter error</AddString>
+		<AddString type="method">30009,The aligner operation failed because the aligner has an error</AddString>
+		<AddString type="method">30010,Communication with Aligner timed out</AddString>
+		<AddString type="method">30011,Communication with Aligner not initialized</AddString>
+		<AddString type="method">30012,Robot Service: timed out</AddString>
+		<AddString type="method">30013,Aligner is offline.Verify command completed successfully</AddString>
+		<AddString type="method">30014,Aligner is offline and may not have completed its service.Verify map before retrying service!</AddString>
+		
+		<AddString type="method">30015,service failed for IO error</AddString>
+		<AddString type="method">30016,IO error is</AddString>
+		
+		<AddString type="method">30017,Aligner communication failed</AddString>
+		<AddString type="method">30018,Communication between Robot and Aligner failed.</AddString>
+		<AddString type="method">30019,Aligner hardware failed</AddString>
+		<AddString type="method">30020,Communication with Aligner not initialized</AddString>
+		<AddString type="method">30021,Communication with Aligner not initialized before attempting service.</AddString>
+		<AddString type="method">30022,Communication with Aligner timed out</AddString>
+		<AddString type="method">30023,Communication with Aligner timed out during service</AddString>
+		<AddString type="method">30024,Invalid wafer size for Aligner</AddString>
+		<AddString type="method">30025,Invalid wafer size for Aligner</AddString>
+		<AddString type="method">30026,No wafer detected at Aligner</AddString>
+		<AddString type="method">30027,No wafer detected at Aligner before scan</AddString>
+		<AddString type="method">30028,Material at Aligner is out of CCD range</AddString>
+		<AddString type="method">30029,Material at Aligner is out of CCD range and cannot be scanned</AddString>
+		<AddString type="method">30030,Aligner Material characterization failure</AddString>
+		<AddString type="method">30031,Aligner Material characterization failure</AddString>
+       
+       <!--USED IN BufferAalarm.xml-->
+       <AddString type="method">30032,Wafer slide out detected.</AddString>
+		<AddString type="method">30033,Wafer slide out detected during operation.</AddString>
+		<AddString type="method">30034,Ignore and Continue</AddString>
+		<AddString type="method">30035,Robot arm extended in load port module.</AddString>
+		<AddString type="method">30036,Robot arm extended in load port module.</AddString>
+		<AddString type="method">30037,Mapping failed, either FindBias error or MappingError reported</AddString>
+		<AddString type="method">30038,The map service failed to produce a correct mapping.</AddString>
+		<AddString type="method">30039,Ignore and Continue</AddString>
+		<AddString type="method">30040,Communication Error with the mapper</AddString>
+		<AddString type="method">30041,The map service failed to produce a correct mapping.</AddString>
+		<AddString type="method">30042,Ignore and Continue</AddString>
+		<AddString type="method">30043,Mapper cannot be controlled, locked out by CDM</AddString>
+		<AddString type="method">30044,The map service failed to produce a correct mapping.</AddString>
+		<AddString type="method">30045,Mapper cannot map due to tool emergency stop being active</AddString>
+		<AddString type="method">30046,The map service failed to produce a correct mapping.</AddString>
+		<AddString type="method">30047,General Undefined Robot Error during map</AddString>
+		<AddString type="method">30048,The map service failed to produce a correct mapping.</AddString>
+		<AddString type="method">30049,Ignore and Continue</AddString>
+		<AddString type="method">30050,Invalid wafer placed detected.</AddString>
+		<AddString type="method">30051,A cross slotted wafer or a double placed wafer has been detected.</AddString>
+		<AddString type="method">30052,Ignore and Continue</AddString>
+		
+		<AddString type="method">30075,Aligner operation failed</AddString>
+		<AddString type="method">30076,Aligner had unknown failure during service</AddString>
+		
+		<!--USED IN HeaterAalarm.xml-->
+		<AddString type="method">30053,Heater execute SetTemp failed.</AddString>
+		<AddString type="method">30054,The service failed for .</AddString>
+		
+		<!--USED IN LoadLockAalarm.xml-->
+		<AddString type="method">30055,Spider failed to raise</AddString>
+		<AddString type="method">30056,The object cannot raise spider.</AddString>
+		<AddString type="method">30057,Spider failed to lower</AddString>
+		<AddString type="method">30058,The object cannot lower spider.</AddString>
+		<AddString type="method">30059,service failed for IO error</AddString>
+		<AddString type="method">30060,IO error is .</AddString>
+		<AddString type="method">30061,Spider failed to raise for timeout</AddString>
+		<AddString type="method">30062,Spider failed to lower for timeout</AddString>
+		
+		<AddString type="method">30063,VBE Robot arm extended in load block elevator.</AddString>
+		<AddString type="method">30064,VBE Robot arm extended in load block elevator</AddString>
+		<AddString type="method">30065,ATM Robot arm extended in load block elevator.</AddString>
+		<AddString type="method">30066,ATMRobot arm extended in load block elevator.</AddString>
+
+		<AddString type="method">30069,Elevator Service:  timed out</AddString>
+		<AddString type="method">30070,Elevator Service:  timed out</AddString>
+		<AddString type="method">30071,service failed for IO error</AddString>
+		<AddString type="method">30072,IO error is </AddString>
+		<AddString type="method">30073,Wait for command</AddString>
+		<AddString type="method">30074,time out!</AddString>
+		
+		<AddString type="method">30077,Air not available for loadblock</AddString>
+		<AddString type="method">30078,: Air pressure is required to actuate any pneumatic valves.</AddString>
+
+		<AddString type="method">30081,Cannot close the atmospheric door for loadblock</AddString>
+		<AddString type="method">30082,The atmospheric door has failed to close for</AddString>
+
+		<AddString type="method">30084,Vacuum Slot Valve failed to close in loadblock</AddString>
+		<AddString type="method">30085,The operation to close the vacuum slot valve has failed in</AddString>
+
+		<AddString type="method">30089,Vacuum Slot Valve failed to open in loadblock</AddString>
+		<AddString type="method">30090,The operation to open the vacuum slot valve has failed in</AddString>
+		
+		<AddString type="method">30093,Vacuum Slot Valve is not closed in loadblock</AddString>
+		<AddString type="method">30094,This operation requires that the vacuum slot valve be close in </AddString>
+	
+		<AddString type="method">30097,Vacuum Slot Valve is not open in loadblock</AddString>
+		<AddString type="method">30098,This operation requires that the vacuum slot valve be open in  </AddString>
+				
+		<AddString type="method">30101,Interlock tripped closing atmospheric door.</AddString>
+		<AddString type="method">30102,An interlock occured while closing the atmospheric door of</AddString>	
+		
+		<AddString type="method">30105,Error while mapping loadblock</AddString>
+		<AddString type="method">30106,An error occurred during mapping of</AddString>
+		
+       <AddString type="method">30109,Cannot open the atmospheric door for loadblock</AddString>
+       <AddString type="method">30110,The atmospheric door has failed to open for</AddString>
+
+		<AddString type="method">30111,catch exception during pumpdown</AddString>
+		<AddString type="method">30112,catch exception during pumpdown</AddString>
+	
+		<AddString type="method">30113,service failed for IO error</AddString>
+		<AddString type="method">30114,IO error is</AddString>
+       <AddString type="method">30115,Interlock tripped opening loadblock atmospheric door.</AddString>
+       <AddString type="method">30116,An interlock occured while opening the atmospheric door of</AddString>
+		<AddString type="method">30117,Read BarCode timeout.</AddString>
+		<AddString type="method">30118,Read BarCode timeout.please map the bar.</AddString>
+		
+		<!--USED IN OCDALARM.XML-->
+		<AddString type="method">30119,OCD Command Failed</AddString>
+		<AddString type="method">30120,The service failed for</AddString>
+       <AddString type="method">30121,OCD Command Load Failed</AddString>
+       <AddString type="method">30122,OCD Command Select Failed</AddString>
+       <AddString type="method">30123,OCD Command Start Failed</AddString>
+       <AddString type="method">30124,OCD Command Pause Failed</AddString>
+       <AddString type="method">30125,OCD Command Resume Failed</AddString>
+       <AddString type="method">30126,OCD Command Abort Failed</AddString>
+       <AddString type="method">30127,OCD Command WaferPresence Failed</AddString>
+       <AddString type="method">30128,OCD Command CurrentState Failed</AddString>
+       <AddString type="method">30129,OCD Command Stop Failed</AddString>
+       <AddString type="method">30130,OCD Command SetId Failed</AddString>
+       <AddString type="method">30131,OCD Command Result Failed</AddString>
+       <AddString type="method">30132,OCD Command Recipe Failed</AddString>
+       
+       <AddString type="method">30133,process timeout</AddString>
+       <AddString type="method">30134,process timeout</AddString>   
+       <AddString type="method">30135,The device currentStatus is Error during the measurement</AddString>
+       <AddString type="method">30136,errorMsg</AddString>
+       <AddString type="method">30137,Map is not allowed</AddString> 
+       <AddString type="method">30138,Map operation is not allowed when ocd status is run or paused.</AddString>   
+       <AddString type="method">30139,The operation is not allowed</AddString>
+       <AddString type="method">30140,The operation is not allowed</AddString>
+       
+       <!--USED IN MATERIALIDREADER -->
+       <AddString type="method">30141,Error reading material ID</AddString>
+       <AddString type="method">30142,Check ReadStatus for information.</AddString>
+       <AddString type="method">30143,ID reader device is offline</AddString>
+       <AddString type="method">30144,ID reader device is offline - check power or cable.</AddString>
+       <AddString type="method">30145,Reading material ID error</AddString>
+       <AddString type="method">30146,Error occurred from the device during the reading of the material ID.</AddString>
+       <AddString type="method">30147,Override material ID</AddString>
+       <AddString type="method">30148,Clear alarm and disable the Mateial ID Reader</AddString>
+       <AddString type="method">30149,Communication error reading material ID</AddString>
+       <AddString type="method">30150,Communication error could be BadPackage. TimeOut or No End.</AddString>
+       <AddString type="method">30151,Override material ID</AddString>
+       <AddString type="method">30152,Clear alarm and disable the Mateial ID Reader</AddString>
+       
+       &ExceptionStrRC;
+</StringResource>

@@ -1,0 +1,16 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't Open Chiller</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChillerLeak</addToIOInterlocks>
+	
+	<ChillerLeak type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">400</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/ChillerLeakDI==1)</setConditionStr>
+	</ChillerLeak>	
+	
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

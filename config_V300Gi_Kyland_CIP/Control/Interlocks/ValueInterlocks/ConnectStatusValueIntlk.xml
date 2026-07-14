@@ -1,0 +1,73 @@
+<addCheckItem type="method">./ChillerConnectStatus</addCheckItem>	
+<addCheckItem type="method">./TempCtlConnectStatus</addCheckItem>
+<addCheckItem type="method">./EPDFault</addCheckItem>
+<addCheckItem type="method">./EPDError</addCheckItem>
+<addCheckItem type="method">./RedisConnectStatus</addCheckItem>
+<addCheckItem type="method">./ChillerOffline</addCheckItem>
+
+<RedisConnectStatus type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/RedisConnectStatus==0)</setTriggerCondition>			
+	<setDurativeTimeS type="method">3</setDurativeTimeS>		
+	<setAlarmMessage type="method">The Redis connection failed.Please check the status of the Redis server!</setAlarmMessage>
+	<setAlarmSeverity type="method">1</setAlarmSeverity>	
+	<!--addAction type="method"></addAction-->	
+</RedisConnectStatus>	
+
+<ChillerConnectStatus type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerConnectStatus==0)</setTriggerCondition>			
+	<setDurativeTimeS type="method">5</setDurativeTimeS>		
+	<setAlarmMessageID type="method">133</setAlarmMessageID>
+	<setAlarmSeverity type="method">1</setAlarmSeverity>	
+	<!--addAction type="method"></addAction-->	
+</ChillerConnectStatus>	
+
+<TempCtlConnectStatus type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/TempCtlConnectStatus==0)</setTriggerCondition>			
+	<setDurativeTimeS type="method">5</setDurativeTimeS>	
+	<setAlarmMessageID type="method">134</setAlarmMessageID>
+	<setAlarmSeverity type="method">1</setAlarmSeverity>	
+	<!--addAction type="method"></addAction-->	
+</TempCtlConnectStatus>
+
+<EPDFault type="instance" class="ErrCodeCheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/EPDErrorSeverity==4)</setTriggerCondition>			
+	<setDurativeTimeS type="method">1</setDurativeTimeS>	
+	<setAlarmMessage type="method">EPD has fault alarm.</setAlarmMessage>
+	<setAlarmDescriptionCh type="method">/Control/PMCExports/InnerDatas/EPDErrorMoreInfo</setAlarmDescriptionCh>
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./ClearError</addActuator>
+
+		<ClearError type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/EPDClearErrorSeverity</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</ClearError>
+		
+	</Action>	
+</EPDFault>
+
+<EPDError type="instance" class="ErrCodeCheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/EPDErrorSeverity==3)</setTriggerCondition>			
+	<setDurativeTimeS type="method">1</setDurativeTimeS>	
+	<setAlarmMessage type="method">EPD has error alarm.</setAlarmMessage>
+	<setAlarmDescriptionCh type="method">/Control/PMCExports/InnerDatas/EPDErrorMoreInfo</setAlarmDescriptionCh>
+	<addAction type="method">./Action</addAction>
+	
+	<Action type="instance" class="DefaultGuadAction">
+		<addActuator type="method">./ClearError</addActuator>
+
+		<ClearError type="instance" class="Actuator">
+			<setActuatorCh type="method">/Control/PMCExports/InnerDatas/EPDClearErrorSeverity</setActuatorCh>
+			<setActiveHigh type="method">false</setActiveHigh>
+		</ClearError>
+		
+	</Action>	
+</EPDError>
+<ChillerOffline type="instance" class="CheckItem">
+	<setTriggerCondition type="method">(/Control/PMCExports/InnerDatas/ChillerConnectStatus==0)</setTriggerCondition>			
+	<!--setAlarmMessage type="method">Chiller is offline</setAlarmMessage-->
+	<setAlarmMessageID type="method">1411</setAlarmMessageID>
+	<setDurativeTimeS type="method">3</setDurativeTimeS>	
+</ChillerOffline>

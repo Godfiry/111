@@ -1,0 +1,187 @@
+<addCheckItem type="method">./BoshGDPTemp</addCheckItem>
+<addCheckItem type="method">./BoshMC1Temp</addCheckItem>
+<addCheckItem type="method">./BoshMC2Temp</addCheckItem>
+<addCheckItem type="method">./BoshMC3Temp</addCheckItem>
+<addCheckItem type="method">./BoshMC4Temp</addCheckItem>
+<addCheckItem type="method">./BoshWinInnerTemp</addCheckItem>
+<addCheckItem type="method">./BoshBaseHeater1Temp</addCheckItem>
+<addCheckItem type="method">./BoshBaseHeater2Temp</addCheckItem>
+
+<BoshGDPTemp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgGDPTempSetpoint</setSetPoint>	
+	<setAlarmMessageID type="method">125</setAlarmMessageID>
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/GDPTemp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgGDPTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgGDPTempSoftTolTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgGDPTempSetpoint</setSetPoint>	
+		
+		<setAlarmMessageID type="method">126</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>	
+		<setSensor type="method">/Control/PMCExports/Datas/GDPTemp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgGDPTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgGDPTempHardTolTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshGDPTemp>	
+
+<BoshMC1Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">Middle chamber temp1 exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">117</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/MC1Temp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgMiddle1ChamberTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle1ChamberTempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">Middle chamber temp1 exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">118</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/MC1Temp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgMiddle1ChamberTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle1ChamberTempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshMC1Temp>	
+
+<BoshMC2Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">Middle chamber temp2 exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">119</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/MC2Temp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgMiddle2ChamberTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle2ChamberTempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">Middle chamber temp2 exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">120</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/MC2Temp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgMiddle2ChamberTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle2ChamberTempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshMC2Temp>	
+
+<BoshMC3Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">Middle chamber temp3 exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">121</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/MC3Temp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgMiddle3ChamberTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle3ChamberTempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">Middle chamber temp3 exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">122</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/MC3Temp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgMiddle3ChamberTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle3ChamberTempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshMC3Temp>	
+
+<BoshMC4Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">Middle chamber temp4 exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">123</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/MC4Temp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgMiddle4ChamberTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle4ChamberTempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgMiddleChamberTempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">Middle chamber temp4 exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">124</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/MC4Temp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgMiddle4ChamberTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgMiddle4ChamberTempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshMC4Temp>	
+
+<BoshWinInnerTemp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgWinInnerTempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">WinInner temp exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">131</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/WindowInnerTemp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgWinInnerTempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgWinInnerTempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgWinInnerTempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">WinInner Temp exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">132</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/WindowInnerTemp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgWinInnerTempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgWinInnerTempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</BoshWinInnerTemp>	
+<BoshBaseHeater1Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgBaseHeater1TempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">BaseHeater1 temp exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">208</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/BaseHeater1SensorTemp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgBaseHeater1TempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgBaseHeater1TempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgBaseHeater1TempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">BaseHeater1 temp exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">209</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/BaseHeater1SensorTemp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgBaseHeater1TempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgBaseHeater1TempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>			
+</BoshBaseHeater1Temp>
+<BoshBaseHeater2Temp type="instance" class="TempProcessCheckItem">
+	<setSetPoint type="method">/SETUP/TempCtl/cfgBaseHeater2TempSetpoint</setSetPoint>	
+	<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgTunableESCToleranceCheckDelay</setCheckDelaySCh-->	
+	<!--setAlarmMessage type="method">BaseHeater2 temp exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">210</setAlarmMessageID>	
+	<setAlarmSeverity type="method">2</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/BaseHeater2SensorTemp</setSensor>
+	<setTolerance type="method">/SETUP/TempCtl/cfgBaseHeater2TempSoftTol</setTolerance>		
+	<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgBaseHeater2TempSoftTolTime</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setSetPoint type="method">/SETUP/TempCtl/cfgBaseHeater2TempSetpoint</setSetPoint>	
+		<!--setAlarmMessage type="method">BaseHeater2 temp exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">211</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>		
+		<setSensor type="method">/Control/PMCExports/Datas/BaseHeater2SensorTemp</setSensor>
+		<setTolerance type="method">/SETUP/TempCtl/cfgBaseHeater2TempHardTol</setTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/TempCtl/cfgBaseHeater2TempHardTolTime</setDurativeTimeSCh>	
+	</CheckHardTolerance>			
+</BoshBaseHeater2Temp>
+
+
+
+
+
+
+	

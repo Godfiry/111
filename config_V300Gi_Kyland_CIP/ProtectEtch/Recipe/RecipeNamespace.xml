@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RecipeNamespace name="Local" readOnlyLvl="2">
+  <RecipeClass name="Process">
+    <RecipeExecutor type="default">
+      <Param name="ProcessTime" dataObject="" type="D" min="0" max="360000" units="sec" accuracy="0.1" default="0" />
+    </RecipeExecutor>
+  </RecipeClass>
+</RecipeNamespace>

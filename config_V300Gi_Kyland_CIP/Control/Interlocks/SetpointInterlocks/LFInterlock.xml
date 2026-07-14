@@ -1,0 +1,82 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open LF generator</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChamberPressureAbove75T</addToIOInterlocks>
+	<addToIOInterlocks type="method">./CoilEnclosureSWOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./LFMatchConnect</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./ChamberSWOpen</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./SlotValveOpen</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DPAlarmPresent</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DryPumpNotRunning</addToIOInterlocks>
+	<addToIOInterlocks type="method">./TMPFault</addToIOInterlocks>
+	<addToIOInterlocks type="method">./LFOverheat</addToIOInterlocks>
+	<addToIOInterlocks type="method">./HeRFCoverNotConnect</addToIOInterlocks>
+	<addToIOInterlocks type="method">./InnerDoorOpen</addToIOInterlocks>
+	
+	<ChamberPressureAbove75T type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">248</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/VACSwitchDI==1)</setConditionStr>
+	</ChamberPressureAbove75T>
+
+	<CoilEnclosureSWOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">249</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/CoilEnclosureSWDI==1)</setConditionStr>
+	</CoilEnclosureSWOpen>	
+
+	<LFMatchConnect type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">293</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/LMatchConSWDI==1)</setConditionStr>
+	</LFMatchConnect>	
+	
+	<ChamberSWOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">250</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/ChamberSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/ChamberSW2DI==1))</setConditionStr>
+	</ChamberSWOpen>	
+	
+	<SlotValveOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">251</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/SlotValveCloseDI==1)</setConditionStr>
+	</SlotValveOpen>	
+	
+	<DPAlarmPresent type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">252</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DPAlarmPresent>
+	
+	<DryPumpNotRunning type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">253</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+	</DryPumpNotRunning>
+		
+	<TMPFault type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">254</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/TMPFaultDI==1)</setConditionStr>
+	</TMPFault>	
+	
+	<LFOverheat type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">255</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/LFOverheatDI==0)</setConditionStr>
+	</LFOverheat>		
+	
+	<HeRFCoverNotConnect type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">256</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/HeRFCoverSWDI==1)</setConditionStr>
+	</HeRFCoverNotConnect>
+	
+	<InnerDoorOpen type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">309</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/InnerDoorOpenDI==0)</setConditionStr>
+	</InnerDoorOpen>
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method">./LFNotOff</addToIOInterlocks>
+	
+	<LFNotOff type="instance" class="IOInterlockCondition">
+		<setMessage type="method">Can't close LF With LF on</setMessage>
+		<setMessageID type="method">257</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/LFPowerOnDO==0)</setConditionStr>
+	</LFNotOff-->	
+		
+	&SetSimulated;
+</CloseInterlocks>

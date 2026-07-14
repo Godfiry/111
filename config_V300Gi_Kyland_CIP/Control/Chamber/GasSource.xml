@@ -1,0 +1,3141 @@
+<!-->the ProcessGasIDs is in order, if the add order changed , the process procedure changed</-->
+<ProcessGasIDs type="instance" class="GasIDs" alias="">
+	<addGasID type="method">FV11</addGasID>
+	<addGasID type="method">FV12</addGasID>
+	<addGasID type="method">FV21</addGasID>
+	<addGasID type="method">FV22</addGasID>
+	<addGasID type="method">FP11</addGasID>
+	<addGasID type="method">FP12</addGasID>
+	<addGasID type="method">FP21</addGasID>
+	<addGasID type="method">FP22</addGasID>
+	<addGasID type="method">&Gas1Name;</addGasID>
+	<addGasID type="method">&Gas2Name;</addGasID>
+	<addGasID type="method">&Gas3Name;</addGasID>
+	<addGasID type="method">&Gas4Name;</addGasID>
+	<addGasID type="method">&Gas5Name;</addGasID>
+	<addGasID type="method">&Gas6Name;</addGasID>
+	<addGasID type="method">&Gas7Name;</addGasID>
+	<addGasID type="method">&Gas8Name;</addGasID>
+	<addGasID type="method">&Gas9Name;</addGasID>
+	<addGasID type="method">&Gas10Name;</addGasID>
+	<addGasID type="method">&Gas11Name;</addGasID>
+	<addGasID type="method">&Gas12Name;</addGasID>
+	<addGasID type="method">&Gas13Name;</addGasID>
+	<addGasID type="method">&Gas14Name;</addGasID>
+	<addGasID type="method">&Gas15Name;</addGasID>
+	<addGasID type="method">&Gas16Name;</addGasID>
+	<addGasID type="method">&Gas17Name;</addGasID>
+	<addGasID type="method">&Gas18Name;</addGasID>
+	<addGasID type="method">PendulumValve</addGasID>
+	
+	<addGroupFinalGasID type="method">&Gas1Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas2Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas3Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas4Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas5Name;,FV12</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas6Name;,FV22</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas7Name;,FV21</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas8Name;,FV21</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas9Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas10Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas11Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas12Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas13Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas14Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas15Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas16Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas17Name;,FV11</addGroupFinalGasID>
+	<addGroupFinalGasID type="method">&Gas18Name;,FV11</addGroupFinalGasID>
+</ProcessGasIDs>
+
+<GasSource type="instance" class="GasSource">
+	<setTheGasses type="method">./GasValves</setTheGasses>	
+	
+	<GasValves type="instance" class="Gasses">
+		<addToGasValve type="method">./Gas1</addToGasValve>
+		<addToGasValve type="method">./Gas2</addToGasValve>
+		<addToGasValve type="method">./Gas3</addToGasValve>
+		<addToGasValve type="method">./Gas4</addToGasValve>
+		<addToGasValve type="method">./Gas5</addToGasValve>
+		<addToGasValve type="method">./Gas6</addToGasValve>
+		<addToGasValve type="method">./Gas7</addToGasValve>
+		<addToGasValve type="method">./Gas8</addToGasValve>
+		<addToGasValve type="method">./Gas9</addToGasValve>
+		<addToGasValve type="method">./Gas10</addToGasValve>
+		<addToGasValve type="method">./Gas11</addToGasValve>
+		<addToGasValve type="method">./Gas12</addToGasValve>
+		<addToGasValve type="method">./Gas13</addToGasValve>
+		<addToGasValve type="method">./Gas14</addToGasValve>
+		<addToGasValve type="method">./Gas15</addToGasValve>
+		<addToGasValve type="method">./Gas16</addToGasValve>
+		<addToGasValve type="method">./Gas17</addToGasValve>
+		<addToGasValve type="method">./Gas18</addToGasValve>
+		<addToGasValve type="method">./Gases</addToGasValve>
+		<addToGasValve type="method">./PendulumValve</addToGasValve>
+		
+		<addToGasValve type="method">./V1</addToGasValve>
+		<addToGasValve type="method">./V2</addToGasValve>
+		<!--addToGasValve type="method">./V3</addToGasValve-->
+		<addToGasValve type="method">./V4</addToGasValve>
+		<addToGasValve type="method">./V401</addToGasValve>
+		<addToGasValve type="method">./V402</addToGasValve>
+		<addToGasValve type="method">./V403</addToGasValve>
+		<addToGasValve type="method">./V5</addToGasValve>
+		<addToGasValve type="method">./V501</addToGasValve>
+		<addToGasValve type="method">./V502</addToGasValve>
+		<addToGasValve type="method">./V503</addToGasValve>
+		<addToGasValve type="method">./V801</addToGasValve>
+		<addToGasValve type="method">./V901</addToGasValve>
+        <!--addToGasValve type="method">./V801</addToGasValve-->
+		<addToGasValve type="method">./V802</addToGasValve>
+		<!--addToGasValve type="method">./V901</addToGasValve-->
+		<addToGasValve type="method">./V902</addToGasValve>
+		
+		<addToGasValve type="method">./FV11</addToGasValve>
+		<addToGasValve type="method">./FV12</addToGasValve>
+		<addToGasValve type="method">./FV21</addToGasValve>
+		<addToGasValve type="method">./FV22</addToGasValve>
+		<addToGasValve type="method">./FP11</addToGasValve>
+		<addToGasValve type="method">./FP12</addToGasValve>
+		<addToGasValve type="method">./FP21</addToGasValve>
+		<addToGasValve type="method">./FP22</addToGasValve>
+		<addToGasValve type="method">./HeValve1</addToGasValve>
+		<addToGasValve type="method">./HeValve2</addToGasValve>
+		<addToGasValve type="method">./HeValve3</addToGasValve>
+		<addToGasValve type="method">./HeValve4</addToGasValve>
+		<addToGasValve type="method">./HeValve22</addToGasValve>
+		<addToGasValve type="method">./HeValve32</addToGasValve>
+		<addToGasValve type="method">./HeValve42</addToGasValve>
+		<addToGasValve type="method">./TMPIsolationValve</addToGasValve>
+		<addToGasValve type="method">./TMPPurgeValve</addToGasValve>
+		<addToGasValve type="method">./ResetButton</addToGasValve>
+		
+		<Gas1 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas1Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V501/V501Controller</addValve>
+			<addValve type="method">Final,../FV12/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas1Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve11DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas1Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve13DO</setActuatorCh>
+					
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas1Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve12DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas1SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas1AT</setReadGasData>
+			</MFCController>	
+		</Gas1>
+		
+		<Gas2 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas2Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V501/V501Controller</addValve>
+			<addValve type="method">Final,../FV12/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas2Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve21DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas2Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve23DO</setActuatorCh>
+					
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas2Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve22DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas2SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas2AT</setReadGasData>
+			</MFCController>
+		</Gas2>	
+		
+		<Gas3 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas3Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V501/V501Controller</addValve>
+			<addValve type="method">Final,../FV12/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas3Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve31DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas3Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve33DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas3Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve32DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas3SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas3AT</setReadGasData>
+			</MFCController>	
+		</Gas3>	
+		
+		<Gas4 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas4Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V501/V501Controller</addValve>
+			<addValve type="method">Final,../FV12/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas4Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve41DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas4Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve43DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas4Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve42DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas4SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas4AT</setReadGasData>
+			</MFCController>
+		</Gas4>
+		
+		<Gas5 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas5Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V501/V501Controller</addValve>
+			<addValve type="method">Final,../FV12/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas5Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve51DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas5Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve53DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas5Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve52DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas5SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas5AT</setReadGasData>
+			</MFCController>	
+		</Gas5>	
+		
+		<Gas6 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas6Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V502/V502Controller</addValve>
+			<addValve type="method">Final,../FV22/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas6Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve61DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas6Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve63DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas6Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve62DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas6SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas6AT</setReadGasData>
+			</MFCController>
+		</Gas6>	
+		
+		<Gas7 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas7Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V503/V503Controller</addValve>
+			<addValve type="method">Final,../FV21/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas7Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve71DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas7Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve73DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas7Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve72DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas7SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas7AT</setReadGasData>
+			</MFCController>
+		</Gas7>
+		
+		<Gas8 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas8Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V503/V503Controller</addValve>
+			<addValve type="method">Final,../FV21/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas8Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve81DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&O2PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas8Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve83DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas8Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve82DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&O2GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas8SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas8AT</setReadGasData>
+			</MFCController>
+		</Gas8>
+
+		<Gas9 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas9Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas9Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve91DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas9Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve93DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas9Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve92DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas9SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas9AT</setReadGasData>
+			</MFCController>
+		</Gas9>
+
+		<Gas10 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas10Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas10Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve101DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&O2PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas10Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve103DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas10Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve102DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&O2GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas10SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas10AT</setReadGasData>
+			</MFCController>
+		</Gas10>
+		
+		<Gas11 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas11Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas11Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve111DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&H2PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas11Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve113DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas11Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve112DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&H2GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas11SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas11AT</setReadGasData>
+			</MFCController>
+		</Gas11>
+		
+		<Gas12 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas12Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas12Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve121DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas12Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve123DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas12Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve122DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas12SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas12AT</setReadGasData>
+			</MFCController>
+		</Gas12>
+		
+		<Gas13 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas13Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas13Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve131DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas13Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve133DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas13Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve132DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas13SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas13AT</setReadGasData>
+			</MFCController>
+		</Gas13>
+		
+		<Gas14 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas14Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas14Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve141DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas14Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve143DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas14Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve142DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas14SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas14AT</setReadGasData>
+			</MFCController>
+		</Gas14>
+		
+		<Gas15 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas15Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas15Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve151DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas15Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve153DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas15Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve152DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas15SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas15AT</setReadGasData>
+			</MFCController>
+		</Gas15>
+		
+		<Gas16 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas16Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas16Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve161DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas16Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve163DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas16Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve162DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas16SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas16AT</setReadGasData>
+			</MFCController>
+		</Gas16>
+		
+		<Gas17 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas17Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas17Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve171DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas17Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve173DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas17Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve172DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas17SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas17AT</setReadGasData>
+			</MFCController>
+		</Gas17>
+		
+		<Gas18 type="instance" class="ProcessGasLine">
+			<setGasID type="method">&Gas18Name;</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addValve type="method">Primary,./PrimaryValve</addValve>
+			<addValve type="method">Purge,./PurgeValve</addValve>
+			<addValve type="method">Secondary,./SecondaryValve</addValve>
+			<addValve type="method">Chamber,../V5/V5Controller</addValve>
+			<addValve type="method">Final,../FV11/FVController</addValve>
+			<setMFCController type="method">./MFCController</setMFCController>
+			&SetSimulated;
+			
+			<PrimaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas18Primary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPrimaryValve181DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PrimaryValveInterlock;
+				&oneActuator;
+			</PrimaryValve>
+			
+			<PurgeValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas18Purge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasPurgValve183DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&PurgeValveInterlock;
+				&oneActuator;
+			</PurgeValve>	
+			
+			<SecondaryValve type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/Gas18Secondary_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/GasSecondValve182DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&GasValveInterlock;
+				&oneActuator;
+			</SecondaryValve>		
+			
+			<MFCController type="instance" class="MFCController">
+				<setWriteGasData type="method">/Control/PMCExports/Datas/Gas18SP</setWriteGasData>
+				<setReadGasData type="method">/Control/PMCExports/Datas/Gas18AT</setReadGasData>
+			</MFCController>
+		</Gas18>
+		
+		<Gases type="instance" class="SetpointGasLineSys">
+			<setGasID type="method">Gases</setGasID>	
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<addProcessGasLine type="method">../Gas1</addProcessGasLine>	
+			<addProcessGasLine type="method">../Gas2</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas3</addProcessGasLine>	
+			<addProcessGasLine type="method">../Gas4</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas5</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas6</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas7</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas8</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas9</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas10</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas11</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas12</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas13</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas14</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas15</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas16</addProcessGasLine>			
+			<addProcessGasLine type="method">../Gas17</addProcessGasLine>
+			<addProcessGasLine type="method">../Gas18</addProcessGasLine>				
+			&SetSimulated;
+		</Gases>		
+		
+		<PendulumValve type="instance" class="PendulumValve">
+			<setGasID type="method">PendulumValve</setGasID>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<setPendulumController type="method">./PendulumController</setPendulumController>
+			&SetSimulated;
+			
+			<PendulumController type="instance" class="PendulumController">
+				<setLocalRemoteWCh type="method">/Control/PMCExports/Datas/VATRunModeSP</setLocalRemoteWCh>
+				<setOpenCloseWCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_OpenCloseDO</setOpenCloseWCh>
+				<setPressureWCh type="method">/Control/PMCExports/Datas/VATPressureSP</setPressureWCh>
+				<setPositionWCh type="method">/Control/PMCExports/Datas/VATPositionSP</setPositionWCh>
+				<setPressureRCh type="method">/Control/PMCExports/Datas/ProcessPressure</setPressureRCh>
+				<setPositionRCh type="method">/Control/PMCExports/Datas/VATPosition</setPositionRCh>
+				<setLocalRemoteRCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_LocalRemoteRCh</setLocalRemoteRCh>
+				<setStatusCh type="method">/Control/PMCExports/InnerDatas/PendulumValveStatusDI</setStatusCh>
+				<setLeanWCh type="method">/Control/PMCExports/Datas/PendulumValve_LearnSP</setLeanWCh>
+				<setZeroAdjustWCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_ZeroSP</setZeroAdjustWCh>
+				<setCloseInterlocks type="method">./CloseInterlocks</setCloseInterlocks>
+				<setFlowGasInterlocks type="method">./OpenInterlocks</setFlowGasInterlocks>
+				<setOpenInterlocks type="method">./OpenInterlocks</setOpenInterlocks>
+				<setDelayTimeMS type="method">0</setDelayTimeMS>
+				<setCloseTimeOut type="method">20</setCloseTimeOut>
+				&PendulumInterlock;
+				&SetSimulated;
+			</PendulumController>				
+		</PendulumValve>		
+	
+		<V1 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V1</setGasID>
+			<setValveController type="method">./V1Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V1Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V1_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/N2PurgeValveV1DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				&V1Interlock;
+				&oneActuator;
+			</V1Controller>				
+		</V1>	
+		
+		<V2 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V2</setGasID>
+			<setValveController type="method">./V2Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V2Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V2_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/VacuumPrimaryValveV2DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V2Interlock;
+				&oneActuator;
+			</V2Controller>				
+		</V2>
+		
+		<V3 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V3</setGasID>
+			<setValveController type="method">./V3Controller</setValveController>
+			<setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource>
+			&SetSimulated;
+			
+			<V3Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V3_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV4DO</setActuatorCh>
+					<setDelayMS type="method">500</setDelayMS>
+				</Actuator>
+				
+				&V3Interlock;
+				&oneActuator;
+			</V3Controller>				
+		</V3>	
+		
+		<V4 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V4</setGasID>
+			<setValveController type="method">./V4Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V4Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V4_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV4DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V4Interlock;
+				&oneActuator;
+			</V4Controller>				
+		</V4>	
+		
+		<V401 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V401</setGasID>
+			<setValveController type="method">./V401Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V401Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V401_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV401DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V4Interlock;
+				&oneActuator;
+			</V401Controller>				
+		</V401>
+		
+		<V402 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V402</setGasID>
+			<setValveController type="method">./V402Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V402Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V402_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV402DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V4Interlock;
+				&oneActuator;
+			</V402Controller>				
+		</V402>
+		
+		<V403 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V403</setGasID>
+			<setValveController type="method">./V403Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V403Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V403_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ManifoldPrechargeValveV403DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V4Interlock;
+				&oneActuator;
+			</V403Controller>				
+		</V403>
+		
+		<V5 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V5</setGasID>
+			<setValveController type="method">./V5Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V5Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V5_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV5DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V5Interlock;
+				&oneActuator;
+			</V5Controller>				
+		</V5>	
+		
+				<V501 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V501</setGasID>
+			<setValveController type="method">./V501Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V501Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V501_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV501DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V5Interlock;
+				&oneActuator;
+			</V501Controller>				
+		</V501>
+		
+		<V502 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V502</setGasID>
+			<setValveController type="method">./V502Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V502Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V502_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV502DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V5Interlock;
+				&oneActuator;
+			</V502Controller>				
+		</V502>
+		
+		<V503 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V503</setGasID>
+			<setValveController type="method">./V503Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V503Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V503_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberDeliveryV503DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V5Interlock;
+				&oneActuator;
+			</V503Controller>				
+		</V503>
+		
+		<V801 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V801</setGasID>
+			<setValveController type="method">./V8Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V8Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V801_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV801DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V8Interlock;
+				&oneActuator;
+			</V8Controller>				
+		</V801>
+		
+		<V901 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V901</setGasID>
+			<setValveController type="method">./V9Controller</setValveController>
+			<setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource>
+			&SetSimulated;
+			
+			<V9Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V901_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV901DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V9Interlock;
+				&oneActuator;
+			</V9Controller>				
+		</V901>		
+		
+		<V802 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V802</setGasID>
+			<setValveController type="method">./V802Controller</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<V802Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V802_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberSlowVentValveV802DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V8Interlock;
+				&oneActuator;
+			</V802Controller>				
+		</V802>
+		
+		<V902 type="instance" class="SetpointGasValve">
+			<setGasID type="method">V902</setGasID>
+			<setValveController type="method">./V902Controller</setValveController>
+			<setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource>
+			&SetSimulated;
+			
+			<V902Controller type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/V902_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/InnerDatas/ChamberFastVentValveV902DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&V9Interlock;
+				&oneActuator;
+			</V902Controller>				
+		</V902>
+		
+		<FV11 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FV11</setGasID>
+			<setValveController type="method">./FVController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FVController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV11ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP11ValveDO</setActuatorCh>
+					
+				</CloseActuator>	
+				
+				&FV11ValveInterlock;
+				&twoActuatorV;
+			</FVController>				
+		</FV11>
+
+		<FV12 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FV12</setGasID>
+			<setValveController type="method">./FVController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FVController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV12ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP12ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FV12ValveInterlock;
+				&twoActuatorV;
+			</FVController>				
+		</FV12>
+		
+		<FV21 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FV21</setGasID>
+			<setValveController type="method">./FVController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FVController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV21ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP21ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FV21ValveInterlock;
+				&twoActuatorV;
+			</FVController>				
+		</FV21>
+
+		<FV22 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FV22</setGasID>
+			<setValveController type="method">./FVController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FVController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV22ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP22ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FV22ValveInterlock;
+				&twoActuatorV;
+			</FVController>				
+		</FV22>
+		
+		<FP11 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FP11</setGasID>
+			<setValveController type="method">./FPController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FPController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+				
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP11ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV11ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FP11ValveInterlock;
+				&twoActuatorV;
+			</FPController>				
+		</FP11>
+		
+		<FP12 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FP12</setGasID>
+			<setValveController type="method">./FPController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FPController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP12ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV12ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FP12ValveInterlock;
+				&twoActuatorV;
+			</FPController>				
+		</FP12>
+		
+		<FP21 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FP21</setGasID>
+			<setValveController type="method">./FPController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FPController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP21ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV21ValveDO</setActuatorCh>
+					
+				</CloseActuator>
+				
+				&FP21ValveInterlock;
+				&twoActuatorV;
+			</FPController>				
+		</FP21>
+		
+		<FP22 type="instance" class="SetpointGasValve">
+			<setGasID type="method">FP22</setGasID>
+			<setValveController type="method">./FPController</setValveController>
+			<setGaugeSource type="method">../../../ProcessGaugeSource/GaugeMechanism</setGaugeSource>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<FPController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+
+				<OpenActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FP22ValveDO</setActuatorCh>
+					
+				</OpenActuator>
+		
+				<CloseActuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/FV22ValveDO</setActuatorCh>
+					
+				</CloseActuator>								
+				
+				&FP22ValveInterlock;
+				&twoActuatorV;
+			</FPController>				
+		</FP22>
+		
+		<HeValve1 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve1</setGasID>
+			<setValveController type="method">./HeController1</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController1 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve1_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve1DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController1>				
+		</HeValve1>								
+	
+		<HeValve2 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve2</setGasID>
+			<setValveController type="method">./HeController2</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController2 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve2_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve2DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController2>				
+		</HeValve2>
+		
+		<HeValve3 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve3</setGasID>
+			<setValveController type="method">./HeController3</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController3 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve3_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve3DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController3>				
+		</HeValve3>	
+		
+		<HeValve4 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve4</setGasID>
+			<setValveController type="method">./HeController4</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController4 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve4_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve4DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController4>						
+		</HeValve4>	
+		
+		<HeValve22 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve22</setGasID>
+			<setValveController type="method">./HeController22</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController22 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve22_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve22DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController22>						
+		</HeValve22>
+		 
+		<HeValve32 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve32</setGasID>
+			<setValveController type="method">./HeController32</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController32 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve32_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve23DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController32>						
+		</HeValve32>
+		
+		<HeValve42 type="instance" class="SetpointGasValve">
+			<setGasID type="method">HeValve42</setGasID>
+			<setValveController type="method">./HeController42</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<HeController42 type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>	
+	
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/HeValve42_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>
+								
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve24DO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+				</Actuator>
+				
+				&HeliumValveInterlock;
+				&oneActuator;
+			</HeController42>						
+		</HeValve42>
+
+
+		<TMPIsolationValve type="instance" class="SetpointGasValve">
+			<setGasID type="method">TMPIsolationValve</setGasID>
+			<setValveController type="method">./TMPIsolationController</setValveController>
+			<!--setGaugeSource type="method">../../../ForlineGaugeSource/GaugeMechanism</setGaugeSource-->
+			<setGaugeSource type="method">../../../ForlinePressureSwitch</setGaugeSource>
+			&SetSimulated;
+			
+			<TMPIsolationController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+				
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/TMPIso_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>	
+						
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/ISOValveDO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+					<!--setExportName type="method">dLAC/ATMSns</setExportName-->
+				</Actuator>
+								
+				&IsoValveInterlock;
+				&oneActuator;					
+			</TMPIsolationController>								
+		</TMPIsolationValve>	
+		
+		<TMPPurgeValve type="instance" class="SetpointGasValve">
+			<setGasID type="method">TMPPurgeValve</setGasID>
+			<setValveController type="method">./TMPPurgeController</setValveController>
+			<!--setGaugeSource type="method">../../../ForlineGaugeSource/GaugeMechanism</setGaugeSource-->
+			<setGaugeSource type="method">../../../ForlinePressureSwitch</setGaugeSource>
+			&SetSimulated;	
+			
+			<TMPPurgeController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+				
+				<InterlockData type="data" dataType="I" accessMode="RW" alias="/Control/PMCExports/Datas/TMPPurge_Sns">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>	
+						
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/TMPPurgeValveDO</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+					<!--setExportName type="method">dLAC/ATMSns</setExportName-->
+				</Actuator>
+								
+				&TMPValveInterlock;
+				&oneActuator;					
+			</TMPPurgeController>						
+		</TMPPurgeValve>		
+		
+		<SimulatedGasValve type="instance" class="SetpointGasValve">
+			<setGasID type="method">SimulatedGasValve</setGasID>
+			<setValveController type="method">./SimulatedController</setValveController>
+			<!--setGaugeSource type="method">../../../ATMPressureSwitch</setGaugeSource-->
+			&SetSimulated;
+			
+			<SimulatedController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+				
+				<InterlockData type="data" dataType="I" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>	
+						
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">./SimulatedCh</setActuatorCh>
+					
+						<SimulatedCh type="data" dataType="I" accessMode="RW">
+							<Bd></Bd>
+							<Ch></Ch>
+							<DescriptorList>Close,Open</DescriptorList>
+						</SimulatedCh>
+				</Actuator>
+								
+				&NoInterlock;
+				&oneActuator;					
+			</SimulatedController>							
+		</SimulatedGasValve>																										
+		
+		<ResetButton type="instance" class="SetpointGasValve">
+			<setGasID type="method">ResetButton</setGasID>
+			<setValveController type="method">./ResetButtonController</setValveController>
+			&SetSimulated;
+			
+			<ResetButtonController type="instance" class="ValveController">
+				<setClosePosition type="method">./Close</setClosePosition>
+				<setOpenPosition type="method">./Open</setOpenPosition>
+				<setInterlockChannel type="method">./InterlockData</setInterlockChannel>
+				<setPositionChannel type="method">./PositionIndication</setPositionChannel>		
+				
+				<InterlockData type="data" dataType="I" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<DescriptorList>UNKNOWN:-1,Close,Open</DescriptorList>
+				</InterlockData>					
+				
+				<PositionIndication type="data" dataType="S" accessMode="RW">
+					<Bd></Bd>
+					<Ch></Ch>
+					<MaxLength>100</MaxLength>
+				</PositionIndication>	
+						
+				<Actuator type="instance" class="Actuator">
+					<setActuatorCh type="method">/Control/PMCExports/Datas/DnetReset</setActuatorCh>
+					<!--setDelayMS type="method">500</setDelayMS-->
+					<!--setExportName type="method">dLAC/ATMSns</setExportName-->
+				</Actuator>
+				
+				&NoInterlock;	
+				&oneActuator;					
+			</ResetButtonController>								
+		</ResetButton>
+	</GasValves>
+</GasSource>

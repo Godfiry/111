@@ -1,0 +1,17 @@
+<StatusMonitor type="instance" class="StatusMonitor">
+	<setIntervalS type="method">0.2</setIntervalS>		
+	<setAutoStart type="method">true</setAutoStart>	
+	
+	&SetSimulated;	
+	&GasValueIntlk;	
+	&RFValueIntlk;
+	&TempCtlValueIntlk;
+	&ESCValueIntlk;
+	&VacuumValueIntlk;
+	&ConnectStatusValueIntlk;
+</StatusMonitor>
+
+
+
+
+

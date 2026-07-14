@@ -1,0 +1,43 @@
+<addActuator type="method">./CloseHeliumVlv1</addActuator>	
+<addActuator type="method">./CloseHeliumVlv2</addActuator>
+<addActuator type="method">./CloseHeliumVlv3</addActuator>
+<addActuator type="method">./CloseHeliumVlv4</addActuator>
+<addActuator type="method">./CloseHeliumVlv22</addActuator>
+<addActuator type="method">./CloseHeliumVlv32</addActuator>
+<addActuator type="method">./CloseHeliumVlv42</addActuator>
+		
+		
+<CloseHeliumVlv1 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve1DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv1>
+
+<CloseHeliumVlv2 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve2DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv2>
+
+<CloseHeliumVlv3 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve3DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv3>
+
+<CloseHeliumVlv4 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve4DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv4>
+
+<CloseHeliumVlv22 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve22DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv22>
+
+<CloseHeliumVlv32 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve23DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv32>
+
+<CloseHeliumVlv42 type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/Datas/HeliumValve24DO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</CloseHeliumVlv42>

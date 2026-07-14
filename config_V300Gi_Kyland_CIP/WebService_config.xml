@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WebService>
+	<HostID Value="127.0.0.1"/>
+	<DataService Port="10200" Path="/root/Desktop/PMC/bin/data.wsdl"/>
+	<ControlService Port="10201" Path="/root/Desktop/PMC/bin/control.wsdl"/>
+	<AlarmService Port="10202" Path="/root/Desktop/PMC/bin/alarm.wsdl"/>
+	<RcpStpService Port="10203" Path="/root/Desktop/PMC/bin/rcpstp.wsdl"/>
+	<InlkdbService Port="10204" Path="/root/Desktop/PMC/bin/inlkdb.wsdl"/>
+	<RcpService Port="10205" Path="/root/Desktop/PMC/bin/rcp.wsdl"/>
+</WebService>

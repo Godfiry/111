@@ -1,0 +1,41 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setPostAlarm type="method">true</setPostAlarm>
+	<setAlarmMessage type="method">Can't open Turbo pump</setAlarmMessage>
+	<addToIOInterlocks type="method">./ChamberPressureAbove500mT</addToIOInterlocks>
+	<addToIOInterlocks type="method">./ForlinePressureAbove750mT</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./DryPumpNotRunning</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./DryPumpAlarm</addToIOInterlocks>
+	<addToIOInterlocks type="method">./TMPFaultAbnormal</addToIOInterlocks>
+	
+	<ChamberPressureAbove500mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">285</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ChamberPressureSW2DI==1)</setConditionStr>
+	</ChamberPressureAbove500mT>	
+
+	<ForlinePressureAbove750mT type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">286</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/ForlinePressure1SWDI==1)</setConditionStr>
+	</ForlinePressureAbove750mT>	
+	
+	<DryPumpNotRunning type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open Turbo Pump With Dry pump not running</setMessage-->
+		<setMessageID type="method">287</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+	</DryPumpNotRunning>		
+	
+	<DryPumpAlarm type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">288</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DryPumpAlarm>
+	
+	<TMPFaultAbnormal type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">335</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/TMPFaultDI==1)</setConditionStr>
+	</TMPFaultAbnormal>
+		
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	&SetSimulated;
+</CloseInterlocks>

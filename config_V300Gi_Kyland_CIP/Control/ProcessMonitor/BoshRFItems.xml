@@ -1,0 +1,62 @@
+<addCheckItem type="method">./BoschSRFPower</addCheckItem>
+<addCheckItem type="method">./BoschLFPower</addCheckItem>
+<!--addCheckItem type="method">./BoschSRFC5Preset</addCheckItem-->
+<addCheckItem type="method">./BoschSRFMatchCurrRatio</addCheckItem>
+
+<BoschSRFPower type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">SRFPower(W)</setSetPointID>
+	<setSoftTriggerAlarm type="method">91,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">92,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/SRF_ForwardPower</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgSRFPowerSoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgSRFPowerHardTol</setSensorHardTolerance>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+</BoschSRFPower>
+
+<BoschLFPower type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">LFPower(W)</setSetPointID>	
+	<setSoftTriggerAlarm type="method">97,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">98,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/LF_ForwardPower</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgLFPowerSoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgLFPowerHardTol</setSensorHardTolerance>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+</BoschLFPower>
+
+<BoschSRFC5Preset type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">SRFC5Preset</setSetPointID>	
+	<setSoftTriggerAlarm type="method">144,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">145,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/SRFC5</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/Recipe/cfgSRFC5PresetSoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/Recipe/cfgSRFC5PresetHardTol</setSensorHardTolerance>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+</BoschSRFC5Preset>
+	
+<BoschSRFMatchCurrRatio type="instance" class="BoshGasProcessCheckItem">
+	<setSetPointID type="method">SRFMatchCurrRatio</setSetPointID>	
+	<setSoftTriggerAlarm type="method">154,2</setSoftTriggerAlarm>	
+	<setHardTriggerAlarm type="method">155,1</setHardTriggerAlarm>
+	<setSensor type="method">/Control/PMCExports/Datas/CurrentRatio</setSensor>
+	<setZeroTolerance type="method">1</setZeroTolerance>
+	<setSensorSoftTolerance type="method">/SETUP/RF/cfgSRFMatchCurrRatioSoftTol</setSensorSoftTolerance>
+	<setSensorHardTolerance type="method">/SETUP/RF/cfgSRFMatchCurrRatioHardTol</setSensorHardTolerance>
+	<setCycleAbnormalPointSoftTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointSoftPercent</setCycleAbnormalPointSoftTolerance>
+	<setCycleAbnormalPointHardTolerance type="method">/SETUP/CycleRecipe/cfgCycleAbnormalPointHardPercent</setCycleAbnormalPointHardTolerance>		
+	<setAbnormalDurativePointCh type="method">/SETUP/CycleRecipe/cfgCycleAbnormalDurativePointNum</setAbnormalDurativePointCh>
+</BoschSRFMatchCurrRatio>
+
+	
+	
+
+
+

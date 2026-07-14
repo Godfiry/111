@@ -1,0 +1,22 @@
+<addCheckItem type="method">./InnerDoorOpen</addCheckItem>
+<addCheckItem type="method">./InnerDoorClose</addCheckItem>
+
+<InnerDoorOpen type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">InnerDoorOpen</setSetPointID>	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgRingUpCheckDelay</setCheckDelaySCh-->
+		<setAlarmMessage type="method">Inner Door Open failed</setAlarmMessage>	
+		<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/InnerDoorOpenDI==0)||(/Control/PMCExports/InnerDatas/InnerDoorCloseDI==1))</setTriggerCondition>		
+		<!--setAlarmMessageID type="method">160</setAlarmMessageID-->
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setDurativeTimeSCh type="method">/SETUP/Recipe/cfgInnerDoorOpenTimeout</setDurativeTimeSCh>		
+</InnerDoorOpen>
+
+<InnerDoorClose type="instance" class="ProcessCheckItem">
+		<setSetPointID type="method">InnerDoorClose</setSetPointID>	
+		<!--setCheckDelaySCh type="method">/SETUP/EChuck/cfgRingDownCheckDelay</setCheckDelaySCh-->
+		<setAlarmMessage type="method">Inner Door Close failed</setAlarmMessage>	
+		<setTriggerCondition type="method">((/Control/PMCExports/InnerDatas/InnerDoorOpenDI==1)||(/Control/PMCExports/InnerDatas/InnerDoorCloseDI==0))</setTriggerCondition>	
+		<!--setAlarmMessageID type="method">161</setAlarmMessageID-->
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setDurativeTimeSCh type="method">/SETUP/Recipe/cfgInnerDoorCloseTimeout</setDurativeTimeSCh>		
+</InnerDoorClose>

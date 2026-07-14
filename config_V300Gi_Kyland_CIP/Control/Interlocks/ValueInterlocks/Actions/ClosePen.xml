@@ -1,0 +1,6 @@
+<addActuator type="method">./ClosePenValve</addActuator>
+
+<ClosePenValve type="instance" class="Actuator">
+	<setActuatorCh type="method">/Control/PMCExports/InnerDatas/PendulumValve_OpenCloseDO</setActuatorCh>
+	<setActiveHigh type="method">false</setActiveHigh>
+</ClosePenValve>	

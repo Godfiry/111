@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SysLog>
+	<Dir>/home/nmc/PMCI/log</Dir>
+	<Threshold>5000</Threshold>
+	<Branch>
+	       <IO level="PROBLEM">1</IO>
+	     <CORE level="VERBOSE">1</CORE>
+	    <CONTROL level="EVENT">1</CONTROL>
+	  <CONDITION level="PROBLEM">1</CONDITION>
+	    <ALARM level="VERBOSE">1</ALARM>
+	<INTERLOCK level="PROBLEM">1</INTERLOCK>
+	  <DATALOG level="EVENT">1</DATALOG>
+	   <RECIPE level="EVENT">1</RECIPE>
+	      <SETUP level="EVENT">1</SETUP>
+	   <REMOTE level="FATAL">1</REMOTE>
+	      <APP level="VERBOSE">1</APP>
+	</Branch>
+</SysLog>
+

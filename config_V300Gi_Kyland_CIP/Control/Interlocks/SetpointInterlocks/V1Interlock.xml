@@ -1,0 +1,60 @@
+<OpenInterlocks type="instance" class="IOInterlocks">
+	<setAlarmMessage type="method">Can't open V1 valve</setAlarmMessage>
+    <addToIOInterlocks type="method">./CDANoOK</addToIOInterlocks>
+	<!--addToIOInterlocks type="method">./DryPumpAlarm</addToIOInterlocks>
+	<addToIOInterlocks type="method">./DryPumpNotRunning</addToIOInterlocks-->
+	<addToIOInterlocks type="method">./CustomerIntlkInvoked</addToIOInterlocks>
+	<addToIOInterlocks type="method">./CustomerGasDetectFailed</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxDoor1NotClosed</addToIOInterlocks>
+	<addToIOInterlocks type="method">./GasBoxPressAbnormal</addToIOInterlocks>	
+	<addToIOInterlocks type="method">./N2PressureAbnormal</addToIOInterlocks>
+	
+	<CDANoOK type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">233</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasboxCDADI==1)</setConditionStr>
+	</CDANoOK>
+	
+	<DryPumpAlarm type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open Valve With DryPump Alarm</setMessage-->
+		<setMessageID type="method">232</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPAlarmPresenceDI==1)</setConditionStr>
+	</DryPumpAlarm>
+	
+	<DryPumpNotRunning type="instance" class="IOInterlockCondition">
+		<!--setMessage type="method">Can't Open Turbo Pump With Dry pump not running</setMessage-->
+		<setMessageID type="method">232</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/DPOnDI==1)</setConditionStr>
+	</DryPumpNotRunning>	
+		
+	<CustomerIntlkInvoked type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">240</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerIntlkDI==1)</setConditionStr>
+	</CustomerIntlkInvoked>	
+	
+	<CustomerGasDetectFailed type="instance" class="IOInterlockCondition">
+		<setMessageID type="method">241</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/CustomerGasDetectDI==1)</setConditionStr>
+	</CustomerGasDetectFailed>		
+
+	<GasBoxDoor1NotClosed type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">263</setMessageID>
+		<setConditionStr type="method">((/Control/PMCExports/InnerDatas/GasBoxDoorSW1DI==1)&amp;&amp;(/Control/PMCExports/InnerDatas/GasBoxDoorSW2DI==1))</setConditionStr>
+	</GasBoxDoor1NotClosed>	
+	
+	<GasBoxPressAbnormal type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">244</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/InnerDatas/GasBoxPressDifflSWDI==1)</setConditionStr>
+	</GasBoxPressAbnormal>
+	
+	<N2PressureAbnormal type="instance" class="IOInterlockCondition">	
+		<setMessageID type="method">333</setMessageID>
+		<setConditionStr type="method">(/Control/PMCExports/Datas/N2SupplyPressureSWDI==1)</setConditionStr>
+	</N2PressureAbnormal>	
+		
+	&SetSimulated;
+</OpenInterlocks>
+
+<CloseInterlocks type="instance" class="IOInterlocks">
+	<!--addToIOInterlocks type="method"></addToIOInterlocks-->
+	&SetSimulated;
+</CloseInterlocks>

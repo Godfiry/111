@@ -1,0 +1,122 @@
+<addCheckItem type="method">./SRFReflPower</addCheckItem>
+<addCheckItem type="method">./LFReflPower</addCheckItem>		
+<addCheckItem type="method">./SRFPower</addCheckItem>
+<addCheckItem type="method">./LFPower</addCheckItem>
+<addCheckItem type="method">./SRFC5</addCheckItem>
+<addCheckItem type="method">./SRFMatchCurrRatio</addCheckItem>
+
+<SRFReflPower type="instance" class="DualProcessCheckItem">
+	<setSetPointID type="method">SRFMaxReflectedPower(W)</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFReflCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">SRF reflected power exceeded max value</setAlarmMessage-->
+	<setAlarmMessageID type="method">87</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/SRFReflectPWRAI</setSensor>
+	<setAlternativeSetPoint type="method">/SETUP/RF/cfgSRFMaxReflectedPower</setAlternativeSetPoint>		
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFReflTimeout</setDurativeTimeSCh>	
+	<!--setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem-->	
+</SRFReflPower>	
+
+<LFReflPower type="instance" class="DualProcessCheckItem">
+	<setSetPointID type="method">LFMaxReflectedPower(W)</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgLFReflCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">BRF reflected power exceeded max value</setAlarmMessage-->	
+	<setAlarmMessageID type="method">90</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/LFReflectPWRAI</setSensor>
+	<setAlternativeSetPoint type="method">/SETUP/RF/cfgLFMaxReflectedPower</setAlternativeSetPoint>		
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgLFReflTimeout</setDurativeTimeSCh>	
+	<!--setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem-->	
+</LFReflPower>
+
+<SRFPower type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">SRFPower(W)</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">SRF power exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">91</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/SRF_ForwardPower</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgSRFPowerSoftTol</setTolerance>		
+	<setZeroTolerance type="method">5</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">SRF power exceeded hard tolerance</setAlarmMessage-->
+		<setAlarmMessageID type="method">92</setAlarmMessageID>	
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/SRF_ForwardPower</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgSRFPowerHardTol</setTolerance>
+		<setZeroTolerance type="method">6</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</SRFPower>
+
+<LFPower type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">LFPower(W)</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgLFToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">LF power exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">97</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/LF_ForwardPower</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgLFPowerSoftTol</setTolerance>		
+	<setZeroTolerance type="method">5</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgLFSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/RF/cfgLFToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">LF power exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">98</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/LF_ForwardPower</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgLFPowerHardTol</setTolerance>
+		<setZeroTolerance type="method">6</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/RF/cfgLFHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</LFPower>	
+
+<SRFC5 type="instance" class="ProcessCheckItem">
+	<setSetPointID type="method">SRFC5Preset</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFC5PresetToleranceCheckDelay</setCheckDelaySCh>	
+	<!--setAlarmMessage type="method">LF power exceeded soft tolerance</setAlarmMessage-->
+	<setAlarmMessageID type="method">144</setAlarmMessageID>	
+	<setSensor type="method">/Control/PMCExports/Datas/SRFC5</setSensor>
+	<setTolerance type="method">/SETUP/Recipe/cfgSRFC5PresetSoftTol</setTolerance>		
+	<setZeroTolerance type="method">5</setZeroTolerance>
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFC5PresetSoftToleranceTimeout</setDurativeTimeSCh>	
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>	
+	
+	<CheckHardTolerance type="instance" class="ProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFC5PresetToleranceCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">LF power exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">145</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/SRFC5</setSensor>
+		<setTolerance type="method">/SETUP/Recipe/cfgSRFC5PresetHardTol</setTolerance>
+		<setZeroTolerance type="method">6</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFC5PresetHardToleranceTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>		
+</SRFC5>
+	
+<SRFMatchCurrRatio type="instance" class="TempProcessCheckItem">
+	<setSetPointID type="method">SRFMatchCurrRatio</setSetPointID>	
+	<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFMatchCurrRatioCheckDelay</setCheckDelaySCh>	
+	<setAlarmMessage type="method">SRF match current ratio exceeded soft tolerance. </setAlarmMessage>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/CurrentRatio</setSensor>
+	<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFMatchCurrRatioSoftTolTimeout</setDurativeTimeSCh>	
+	<setTolerance type="method">/SETUP/RF/cfgSRFMatchCurrRatioSoftTol</setTolerance>
+	<!--setZeroTolerance type="method">50</setZeroTolerance-->
+	<setNextCheckItem type="method">./CheckHardTolerance</setNextCheckItem>
+	
+	<CheckHardTolerance type="instance" class="TempProcessCheckItem">
+		<setCheckDelaySCh type="method">/SETUP/RF/cfgSRFMatchCurrRatioCheckDelay</setCheckDelaySCh>		
+		<!--setAlarmMessage type="method">LF power exceeded hard tolerance</setAlarmMessage-->	
+		<setAlarmMessageID type="method">155</setAlarmMessageID>
+		<setAlarmSeverity type="method">1</setAlarmSeverity>
+		<setSensor type="method">/Control/PMCExports/Datas/CurrentRatio</setSensor>
+		<setTolerance type="method">/SETUP/RF/cfgSRFMatchCurrRatioHardTol</setTolerance>
+		<setZeroTolerance type="method">6</setZeroTolerance>
+		<setDurativeTimeSCh type="method">/SETUP/RF/cfgSRFMatchCurrRatioHardTolTimeout</setDurativeTimeSCh>	
+	</CheckHardTolerance>	
+</SRFMatchCurrRatio>

@@ -1,0 +1,327 @@
+<ProcessDataCollector type="instance" class="ProcessDataCollector" alias="">
+	<setIntervalMSCh type="method">/SETUP/Recipe/cfgSamplingTime</setIntervalMSCh>
+	<addProcessDataItem type="method">./ProcessPressure</addProcessDataItem>
+	<addProcessDataItem type="method">./ESCHePressureInner</addProcessDataItem>
+	<addProcessDataItem type="method">./ESCHePressureOuter</addProcessDataItem>
+	<addProcessDataItem type="method">./ESCHeFlowInner</addProcessDataItem>
+	<addProcessDataItem type="method">./ESCHeFlowOuter</addProcessDataItem>
+	<addProcessDataItem type="method">./VATPosition</addProcessDataItem>
+	<addProcessDataItem type="method">./ForlinePressure</addProcessDataItem>
+	<addProcessDataItem type="method">./ChamberPressure</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFPower</addProcessDataItem>
+	<addProcessDataItem type="method">./LFPower</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFReflPower</addProcessDataItem>
+	<addProcessDataItem type="method">./LFReflPower</addProcessDataItem>
+	<addProcessDataItem type="method">./DCBias</addProcessDataItem>
+	<!--addProcessDataItem type="method">./BRFVoltage</addProcessDataItem-->
+	<addProcessDataItem type="method">./LFC1</addProcessDataItem>
+	<addProcessDataItem type="method">./LFC2</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFC1</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFC2</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFC5</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas1</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas2</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas3</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas4</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas5</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas6</addProcessDataItem>		
+	<addProcessDataItem type="method">./Gas7</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas8</addProcessDataItem>	
+	<addProcessDataItem type="method">./Gas9</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas10</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas11</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas12</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas13</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas14</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas15</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas16</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas17</addProcessDataItem>
+	<addProcessDataItem type="method">./Gas18</addProcessDataItem>
+	<!--addProcessDataItem type="method">./FRCARatio</addProcessDataItem-->
+	<addProcessDataItem type="method">./LFPulseDutyCycle</addProcessDataItem>
+      <addProcessDataItem type="method">./LFPulseFrequency</addProcessDataItem>
+	<addProcessDataItem type="method">./GDPTemp</addProcessDataItem>
+	<addProcessDataItem type="method">./MC1Temp</addProcessDataItem>
+	<addProcessDataItem type="method">./MC2Temp</addProcessDataItem>
+	<addProcessDataItem type="method">./MC3Temp</addProcessDataItem>
+	<addProcessDataItem type="method">./MC4Temp</addProcessDataItem>
+
+	<!--addProcessDataItem type="method">./BiasTemp</addProcessDataItem-->
+
+	<addProcessDataItem type="method">./WinInnerTemp</addProcessDataItem>
+	<addProcessDataItem type="method">./WinOuterTemp</addProcessDataItem>
+	<!--addProcessDataItem type="method">./AirHeater1Temp</addProcessDataItem-->
+
+	
+	<addProcessDataItem type="method">./ESCTemp</addProcessDataItem>
+	<addProcessDataItem type="method">./ChillerTemp</addProcessDataItem>
+	<addProcessDataItem type="method">./ESCVoltage</addProcessDataItem>
+
+	<addProcessDataItem type="method">./NegCurrentMonAI</addProcessDataItem>
+	<addProcessDataItem type="method">./PosCurrentMonAI</addProcessDataItem>
+
+	<addProcessDataItem type="method">./TrendData1</addProcessDataItem>
+	<addProcessDataItem type="method">./TrendData2</addProcessDataItem>
+	<addProcessDataItem type="method">./TrendData3</addProcessDataItem>
+	<addProcessDataItem type="method">./TrendData4</addProcessDataItem>
+	<addProcessDataItem type="method">./TrendData5</addProcessDataItem>
+	<addProcessDataItem type="method">./TrendData6</addProcessDataItem>
+	<addProcessDataItem type="method">./StepIDForPSD</addProcessDataItem>
+	
+	<addProcessDataItem type="method">./SRFOuterCurrent</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFInnerCurrent</addProcessDataItem>
+	<addProcessDataItem type="method">./SRFCurrentRatio</addProcessDataItem>
+	<addProcessDataItem type="method">./LearnedCap</addProcessDataItem>
+	<addProcessDataItem type="method">./LearnedPV</addProcessDataItem>
+	
+	<ProcessPressure type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/ProcessPressure</setSensorD>	
+	</ProcessPressure>
+	
+	<ESCHePressureInner type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/PCSPPressureOutAI</setSensorD>	
+	</ESCHePressureInner>	
+	
+	<ESCHePressureOuter type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/PMSPPressureOut2AI</setSensorD>	
+	</ESCHePressureOuter>
+	
+	<ESCHeFlowInner type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/PCFlowOutAI</setSensorD>	
+	</ESCHeFlowInner>
+	
+	<ESCHeFlowOuter type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/PMFlowOut2AI</setSensorD>	
+	</ESCHeFlowOuter>
+	
+	<VATPosition type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/VATPosition</setSensorD>	
+	</VATPosition>
+	
+	<ForlinePressure type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/ForlinePressure</setSensorD>	
+	</ForlinePressure>
+	
+	<ChamberPressure type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/ChamberPressure</setSensorD>	
+	</ChamberPressure>
+	
+	<SRFPower type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/SRF_ForwardPower</setSensorD>	
+	</SRFPower>	
+	
+	<LFPower type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/LF_ForwardPower</setSensorD>	
+	</LFPower>		
+	
+	<SRFReflPower type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/SRFReflectPWRAI</setSensorD>	
+	</SRFReflPower>	
+	
+	<LFReflPower type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/LFReflectPWRAI</setSensorD>	
+	</LFReflPower>		
+	
+	<DCBias type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/LFDCBias</setSensorD>	
+	</DCBias>
+	
+	<LFC1 type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/LFC1</setSensorI>	
+	</LFC1>
+	
+	<LFC2 type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/LFC2</setSensorI>	
+	</LFC2>	
+	
+	<SRFC1 type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/SRFC1</setSensorI>	
+	</SRFC1>
+	
+	<SRFC2 type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/SRFC2</setSensorI>	
+	</SRFC2>	
+	
+	<SRFC5 type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/SRFC5</setSensorI>	
+	</SRFC5>
+	
+	<Gas1 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas1AT</setSensorD>	
+	</Gas1>
+	
+	<Gas2 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas2AT</setSensorD>	
+	</Gas2>
+	
+	<Gas3 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas3AT</setSensorD>	
+	</Gas3>
+	
+	<Gas4 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas4AT</setSensorD>	
+	</Gas4>
+	
+	<Gas5 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas5AT</setSensorD>	
+	</Gas5>	
+	
+	<Gas6 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas6AT</setSensorD>	
+	</Gas6>
+	
+	<Gas7 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas7AT</setSensorD>	
+	</Gas7>
+	
+	<Gas8 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas8AT</setSensorD>	
+	</Gas8>	
+	
+	<Gas9 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas9AT</setSensorD>	
+	</Gas9>	
+	
+	<Gas10 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas10AT</setSensorD>	
+	</Gas10>
+	
+	<Gas11 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas11AT</setSensorD>	
+	</Gas11>	
+	
+	<Gas12 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas12AT</setSensorD>	
+	</Gas12>	
+	
+	<Gas13 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas13AT</setSensorD>	
+	</Gas13>
+	
+	<Gas14 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas14AT</setSensorD>	
+	</Gas14>	
+	
+	<Gas15 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas15AT</setSensorD>	
+	</Gas15>	
+	
+	<Gas16 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas16AT</setSensorD>	
+	</Gas16>	
+	
+	<Gas17 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas17AT</setSensorD>	
+	</Gas17>
+	
+	<Gas18 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/Gas18AT</setSensorD>	
+	</Gas18>
+	
+	<GDPTemp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/GDPTemp</setSensorD>	
+	</GDPTemp>	
+	
+	<MC1Temp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/MC1Temp</setSensorD>	
+	</MC1Temp>	
+	
+	<MC2Temp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/MC2Temp</setSensorD>	
+	</MC2Temp>
+		
+	<MC3Temp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/MC3Temp</setSensorD>	
+	</MC3Temp>	
+	
+	<MC4Temp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/MC4Temp</setSensorD>	
+	</MC4Temp>		
+	
+	<ESCTemp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/BiasTemp</setSensorD>	
+	</ESCTemp>	
+	
+	<WinInnerTemp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/WindowInnerTemp</setSensorD>	
+	</WinInnerTemp>		
+	
+	<WinOuterTemp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/WindowOuterTemp</setSensorD>	
+	</WinOuterTemp>
+	
+	<!--AirHeater1Temp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/AirSensor</setSensorD>	
+	</AirHeater1Temp-->			
+	
+	<ChillerTemp type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/ChillerTemp</setSensorD>	
+	</ChillerTemp>		
+	
+	<ESCVoltage type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/DCOutputAI</setSensorD>	
+	</ESCVoltage>	
+	
+	<TrendData1 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData1</setSensorD>	
+	</TrendData1>		
+	
+	<TrendData2 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData2</setSensorD>	
+	</TrendData2>	
+	
+	<TrendData3 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData3</setSensorD>	
+	</TrendData3>	
+	
+	<TrendData4 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData4</setSensorD>	
+	</TrendData4>	
+	
+	<TrendData5 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData5</setSensorD>	
+	</TrendData5>	
+	
+	<TrendData6 type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/InnerDatas/EPDTrendData6</setSensorD>	
+	</TrendData6>																																													
+
+	<StepIDForPSD type="instance" class="ProcessDataItem" alias="">
+		<setSensorI type="method">/Control/PMCExports/Datas/PM_S1_ParentStepId_PSD</setSensorI>	
+	</StepIDForPSD>
+
+	<NegCurrentMonAI type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/NegCurrentMonAI</setSensorD>	
+	</NegCurrentMonAI>
+	
+	<PosCurrentMonAI type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/PosCurrentMonAI</setSensorD>	
+	</PosCurrentMonAI>
+
+	<LFPulseDutyCycle type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/LFPulseDutyAI</setSensorD>	
+	</LFPulseDutyCycle>
+
+	<LFPulseFrequency type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/LFGenFrequency</setSensorD>	
+	</LFPulseFrequency>
+	
+	<SRFOuterCurrent type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/OuterCurrent</setSensorD>	
+	</SRFOuterCurrent>
+	<SRFInnerCurrent type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/InnerCurrent</setSensorD>	
+	</SRFInnerCurrent>
+	<SRFCurrentRatio type="instance" class="ProcessDataItem" alias="">
+		<setSensorD type="method">/Control/PMCExports/Datas/CurrentRatio</setSensorD>	
+	</SRFCurrentRatio>
+	<LearnedCap type="instance" class="CapLearnDataItem" alias="">
+		<setSensorForLearnCapC1 type="method">/Control/PMCExports/Datas/SRFC1</setSensorForLearnCapC1>
+		<setSensorForLearnCapC2 type="method">/Control/PMCExports/Datas/SRFC2</setSensorForLearnCapC2>	
+	</LearnedCap>
+
+	<LearnedPV type="instance" class="PVLearnDataItem" alias="">
+		<setSensorPressureForLearnPV type="method">/Control/PMCExports/Datas/ProcessPressure</setSensorPressureForLearnPV>
+	</LearnedPV>
+
+</ProcessDataCollector>

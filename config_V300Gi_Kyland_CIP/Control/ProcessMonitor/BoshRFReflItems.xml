@@ -1,0 +1,25 @@
+<addCheckItem type="method">./BoschSRFReflPower</addCheckItem>
+<addCheckItem type="method">./BoschLFReflPower</addCheckItem>	
+
+<BoschSRFReflPower type="instance" class="BoshProcessCheckItem_ReflPower">
+	<setSetPointID type="method">SRFPower(W)</setSetPointID>	
+    <setAlarmMessageID type="method">87</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/SRFReflectPWRAI</setSensor>	
+	<setZeroTolerance type="method">5</setZeroTolerance>
+	<setTolerance type="method">/SETUP/RF/cfgSRFMaxReflectedPowerBoschTol</setTolerance>
+	<setCheckDelayS type="method">0.3</setCheckDelayS>
+	<setDurativeTimeS type="method">0.5</setDurativeTimeS>		
+</BoschSRFReflPower>
+
+<BoschLFReflPower type="instance" class="BoshProcessCheckItem_ReflPower">
+	<setSetPointID type="method">LFPower(W)</setSetPointID>	
+	<!--setAlarmMessage type="method">LF reflected power exceeded max value</setAlarmMessage-->
+	<setAlarmMessageID type="method">90</setAlarmMessageID>	
+	<setAlarmSeverity type="method">1</setAlarmSeverity>
+	<setSensor type="method">/Control/PMCExports/Datas/LFReflectPWRAI</setSensor>	
+	<setZeroTolerance type="method">5</setZeroTolerance>	
+	<setTolerance type="method">/SETUP/RF/cfgLFMaxReflectedPowerBoschTol</setTolerance>
+	<setCheckDelayS type="method">0.3</setCheckDelayS>
+	<setDurativeTimeS type="method">0.5</setDurativeTimeS>	
+</BoschLFReflPower>

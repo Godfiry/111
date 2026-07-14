@@ -1,0 +1,26 @@
+<PM type="instance" class="BoshProcessResource" alias="">
+	<setCapacity type="method">1</setCapacity>
+	<setEPD type="method">./EPD</setEPD>
+	<setRFSys type="method">./SRF</setRFSys>
+	<setTempCtl type="method">./TempCtl</setTempCtl>
+	<setESC type="method">./ESC</setESC>
+	<setChamber type="method">./Chamber</setChamber>
+	<setBoshProcessExecuter type="method">./BoshProcessExecuter</setBoshProcessExecuter>
+	<setProcessMonitor type="method">./ProcessMonitor</setProcessMonitor>	
+	<addBoshProcessMonitor type="method">./BoshProcessMonitorStable</addBoshProcessMonitor>
+	<addBoshProcessMonitor type="method">./BoshProcessMonitorVariable</addBoshProcessMonitor>
+	<setBoshProcessReflMonitor type="method">./BoshProcessReflMonitor</setBoshProcessReflMonitor>
+	
+	<setProcessDataCollector type="method">./ProcessDataCollector</setProcessDataCollector>	
+	<setHistoryStepData type="method">/Control/Operational/HistoryStepData</setHistoryStepData>	
+		
+	&SetSimulated;	
+	&ProcessMonitor;
+	&ProcessDataCollector;
+	&ESC;
+	&TempCtl;	
+	&RFSys;
+	&EPD;
+	&Chamber;
+	&BoshProcess;	
+</PM>
